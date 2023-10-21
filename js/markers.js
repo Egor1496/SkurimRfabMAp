@@ -389,7 +389,7 @@ const listMarkers = [
 	{
 		title: "Форт Греймур (<q light-blue>10lvl</q>)",
 		description: "Бандиты <q green>4</q>-шт снаружи и <q green>8</q>-шт внутри.",
-		secondDescription: ["<q yelow>книга опыта</q>"],
+		secondDescription: ["<q yelow>Книга опыта</q>"],
 		type: "",
 		nameIcon: "Fort",
 		id: "id35",

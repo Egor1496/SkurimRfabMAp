@@ -61,6 +61,9 @@ function createMarkers(canvas, element, applyTransform) {
 
 			oImg.on("mouseover", function (opt) {
 				oImg
+					.set("hasControls", false)
+					.set("hasBorders", false)
+					.set("cornerSize", 0)
 					.scale(oImg.getObjectScaling().scaleX + 0.2)
 					.set("left", oImg.get("left") - 4)
 					.set("top", oImg.get("top") - 4);
@@ -110,7 +113,7 @@ function createMarkers(canvas, element, applyTransform) {
 						return "\n" + str;
 					});
 
-				navigator.clipboard.writeText(MarkJSON.join()+",");//mark.id
+				navigator.clipboard.writeText(MarkJSON.join() + ","); //mark.id
 			});
 
 			canvas.add(oImg);
