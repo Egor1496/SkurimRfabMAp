@@ -1,0 +1,121 @@
+Для создания метки вам нужно:
+  1) Перезагрузи страницу и не трогай колесико мышки (зум) для коректного сохраниния координат.
+  2) Перед перезагрузкой ты можешь увеличать масштаб страницы браузера для увеличения карты.
+  3) Кликни на карте в том месте где хочешь поставить метку. При клики в буфер обмена скопируеться "обьект" метка.
+  4) Отредактируйте обьект и отправте его(их) разработчику.
+
+Для изменения метки вам нужно:
+  1) Кликни по метки (не промахнись). При клики в буфер обмена скопируеться "обьект" метка.
+  5) Отредактируйте обьект и отправте его(их) разработчику.
+
+Пример обьекта:
+{
+  title: "Бандиты.",
+  description: "<span class='color-green'>2</span>-шт.",
+  secondDescription: ["3-шт. после открытия сундука.", "123", "24543"],
+  type: "bandit",
+  nameIcon: "bandit",
+  id: "id15",
+  scale: 0.2,
+  top: 575,
+  left: 694,
+},
+title - Заголовок.
+description - Описание.
+secondDescription - Доп. описание (масив строк ["строка 1", "строка 2", "строка n..."])
+type - Тип метки для фильтра.
+nameIcon - иконка метки.
+id - уникальный номер метки (игнорируй)
+scale - Масштаб метки.
+top - Расстояние от верхнего правого угла по вертикали.
+left - Расстояние от верхнего правого угла по горезонтали.
+
+Размеры иконок (default 0.3)
+  Пример - "scale: 0.3,".
+  Замки - scale 0.5.
+  Больше дажни - scale 0.4.
+  Лагеря и п. мелкие данжи - scale 0.3.
+  Великаны - scale 0.3.
+  Одиночные бандиты/изгои - scale 0.2.
+
+Типы меток
+  Пример: "type: "bandit","
+  bandit - Бандиты.
+  trash - Изгои
+  Giant - Великаны
+  Daedric - Даэдра
+  Imperial - Имперцы
+  Nordic - Норды
+  Dwemer - Двемеры
+  Falmer - Фламеры
+  Dragon - Драконы
+  Magic - Маги
+  Vampire - Вампиры
+  Skelet - Скелеты
+  Draugry - Драугры
+  Boss - Босcы
+
+Цвета для Заголовков и описаний.
+  Пример: ' <span class="color-purple">Винтерхолд</span> '
+  "color-red" rgb(255, 58, 58);
+  "color-green" rgb(79, 255, 52);
+  "color-blue" rgb(60, 50, 255);
+  "color-yelow" rgb(255, 238, 49);
+  "color-grey" rgb(160, 160, 160);
+  "color-purple" rgb(244, 83, 255);
+
+Доступные иконки
+  _undiscovered - Постфикс для темных иконок (если такая есть в списке)
+
+  Whiterun | Whiterun_undiscovered - Вайтран (Whiterun)
+  Solitude | Solitude_undiscovered - Солитьюд (Solitude)
+  Riften | Riften_undiscovered - Рифтен (Riften)
+  Markarth - Маркарт (Markarth)
+  Winterhold - Винтерхолд (Winterhold)
+  Windhelm | Windhelm_undiscovered - Виндхельм (Windhelm)
+  Dawnstar | Dawnstar_undiscovered - Данстар (Dawnstar)
+  Morthal | Morthal_undiscovered - Морфал (Morthal)
+  Falkreath | Falkreath_undiscovered - Фолкрит (Falkreath)
+
+  JarlResidence - Замок ярла (Dragonsreach)
+  CollegeofWinterhold - Коллегия винтерхолда
+  UnderstoneKeep - Подземная крепость (Understone Keep)
+  PalaceoftheKings - Дворец королей (Palace of the Kings)
+  MistveilKeep - Крепость тумана (Mistveil Keep)
+  BluePalace - Синий дворец
+
+  bandit - Бандиты.
+  Campsite - Лагерь (Camp)
+  Cave - Пещера (Cave)
+  Tower - Форт (Fort)
+  Fort - Форт (Fort)
+  DwemerRuins - Двемерские руины (Dwarven Ruin)
+  Shipwreck - Корабли (Ship)
+
+  DaedricShrine -  Даэдрическое святилище (Daedric Shrine)
+  Dragon - Логово дракона (Dragon Lair)
+  NordicDwelling - Руины (Ruin)
+  Tomb - Нордские руины (Nordic Ruin)
+  OrcStronghold - Крепость орков (Orc Stronghold)
+  Grove - Роща (Grove)
+  Mine - Шахта (Mine)
+  Pass - Проход (Pass)
+  Pond - Поляна (Clearing)
+
+  Town - Город (Town)
+  Settlement - Поселение (Settlement)
+  WoodMill - Лесопилка (Wood Mill)
+  Farm - Ферма (Farm)
+  FarmWithMill - Мельница (Wheat Mill)
+  Shack - Лачуга (Shack)
+  Stable - Конюшня (Stable)
+  Dock - Пристань (Dock)
+  Lighthouse - Маяк (Lighthouse)
+
+  ImperialTower - Сторожевая башная (Watchtower)
+  GiantCamp - Лагерь великанов (Giant Camp)
+  NordicTower - Башня нордов (Nordic Tower)
+  PointofInterest - Достопримечательность (Landmark)
+  StandingStone - Камни хранители (Standing Stone)
+  ImperialCamp - Имперский лагерь (Imperial Camp)
+  StormcloakCamp - Лагерь Братьев Бури (Stormcloak Camp)
