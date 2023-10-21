@@ -84,7 +84,7 @@ function createMarkers(canvas, element, applyTransform) {
 				modal.css({ left: modalLeft });
 				modal.css({ top: modaTop });
 
-				if (ul.html().length > 0 || title.html().length > 0 || description.html().length > 0) {
+				if (ul.length > 1 || title.html().length > 0 || description.html().length > 0) {
 					modal.removeClass("close");
 				}
 
@@ -106,7 +106,7 @@ function createMarkers(canvas, element, applyTransform) {
 						return "\n" + str;
 					});
 
-				navigator.clipboard.writeText(MarkJSON.join());
+				navigator.clipboard.writeText(MarkJSON.join()+",");//mark.id
 			});
 
 			canvas.add(oImg);
