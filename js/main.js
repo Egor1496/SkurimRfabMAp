@@ -14,7 +14,11 @@ const coppyObject = (top, left) => {
 	// `
 	const copy = `
 		{
+			title: "",
+			description: "",
+			secondDescription: [""],
 			nameIcon: "",
+			scale: 0.3,
 			id: "id${listMarkers.length + 1}",
 			top: ${top},
 			left: ${left},

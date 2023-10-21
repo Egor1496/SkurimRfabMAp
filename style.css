@@ -1,50 +1,58 @@
 @font-face {
-	font-family: 'Arimo-Regular';
-	src: url(fonts/Arimo-Regular.ttf);
+  font-family: 'Arimo-Regular';
+  src: url(fonts/Arimo-Regular.ttf);
 }
 
 @font-face {
-	font-family: 'Arimo-Medium';
-	src: url(fonts/Arimo-Medium.ttf);
+  font-family: 'Arimo-Medium';
+  src: url(fonts/Arimo-Medium.ttf);
 }
 
 @font-face {
-	font-family: 'Arimo-Italic';
-	src: url(fonts/Arimo-Italic.ttf);
+  font-family: 'Arimo-Italic';
+  src: url(fonts/Arimo-Italic.ttf);
 }
 
-.color-red{
- color: rgb(255, 58, 58);
+.color-red {
+  color: rgb(255, 58, 58);
 }
 
-.color-green{
- color: rgb(79, 255, 52);
+.color-green {
+  color: rgb(79, 255, 52);
 }
 
-.color-blue{
- color: rgb(60, 50, 255);
+.color-blue {
+  color: rgb(60, 50, 255);
 }
 
-.color-yelow{
- color: rgb(255, 238, 49);
+.color-light-blue {
+  color: rgb(31, 180, 255);
 }
 
-.color-grey{
- color: rgb(160, 160, 160);
+.color-yelow {
+  color: rgb(253, 235, 35);
 }
 
-.color-purple{
- color: rgb(244, 83, 255);
+.color-orange {
+  color: rgb(253, 162, 35);
 }
 
-html{
+.color-grey {
+  color: rgb(160, 160, 160);
+}
+
+.color-purple {
+  color: rgb(244, 83, 255);
+}
+
+html {
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
 }
 
-body{
+body {
   width: 100%;
   height: 100%;
   margin: 0;
@@ -53,7 +61,7 @@ body{
   background-color: rgba(53, 53, 53, 0.783)
 }
 
-.canvas-container{
+.canvas-container {
   z-index: 10;
   position: fixed;
   left: 50%;
@@ -65,44 +73,44 @@ body{
   transform: translate(-50%, -50%);
 }
 
-.modal-wrap{
+.modal-wrap {
   z-index: 20;
   position: fixed;
   left: 0;
   top: 0;
 }
 
-.modal-wrap.close{
+.modal-wrap.close {
   display: none;
 }
 
-.modal{
+.modal {
+  max-width: 400px;
   padding: 5px;
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 5px;
   border: 2px solid #929292;
 }
 
-.title{
+.title {
   font-size: 18px;
   font-family: 'Arimo-Medium';
 }
 
-.description{
+.description {
   font-size: 14px;
   font-family: 'Arimo-Regular';
 }
 
-.more-info{
-}
+.more-info {}
 
-.list-info{
+.list-info {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.item-info{
+.item-info {
   font-size: 14px;
   font-family: 'Arimo-Italic';
 }
