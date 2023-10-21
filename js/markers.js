@@ -13,13 +13,13 @@
 // Бандиты./изгои - scale 0.2
 
 // Цвета для Заголовков и описаний
-// Пример: ' <span class="color-purple">Винтерхолд</span> '
-//  "color-red" rgb(255, 58, 58);
-//  "color-green" rgb(79, 255, 52);
-//  "color-blue" rgb(60, 50, 255);
-//  "color-yelow" rgb(255, 238, 49);
-//  "color-grey" rgb(160, 160, 160);
-//  "color-purple" rgb(244, 83, 255);
+// Пример: ' <q purple>Винтерхолд</q> '
+//  "red" rgb(255, 58, 58);
+//  "green" rgb(79, 255, 52);
+//  "blue" rgb(60, 50, 255);
+//  "yelow" rgb(255, 238, 49);
+//  "grey" rgb(160, 160, 160);
+//  "purple" rgb(244, 83, 255);
 
 // Типы меток
 // Пример: ' type: "bandit", '
@@ -177,8 +177,8 @@ const listMarkers = [
 	},
 	{
 		title: "Бандиты",
-		description: "<span class='color-green'>2</span>-шт.",
-		secondDescription: ["<span class='color-green'>3</span>-шт. после открытия сундука."],
+		description: "<q green>2</q>-шт.",
+		secondDescription: ["<q green>3</q>-шт. после открытия сундука."],
 		type: "bandit",
 		nameIcon: "bandit",
 		id: "id15",
@@ -187,9 +187,9 @@ const listMarkers = [
 		left: 694,
 	},
 	{
-		title: "Лагерь Тихих Лун",
-		description: "Много.",
-		secondDescription: ["Босс"],
+		title: "Лагерь Тихих Лун (<q light-blue>10lvl</q>)",
+		description: "Бандиты <q green>6</q>-шт снаружи и <q green>3</q>-шт внутри.",
+		secondDescription: ["<q red>Босс</q> Рон Ворон <q light-blue>1000xp</q>. <br/>Щитовик бьет на бегу. Байти на арболет."],
 		type: "bandit",
 		nameIcon: "Tomb",
 		id: "id16",
@@ -198,9 +198,12 @@ const listMarkers = [
 		left: 646,
 	},
 	{
-		title: "Лагерь Чистых родников",
-		description: "<span class='color-green'>Бандиты</span> Много снаружи и <span class='color-green'>4</span>-шт. внутри.",
-		secondDescription: ["<span class='color-red'>Босс Шаглак</span>"],
+		title: "Лагерь Чистых родников (<q light-blue>10lvl</q>)",
+		description: "Бандиты <q green>4</q>-шт снаружи и <q green>3</q>-шт внутри.",
+		secondDescription: [
+			"<q red>Босс</q> Шаглак <q light-blue>1000xp</q>. <br/> В конце локации щитовик. Используй паралич или беги наружу.",
+			"Рецепт <q yelow>толченый бивень</q>.",
+		],
 		type: "bandit",
 		nameIcon: "Campsite",
 		id: "id17",
@@ -216,9 +219,9 @@ const listMarkers = [
 		left: 416,
 	},
 	{
-		title: "Факельная шахта (<span class='color-light-blue'>0lvl</span>)",
-		description: "Бандиты <span class='color-green'>1</span>-шт снаружи и <span class='color-green'>8</span>-шт внутри.",
-		secondDescription: ["<span class='color-yelow'>Книга опыта</span>."],
+		title: "Факельная шахта (<q light-blue>0lvl</q>)",
+		description: "Бандиты <q green>1</q>-шт снаружи и <q green>8</q>-шт внутри.",
+		secondDescription: ["<q yelow>Книга опыта</q>."],
 		type: "bandit",
 		nameIcon: "Mine",
 		id: "id19",
@@ -1090,7 +1093,6 @@ const listMarkers = [
 		left: 323,
 	},
 
-
 	{
 		title: "Мшистая пещера",
 		description: "",
@@ -1158,10 +1160,12 @@ const listMarkers = [
 		left: 519,
 	},
 	{
-		title: "Приречная застава (<span class='color-light-blue'>10lvl</span>)",
-		description: "Бандиты. <span class='color-green'>2</span>-шт снаружи и <span class='color-green'>7</span>-шт внутри.",
-		secondDescription: ["<span class='color-red'>Босс</span> Ульфр Слепой <span class='color-light-blue'>1000xp</span>. <br/> В начале локации пасивный рукопашник. Используй параличь.",
-	"<span class='color-red'>Босс</span> Хайфар Железная Рука <span class='color-light-blue'>1000xp</span>. <br/> После локации стоит спиной, сбивает с ног двуручь, залезь на стол."],
+		title: "Приречная застава (<q light-blue>10lvl</q>)",
+		description: "Бандиты. <q green>2</q>-шт снаружи и <q green>7</q>-шт внутри.",
+		secondDescription: [
+			"<q red>Босс</q> Ульфр Слепой <q light-blue>1000xp</q>. <br/> В начале локации пассивный рукопашник. Используй паралич.",
+			"<q red>Босс</q> Хайфар Железная Рука <q light-blue>1000xp</q>. <br/> После локации стоит спиной, сбивает с ног двуручь, залезь на стол.",
+		],
 		type: "bandit",
 		nameIcon: "Cave",
 		id: "id108",
@@ -1809,7 +1813,7 @@ const listMarkers = [
 		type: "",
 		nameIcon: "GiantCamp",
 		id: "id166-0",
-		top:  491.3008003234863,
+		top: 491.3008003234863,
 		left: 848.8672008514404,
 	},
 	{
@@ -2456,10 +2460,10 @@ const listMarkers = [
 		left: 554.3909912109375,
 	},
 	{
-		title: "Ветренный пик",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Ветренный пик (<q light-blue>10lvl</q>)",
+		description: "Бандиты <q green>3</q>-шт снаружи и <q green>3</q>-шт внутри.",
+		secondDescription: ["После бандосов большой паук, потом <q red>драугры</q>"],
+		type: "bandit",
 		nameIcon: "Tomb",
 		scale: 0.4,
 		id: "id229",
@@ -2857,15 +2861,35 @@ const listMarkers = [
 		left: 1173.3028411865234,
 	},
 	{
-		title: "Хижина Агнис (<span class='color-light-blue'>0lvl</span>)",
-		description: "Пасивная ведьма. Перед наподением сагри для сохранения праведности.",
-		secondDescription: ["В подвале <span class='color-yelow'>яд параличь</span>."],
+		title: "Хижина Агнис (<q light-blue>0lvl</q>)",
+		description: "Пассивная ведьма. Перед нападением сагри для сохранения праведности.",
+		secondDescription: ["В подвале <q yelow>яд паралич</q>."],
 		type: "magic",
 		nameIcon: "Shack",
 		id: "id267",
 		top: 756,
 		left: 636.6666641235352,
-		},
+	},
+	{
+		title: "Лагерь",
+		description: "Бандиты <q green>3</q>-шт",
+		secondDescription: [""],
+		type: "bandit",
+		nameIcon: "bandit",
+		id: "id267",
+		top: 738,
+		left: 644.6666641235352,
+	},
+	{
+		title: "Лагерь",
+		description: "Бандиты <q green>2</q>-шт",
+		secondDescription: ["<q yelow>Книга опыта</q>"],
+		type: "bandit",
+		nameIcon: "bandit",
+		id: "id267",
+		top: 770,
+		left: 698.6666641235352,
+	},
 ];
 // _undiscovered - темная иконка
 

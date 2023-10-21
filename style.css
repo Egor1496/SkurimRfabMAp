@@ -13,36 +13,46 @@
   src: url(fonts/Arimo-Italic.ttf);
 }
 
-.color-red {
+[red] {
   color: rgb(255, 58, 58);
 }
 
-.color-green {
+
+
+[green] {
   color: rgb(79, 255, 52);
 }
 
-.color-blue {
+[blue] {
   color: rgb(60, 50, 255);
 }
 
-.color-light-blue {
+[light-blue] {
   color: rgb(31, 180, 255);
 }
 
-.color-yelow {
+[yelow] {
   color: rgb(253, 235, 35);
 }
 
-.color-orange {
+[orange] {
   color: rgb(253, 162, 35);
 }
 
-.color-grey {
+[grey] {
   color: rgb(160, 160, 160);
 }
 
-.color-purple {
+[purple] {
   color: rgb(244, 83, 255);
+}
+
+q::after{
+  content: "";
+}
+
+q::before{
+  content: "";
 }
 
 html {
