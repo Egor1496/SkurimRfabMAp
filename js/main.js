@@ -132,7 +132,7 @@ $(".filter-button").on("click", function (e) {
 	$(this).toggleClass("close");
 });
 
-if (localStorage.getItem("type").trim().length > 0) {
+if (localStorage.getItem("type")?.trim().length > 0) {
 	$(".filter-open-icon").show();
 	$(".filter-close-icon").hide();
 	$(".filter-item[data-type=" + localStorage.getItem("type") + "]").addClass("filter-item--active");
