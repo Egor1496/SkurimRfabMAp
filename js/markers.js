@@ -2632,7 +2632,7 @@ const listMarkers = [
 		title: "Башни Валтхейм (<q light-blue>10lvl</q>)",
 		description: "Бандиты <q green>4</q>-шт снаружи и <q green>13</q>-шт внутри. Много лучников.",
 		secondDescription: [
-			"<q red>Босс</q> Элси Спайкер <q light-blue>1000xp</q>. <br/> В конце моста. Электрический Боевой посох у босса.",
+			"<q red>Босс</q> Элси Спайкер <q light-blue>1000xp</q>. <br/>В конце моста. Электрический Боевой посох у босса.",
 			"<q yelow>Книга опыта</q>.",
 		],
 		type: "",

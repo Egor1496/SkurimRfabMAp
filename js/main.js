@@ -113,7 +113,7 @@ function createMarkers(canvas, element, applyTransform) {
 						return "\n" + str;
 					});
 
-				navigator.clipboard.writeText(MarkJSON.join() + ","); //mark.id
+				navigator.clipboard.writeText(mark.id); //MarkJSON.join() + ","
 			});
 
 			canvas.add(oImg);
