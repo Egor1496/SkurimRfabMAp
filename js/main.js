@@ -46,7 +46,9 @@ const scaleIcon = (oImg, mark, isSacle) => {
 };
 
 function createMarkers(canvas, element, applyTransform) {
-	listMarkers.forEach((mark) => {
+	const filterList = listMarkers.filter((el) => el.type === localStorage.getItem("type"));
+
+	filterList.forEach((mark) => {
 		fabric.Image.fromURL(`image/icon/${mark?.nameIcon || "circle"}.${mark?.formatIcon || "svg"}`, (oImg) => {
 			const modal = $(".modal-wrap"),
 				title = modal.find(".title"),
@@ -121,3 +123,24 @@ function createMarkers(canvas, element, applyTransform) {
 		});
 	});
 }
+
+$(".filter-button").on("click", function (e) {
+	$(this).toggleClass("close");
+});
+
+$(".filter-item[data-type=" + (localStorage.getItem("type") || "1") + "]").addClass("filter-item--active");
+
+$(".filter-item")
+	.not(".filter-item--active")
+	.on("click", function (e) {
+		$(".filter-item").removeClass("filter-item--active");
+		$(this).addClass("filter-item--active");
+		localStorage.setItem("type", $(this).data("type"));
+		location.reload();
+	});
+
+$(".filter-item--active").on("click", (e) => {
+	$(".filter-item").removeClass("filter-item--active");
+	localStorage.setItem("type", "");
+	location.reload();
+});

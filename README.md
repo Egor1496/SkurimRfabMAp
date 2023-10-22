@@ -111,6 +111,7 @@ PalaceoftheKings - Дворец королей (Palace of the Kings)
 MistveilKeep - Крепость тумана (Mistveil Keep)
 BluePalace - Синий дворец
 
+Star - звездочка.
 bandit - Бандиты.
 Campsite - Лагерь (Camp)
 Cave - Пещера (Cave)

@@ -60,6 +60,7 @@ html {
   height: 100%;
   margin: 0;
   padding: 0;
+  font-family: 'Arimo-Medium';
 }
 
 body {
@@ -68,7 +69,7 @@ body {
   margin: 0;
   padding: 0;
   color: white;
-  background-color: rgba(53, 53, 53, 0.783)
+  background-color: #c9d2d7
 }
 
 .canvas-container {
@@ -78,8 +79,8 @@ body {
   top: 50%;
   width: 100%;
   height: 100%;
-  border: 4px solid black;
-  /* border-radius: 10px; */
+  border: 4px solid #6b6159;
+  border-radius: 2px;
   transform: translate(-50%, -50%);
 }
 
@@ -123,4 +124,52 @@ body {
 .item-info {
   font-size: 14px;
   font-family: 'Arimo-Italic';
+}
+
+.filter-wrap{
+  z-index: 20;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+}
+
+.filter-button{
+  width: 50px;
+  height: 50px;
+}
+
+.filter-button.close + .filter-list{
+  display: none;
+}
+
+.filter-button img{
+  width: 30px;
+}
+
+.filter-button img:hover{
+  cursor: pointer;
+}
+
+.filter-list{
+  position: absolute;
+  left: 33px;
+  top: 3px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 2px solid #929292;
+}
+
+.filter-item{
+  padding: 5px 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.filter-item--active{
+  background-color: #353434;
+}
+
+.filter-item:hover{
+  cursor: pointer;
+  background-color: #353434;
 }
