@@ -46,7 +46,11 @@ const scaleIcon = (oImg, mark, isSacle) => {
 };
 
 function createMarkers(canvas, element, applyTransform) {
-	const filterList = listMarkers.filter((el) => el.type === localStorage.getItem("type"));
+	let filterList;
+	if (localStorage.getItem("type").trim().length > 0) filterList = listMarkers.filter((el) => el.type === localStorage.getItem("type"));
+	else {
+		filterList = listMarkers;
+	}
 
 	filterList.forEach((mark) => {
 		fabric.Image.fromURL(`image/icon/${mark?.nameIcon || "circle"}.${mark?.formatIcon || "svg"}`, (oImg) => {

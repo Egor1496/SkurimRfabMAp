@@ -38,7 +38,6 @@
 const listMarkers = [
 	{
 		title: "Солитьюд",
-		type: "castle",
 		nameIcon: "Solitude",
 		id: "id1",
 		scale: 0.5,
@@ -47,7 +46,6 @@ const listMarkers = [
 	},
 	{
 		title: "Синий дворец",
-		type: "castle",
 		nameIcon: "BluePalace",
 		id: "id2",
 		scale: 0.5,
@@ -56,7 +54,6 @@ const listMarkers = [
 	},
 	{
 		title: "Рифтен",
-		type: "castle",
 		nameIcon: "Riften",
 		id: "id3",
 		scale: 0.5,
@@ -65,7 +62,6 @@ const listMarkers = [
 	},
 	{
 		title: "Крепость Миствейл",
-		type: "castle",
 		nameIcon: "MistveilKeep",
 		id: "id4",
 		scale: 0.5,
@@ -74,7 +70,6 @@ const listMarkers = [
 	},
 	{
 		title: "Коллегия винтерхолда",
-		type: "castle",
 		nameIcon: "CollegeofWinterhold",
 		id: "id5",
 		scale: 0.5,
@@ -83,7 +78,6 @@ const listMarkers = [
 	},
 	{
 		title: "Винтерхолд",
-		type: "castle",
 		nameIcon: "Winterhold",
 		id: "id6",
 		scale: 0.5,
@@ -92,7 +86,6 @@ const listMarkers = [
 	},
 	{
 		title: "Подкаменная крепость",
-		type: "castle",
 		nameIcon: "UnderstoneKeep",
 		id: "id7",
 		scale: 0.5,
@@ -101,7 +94,6 @@ const listMarkers = [
 	},
 	{
 		title: "Маркарт",
-		type: "castle",
 		nameIcon: "Markarth",
 		id: "id8",
 		scale: 0.5,
@@ -110,7 +102,6 @@ const listMarkers = [
 	},
 	{
 		title: "Фолкрит",
-		type: "castle",
 		nameIcon: "Falkreath",
 		id: "id9",
 		scale: 0.5,
@@ -119,7 +110,6 @@ const listMarkers = [
 	},
 	{
 		title: "Королевский дворец",
-		type: "castle",
 		nameIcon: "PalaceoftheKings",
 		id: "id10",
 		scale: 0.5,
@@ -129,7 +119,6 @@ const listMarkers = [
 
 	{
 		title: "Данстар",
-		type: "castle",
 		nameIcon: "Dawnstar",
 		id: "id10.0",
 		scale: 0.5,
@@ -139,7 +128,6 @@ const listMarkers = [
 
 	{
 		title: "Виндхельм",
-		type: "castle",
 		nameIcon: "Windhelm",
 		id: "id11",
 		scale: 0.5,
@@ -148,7 +136,6 @@ const listMarkers = [
 	},
 	{
 		title: "Замок ярла",
-		type: "castle",
 		nameIcon: "JarlResidence",
 		id: "id12",
 		scale: 0.5,
@@ -157,7 +144,6 @@ const listMarkers = [
 	},
 	{
 		title: "Вайтран",
-		type: "castle",
 		nameIcon: "Whiterun",
 		id: "id13",
 		scale: 0.5,
@@ -166,7 +152,6 @@ const listMarkers = [
 	},
 	{
 		title: "Морфал",
-		type: "castle",
 		nameIcon: "Morthal",
 		id: "id14",
 		scale: 0.5,
@@ -2642,7 +2627,7 @@ const listMarkers = [
 			"<q red>Босс</q> Элси Спайкер <q light-blue>1000xp</q>. В конце моста. <br/> &nbsp;  -Электрический Боевой посох.",
 			"<q yelow>Книга опыта</q>.",
 		],
-		type: "",
+		type: "bandit",
 		nameIcon: "NordicTower",
 		id: "id245",
 		top: 596.7577056884766,
