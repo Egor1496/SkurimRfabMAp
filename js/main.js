@@ -47,7 +47,7 @@ const scaleIcon = (oImg, mark, isSacle) => {
 
 function createMarkers(canvas, element, applyTransform) {
 	let filterList;
-	if (localStorage.getItem("type").trim().length > 0) filterList = listMarkers.filter((el) => el.type === localStorage.getItem("type"));
+	if (localStorage.getItem("type")?.trim().length > 0) filterList = listMarkers.filter((el) => el.type === localStorage.getItem("type"));
 	else {
 		filterList = listMarkers;
 	}
