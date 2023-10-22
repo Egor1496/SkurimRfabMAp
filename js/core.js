@@ -137,18 +137,18 @@ window.onload = (e) => {
 			mouseDown = false;
 		});
 
-		// Масштабирование колесом мыши
-		container.mousewheel(function (event, delta, deltaX, deltaY) {
-			var offset = element.offset(), // положение холста на странице
-				centerX = event.pageX - offset.left, // координата x центра масштабирования
-				centerY = event.pageY - offset.top, // координата y центра масштабирования
-				zoomStep = Math.pow(1.1, deltaY); // шаг масштабирования, удобный для пользователя.
-			baseZoom += deltaY * 0.13;
-			setScale(scale * zoomStep, centerX, centerY);
+		// // Масштабирование колесом мыши
+		// container.mousewheel(function (event, delta, deltaX, deltaY) {
+		// 	var offset = element.offset(), // положение холста на странице
+		// 		centerX = event.pageX - offset.left, // координата x центра масштабирования
+		// 		centerY = event.pageY - offset.top, // координата y центра масштабирования
+		// 		zoomStep = Math.pow(1.1, deltaY); // шаг масштабирования, удобный для пользователя.
+		// 	baseZoom += deltaY * 0.13;
+		// 	setScale(scale * zoomStep, centerX, centerY);
 
-			// Отключим скроллирование страницы
-			event.preventDefault();
-		});
+		// 	// Отключим скроллирование страницы
+		// 	event.preventDefault();
+		// });
 	};
 
 	var bindContainerTouchEvents = function () {

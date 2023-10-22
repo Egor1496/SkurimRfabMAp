@@ -21,10 +21,10 @@
 //  "grey" rgb(160, 160, 160);
 //  "purple" rgb(244, 83, 255);
 
-// Типы меток
-// Пример: 'type: "bandit",'
+// Типы меток.
 // bandit - Бандиты
 // trash - Изгои
+// animal - Звери
 // giant - Великаны
 // daedric - Даэдра
 // dwemer - Двемеры
@@ -194,7 +194,9 @@ const listMarkers = [
 		left: 687,
 	},
 	{
-		title: "Хребет Острие Ножа",
+		title: "Хребет Острие Ножа (<q light-blue>10lvl</q>) (<q light-blue>30lvl</q>)",
+		description: "Бандиты <q green>9</q>-шт снаружи и <q green>6</q>-шт внутри. после 20лвл <q red>босс</q> по квесу.",
+		secondDescription: ["<q red>Босс</q> <q light-blue>-xp</q>. <br/>&nbsp; -Убегать и Бить.", "<q yelow>Лук</q>."],
 		type: "bandit",
 		nameIcon: "Campsite",
 		id: "id18",
@@ -348,10 +350,13 @@ const listMarkers = [
 		left: 415,
 	},
 	{
-		title: "Крепость Треснувший Бивень",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Крепость Треснувший Бивень (<q light-blue>20lvl</q>)",
+		description: "Бандиты <q green>4</q>-шт снаружи и <q green>3</q>-шт внутри.",
+		secondDescription: [
+			"<q red>Босс</q> Гунзул <q light-blue>4000xp</q>. <br/>&nbsp; -Сильные расскрутки и снижает броню. Запрыгивай на камень.",
+			"<q yelow>Орфей</q>, <q yelow>Свирепость</q>, <q yelow>книга опыта</q> <q green>2</q>-шт, <q yelow>Превосходное зелье ст</q>.",
+		],
+		type: "bandit",
 		nameIcon: "Fort",
 		id: "id33",
 		scale: 0.4,
@@ -1160,10 +1165,10 @@ const listMarkers = [
 		left: 768,
 	},
 	{
-		title: "Серозимняя застава",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Серозимняя застава (<q light-blue>10lvl</q>)",
+		description: "пару тролей. Используй огонь.",
+		secondDescription: ["<q yelow>Лук Фроки</q>, <q yelow>Книга опыта</q>."],
+		type: "animal",
 		nameIcon: "Cave",
 		id: "id109",
 		scale: 0.4,
@@ -1406,26 +1411,15 @@ const listMarkers = [
 		left: 1144,
 	},
 	{
-		title: "Соловьиный зал",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Лощина Сломанный шлем (<q light-blue>10lvl</q>)",
+		description: "Бандиты <q green>2</q>-шт снаружи и <q green>3</q>-шт внутри.",
+		secondDescription: ["<q yelow>Книга опыта</q>."],
+		type: "bandit",
 		nameIcon: "Cave",
 		id: "id130",
 		scale: 0.4,
 		top: 929,
 		left: 1235,
-	},
-	{
-		title: "Лощина Сломанный Шлем",
-		description: "",
-		secondDescription: [""],
-		type: "",
-		nameIcon: "Cave",
-		id: "id131",
-		scale: 0.4,
-		top: 924,
-		left: 1263,
 	},
 	{
 		title: "Пруд Чистых Сосен",
@@ -1934,10 +1928,10 @@ const listMarkers = [
 		left: 548.3909759521484,
 	},
 	{
-		title: "Вечнозеленая роща",
-		description: "",
+		title: "Вечнозеленая роща (<q light-blue>20lvl</q>)",
+		description: "Волк, <q green>2</q>-шт спригана.",
 		secondDescription: [""],
-		type: "",
+		type: "animal",
 		nameIcon: "Grove",
 		id: "id178",
 		top: 798.6619873046875,
@@ -2581,10 +2575,10 @@ const listMarkers = [
 		left: 320.30284118652344,
 	},
 	{
-		title: "Башня Баннермист",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Башня Баннермист (<q light-blue>0lvl</q>)",
+		description: "Бандиты <q green>3</q>-шт.",
+		secondDescription: ["<q yelow>Книга опыта</q>, <q light-blue>бандиты</q> на опыт."],
+		type: "bandit",
 		nameIcon: "NordicTower",
 		id: "id241",
 		top: 785.7577056884766,
@@ -2699,10 +2693,10 @@ const listMarkers = [
 		left: 576.3028411865234,
 	},
 	{
-		title: "Придорожные руины",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Придорожные руины (<q light-blue>20lvl</q>)",
+		description: "Cприган",
+		secondDescription: ["Используй огонь"],
+		type: "animal",
 		nameIcon: "NordicDwelling",
 		id: "id252",
 		scale: 0.4,
@@ -2846,10 +2840,10 @@ const listMarkers = [
 		left: 1069.3028411865234,
 	},
 	{
-		title: "Крушение 'Зимней войны'",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Крушение 'Зимней войны' (<q light-blue>0lvl</q>)",
+		description: "Бандиты <q green>3</q>-шт. Около корабля плавает страшная рыба.",
+		secondDescription: ["<q light-blue>Бандиты</q> на опыт."],
+		type: "bandit",
 		nameIcon: "Shipwreck",
 		id: "id266",
 		top: 380.75770568847656,
@@ -2964,25 +2958,77 @@ const listMarkers = [
 		top: 803.0000009536743,
 		left: 605.4285774230957,
 	},
+
+	{
+		title: "Сосновая застава (<q light-blue>10lvl</q>)",
+		description: "Бандиты <q green>18</q>-шт внутри.",
+		secondDescription: [
+			"<q red>Босс</q> Ригель Сильная Рука <q light-blue>1000xp</q>. Cпит в конце локации.<br/>&nbsp; -Снижает скорость передвежения и стамину.",
+			"<q yelow>Щит доблесть</q>.",
+		],
+		type: "bandit",
+		nameIcon: "Shack",
+		scale: 0.3,
+		id: "id277",
+		top: 827.3008003234863,
+		left: 604.8672008514404,
+	},
+	{
+		title: "Лагерь Валус (<q light-blue>10lvl</q>)",
+		description: "Бандиты <q green>5</q>-шт.",
+		secondDescription: [""],
+		type: "bandit",
+		nameIcon: "Campsite",
+		scale: 0.3,
+		id: "id278",
+		top: 384.0000009536743,
+		left: 1125.4285774230957,
+	},
+	{
+		title: "Некромант (<q light-blue>20lvl</q>)",
+		description: "Сильный маг ночью.",
+		secondDescription: [""],
+		type: "magic",
+		nameIcon: "Star",
+		scale: 0.3,
+		id: "id279",
+		top: 829.0000009536743,
+		left: 469.4285774230957,
+	},
+	{
+		title: "Лагерь береговой камень (<q light-blue>10lvl</q>)",
+		description: "Бандиты <q green>5</q>-шт",
+		secondDescription: [""],
+		type: "bandit",
+		nameIcon: "Campsite",
+		scale: 0.3,
+		id: "id280",
+		top: 784.0000009536743,
+		left: 429.4285774230957,
+	},
+	{
+		title: "Лагерь Желтая Изгородь (<q light-blue>10lvl</q>)",
+		description: "Бандиты <q green>8</q>-шт.",
+		secondDescription: [""],
+		type: "bandit",
+		nameIcon: "Campsite",
+		scale: 0.3,
+		id: "id281",
+		top: 547.0000009536743,
+		left: 813.4285774230957,
+	},
+	{
+		title: "Бандиты (<q light-blue>0lvl</q>)",
+		description: "<q green>2</q>-шт.",
+		secondDescription: [""],
+		type: "bandit",
+		nameIcon: "bandit",
+		scale: 0.3,
+		id: "id282",
+		top: 906.0000009536743,
+		left: 1233.4285774230957,
+	},
 ];
-// _undiscovered - темная иконка
-
-// Whiterun | Whiterun_undiscovered - Вайтран (Whiterun)
-// Solitude | Solitude_undiscovered - Солитьюд (Solitude)
-// Riften | Riften_undiscovered - Рифтен (Riften)
-// Markarth - Маркарт (Markarth)
-// Winterhold - Винтерхолд (Winterhold)
-// Windhelm | Windhelm_undiscovered - Виндхельм (Windhelm)
-// Dawnstar | Dawnstar_undiscovered - Данстар (Dawnstar)
-// Morthal | Morthal_undiscovered - Морфал (Morthal)
-// Falkreath | Falkreath_undiscovered - Фолкрит (Falkreath)
-
-// JarlResidence - Замок ярла (Dragonsreach)
-// CollegeofWinterhold - Коллегия винтерхолда
-// UnderstoneKeep - Подземная крепость (Understone Keep)
-// PalaceoftheKings - Дворец королей (Palace of the Kings)
-// MistveilKeep - Крепость тумана (Mistveil Keep)
-// BluePalace - Синий дворец
 
 // bandit - Бандиты.
 // Campsite - Лагерь (Camp)

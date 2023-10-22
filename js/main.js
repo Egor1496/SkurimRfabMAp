@@ -20,7 +20,7 @@ const coppyObject = (top, left) => {
 			type: "",
 			nameIcon: "",
 			scale: 0.3,
-			id: "id${listMarkers.length + 1}",
+			id: "id--------------------------------------------------",
 			top: ${top},
 			left: ${left},
 		},
