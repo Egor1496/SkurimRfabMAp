@@ -132,7 +132,14 @@ $(".filter-button").on("click", function (e) {
 	$(this).toggleClass("close");
 });
 
-$(".filter-item[data-type=" + (localStorage.getItem("type") || "1") + "]").addClass("filter-item--active");
+if (localStorage.getItem("type").trim().length > 0) {
+	$(".filter-open-icon").show();
+	$(".filter-close-icon").hide();
+	$(".filter-item[data-type=" + localStorage.getItem("type") + "]").addClass("filter-item--active");
+} else {
+	$(".filter-close-icon").show();
+	$(".filter-open-icon").hide();
+}
 
 $(".filter-item")
 	.not(".filter-item--active")

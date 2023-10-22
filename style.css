@@ -138,6 +138,26 @@ body {
   height: 50px;
 }
 
+/* .filter-close-icon, .filter-open-icon{
+  display: none;
+}
+
+.filter-button .filter-close-icon{
+  display: block;
+}
+
+.filter-button .filter-open-icon{
+  display: none;
+}
+
+.filter-button.close .filter-open-icon{
+  display: block;
+}
+
+.filter-button.close .filter-close-icon{
+  display: none;
+} */
+
 .filter-button.close + .filter-list{
   display: none;
 }
