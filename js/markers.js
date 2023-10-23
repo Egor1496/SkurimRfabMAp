@@ -160,8 +160,8 @@ const listMarkers = [
 	},
 	{
 		title: "Бандиты",
-		description: "<q green>2</q>-шт.",
-		secondDescription: ["<q green>3</q>-шт. после открытия сундука."],
+		description: "<q green>2</q> и <q green>3</q> после открытия сундука.",
+		secondDescription: [""],
 		type: "bandit",
 		nameIcon: "bandit",
 		id: "id15",
@@ -171,7 +171,7 @@ const listMarkers = [
 	},
 	{
 		title: "Лагерь Тихих Лун (<q light-blue>10lvl</q>)",
-		description: "Бандиты <q green>6</q>-шт снаружи и <q green>3</q>-шт внутри.",
+		description: "Бандиты <q green>6</q> снаружи и <q green>3</q> внутри.",
 		secondDescription: ["<q red>Босс</q> Рон Ворон <q light-blue>1000xp</q>. <br/> &nbsp; -Щитовик бьет на бегу. Байти на арбалет."],
 		type: "bandit",
 		nameIcon: "Tomb",
@@ -182,7 +182,7 @@ const listMarkers = [
 	},
 	{
 		title: "Лагерь Чистых родников (<q light-blue>10lvl</q>)",
-		description: "Бандиты <q green>4</q>-шт снаружи и <q green>3</q>-шт внутри.",
+		description: "Бандиты <q green>4</q> снаружи и <q green>3</q> внутри.",
 		secondDescription: [
 			"<q red>Босс</q> Шаглак <q light-blue>1000xp</q>. В конце локации. <br/> &nbsp;  -Щитовик. Используй паралич или беги наружу.",
 			"Рецепт <q yelow>толченый бивень</q>.",
@@ -195,7 +195,7 @@ const listMarkers = [
 	},
 	{
 		title: "Хребет Острие Ножа (<q light-blue>10lvl</q>) (<q light-blue>30lvl</q>)",
-		description: "Бандиты <q green>9</q>-шт снаружи и <q green>6</q>-шт внутри. после 20лвл <q red>босс</q> по квесу.",
+		description: "Бандиты <q green>9</q> снаружи и <q green>6</q> внутри. после 20лвл <q red>босс</q> по квесу.",
 		secondDescription: ["<q red>Босс</q> <q light-blue>-xp</q>. <br/>&nbsp; -Убегать и Бить.", "<q yelow>Лук</q>."],
 		type: "bandit",
 		nameIcon: "Campsite",
@@ -205,7 +205,7 @@ const listMarkers = [
 	},
 	{
 		title: "Факельная шахта (<q light-blue>0lvl</q>)",
-		description: "Бандиты <q green>1</q>-шт снаружи и <q green>8</q>-шт внутри.",
+		description: "Бандиты <q green>1</q> снаружи и <q green>8</q> внутри.",
 		secondDescription: ["<q yelow>Книга опыта</q>."],
 		type: "bandit",
 		nameIcon: "Mine",
@@ -215,7 +215,7 @@ const listMarkers = [
 	},
 	{
 		title: "Оплот Змеиный Утес (<q light-blue>20lvl</q>)",
-		description: "Изгои <q green>5</q>-шт снаружи и <q green>3</q> внутри и ворожея.",
+		description: "Изгои <q green>5</q> снаружи и <q green>3</q> внутри и ворожея.",
 		secondDescription: ["<q light-blue>Предмет</q> на опыт, <q yelow>книга опыта</q>."],
 		type: "trash",
 		nameIcon: "Campsite",
@@ -225,7 +225,7 @@ const listMarkers = [
 	},
 	{
 		title: "Картспайр (<q light-blue>20lvl</q>)",
-		description: "Изгои <q green>3</q>-шт.",
+		description: "Изгои <q green>3</q>.",
 		secondDescription: ["<q yelow>Книга опыта</q>"],
 		type: "trash",
 		nameIcon: "Campsite",
@@ -235,7 +235,7 @@ const listMarkers = [
 	},
 	{
 		title: "Лагерь Картспайр (<q light-blue>20lvl</q>)",
-		description: "Изгои <q green>11</q>-шт.",
+		description: "Изгои <q green>11</q>.",
 		secondDescription: ["<q yelow>Книга опыта</q>."],
 		type: "trash",
 		nameIcon: "Campsite",
@@ -245,7 +245,7 @@ const listMarkers = [
 	},
 	{
 		title: "Теснина грабителя (<q light-blue>10lvl</q>)",
-		description: "Бандиты <q green>7</q>-шт.",
+		description: "Бандиты <q green>7</q>.",
 		secondDescription: [""],
 		type: "",
 		nameIcon: "Campsite",
@@ -255,7 +255,7 @@ const listMarkers = [
 	},
 	{
 		title: "Высота Драконий Мост (<q light-blue>10lvl</q>)",
-		description: "Изгои <q green>2</q>-шт.",
+		description: "Изгои <q green>2</q>.",
 		secondDescription: [""],
 		type: "trash",
 		nameIcon: "Campsite",
@@ -318,8 +318,8 @@ const listMarkers = [
 	},
 	{
 		title: "Сломанная башня (<q light-blue>20lvl</q>)",
-		description: "Изгои <q green>4</q>-шт снаружи и <q green>7</q>-шт внутри, руна элетр.",
-		secondDescription: ["<q yelow>Книга опыта</q> <q green>2</q>-шт, мастер. <q yelow>сундук</q> превосход. СТ."],
+		description: "Изгои <q green>4</q> снаружи и <q green>7</q> внутри, руна элетр.",
+		secondDescription: ["<q yelow>Книга опыта</q> <q green>2</q>, мастер. <q yelow>сундук</q> превосход. СТ."],
 		type: "trash",
 		nameIcon: "Fort",
 		id: "id30",
@@ -340,7 +340,7 @@ const listMarkers = [
 	},
 	{
 		title: "Форт Сангард (<q light-blue>20lvl</q>)",
-		description: "Изгои <q green>8</q>-шт снаружи. внутри пусто и мелкий лут.",
+		description: "Изгои <q green>8</q> снаружи. внутри пусто и мелкий лут.",
 		secondDescription: [""],
 		type: "trash",
 		nameIcon: "Fort",
@@ -351,10 +351,10 @@ const listMarkers = [
 	},
 	{
 		title: "Крепость Треснувший Бивень (<q light-blue>20lvl</q>)",
-		description: "Бандиты <q green>4</q>-шт снаружи и <q green>3</q>-шт внутри.",
+		description: "Бандиты <q green>4</q> снаружи и <q green>3</q> внутри.",
 		secondDescription: [
 			"<q red>Босс</q> Гунзул <q light-blue>4000xp</q>. <br/>&nbsp; -Сильные расскрутки и снижает броню. Запрыгивай на камень.",
-			"<q yelow>Орфей</q>, <q yelow>Свирепость</q>, <q yelow>книга опыта</q> <q green>2</q>-шт, <q yelow>Превосходное зелье ст</q>.",
+			"<q yelow>Орфей</q>, <q yelow>Свирепость</q>, <q yelow>книга опыта</q> <q green>2</q>, <q yelow>Превосходное зелье ст</q>.",
 		],
 		type: "bandit",
 		nameIcon: "Fort",
@@ -376,7 +376,7 @@ const listMarkers = [
 	},
 	{
 		title: "Форт Греймур (<q light-blue>10lvl</q>)",
-		description: "Бандиты <q green>4</q>-шт снаружи и <q green>8</q>-шт внутри.",
+		description: "Бандиты <q green>4</q> снаружи и <q green>8</q> внутри.",
 		secondDescription: ["<q yelow>Книга опыта</q>."],
 		type: "",
 		nameIcon: "Fort",
@@ -453,7 +453,7 @@ const listMarkers = [
 	},
 	{
 		title: "Хелген (<q light-blue>10lvl</q>)",
-		description: "Бандиты <q green>5</q>-шт снаружи и <q green>7</q>-шт внутри после босса <q green>2</q> паука и медведь.",
+		description: "Бандиты <q green>5</q> снаружи и <q green>7</q> внутри после босса <q green>2</q> паука и медведь.",
 		secondDescription: [
 			"<q red>Босс</q> До`Скахар <q light-blue>1000xp</q>. В конце локации. <br/> &nbsp; -Копье. Используй паралич, или крутись вокруг, можно выбежать из локации.",
 			"<q yelow>Кольцо льва</q>, 5лвл <q yelow>банки</q> в бочке.",
@@ -511,8 +511,8 @@ const listMarkers = [
 	},
 	{
 		title: "Висельная Скала (<q light-blue>20lvl</q>)",
-		description: "Воины Серебряной руки <q green>3</q>-шт снаружи и <q green>8</q>-шт внутри.",
-		secondDescription: ["<q yelow>Книги опыта</q> <q green>2</q>-шт."],
+		description: "Воины Серебряной руки <q green>3</q> снаружи и <q green>8</q> внутри.",
+		secondDescription: ["<q yelow>Книги опыта</q> <q green>2</q>."],
 		type: "bandit",
 		nameIcon: "Fort",
 		id: "id47",
@@ -522,7 +522,7 @@ const listMarkers = [
 	},
 	{
 		title: "Форт Амол (<q light-blue>20lvl</q>)",
-		description: "Маги <q green>4</q>-шт снаружи и <q green>6</q>-шт внутри. Пасивные снаружи",
+		description: "Маги <q green>4</q> снаружи и <q green>6</q> внутри. Пасивные снаружи",
 		secondDescription: ["&nbsp;-Сильные маги разрушения."],
 		type: "magic",
 		nameIcon: "Fort",
@@ -544,7 +544,7 @@ const listMarkers = [
 	},
 	{
 		title: "Тревская застава (<q light-blue>20lvl</q>)",
-		description: "Бандиты <q green>5</q>-шт снаружи и <q green>5</q>-шт внутри.",
+		description: "Бандиты <q green>5</q> снаружи и <q green>5</q> внутри.",
 		secondDescription: [
 			"<q red>Босс</q> Фьела <q light-blue>3000xp</q> в конце локации. <br/>&nbsp; -Сильный воин с щитом, Cбивает с ног, резисты к холоду.",
 		],
@@ -568,7 +568,7 @@ const listMarkers = [
 	},
 	{
 		title: "Форт Гринвол (<q light-blue>10lvl</q>)",
-		description: "Бандиты <q green>3</q>-шт снаружи, <q green>4</q>-шт внутри и <q green>3</q>-шт паука.",
+		description: "Бандиты <q green>3</q> снаружи, <q green>4</q> внутри и <q green>3</q> паука.",
 		secondDescription: [""],
 		type: "bandit",
 		nameIcon: "Fort",
@@ -713,7 +713,7 @@ const listMarkers = [
 	},
 	{
 		title: "Грот Сломанное Весло (<q light-blue>20lvl</q>)",
-		description: "Бандиты <q green>12</q>-шт. Много ядомагов-автоматчиков накладывают долгое отравление.",
+		description: "Бандиты <q green>12</q>. Много ядомагов-автоматчиков накладывают долгое отравление.",
 		secondDescription: [
 			"<q red>Босс</q> Джарира <q light-blue>3000xp</q> по квесут. <br/>&nbsp; -Cильный лучник с огне/гроз стрелами.",
 			"<q red>Босс</q> Харгар <q light-blue>3000xp</q>. Двуруч в коне локации. <br/>&nbsp; -Быстрый, сбивает с ног, ест СТ.",
@@ -860,7 +860,7 @@ const listMarkers = [
 	},
 	{
 		title: "Пещера Говорящие Холмы (<q light-blue>10lvl</q>)",
-		description: "Бандиты <q green>2</q>-шт снаружи и Бандиты <q green>7</q>-шт внутри.",
+		description: "Бандиты <q green>2</q> снаружи и Бандиты <q green>7</q> внутри.",
 		secondDescription: ["<q light-blue>Предмет</q> на опыт в сундуке."],
 		type: "",
 		nameIcon: "Cave",
@@ -904,7 +904,7 @@ const listMarkers = [
 	},
 	{
 		title: "Приют Редорана (<q light-blue>0lvl</q>)",
-		description: "Бандиты <q green>3</q>-шт и собака внутри.",
+		description: "Бандиты <q green>3</q> и собака внутри.",
 		secondDescription: ["<q light-blue>Меч Армена</q>, <q yelow>книга опыта</q>."],
 		type: "",
 		nameIcon: "Cave",
@@ -915,7 +915,7 @@ const listMarkers = [
 	},
 	{
 		title: "Логово плута (<q light-blue>10lvl</q>)",
-		description: "Бандиты <q green>1</q>-шт cнаружи и <q green>11</q>-шт внутри.",
+		description: "Бандиты <q green>1</q> cнаружи и <q green>11</q> внутри.",
 		secondDescription: ["<q yelow>Книга опыта</q>."],
 		type: "",
 		nameIcon: "Cave",
@@ -937,7 +937,7 @@ const listMarkers = [
 	},
 	{
 		title: "Оротхейм (<q light-blue>10lvl</q>)",
-		description: "Бандиты <q green>5</q>-шт внутри.",
+		description: "Бандиты <q green>5</q> внутри.",
 		secondDescription: ["Мастер. сундук с <q yelow>броней</q> 'странствуещего рыцаря', <br/> <q yelow>книга опыта</q>."],
 		type: "bandit",
 		nameIcon: "Cave",
@@ -981,7 +981,7 @@ const listMarkers = [
 	},
 	{
 		title: "Оплот Прыжок Брюсы (<q light-blue>20lvl</q>)",
-		description: "Изгои <q green>2</q>-шт снаружи и <q green>2</q>-шт внутри.",
+		description: "Изгои <q green>2</q> снаружи и <q green>2</q> внутри.",
 		secondDescription: ["<q yelow>Книга опыта</q>."],
 		type: "trash",
 		nameIcon: "Cave",
@@ -992,9 +992,8 @@ const listMarkers = [
 	},
 	{
 		title: "Пещера Отвесный Утес (<q light-blue>20lvl</q>)",
-		description:
-			"Изгои <q green>3</q>-шт снаружи и <q green>4</q>-шт внутри потом <q green>4</q>-шт внутри и <q green>2</q>-шт ворожеи (квест с мелкой)",
-		secondDescription: ["<q yelow>Книга опыта</q> <q green>3</q>-шт, <q yelow>глаз мелки</q>, <q yelow>веревское сердце</q>."],
+		description: "Изгои <q green>3</q> снаружи и <q green>4</q> внутри потом <q green>4</q> внутри и <q green>2</q> ворожеи (квест с мелкой)",
+		secondDescription: ["<q yelow>Книга опыта</q> <q green>3</q>, <q yelow>глаз мелки</q>, <q yelow>веревское сердце</q>."],
 		type: "trash",
 		nameIcon: "Cave",
 		id: "id91",
@@ -1037,7 +1036,7 @@ const listMarkers = [
 	},
 	{
 		title: "Озерный утес (<q light-blue>20lvl</q>)",
-		description: "Изгои над пещерой <q green>3</q>-шт и <q yelow>Книга опыта</q>.",
+		description: "Изгои над пещерой <q green>3</q> и <q yelow>Книга опыта</q>.",
 		secondDescription: [""],
 		type: "",
 		nameIcon: "Cave",
@@ -1159,7 +1158,7 @@ const listMarkers = [
 	},
 	{
 		title: "Приречная застава (<q light-blue>10lvl</q>)",
-		description: "Бандиты. <q green>2</q>-шт снаружи и <q green>7</q>-шт внутри.",
+		description: "Бандиты. <q green>2</q> снаружи и <q green>7</q> внутри.",
 		secondDescription: [
 			"<q red>Босс</q> Ульфр Слепой <q light-blue>1000xp</q>. В начале локации. <br/> &nbsp;  -Пассивный рукопашник. Используй паралич.",
 			"<q red>Босс</q> Хайфар Железная Рука <q light-blue>1000xp</q>. После локации. <br/> &nbsp;  -Двуручь cтоит спиной, сбивает с ног, залезь на стол.",
@@ -1195,10 +1194,10 @@ const listMarkers = [
 	},
 	{
 		title: "Убежище Потерянный Нож (<q light-blue>10lvl</q>)",
-		description: "Бандиты <q green>20</q>-шт внутри.",
+		description: "Бандиты <q green>20</q> внутри.",
 		secondDescription: [
 			"<q red>Босс</q> Халвар Нетрезвый <q light-blue>3000xp</q>. <br/>&nbsp; -Замедляет передвежение.",
-			"<q yelow>Книга опыта</q> <q green>2</q>-шт, <q yelow>молот опъянения</q>.",
+			"<q yelow>Книга опыта</q> <q green>2</q>, <q yelow>молот опъянения</q>.",
 		],
 		type: "bandit",
 		nameIcon: "Cave",
@@ -1422,7 +1421,7 @@ const listMarkers = [
 	},
 	{
 		title: "Лощина Сломанный шлем (<q light-blue>10lvl</q>)",
-		description: "Бандиты <q green>2</q>-шт снаружи и <q green>3</q>-шт внутри.",
+		description: "Бандиты <q green>2</q> снаружи и <q green>3</q> внутри.",
 		secondDescription: ["<q yelow>Книга опыта</q>."],
 		type: "bandit",
 		nameIcon: "Cave",
@@ -1477,7 +1476,7 @@ const listMarkers = [
 	},
 	{
 		title: "Кратер Драконий Зуб (<q light-blue>20lvl</q>)",
-		description: "Изгои <q green>2</q>-шт и ворожея.",
+		description: "Изгои <q green>2</q> и ворожея.",
 		secondDescription: ["<q yelow>Слово</q> элементарая ярость, мастер <q yelow>сундук</q> много камней."],
 		type: "trash",
 		nameIcon: "Dragon",
@@ -1675,7 +1674,7 @@ const listMarkers = [
 	},
 	{
 		title: "Ральдбтхар (<q light-blue>10lvl</q>) (<q light-blue>30lvl</q>)",
-		description: "Бандиты <q green>3</q>-шт снаружи и <q green>7</q>-шт внутри дальше <q red>двемеры</q>.",
+		description: "Бандиты <q green>3</q> снаружи и <q green>7</q> внутри дальше <q red>двемеры</q>.",
 		secondDescription: [
 			"<q red>Босс</q> Ален Дюфон <q light-blue>1000xp</q>. <br/>&nbsp; -Быстрый, удары молота замедляют игрока. Не лови удары, просто уворачивайся.",
 			"<q yelow>Проклятье Эгиды</q>, <q yelow>Книга опыта</q>.",
@@ -1939,7 +1938,7 @@ const listMarkers = [
 	},
 	{
 		title: "Вечнозеленая роща (<q light-blue>20lvl</q>)",
-		description: "Волк, <q green>2</q>-шт спригана.",
+		description: "Волк, <q green>2</q> спригана.",
 		secondDescription: [""],
 		type: "animal",
 		nameIcon: "Grove",
@@ -2129,7 +2128,7 @@ const listMarkers = [
 	},
 	{
 		title: "Шахта колскеггр (<q light-blue>20lvl</q>)",
-		description: "Изгои <q green>3</q>-шт снаружи и <q green>5</q>-шт внутри.",
+		description: "Изгои <q green>3</q> снаружи и <q green>5</q> внутри.",
 		secondDescription: ["руда <q yelow>золото</q>."],
 		type: "trash",
 		nameIcon: "Mine",
@@ -2267,7 +2266,7 @@ const listMarkers = [
 	},
 	{
 		title: "Обитель Раннвейг (<q light-blue>20lvl</q>)",
-		description: "Призраки <q green>3</q>-шт cнаружи и <q green>5</q>-шт внутри.",
+		description: "Призраки <q green>3</q> cнаружи и <q green>5</q> внутри.",
 		secondDescription: [
 			"<q red>Босс</q> Сильд <q light-blue>4000xp</q>. В конце локации. <br/> &nbsp; -Бсыстро выпускает заклинания высасывания ХП, регенет ХП, призывает 3 ледяных змеев каждые 30сек.",
 			"<q yelow>Кольцо Сильда</q>, <q yelow>камень</q> на +5 веса, <q yelow>книга опыта</q>.",
@@ -2402,9 +2401,9 @@ const listMarkers = [
 	},
 	{
 		title: "Оплот Потерянная Долина (<q light-blue>20lvl</q>)",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		description: "Изгои <q green>13</q> потом папаша и <q green>2</q> варажеи.",
+		secondDescription: ["Прыжок с моста <q light-blue>3000xp</q>, <q yelow>слово</q> бесплодность, <q yelow>веревское сердце</q> <q green>2</q>."],
+		type: "trash",
 		nameIcon: "Tomb",
 		scale: 0.4,
 		id: "id224",
@@ -2457,7 +2456,7 @@ const listMarkers = [
 	},
 	{
 		title: "Ветренный пик (<q light-blue>10lvl</q>)",
-		description: "Бандиты <q green>3</q>-шт снаружи и <q green>3</q>-шт внутри.",
+		description: "Бандиты <q green>3</q> снаружи и <q green>3</q> внутри.",
 		secondDescription: ["После бандосов большой паук, потом <q red>драугры</q>"],
 		type: "bandit",
 		nameIcon: "Tomb",
@@ -2566,7 +2565,7 @@ const listMarkers = [
 	},
 	{
 		title: "Утес Холодный Ветер (<q light-blue>20lvl</q>)",
-		description: "Изгои <q green>3</q>-шт и ворожея.",
+		description: "Изгои <q green>3</q> и ворожея.",
 		secondDescription: ["<q yelow>Книга опыта</q>."],
 		type: "trash",
 		nameIcon: "NordicTower",
@@ -2586,7 +2585,7 @@ const listMarkers = [
 	},
 	{
 		title: "Башня Баннермист (<q light-blue>0lvl</q>)",
-		description: "Бандиты <q green>3</q>-шт.",
+		description: "Бандиты <q green>3</q>.",
 		secondDescription: ["<q yelow>Книга опыта</q>, <q light-blue>бандиты</q> на опыт."],
 		type: "bandit",
 		nameIcon: "NordicTower",
@@ -2626,7 +2625,7 @@ const listMarkers = [
 	},
 	{
 		title: "Башни Валтхейм (<q light-blue>10lvl</q>)",
-		description: "Бандиты <q green>4</q>-шт снаружи и <q green>13</q>-шт внутри. Много лучников.",
+		description: "Бандиты <q green>4</q> снаружи и <q green>13</q> внутри. Много лучников.",
 		secondDescription: [
 			"<q red>Босс</q> Элси Спайкер <q light-blue>1000xp</q>. В конце моста. <br/> &nbsp;  -Электрический Боевой посох.",
 			"<q yelow>Книга опыта</q>.",
@@ -2693,7 +2692,7 @@ const listMarkers = [
 	},
 	{
 		title: "Привал Хамвира (<q light-blue>30lvl</q>)",
-		description: "<q green>3</q>-шт скелета и сильный <q red>драугр</q>.",
+		description: "<q green>3</q> скелета и сильный <q red>драугр</q>.",
 		secondDescription: ["<q yelow>Сундук</q> с эбонит. лутом."],
 		type: "draugry",
 		nameIcon: "NordicDwelling",
@@ -2759,7 +2758,7 @@ const listMarkers = [
 	},
 	{
 		title: "Руины Небесного храма (<q light-blue>20lvl</q>)",
-		description: "Скелеты <q green>4</q>-шт и Драугр.",
+		description: "Скелеты <q green>4</q> и Драугр.",
 		secondDescription: [" <q yelow>Книга опыта</q>, маст. сундук <q yelow>Магический щит</q>."],
 		type: "draugry",
 		nameIcon: "NordicDwelling",
@@ -2780,7 +2779,7 @@ const listMarkers = [
 	},
 	{
 		title: "Привередливый слоад (<q light-blue>10lvl</q>)",
-		description: "Бандиты <q green>2</q>-шт снаружи и <q green>5</q>-шт внутри.",
+		description: "Бандиты <q green>2</q> снаружи и <q green>5</q> внутри.",
 		secondDescription: ["<q yelow>Книга опыта</q>, <q yelow>Камень</q> на +5 веса."],
 		type: "bandit",
 		nameIcon: "Shipwreck",
@@ -2831,7 +2830,7 @@ const listMarkers = [
 
 	{
 		title: "Плащ Пилигрима (<q light-blue>10lvl</q>)",
-		description: "Бандиты <q green>9</q>-шт.",
+		description: "Бандиты <q green>9</q>.",
 		secondDescription: [""],
 		type: "bandit",
 		nameIcon: "Shipwreck",
@@ -2851,7 +2850,7 @@ const listMarkers = [
 	},
 	{
 		title: "Крушение 'Зимней войны' (<q light-blue>0lvl</q>)",
-		description: "Бандиты <q green>3</q>-шт. Около корабля плавает страшная рыба.",
+		description: "Бандиты <q green>3</q>. Около корабля плавает страшная рыба.",
 		secondDescription: ["<q light-blue>Бандиты</q> на опыт."],
 		type: "bandit",
 		nameIcon: "Shipwreck",
@@ -2871,7 +2870,7 @@ const listMarkers = [
 	},
 	{
 		title: "Лагерь",
-		description: "Бандиты <q green>3</q>-шт",
+		description: "Бандиты <q green>3</q>",
 		secondDescription: [""],
 		type: "bandit",
 		nameIcon: "bandit",
@@ -2882,7 +2881,7 @@ const listMarkers = [
 	},
 	{
 		title: "Лагерь",
-		description: "Бандиты <q green>2</q>-шт",
+		description: "Бандиты <q green>2</q>",
 		secondDescription: ["<q yelow>Книга опыта</q>."],
 		type: "bandit",
 		nameIcon: "bandit",
@@ -2893,7 +2892,7 @@ const listMarkers = [
 	},
 	{
 		title: "Лагерь Чужак (<q light-blue>10lvl</q>)",
-		description: "Бандиты <q green>6</q>-шт cнаружи и <q green>3</q>-шт внутри.",
+		description: "Бандиты <q green>6</q> cнаружи и <q green>3</q> внутри.",
 		secondDescription: [
 			"<q red>Босс</q> Уркар <q light-blue>1000xp</q>. В конце локации. <br/>&nbsp; -Двуруч. Паралич или беги на вышку.",
 			"<q yelow>Ожерелье Предков</q>.",
@@ -2906,7 +2905,7 @@ const listMarkers = [
 	},
 	{
 		title: "Лагерь Йофилганд (<q light-blue>0lvl</q>)",
-		description: "Бандиты <q green>3</q>-шт cнаружи и <q red>призраки</q> неподолеку.",
+		description: "Бандиты <q green>3</q> cнаружи и <q red>призраки</q> неподолеку.",
 		type: "bandit",
 		nameIcon: "Campsite",
 		id: "id271",
@@ -2915,7 +2914,7 @@ const listMarkers = [
 	},
 	{
 		title: "Лагерь Рыжая Лиса (<q light-blue>0lvl</q>)",
-		description: "Бандиты <q green>3</q>-шт.",
+		description: "Бандиты <q green>3</q>.",
 		secondDescription: [""],
 		type: "bandit",
 		nameIcon: "Campsite",
@@ -2926,7 +2925,7 @@ const listMarkers = [
 	},
 	{
 		title: "Лагерь Рыжая Лиса (<q light-blue>10lvl</q>)",
-		description: "Бандиты <q green>8</q>-шт.",
+		description: "Бандиты <q green>8</q>.",
 		secondDescription: [""],
 		type: "bandit",
 		nameIcon: "Campsite",
@@ -2937,7 +2936,7 @@ const listMarkers = [
 	},
 	{
 		title: "Пост Предателя (<q light-blue>0lvl</q>)",
-		description: "Бандиты <q green>3</q>-шт.",
+		description: "Бандиты <q green>3</q>.",
 		secondDescription: ["<q light-blue>Предмет</q> на опыт в сейфе."],
 		type: "bandit",
 		nameIcon: "Shack",
@@ -2948,7 +2947,7 @@ const listMarkers = [
 	},
 	{
 		title: "Бандиты (<q light-blue>0lvl</q>)",
-		description: "Бандиты <q green>3</q>-шт.",
+		description: "Бандиты <q green>3</q>.",
 		secondDescription: ["<q yelow>Книга опыта</q>."],
 		nameIcon: "bandit",
 		type: "bandit",
@@ -2959,7 +2958,7 @@ const listMarkers = [
 	},
 	{
 		title: "Некромант (<q light-blue>20lvl</q>)",
-		description: "<q green>1</q>-шт сильный маг появляется ночью.",
+		description: "Cильный маг появляется ночью.",
 		secondDescription: [""],
 		nameIcon: "Star",
 		type: "magic",
@@ -2971,7 +2970,7 @@ const listMarkers = [
 
 	{
 		title: "Сосновая застава (<q light-blue>10lvl</q>)",
-		description: "Бандиты <q green>18</q>-шт внутри.",
+		description: "Бандиты <q green>18</q> внутри.",
 		secondDescription: [
 			"<q red>Босс</q> Ригель Сильная Рука <q light-blue>1000xp</q>. Cпит в конце локации.<br/>&nbsp; -Снижает скорость передвежения и стамину.",
 			"<q yelow>Щит доблесть</q>.",
@@ -2985,7 +2984,7 @@ const listMarkers = [
 	},
 	{
 		title: "Лагерь Валус (<q light-blue>10lvl</q>)",
-		description: "Бандиты <q green>5</q>-шт.",
+		description: "Бандиты <q green>5</q>.",
 		secondDescription: [""],
 		type: "bandit",
 		nameIcon: "Campsite",
@@ -3000,14 +2999,14 @@ const listMarkers = [
 		secondDescription: [""],
 		type: "magic",
 		nameIcon: "Star",
-		scale: 0.3,
+		scale: 0.2,
 		id: "id279",
 		top: 829.0000009536743,
 		left: 469.4285774230957,
 	},
 	{
 		title: "Лагерь береговой камень (<q light-blue>10lvl</q>)",
-		description: "Бандиты <q green>5</q>-шт",
+		description: "Бандиты <q green>5</q>",
 		secondDescription: [""],
 		type: "bandit",
 		nameIcon: "Campsite",
@@ -3018,7 +3017,7 @@ const listMarkers = [
 	},
 	{
 		title: "Лагерь Желтая Изгородь (<q light-blue>10lvl</q>)",
-		description: "Бандиты <q green>8</q>-шт.",
+		description: "Бандиты <q green>8</q>.",
 		secondDescription: [""],
 		type: "bandit",
 		nameIcon: "Campsite",
@@ -3029,7 +3028,7 @@ const listMarkers = [
 	},
 	{
 		title: "Бандиты (<q light-blue>0lvl</q>)",
-		description: "<q green>2</q>-шт.",
+		description: "<q green>2</q>.",
 		secondDescription: [""],
 		type: "bandit",
 		nameIcon: "bandit",
@@ -3051,7 +3050,7 @@ const listMarkers = [
 	},
 	{
 		title: "Лагерь Хьолдаар",
-		description: "Бандиты <q green>3</q>-шт.",
+		description: "Бандиты <q green>3</q>.",
 		secondDescription: [""],
 		type: "bandit",
 		nameIcon: "Campsite",
@@ -3062,7 +3061,7 @@ const listMarkers = [
 	},
 	{
 		title: "Лагерь Бронин (<q light-blue>10lvl</q>)",
-		description: "Бандиты <q green>5</q>-шт снаружи.",
+		description: "Бандиты <q green>5</q> снаружи.",
 		secondDescription: ["<q red>Босс</q> Нарикус <q light-blue>1000xp</q>. <br/>&nbsp; -Дает сильное замедление."],
 		type: "bandit",
 		nameIcon: "Campsite",
@@ -3073,7 +3072,7 @@ const listMarkers = [
 	},
 	{
 		title: "Резиденция Черный Вереск (<q light-blue>10lvl</q>)",
-		description: "Бандиты <q green>2</q>-шт снаружи и <q green>4</q>-шт внутри.",
+		description: "Бандиты <q green>2</q> снаружи и <q green>4</q> внутри.",
 		secondDescription: [""],
 		type: "bandit",
 		nameIcon: "Shack",
@@ -3084,7 +3083,7 @@ const listMarkers = [
 	},
 	{
 		title: "Пещера Ноголомный Проход (<q light-blue>20lvl</q>)",
-		description: "Скелеты <q green>12</q>-шт и некромант. <q green>3</q> руны холода возле дверей.",
+		description: "Скелеты <q green>12</q> и некромант. <q green>3</q> руны холода возле дверей.",
 		secondDescription: [""],
 		type: "skelet",
 		nameIcon: "Cave",
@@ -3095,7 +3094,7 @@ const listMarkers = [
 	},
 	{
 		title: "Лагерь Ветер с Озера (<q light-blue>20lvl</q>)",
-		description: "Бандиты <q green>3</q>-шт и сприган.",
+		description: "Бандиты <q green>3</q> и сприган.",
 		secondDescription: [""],
 		type: "bandit",
 		nameIcon: "Campsite",
@@ -3106,7 +3105,7 @@ const listMarkers = [
 	},
 	{
 		title: "Темное братство (<q light-blue>20lvl</q>)",
-		description: "В локации боссы расположены по порядку, можно быстро убить всех по одному.",
+		description: "По квесту. В локации боссы расположены по порядку, можно быстро убить всех по одному.",
 		secondDescription: [
 			"<q red>Босс</q> Арнбьерн <q light-blue>2000xp</q>. <br/>&nbsp; -Сильный двуручник спит.",
 			"<q red>Босс</q> Визара <q light-blue>2000xp</q>. <br/>&nbsp; -Кинжальщик инвизник, умеет делать раскрутки.",
@@ -3119,12 +3118,12 @@ const listMarkers = [
 		nameIcon: "Shack",
 		scale: 0.3,
 		id: "id289",
-		top: 932.0000009536743,
-		left: 501.42857360839844,
+		top: 820.0000009536743,
+		left: 479.42857360839844,
 	},
 	{
 		title: "Лагерь Болотный лишайник (<q light-blue>10lvl</q>)",
-		description: "Бандиты <q green>3</q>-шт.",
+		description: "Бандиты <q green>3</q>.",
 		secondDescription: [""],
 		type: "bandit",
 		nameIcon: "Campsite",
@@ -3135,7 +3134,7 @@ const listMarkers = [
 	},
 	{
 		title: "Лагер перциус (<q light-blue>10lvl</q>)",
-		description: "Бандиты <q green>7</q>-шт.",
+		description: "Бандиты <q green>7</q>.",
 		secondDescription: [""],
 		type: "bandit",
 		nameIcon: "Campsite",

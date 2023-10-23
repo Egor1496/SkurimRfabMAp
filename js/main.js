@@ -64,13 +64,12 @@ function createMarkers(canvas, element, applyTransform) {
 			mark.description = mark?.description || "";
 			mark.secondDescription = mark?.secondDescription || [];
 
+			oImg.set("hasControls", false).set("hasBorders", false).set("cornerSize", 0);
+
 			scaleIcon(oImg, mark, true);
 
 			oImg.on("mouseover", function (opt) {
 				oImg
-					.set("hasControls", false)
-					.set("hasBorders", false)
-					.set("cornerSize", 0)
 					.scale(oImg.getObjectScaling().scaleX + 0.2)
 					.set("left", oImg.get("left") - 4)
 					.set("top", oImg.get("top") - 4);
@@ -121,6 +120,33 @@ function createMarkers(canvas, element, applyTransform) {
 					});
 
 				navigator.clipboard.writeText(mark.id); //MarkJSON.join() + ","
+
+				title.html("");
+				description.html("");
+				ul.html("");
+
+				title.html(mark?.title);
+				description.html(mark?.description);
+
+				mark?.secondDescription.forEach((description) => {
+					ul.html(ul.html() + `\n <li class="item-info">${description}</li>`);
+				});
+
+				const doc = document.documentElement,
+					scrollleft = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0),
+					scrolltop = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+
+				// console.log(scrollleft, scrolltop);
+
+				const modalLeft = element.offset().left + oImg.get("left") - modal.width() / 2 + 10 - scrollleft,
+					modaTop = element.offset().top + oImg.get("top") - modal.height() - scrolltop;
+
+				modal.css({ left: modalLeft });
+				modal.css({ top: modaTop });
+
+				if (ul.length > 1 || title.html().length > 0 || description.html().length > 0) {
+					modal.removeClass("close");
+				}
 			});
 
 			canvas.add(oImg);
