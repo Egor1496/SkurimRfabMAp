@@ -54,7 +54,7 @@ bandit - Бандиты
 trash - Изгои
 animal - Звери
 giant - Великаны
-daedric - Даэдра
+daedric - Дреморы
 dwemer - Двемеры
 falmer - Фламеры
 dragon - Драконы
