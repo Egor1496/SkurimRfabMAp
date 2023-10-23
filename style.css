@@ -17,8 +17,6 @@
   color: rgb(255, 58, 58);
 }
 
-
-
 [green] {
   color: rgb(79, 255, 52);
 }
@@ -36,7 +34,7 @@
 }
 
 [orange] {
-  color: rgb(253, 162, 35);
+  color: rgb(255, 145, 0);
 }
 
 [grey] {
@@ -138,26 +136,6 @@ body {
   height: 50px;
 }
 
-/* .filter-close-icon, .filter-open-icon{
-  display: none;
-}
-
-.filter-button .filter-close-icon{
-  display: block;
-}
-
-.filter-button .filter-open-icon{
-  display: none;
-}
-
-.filter-button.close .filter-open-icon{
-  display: block;
-}
-
-.filter-button.close .filter-close-icon{
-  display: none;
-} */
-
 .filter-button.close + .filter-list{
   display: none;
 }
@@ -174,6 +152,7 @@ body {
   position: absolute;
   left: 33px;
   top: 3px;
+  width: 145px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -181,6 +160,8 @@ body {
 }
 
 .filter-item{
+  display: flex;
+  justify-content: space-between;
   padding: 5px 10px;
   background-color: rgba(0, 0, 0, 0.8);
 }
