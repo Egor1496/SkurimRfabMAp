@@ -20,7 +20,7 @@ const coppyObject = (top, left) => {
 			type: "",
 			nameIcon: "",
 			scale: 0.3,
-			id: "id--------------------------------------------------",
+			id: "id----------",
 			top: ${top},
 			left: ${left},
 		},
@@ -67,8 +67,6 @@ function modal(isOpen = false, mark, element, oImg) {
 			scrollleft = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0),
 			scrolltop = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
 
-		// console.log(scrollleft, scrolltop);
-
 		const modalLeft = element.offset().left + oImg.get("left") - modal.width() / 2 + 10 - scrollleft,
 			modaTop = element.offset().top + oImg.get("top") - modal.height() - scrolltop;
 
@@ -85,8 +83,11 @@ function modal(isOpen = false, mark, element, oImg) {
 
 function createMarkers(canvas, element, applyTransform) {
 	let filterList;
-	if (localStorage.getItem("type")?.trim().length > 0) filterList = listMarkers.filter((el) => el.type === localStorage.getItem("type"));
-	else {
+	if (localStorage.getItem("type")?.trim().length > 0) {
+		filterList = listMarkers.filter((mark) => {
+			return Boolean(~mark.type?.trim().indexOf(localStorage.getItem("type")?.trim() || ""));
+		});
+	} else {
 		filterList = listMarkers;
 	}
 
