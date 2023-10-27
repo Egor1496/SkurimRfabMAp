@@ -1,14 +1,16 @@
 window.onload = (e) => {
 	let element = $("#canvas");
 
-	// const W = 1;
-	// H = 1;
+	const W = 1;
+	H = 1;
 
-	const W = ((window.innerWidth + 5) / element[0].width).toFixed(2),
-		H = ((window.innerHeight + 5) / element[0].height).toFixed(2);
+	// const W = (($("body").width() + 5) / element[0].width).toFixed(2),
+	// 	H = (($("body").height() + 5) / element[0].height).toFixed(2);
 
-	element[0].width = element[0].width * W;
-	element[0].height = element[0].height * H;
+	// element[0].width = element[0].width * W;
+	// element[0].height = element[0].height * H;
+
+	// console.log(window.innerWidth, window.innerHeight);
 
 	let canvas = new fabric.Canvas(element.get(0), {
 		selection: false, // возможность выбора группы
@@ -115,7 +117,9 @@ window.onload = (e) => {
 
 		container
 			.mouseup(function (e) {
-				coppyObject((e.pageY - baseTop) / baseZoom / H - element.offset().top, (e.pageX - baseLeft) / baseZoom / W - 15 - element.offset().left);
+				const h = (e.pageY - baseTop) / baseZoom - element.offset().top, // / H
+					w = (e.pageX - baseLeft) / baseZoom - element.offset().left; // / W - 15
+				coppyObject(h, w);
 			})
 			.mousemove(function (e) {
 				// Непосредственно перемещение
