@@ -13,8 +13,10 @@
 				<img src="image/filterOpen.svg" class="filter-open-icon" style="display: none" alt="" />
 			</div>
 			<ul class="filter-list">
-				<li class="filter-item" data-type="treasure">Ценности</li>
-				<li class="filter-item" data-type="boss">Боссы</li>
+				<div class="filter-list-wrap">
+					<li class="filter-item" data-type="loot">Лут</li>
+					<li class="filter-item" data-type="boss">Боссы</li>
+				</div>
 				<li class="filter-item" data-type="bandit">
 					Бандиты <span> <span light-blue>0</span>-<span light-blue>20</span></span>
 				</li>
@@ -54,7 +56,7 @@
 			</ul>
 		</div>
 
-		<canvas id="canvas" width="1160" height="550"></canvas>
+		<div class="canvas-wrap"><canvas id="canvas" width="1160" height="550"></canvas></div>
 
 		<div class="modal-wrap close">
 			<div class="modal">

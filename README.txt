@@ -63,7 +63,7 @@ giant - Великаны
 daedric - Дреморы
 dwemer - Двемеры
 falmer - Фалмеры
-dragon - Драконы
+dragon boss - Драконы
 magic - Маги
 vampire - Вампиры
 skelet - Скелеты и призраки

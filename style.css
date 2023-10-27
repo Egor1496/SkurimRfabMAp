@@ -71,12 +71,21 @@ body {
   overflow: hidden ;
 }
 
-.canvas-container {
+.canvas-wrap {
   z-index: 10;
   position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+
+.canvas-wrap:after{
+  content: 'ctrl and +, ctrl and r';
+  position: absolute;
+  left: 0px;
+  top: -50px;
+  display: block;
+  color:  #646869;
 }
 
 .modal-wrap {
@@ -152,6 +161,12 @@ body {
   padding: 0;
   list-style: none;
   border: 2px solid #929292;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.filter-list-wrap{
+  display: flex;
+  justify-content: space-around;
 }
 
 .filter-item{
@@ -159,7 +174,6 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 5px 10px;
-  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .filter-item--active{
