@@ -3365,7 +3365,7 @@ const listMarkers = [
 
 	{
 		title: "Бандиты (<q light-blue>0lvl</q>)",
-		description: "2",
+		description: "<q green>2</q>.",
 		secondDescription: [""],
 		type: "bandit",
 		nameIcon: "bandit",
@@ -3714,24 +3714,24 @@ const listMarkers = [
 	},
 
 	{
-		title: "------------------- (<q light-blue>25lvl</q>)",
-		description: "Призрак по квесту Фроки.",
+		title: "Квест Фроки (<q light-blue>25lvl</q>)",
+		description: "",
 		secondDescription: ["<q red>Босс</q> Дух Волка (<q light-blue>62lvl</q>) <q light-blue>5000xp</q>, Быстрый, накидывает кровотечение."],
-		type: "skelet",
-		nameIcon: "",
-		scale: 0.3,
+		type: "skelet animal boss",
+		nameIcon: "Sneg",
+		scale: 0.2,
 		id: "id332",
 		top: 812.0000009536743,
 		left: 578.4285736083984,
 	},
 
 	{
-		title: "------------------- (<q light-blue>25lvl</q>)",
-		description: "Призрак по квесту Фроки.",
+		title: "Квест Фроки (<q light-blue>25lvl</q>)",
+		description: "",
 		secondDescription: ["<q red>Босс</q>  Дух краба (<q light-blue>62lvl</q>) <q light-blue>5000xp</q>, больно бьет, блок поможет."],
-		type: "skelet",
-		nameIcon: "",
-		scale: 0.3,
+		type: "skelet animal boss",
+		nameIcon: "Sneg",
+		scale: 0.2,
 		id: "id333",
 		top: 612.0000009536743,
 		left: 434.42857360839844,

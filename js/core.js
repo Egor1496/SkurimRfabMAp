@@ -1,6 +1,12 @@
 window.onload = (e) => {
 	let element = $("#canvas");
 
+	const W = (window.innerWidth - 20) / element[0].width,
+		H = (window.innerHeight - 20) / element[0].height;
+
+	element[0].width = element[0].width * W;
+	element[0].height = element[0].height * H;
+
 	let canvas = new fabric.Canvas(element.get(0), {
 		selection: false, // возможность выбора группы
 		scale: 1, // масштаб по умолчанию
@@ -11,12 +17,12 @@ window.onload = (e) => {
 
 	let baseWidth = 0, // начальная ширина
 		baseHeight = 0, // начальная высота
-		baseScale = 0.5, // начальный масштаб
+		baseScale = 1, // начальный масштаб 0.5
 		width = 0, // текущая ширина
 		height = 0, // текущая высота
 		transX = 0, // текущее смещение по оси x
 		transY = 0, // текущее смещение по оси y
-		scale = 1; // текущий масштаб в целом
+		scale = 2; // текущий масштаб в целом
 
 	var applyTransform = function () {
 		var maxTransX, maxTransY, minTransX, minTransY, group;
@@ -254,7 +260,7 @@ window.onload = (e) => {
 		canvas.add(map);
 
 		// Добавить метки на карту
-		createMarkers(canvas, element, applyTransform);
+		createMarkers(canvas, element, applyTransform, W, H);
 
 		// Отмасштабируем, чтобы сразу видеть всё карту
 		curBaseScale = baseScale;

@@ -70,13 +70,14 @@ body {
   background-color: #c9d2d7
 }
 
+.canvas{
+}
+
 .canvas-container {
   z-index: 10;
   position: fixed;
   left: 50%;
   top: 50%;
-  width: 100%;
-  height: 100%;
   border: 2px solid #6b6159;
   border-radius: 2px;
   transform: translate(-50%, -50%);

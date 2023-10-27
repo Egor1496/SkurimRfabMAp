@@ -28,15 +28,15 @@ const coppyObject = (top, left) => {
 	navigator.clipboard.writeText(copy);
 };
 
-const scaleIcon = (oImg, mark, isSacle) => {
+const scaleIcon = (oImg, mark, isSacle, W, H) => {
 	if (isSacle) {
 		const scaleImg = mark?.scale || defaultScaleIcon,
 			leftImg = mark.left || 0,
 			topImg = mark.top || 0;
 		oImg
 			.scale(scaleImg)
-			.set("left", leftImg - (oImg.get("width") * scaleImg) / 2)
-			.set("top", topImg - (oImg.get("height") * scaleImg) / 2);
+			.set("left", (leftImg - (oImg.get("width") * scaleImg) / 2) * W)
+			.set("top", (topImg - (oImg.get("height") * scaleImg) / 2) * H);
 	} else {
 		oImg
 			.scale(oImg.getObjectScaling().scaleX - 0.2)
@@ -81,7 +81,7 @@ function modal(isOpen = false, mark, element, oImg) {
 	}
 }
 
-function createMarkers(canvas, element, applyTransform) {
+function createMarkers(canvas, element, applyTransform, W, H) {
 	let filterList;
 	if (localStorage.getItem("type")?.trim().length > 0) {
 		filterList = listMarkers.filter((mark) => {
@@ -100,7 +100,7 @@ function createMarkers(canvas, element, applyTransform) {
 
 			oImg.set("hasControls", false).set("hasBorders", false).set("cornerSize", 0);
 
-			scaleIcon(oImg, mark, true);
+			scaleIcon(oImg, mark, true, W, H);
 
 			oImg.on("mouseover", function (opt) {
 				oImg
