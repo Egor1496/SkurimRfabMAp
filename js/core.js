@@ -10,7 +10,7 @@ window.onload = (e) => {
 	// element[0].width = element[0].width * W;
 	// element[0].height = element[0].height * H;
 
-	// console.log(window.innerWidth, window.innerHeight);
+	// console.log($("body").width(), $("body").height());
 
 	let canvas = new fabric.Canvas(element.get(0), {
 		selection: false, // возможность выбора группы

@@ -3728,25 +3728,13 @@ const listMarkers = [
 	{
 		title: "Квест Фроки (<q light-blue>25lvl</q>)",
 		description: "",
-		secondDescription: ["<q red>Босс</q>  Дух краба (<q light-blue>62lvl</q>) <q light-blue>5000xp</q>, больно бьет, блок поможет."],
+		secondDescription: ["<q red>Босс</q> Дух краба (<q light-blue>62lvl</q>) <q light-blue>5000xp</q>, больно бьет, блок поможет."],
 		type: "skelet animal boss",
 		nameIcon: "Sneg",
 		scale: 0.2,
 		id: "id333",
 		top: 612.0000009536743,
 		left: 434.42857360839844,
-	},
-
-	{
-		title: "",
-		description: "",
-		secondDescription: [""],
-		type: "",
-		nameIcon: "",
-		scale: 0.3,
-		id: "id----------",
-		top: 210.93028259277344,
-		left: 585.4754180908203,
 	},
 ];
 // «»
