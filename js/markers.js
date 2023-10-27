@@ -3736,18 +3736,6 @@ const listMarkers = [
 		top: 612.0000009536743,
 		left: 434.42857360839844,
 	},
-
-	{
-		title: "",
-		description: "",
-		secondDescription: [""],
-		type: "",
-		nameIcon: "",
-		scale: 0.3,
-		id: "id----------",
-		top: 205.79839968681335,
-		left: 601.3679999113083,
-	},
 ];
 // «»
 // Star - звездочка.

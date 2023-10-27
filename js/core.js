@@ -115,10 +115,7 @@ window.onload = (e) => {
 
 		container
 			.mouseup(function (e) {
-				coppyObject(
-					((e.pageY - baseTop) / baseZoom / H).toFixed() - element.offset().top,
-					((e.pageX - baseLeft) / baseZoom / W - 15).toFixed() - element.offset().left
-				);
+				coppyObject((e.pageY - baseTop) / baseZoom / H - element.offset().top, (e.pageX - baseLeft) / baseZoom / W - 15 - element.offset().left);
 			})
 			.mousemove(function (e) {
 				// Непосредственно перемещение

@@ -99,12 +99,12 @@ body {
 }
 
 .title {
-  font-size: 18px;
+  font-size: 22px;
   font-family: 'Arimo-Medium';
 }
 
 .description {
-  font-size: 14px;
+  font-size: 18px;
   font-family: 'Arimo-Regular';
 }
 
@@ -117,7 +117,7 @@ body {
 }
 
 .item-info {
-  font-size: 14px;
+  font-size: 18px;
   font-family: 'Arimo-Italic';
 }
 
