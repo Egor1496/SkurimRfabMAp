@@ -67,7 +67,8 @@ body {
   margin: 0;
   padding: 0;
   color: white;
-  background-color: #c9d2d7
+  background-color: #c9d2d7;
+  overflow: hidden ;
 }
 
 .canvas{

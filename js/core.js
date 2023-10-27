@@ -1,8 +1,8 @@
 window.onload = (e) => {
 	let element = $("#canvas");
 
-	const W = (window.innerWidth - 20) / element[0].width,
-		H = (window.innerHeight - 20) / element[0].height;
+	const W = window.innerWidth / element[0].width,
+		H = window.innerHeight / element[0].height;
 
 	element[0].width = element[0].width * W;
 	element[0].height = element[0].height * H;

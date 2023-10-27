@@ -30,7 +30,7 @@ const coppyObject = (top, left) => {
 
 const scaleIcon = (oImg, mark, isSacle, W, H) => {
 	if (isSacle) {
-		const scaleImg = mark?.scale || defaultScaleIcon,
+		const scaleImg = mark?.scale * W || defaultScaleIcon * W,
 			leftImg = mark.left || 0,
 			topImg = mark.top || 0;
 		oImg
