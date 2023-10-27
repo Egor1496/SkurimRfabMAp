@@ -31,12 +31,12 @@ const coppyObject = (top, left) => {
 const scaleIcon = (oImg, mark, isSacle, W, H) => {
 	if (isSacle) {
 		const scaleImg = mark?.scale * W || defaultScaleIcon * W,
-			leftImg = mark.left || 0,
-			topImg = mark.top || 0;
+			leftImg = mark?.left || 0,
+			topImg = mark?.top || 0;
 		oImg
 			.scale(scaleImg)
-			.set("left", (leftImg - (oImg.get("width") * scaleImg) / 2) * W)
-			.set("top", (topImg - (oImg.get("height") * scaleImg) / 2) * H);
+			.set("left", (leftImg - (oImg.get("width") * scaleImg) / 2) * W * 1.027)
+			.set("top", (topImg - (oImg.get("height") * scaleImg) / 2) * H * 1.005);
 	} else {
 		oImg
 			.scale(oImg.getObjectScaling().scaleX - 0.2)

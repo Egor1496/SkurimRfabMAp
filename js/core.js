@@ -1,8 +1,11 @@
 window.onload = (e) => {
 	let element = $("#canvas");
 
-	const W = window.innerWidth / element[0].width,
-		H = window.innerHeight / element[0].height;
+	// const W = 1;
+	// H = 1;
+
+	const W = ((window.innerWidth + 5) / element[0].width).toFixed(2),
+		H = ((window.innerHeight + 5) / element[0].height).toFixed(2);
 
 	element[0].width = element[0].width * W;
 	element[0].height = element[0].height * H;
@@ -113,8 +116,8 @@ window.onload = (e) => {
 		container
 			.mouseup(function (e) {
 				coppyObject(
-					((e.pageY - baseTop) / baseZoom).toFixed() - element.offset().top,
-					((e.pageX - baseLeft) / baseZoom).toFixed() - element.offset().left
+					((e.pageY - baseTop) / baseZoom / H).toFixed() - element.offset().top,
+					((e.pageX - baseLeft) / baseZoom / W - 15).toFixed() - element.offset().left
 				);
 			})
 			.mousemove(function (e) {
