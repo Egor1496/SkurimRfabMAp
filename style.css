@@ -67,7 +67,7 @@ body {
   margin: 0;
   padding: 0;
   color: white;
-  background-color: #c9d2d7;
+  background-color: #101010;
   overflow: hidden ;
 }
 
@@ -93,9 +93,12 @@ body {
   position: fixed;
   left: 0;
   top: 0;
+  transition: 0.2s opacity;
+  opacity: 1;
 }
 
 .modal-wrap.close {
+  opacity: 0;
   display: none;
 }
 

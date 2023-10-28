@@ -4,18 +4,20 @@ window.onload = (e) => {
 	const W = 1;
 	H = 1;
 
-	// const W = (($("body").width() + 5) / element[0].width).toFixed(2),
-	// 	H = (($("body").height() + 5) / element[0].height).toFixed(2);
+	// const X = $("body").width() / element[0].width,
+	// 	H = $("body").height() / element[0].height;
+
+	// const W = X > H ? H : X;
 
 	// element[0].width = element[0].width * W;
-	// element[0].height = element[0].height * H;
+	// element[0].height = element[0].height * W;
 
 	// console.log($("body").width(), $("body").height());
 
 	let canvas = new fabric.Canvas(element.get(0), {
 		selection: false, // возможность выбора группы
 		scale: 1, // масштаб по умолчанию
-		// renderOnAddRemove: true, // авто-отрисовка
+		// renderOnAddRemove: false, // авто-отрисовка
 		moveCursor: "default", // сброс курсора
 		hoverCursor: "default", // сброс курсора
 	});
@@ -117,8 +119,10 @@ window.onload = (e) => {
 
 		container
 			.mouseup(function (e) {
-				const h = (e.pageY - baseTop) / baseZoom - element.offset().top, // / H
-					w = (e.pageX - baseLeft) / baseZoom - element.offset().left; // / W - 15
+				// const h = (e.pageY - baseTop) / baseZoom / H - element.offset().top, // / H
+				// 	w = (e.pageX - baseLeft) / baseZoom / W - element.offset().left; // / W - 15
+				const h = (e.pageY - baseTop) / baseZoom - element.offset().top,
+					w = (e.pageX - baseLeft) / baseZoom - element.offset().left;
 				coppyObject(h, w);
 			})
 			.mousemove(function (e) {
@@ -229,10 +233,7 @@ window.onload = (e) => {
 		container.bind("touchmove", handleTouchEvent);
 	};
 
-	// =========================================================================
-	// =========================================================================
-
-	fabric.util.loadImage("image/map/SkurimMap.min.png", function (img) {
+	fabric.util.loadImage("image/map/SkurimMap.minFilter2.png", function (img) {
 		var map = new fabric.Image(img),
 			curBaseScale;
 		if ("ontouchstart" in window || (window.DocumentTouch && document instanceof DocumentTouch)) {

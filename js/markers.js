@@ -70,7 +70,11 @@ const listMarkers = [
 	},
 	{
 		title: "Коллегия винтерхолда",
+		description:
+			"Мидден (<q light-blue>30lvl</q>) дремора и драугр. Далее Дремора <q red>босс</q> Первый помошник (<q light-blue>60lvl</q>) <q light-blue>4000xp</q> маг огня, без брони.",
+		secondDescription: "",
 		nameIcon: "CollegeofWinterhold",
+		type: "boss",
 		id: "id5",
 		scale: 0.5,
 		top: 231,
@@ -199,7 +203,10 @@ const listMarkers = [
 	{
 		title: "Хребет Острие Ножа (<q light-blue>10lvl</q>) (<q light-blue>30lvl</q>)",
 		description: "Бандиты <q green>9</q> снаружи и <q green>6</q> внутри. после 20лвл <q red>босс</q> по квесу.",
-		secondDescription: ["<q red>Босс</q> <q light-blue>-xp</q>. <br/>&nbsp; -Убегать и Бить.", "<q yelow>Лук</q>."],
+		secondDescription: [
+			"<q red>Босс</q> Воин Боэтии (<q light-blue>75lvl</q>) <q light-blue>7000xp</q> эбонитовый бандит, быстрый и умеет сбивать с ног, из далека стреляет из лука.",
+			"<q yelow>Эбонитова Кольчуга</q>, <q yelow>Лук Честный Обмен</q>.",
+		],
 		type: "bandit boss",
 		nameIcon: "Campsite",
 		id: "id18",
@@ -850,10 +857,14 @@ const listMarkers = [
 		left: 998,
 	},
 	{
-		title: "Пещера Холодный Берег",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Пещера Холодный Берег (<q light-blue>10lvl</q>) (<q light-blue>30lvl</q>)",
+		description:
+			"Внутри <q green>3</q> тролля. Далее <q red>закрываеться</q> решетка и появляються по очереди <q green>3</q> сильных стихийных атронаха. После нахождения Меча Монарха: <q red>Босс</q> и атронахи.",
+		secondDescription: [
+			"<q red>Босс</q> Тельдин Терано (<q light-blue>90lvl</q>) <q light-blue>7000xp</q> сильный маг, телепортируеться по комнате, призывает атронахов.",
+			"<q yelow>Краволхок</q>, <q yelow>Клинок монарха</q>.",
+		],
+		type: "animal magic boss",
 		nameIcon: "Cave",
 		id: "id73",
 		scale: 0.4,
@@ -872,10 +883,13 @@ const listMarkers = [
 		left: 1039,
 	},
 	{
-		title: "Забытая пещера",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Забытая пещера (<q light-blue>40lvl</q>)",
+		description: "Драугров <q green>12</q>. Далее <q green>7</q> драугров. В конце локации двойные двери <q red>закроються</q>.",
+		secondDescription: [
+			"<q red>Босс</q> драугр Куралмил (<q light-blue>100lvl</q>) <q light-blue>7000xp</q> сильный маг яда, вместе с ним восстают <q green>3</q> ядо. драугра (<q light-blue>90lvl</q>)",
+			"<q yelow>Рецепт</q> превосходка резистов, <q green>3</q> <q yelow>первосходки</q>, <q yelow>белый флакон</q> (По квесту Нурелиона) Квест <q yelow>предмет</q> в малеком сейфе",
+		],
+		type: "draugry boss",
 		nameIcon: "Cave",
 		id: "id75",
 		scale: 0.4,
@@ -919,10 +933,14 @@ const listMarkers = [
 		left: 773,
 	},
 	{
-		title: "Крипта Ночной пустоты",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Крипта Ночной пустоты (<q light-blue>50lvl</q>)",
+		description:
+			"Вампиров <q green>9</q>, гончих <q green>5</q> и <q green>2</q> драугра. После деревянной двери <q red>Босс</q> и вампир. Далее <q green>2</q> гаргульи, <q green>2</q> драугра и сидит повелитель.",
+		secondDescription: [
+			"<q red>Босс</q> Локил (<q light-blue>125lvl</q>) <q light-blue>10000xp</q> издалека бьет магией крови, испольует секиру.",
+			"Мастер. <q yelow>сундук</q> превосходка ХП.",
+		],
+		type: "vampire boss",
 		nameIcon: "Cave",
 		id: "id81",
 		scale: 0.4,
@@ -1076,10 +1094,11 @@ const listMarkers = [
 		left: 290,
 	},
 	{
-		title: "Озерный утес (<q light-blue>20lvl</q>)",
-		description: "Изгои над пещерой <q green>3</q> и <q yelow>Книга опыта</q>.",
-		secondDescription: [""],
-		type: "",
+		title: "Озерный утес (<q light-blue>20lvl</q>) (<q light-blue>40lvl</q>)",
+		description:
+			"Изгои над пещерой <q green>3</q> и <q yelow>Книга опыта</q>. Внутри драугры и <q red>боссы</q> призраки Голдура. Все Призраки <q red>боссов</q> Голдурсона по порядку и <q green>8</q> драугров. Самый страшный Лучник, у него <q green>7</q> копий ищи по хп.",
+		secondDescription: ["<q yelow>Амулет Голдура</q>, <q yelow>Сет</q> воина слова."],
+		type: "draugry boss trash",
 		nameIcon: "Cave",
 		id: "id95",
 		scale: 0.4,
@@ -1132,8 +1151,8 @@ const listMarkers = [
 		left: 463,
 	},
 	{
-		title: "Гленморильский ковен",
-		description: "",
+		title: "Гленморильский ковен (<q light-blue>30lvl</q>)",
+		description: "По квесту соратников. Снаружи ведьма Внутри <q green>5</q> ведьм и зверьки / <q green>4</q> ворожей и зверьки",
 		secondDescription: [""],
 		type: "",
 		nameIcon: "Cave",
@@ -1143,10 +1162,10 @@ const listMarkers = [
 		left: 384,
 	},
 	{
-		title: "Разделенное ущелье (<q light-blue>10lvl</q>)",
-		description: "Спригана <q green>4</q>, медведи <q green>3</q> и тигр.",
-		secondDescription: ["<q yelow>Клинок Боллара</q>."],
-		type: "animal",
+		title: "Разделенное ущелье (<q light-blue>30lvl</q>)",
+		description: "Некромантов <q green>7</q>, скелетов <q green>5</q> и огне аторонах.",
+		secondDescription: ["Мастр <q yelow>сундук</q> превосходка МП."],
+		type: "animal magic",
 		nameIcon: "Cave",
 		id: "id104",
 		scale: 0.4,
@@ -1267,10 +1286,10 @@ const listMarkers = [
 		left: 1012,
 	},
 	{
-		title: "Святилище Великого Древа",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Святилище Великого Древа (<q light-blue>20lvl</q>)",
+		description: "По квесту <q green>3</q> сприганов.",
+		secondDescription: ["<q yelow>Сундук</q> за веткой Рецепт превосходка омоложения (V+)"],
+		type: "animal loot",
 		nameIcon: "Cave",
 		id: "id114",
 		scale: 0.4,
@@ -1278,10 +1297,10 @@ const listMarkers = [
 		left: 1015,
 	},
 	{
-		title: "Черный Проход",
-		description: "",
+		title: "Черный Проход (<q light-blue>30lvl</q>)",
+		description: "Внутри <q green>10</q> фалмеров и <q green>3</q> коруса.",
 		secondDescription: [""],
-		type: "",
+		type: "falmer",
 		nameIcon: "Cave",
 		id: "id115",
 		scale: 0.4,
@@ -1314,10 +1333,11 @@ const listMarkers = [
 		left: 1161,
 	},
 	{
-		title: "Пещера Толвальда",
-		description: "",
+		title: "Пещера Толвальда (<q light-blue>30lvl</q>)",
+		description:
+			"Если открыть сундук с двух сторон зайдут <q green>3</q> фалмера, потом <q green>7</q>. Далее <q green>11</q> фалмеров, <q green>4</q> корусов. Далее <q green>12</q> фалмеров, <q green>2</q> коруса.",
 		secondDescription: [""],
-		type: "",
+		type: "falmer",
 		nameIcon: "Cave",
 		id: "id118",
 		scale: 0.4,
@@ -2074,10 +2094,10 @@ const listMarkers = [
 		left: 1069.3119812011719,
 	},
 	{
-		title: "",
+		title: "Эбонитовая шахта",
 		description: "",
 		secondDescription: [""],
-		type: "",
+		type: "loot",
 		nameIcon: "Mine",
 		id: "id187",
 		top: 570.5279884338379,
@@ -2290,10 +2310,14 @@ const listMarkers = [
 		left: 575.9280090332031,
 	},
 	{
-		title: "Устенгрев",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Устенгрев (<q light-blue>40lvl</q>)",
+		description:
+			"Пару некромантов и <q green>9</q> драугров. Далее <q green>5</q> драугров, несколько скелетов и <q red>повелитель</q> внизу в фонтане. После загадки, комната с нажимными огненными <q red>ловушками</q>.",
+		secondDescription: [
+			"<q red>Босс</q> Драугр посошник Повелитель (<q light-blue>100lvl</q>) <q light-blue>11000xp</q> призывает <q green>2</q> сильных скелетов архимагов, сильно бьет стихиями. <br/>&nbsp; -Подожди пока он выйдет.",
+			"<q yelow>Сет Языка</q>.",
+		],
+		type: "draugry boss",
 		nameIcon: "Tomb",
 		scale: 0.4,
 		id: "id208",
@@ -2481,10 +2505,13 @@ const listMarkers = [
 		left: 351.3119812011719,
 	},
 	{
-		title: "Валтум",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Валтум (<q light-blue>60lvl</q>)",
+		description:
+			"Драугров <q green>6</q> и повелитель. Далее <q green>10</q> драугров, повелитель в клетке. За решеткой <q green>3</q> драугра и повелитель с <q green>3</q> драуграми за дверью загадкой.",
+		secondDescription: [
+			"<q red>Босс</q> Драконий Жрец Хевнорак (<q light-blue>135lvl</q>) <q light-blue>16000xp</q> воин с мечем и щитом, призывает <q green>2</q> призраков драугров, бьет огнем.",
+		],
+		type: "draugry boss",
 		nameIcon: "Tomb",
 		scale: 0.4,
 		id: "id225",
@@ -2503,10 +2530,14 @@ const listMarkers = [
 		left: 411.3909912109375,
 	},
 	{
-		title: "Северный бастион Кричащий Ветер",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Северный бастион Кричащий Ветер (<q light-blue>40lvl</q>)",
+		description:
+			"Скелеты и трелл. После огненных ловушек, комната с <q red>закрывающейся</q> дверью. В комнате <q green>4</q> вампира и <q red>Босс</q>",
+		secondDescription: [
+			"<q red>Босс</q> вампир Тилен Малорен (<q light-blue>75lvl</q>) <q light-blue>4000xp</q> с копьем.",
+			"<q yelow>Cлово</q> Элементальная ярость, <q yelow>Шлем инквизитора</q>, <q yelow>элк крови дрн вампира</q>, мастер. <q yelow>сундук</q> превосходка ХП.",
+		],
+		type: "boss vampire",
 		nameIcon: "Tomb",
 		scale: 0.4,
 		id: "id227",
@@ -2514,10 +2545,10 @@ const listMarkers = [
 		left: 550.3909912109375,
 	},
 	{
-		title: "Южный бастион Кричащий Ветер",
-		description: "",
+		title: "Южный бастион Кричащий Ветер (<q light-blue>30lvl</q>)",
+		description: "Снаружи <q green>2</q> драугра и скелет.",
 		secondDescription: [""],
-		type: "",
+		type: "draugry",
 		nameIcon: "Tomb",
 		scale: 0.4,
 		id: "id228",
@@ -3840,6 +3871,59 @@ const listMarkers = [
 		id: "id337",
 		top: 429.0000009536743,
 		left: 636.4285736083984,
+	},
+
+	{
+		title: "Одинокая скала (<q light-blue>30lvl</q>)",
+		description: "По квесту восстановления древа в вайтране. <q green>4</q> некроманта и ворожея.",
+		secondDescription: ["<q yelow>Крапивник</q>."],
+		type: "magic",
+		nameIcon: "PointofInterest",
+		scale: 0.3,
+		id: "id338",
+		top: 814.7142858505252,
+		left: 749.1428604125977,
+	},
+
+	{
+		title: "Маг (<q light-blue>20lvl</q>)",
+		description: "",
+		secondDescription: [""],
+		type: "magic",
+		nameIcon: "Star",
+		scale: 0.3,
+		id: "id339",
+		top: 811.7142858505254,
+		left: 1122.4882793248958,
+	},
+
+	{
+		title: "Добавить Древний Каирн (<q light-blue>40lvl</q>)",
+		description:
+			"Драугров <q green>13</q> и воины серебряной крови. Далее двойные двери <q red>закроються</q>, будут <q green>17</q> драугров и <q red>Босс</q>.",
+		secondDescription: [
+			"<q red>Босс</q> Хранитель Крипты (<q light-blue>100lvl</q>) <q light-blue>5000xp</q>, призрак с молотом, очень больно бьет силовыми, замедляет, сбивает с ног.",
+			"<q yelow>Превосходка</q> ХП.",
+		],
+		type: "draugry boss loot",
+		nameIcon: "Tomb",
+		scale: 0.3,
+		id: "id340",
+		top: 531.7142858505249,
+		left: 586.1428604125977,
+	},
+
+	{
+		title: "Дракон (<q light-blue>50lvl</q>)",
+		description:
+			"<q red>Босс</q> Дракон Салокнир (<q light-blue>200lvl</q>) <q light-blue>20000xp</q> спавнит взрывающиеся ледяные кристаллы, иногда активирует пассивку, призывает холодный шторм. Пассивка дракона: если много бить, будет стакаться урон холодом.",
+		secondDescription: [""],
+		type: "dragon boss",
+		nameIcon: "circle2",
+		scale: 0.3,
+		id: "id345",
+		top: 551.7142858505248,
+		left: 1082.4882793248958,
 	},
 ];
 // «»
