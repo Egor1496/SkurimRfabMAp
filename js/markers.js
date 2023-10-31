@@ -26,7 +26,7 @@
 // trash - Изгои
 // animal - Звери
 // giant - Великаны
-// daedric - Даэдра
+// daedric - Дреморы
 // dwemer - Двемеры
 // falmer - Фламеры
 // dragon - Драконы
@@ -37,18 +37,30 @@
 
 const listMarkers = [
 	{
-		title: "Солитьюд",
+		title: "Солитьюд (<q light-blue> 50lvl</q>)",
+		description:
+			"Квест на Хризамер. Достав Хризамер из ножн вас телепорует в другое измерение, из которого <q red>нельзя</q> выбраться не победив босса. Внутри <q green>8</q> сильных огне. атронахов и <q green>3</q> <q red>повелителя</q> в конце.",
+		secondDescription: [
+			"<q red>Босс</q> дремора Сей Джин (<q light-blue>150lvl</q>) <q light-blue>16000xp</q> появляеться за спиной игрока, если взять хризамер. Может бить из бессплотности. Силовые атаки вызывают огненную нову (500 урона) из далека спамит фаерболами.",
+			"<q purple>Хризамер</q>.",
+		],
 		nameIcon: "Solitude",
-		type: "city",
+		type: "city boss daedric",
 		id: "id1",
 		scale: 0.6,
 		top: 262,
 		left: 432,
 	},
 	{
-		title: "Синий дворец",
+		title: "Синий дворец (<q light-blue> 50lvl</q>)",
+		description:
+			"Квест на убийство Потемы. После входа на тумбе лежит ключ от хризамера. Внутри <q green>12</q> драугров, <q green>4</q> вампира. Папа вампир (<q light-blue>125lvl</q>) после дверей загадок, у негоключ от следуещей комнаты. В конце дверь <q red>закроется</q> и восстанут <q green>6</q> драугров.",
+		secondDescription: [
+			"<q red>Босс</q> призрак Потемы (<q light-blue>150lvl</q>) <q light-blue>7000xp</q> призывает скелетов архимагов, воскрешает мертвых, потеряв ХП, вначале стреляет в игрока магией наносящей чистый урон (300). Очень больно бьет посохом, и криком высасывает СТ,ХП,МП.",
+			"Маст <q yelow>Сундук</q> с превосходка ХП",
+		],
 		nameIcon: "BluePalace",
-		type: "city",
+		type: "city boss",
 		id: "id2",
 		scale: 0.5,
 		top: 269,
@@ -302,10 +314,13 @@ const listMarkers = [
 		left: 154,
 	},
 	{
-		title: "Последний пост",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Последний пост (<q light-blue>50lvl</q>)",
+		description: "Эбонитовый воин по квесту.",
+		secondDescription: [
+			"<q red>Босс</q> Эбонитовый воин (<q light-blue>150lvl</q>) <q light-blue>50000xp</q> очень много хп и брони, большие резы к стихиям, имеет большую скорость и урон, призывает <q green>3</q> сильных стихийных атронахов каждые 30 сек. Криком высасывает ХП,СТ,МП, бьет булавой, папировать очень опасно. <br/>&nbsp; -Используй: крик разаружение, проклятие/уведание, крутись вокруг колон.",
+			"<q purple>Сет эбонитового воина</q>",
+		],
+		type: "boss",
 		nameIcon: "Campsite",
 		id: "id26",
 		top: 822,
@@ -468,10 +483,14 @@ const listMarkers = [
 		left: 728,
 	},
 	{
-		title: "Крепость Феллглоу (<q light-blue>30lvl</q>)",
-		description: "Маги призывают атронахов <q green>2</q> снаружи и <q green>17</q> внутри.",
-		secondDescription: [""],
-		type: "magic",
+		title: "Крепость Феллглоу (<q light-blue>30lvl</q>) (<q light-blue>40lvl???</q>)",
+		description:
+			"Маги призывают атронахов <q green>2</q> снаружи и <q green>17</q> внутри. После взятия квеста все враги возрождаються. <q green>3</q> вампира в клетках, <q green>4</q> некроманта. В конце дверь <q red>закрываеться</q>. Если убит Босс лежит ключ от комнаты. В комнате <q green>7</q> дремор, можно выйти из комнаты.",
+		secondDescription: [
+			"<q red>Босс</q> маг Вызывающая (<q light-blue>60lvl</q>) <q light-blue>7000xp</q> телепортируеться по комнате, призывает <q green>3</q> стихийных атронахов,",
+			"<q yelow>Стихийный плащ</q>, <q yelow>Круг Вачуту</q>, <q yelow>Сигильский камень</q>.",
+		],
+		type: "magic boss",
 		nameIcon: "Fort",
 		id: "id40",
 		scale: 0.4,
@@ -852,10 +871,10 @@ const listMarkers = [
 	{
 		title: "Пещера Холодный Берег (<q light-blue>10lvl</q>) (<q light-blue>30lvl</q>)",
 		description:
-			"Внутри <q green>3</q> тролля. Далее <q red>закрываеться</q> решетка и появляються по очереди <q green>3</q> сильных стихийных атронаха. После нахождения Меча Монарха: <q red>Босс</q> и атронахи.",
+			"Внутри <q green>3</q> тролля. Срузу после люка <q red>закрываеться</q> решетка и появляються по очереди <q green>3</q> сильных стихийных атронаха. После нахождения Меча Монарха: <q red>Босс</q> и атронахи.",
 		secondDescription: [
 			"<q red>Босс</q> Тельдин Терано (<q light-blue>90lvl</q>) <q light-blue>7000xp</q> сильный маг, телепортируеться по комнате, призывает атронахов.",
-			"<q yelow>Краволхок</q>, <q yelow>Клинок монарха</q>.",
+			"<q yelow>Краволхок</q>, <q yelow>Клинок монарха</q>, <q yelow>Книга опыта</q> у трупа.",
 		],
 		type: "animal magic boss",
 		nameIcon: "Cave",
@@ -901,10 +920,10 @@ const listMarkers = [
 		left: 901,
 	},
 	{
-		title: "Пещера Говорящие Холмы (<q light-blue>10lvl</q>)",
+		title: "Пещера Говорящие Холмы (<q light-blue>20lvl</q>)",
 		description: "Бандиты <q green>2</q> снаружи и Бандиты <q green>7</q> внутри.",
 		secondDescription: ["<q light-blue>Предмет</q> на опыт в сундуке."],
-		type: "bamdit loot",
+		type: "bandit loot",
 		nameIcon: "Cave",
 		id: "id77",
 		scale: 0.4,
@@ -1079,7 +1098,7 @@ const listMarkers = [
 			"<q red>Босс</q> Красный Орел (<q light-blue>100lvl</q>) <q light-blue>5000xp</q>. <br/>&nbsp; -Использует: огне. плащ, лук, огне. крик, топор и щит.",
 			"<q yelow>Превсходка ХП</q>.",
 		],
-		type: "dwemer boss",
+		type: "draugry boss",
 		nameIcon: "Cave",
 		id: "id94",
 		scale: 0.4,
@@ -1680,10 +1699,13 @@ const listMarkers = [
 		left: 628,
 	},
 	{
-		title: "Бтардамз",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Бтардамз (<q light-blue>40lvl</q>)",
+		description: "Снаружи <q green>5</q> одержимых. Внутри <q green>40</q> одержимых, <q green>12</q> паучков <q green>7</q> двемеров и Центурион.",
+		secondDescription: [
+			"<q red>Босс</q> Оркендор (<q light-blue>80lvl</q>) <q light-blue>7000xp</q> стреляет фаер болами, бьет больно посохом, очень быстрый.",
+			"<q yelow>Сет двемеского архитектора</q>, <q yelow>Боевой посох Оркендора</q>.",
+		],
+		type: "dwemer boss",
 		nameIcon: "DwemerRuins",
 		id: "id146",
 		scale: 0.4,
@@ -2292,10 +2314,13 @@ const listMarkers = [
 		left: 484.9280090332031,
 	},
 	{
-		title: "Руины Высоких Врат",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Руины Высоких Врат (<q light-blue>60lvl</q>)",
+		description: "Внутри <q green>16</q> драугров. Дальше <q red>закроется</q> дверь.",
+		secondDescription: [
+			"<q red>Босс</q> Вакун (<q light-blue>125lvl</q>) <q light-blue>16000xp</q> призывает <q green>4</q> точные копии себя, ориентируйтесь по хп. Стреляет чистой магией, высасывает ХП, каждые 30 сек взывает магическую нову (300) на всю локацию, потеряв хп тепепортирует игрока в Кошмар. Кошмар (60 сек, чтобы сбежать или смерть), чтобы пройти нужно иметь минимум 125 скорости.",
+			"",
+		],
+		type: "boss draugry",
 		nameIcon: "Tomb",
 		scale: 0.4,
 		id: "id207",
@@ -2354,10 +2379,13 @@ const listMarkers = [
 		left: 486.9280090332031,
 	},
 	{
-		title: "Волундруд",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Волундруд (<q light-blue>40lvl</q>)",
+		description: "Внутри слева <q green>7</q> другров, справа <q green>7</q> драугров. В финальной комнате <q red>Босс</q> и <q green>3</q> драугра.",
+		secondDescription: [
+			"<q red>Босс</q> призрак (<q light-blue>125lvl</q>) <q light-blue>7000xp</q> призывает двух призраков (<q light-blue>100lvl</q>), все призраки больно бьют холодом.",
+			"<q yelow>Кольцо Ледяная защита</q>.",
+		],
+		type: "draugry boss",
 		nameIcon: "Tomb",
 		scale: 0.4,
 		id: "id213",
@@ -2379,9 +2407,13 @@ const listMarkers = [
 		left: 665.9280090332031,
 	},
 	{
-		title: "Корваньюнд (<q light-blue>10lvl</q>)",
-		description: "Бандиты <q green>3</q> снаружи. До квеста «Зубчатая корона».",
-		secondDescription: [""],
+		title: "Корваньюнд (<q light-blue>10lvl</q>) (<q light-blue>30lvl</q>)",
+		description:
+			"Бандиты <q green>3</q> снаружи. До квеста «Зубчатая корона». С квестом <q green>3</q> солдата снаружи и <q green>14</q> внутри. Далее активировав рычаг восстанут <q green>6</q> драугров. В конце <q green>2</q> драугра.",
+		secondDescription: [
+			"<q red>Босс</q> драугр Король Боргас (<q light-blue>100lvl</q>) <q light-blue>7000xp</q>",
+			"<q yelow>Слово</q> Замедление времени, <q yelow>зубчатая корона</q>.",
+		],
 		type: "bandit draugry",
 		nameIcon: "Tomb",
 		scale: 0.4,
@@ -2959,7 +2991,7 @@ const listMarkers = [
 	},
 
 	{
-		title: "Плащ Пилигрима (<q light-blue>10lvl</q>)",
+		title: "Плащ Пилигрима (<q light-blue>20lvl</q>)",
 		description: "Бандиты <q green>9</q>.",
 		secondDescription: [""],
 		type: "bandit",
@@ -2969,7 +3001,7 @@ const listMarkers = [
 		left: 894.3028411865234,
 	},
 	{
-		title: "Крушение «Гордости Тель Воса»",
+		title: "Крушение «Гордости Тель Воса» (<q light-blue>10lvl</q>)",
 		description: "Бандиты <q green>3</q>",
 		secondDescription: ["<q yelow>Руда</q> малахит <q green>12</q>."],
 		type: "bandit",
@@ -3099,7 +3131,7 @@ const listMarkers = [
 	},
 
 	{
-		title: "Сосновая застава (<q light-blue>10lvl</q>)",
+		title: "Сосновая застава (<q light-blue>20lvl</q>)",
 		description: "Бандиты <q green>18</q> внутри.",
 		secondDescription: [
 			"<q red>Босс</q> Ригель Сильная Рука <q light-blue>1000xp</q>. Cпит в конце локации.<br/>&nbsp; -Снижает скорость передвежения и стамину.",
@@ -3311,7 +3343,7 @@ const listMarkers = [
 		description:
 			"Бандиты: <q green>1</q> снаружи, <q green>4</q> внутри и <q green>2</q> тигра в упоре. В конце локации <q red>закрывающаяся дверь</q>. За дверью появляються два босса. Дверь можно открыть цепью.",
 		secondDescription: [
-			"<q red>Босс</q> Баглаг <q light-blue>500xp</q> слабый. В начале локации.",
+			"<q red>Босс</q> Баглаг <q light-blue>1000xp</q> слабый. В начале локации.",
 			"<q red>Босс</q> Тален-лей <q light-blue>1000xp</q> дуальшик. За дверью.",
 			"<q red>Босс</q> Варис <q light-blue>1000xp</q> маг холода. за дверью.",
 			"<q yelow>Карта</q> открывает весь скайрим.",
@@ -3635,7 +3667,7 @@ const listMarkers = [
 	},
 
 	{
-		title: "Лагерь Обломки корабля (<q light-blue>10lvl</q>)",
+		title: "Лагерь Обломки корабля (<q light-blue>20lvl</q>)",
 		description: "Бандиты <q green>10</q>.",
 		secondDescription: [""],
 		type: "bandit",
@@ -3671,7 +3703,7 @@ const listMarkers = [
 	},
 
 	{
-		title: "Картвастен (<q light-blue>10lvl</q>)",
+		title: "Картвастен (<q light-blue>20lvl</q>)",
 		description: "Наёмники Серебряной Крови <q green>4</q> по квесту квесту.",
 		secondDescription: [""],
 		type: "bandit",
@@ -3917,6 +3949,46 @@ const listMarkers = [
 		id: "id345",
 		top: 551.7142858505248,
 		left: 1082.4882793248958,
+	},
+
+	{
+		title: "Логово (<q light-blue>10lvl</q>)",
+		description: "Саблезуб.",
+		secondDescription: [""],
+		type: "animal",
+		nameIcon: "ImperialTower",
+		scale: 0.3,
+		id: "id346",
+		top: 467.5714285373688,
+		left: 1172.7739925206965,
+	},
+
+	{
+		title: "Сундук (<q light-blue>10lvl</q>)",
+		description: "Все книги на опыт. Медведь и саблезуб.",
+		secondDescription: [""],
+		type: "loot animal",
+		nameIcon: "Loot",
+		scale: 0.2,
+		id: "id347",
+		top: 419.5714285373688,
+		left: 1058.4285736083984,
+	},
+
+	{
+		title: "Могила Чемпиона (<q light-blue>60lvl</q>)",
+		description:
+			"Внутри <q green>11</q> драугров и <q red>Босс</q> в конце. МОЖНО УБЕЖАТЬ ЕСЛИ СТРАШНО!!! Не нужно строить из себя героя, все герои уже в Совнгарде :)",
+		secondDescription: [
+			"<q red>Босс</q> Умбра (<q light-blue>999lvl</q>) <q light-blue>50000xp</q> бессмертный до призыва (<q green>6</q>)-ти своих копий, из далека больно бьет магией высавания ХП,СТ,МП, сильно регениться от ударов по игроку. Очень быстрый, иногда призывает новы (огне, мороз, паралич) <br/>&nbsp; -Призывные сущ. игрока будут только хиллить умбру, бегай по кругу, а когда призывает копии, подходи бей и убегай.",
+			" <q purple>Даэдрический меч Умбра</q>",
+		],
+		type: "boss draugry",
+		nameIcon: "Tomb",
+		scale: 0.3,
+		id: "id348",
+		top: 795.714285850525,
+		left: 1242.4882793248958,
 	},
 ];
 // «»

@@ -34,34 +34,35 @@ function modal(isOpen = false, mark, element, oImg) {
 		title.html(mark?.title);
 		description.html(mark?.description);
 
-		mark?.secondDescription.forEach((description) => {
-			ul.html(ul.html() + `\n <li class="item-info">${description}</li>`);
-		});
-
-		const doc = document.documentElement,
-			scrollleft = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0),
-			scrolltop = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-
-		let modalLeft = element.offset().left + oImg.get("left") - modal.width() / 2 + 10 - scrollleft,
-			modaTop = element.offset().top + oImg.get("top") - modal.height() - scrolltop;
-
-		if (modalLeft < 0) {
-			modalLeft = 0;
-		}
-		if (modaTop < 0) {
-			modaTop += 5 + modal.height() + oImg.get("width") * oImg.scaleX;
-		}
-		if (modalLeft + modal.width() > element.width()) {
-			modalLeft = element.width() - modal.width() - 5;
-		}
-
-		modal.css({ left: modalLeft });
-		modal.css({ top: modaTop });
-
 		if (ul.length > 1 || title.html().length > 0 || description.html().length > 0) {
+			mark?.secondDescription.forEach((description) => {
+				ul.html(ul.html() + `\n <li class="item-info">${description}</li>`);
+			});
+
+			const doc = document.documentElement,
+				scrollleft = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0),
+				scrolltop = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+
+			let modalLeft = element.offset().left + oImg.get("left") - modal.width() / 2 + 10 - scrollleft,
+				modaTop = element.offset().top + oImg.get("top") - modal.height() - scrolltop;
+
+			if (modalLeft < 0) {
+				modalLeft = 0;
+			}
+			if (modaTop < 0) {
+				modaTop += 5 + modal.height() + oImg.get("width") * oImg.scaleX;
+			}
+			if (modalLeft + modal.width() > element.width()) {
+				modalLeft = element.width() - modal.width() - 5;
+			}
+
+			modal.css({ left: modalLeft });
+			modal.css({ top: modaTop });
 			modal.removeClass("close");
 		}
 	} else {
+		modal.css({ left: -500 });
+		modal.css({ top: -500 });
 		modal.addClass("close");
 	}
 }
@@ -74,8 +75,7 @@ const scaleIcon = (oImg, mark, isSacle, W, H) => {
 		oImg
 			.scale(scaleImg)
 			.set("left", leftImg - (oImg.get("width") * scaleImg) / 2)
-			.set("top", topImg - (oImg.get("height") * scaleImg) / 2)
-			.set("opacity", mark.cssOpacity);
+			.set("top", topImg - (oImg.get("height") * scaleImg) / 2);
 
 		// .set("left", (leftImg - (oImg.get("width") * scaleImg) / 2) * W) // * W * 1.027
 		// .set("top", (topImg - (oImg.get("height") * scaleImg) / 2) * H); // * H * 1.005
@@ -101,7 +101,6 @@ function createMarkers(canvas, element, applyTransform, W, H) {
 				mark.scale += 0.05;
 			} else {
 				mark.scale -= 0.05;
-				mark.cssOpacity = 0.8;
 			}
 			filterList.push(mark);
 		});
@@ -111,7 +110,6 @@ function createMarkers(canvas, element, applyTransform, W, H) {
 
 	filterList.forEach((mark) => {
 		mark.cssFilter = mark?.cssFilter || "";
-		mark.cssOpacity = mark?.cssOpacity || 1;
 		mark.type = mark?.type || "";
 		mark.title = mark?.title || "";
 		mark.description = mark?.description || "";
@@ -119,7 +117,7 @@ function createMarkers(canvas, element, applyTransform, W, H) {
 
 		const postfix = mark.cssFilter;
 
-		const iconPath = `image/icon/${mark?.nameIcon + postfix || "circle"}.${mark?.formatIcon || "svg"}`;
+		const iconPath = `image/icon/${(mark?.nameIcon || "circle") + postfix}.${mark?.formatIcon || "svg"}`;
 
 		console.log(postfix);
 
@@ -133,8 +131,6 @@ function createMarkers(canvas, element, applyTransform, W, H) {
 					.scale(oImg.getObjectScaling().scaleX + 0.2)
 					.set("left", oImg.get("left") - 4)
 					.set("top", oImg.get("top") - 4);
-
-				// opacity
 
 				modal(true, mark, element, oImg);
 

@@ -91,15 +91,14 @@ body {
 .modal-wrap {
   z-index: 20;
   position: fixed;
-  left: 0;
-  top: 0;
+  left: -500px;
+  top: -500px;
   transition: 0.2s opacity;
   opacity: 1;
 }
 
 .modal-wrap.close {
   opacity: 0;
-  display: none;
 }
 
 .modal {
