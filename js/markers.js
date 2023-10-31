@@ -39,6 +39,7 @@ const listMarkers = [
 	{
 		title: "Солитьюд",
 		nameIcon: "Solitude",
+		type: "city",
 		id: "id1",
 		scale: 0.6,
 		top: 262,
@@ -47,6 +48,7 @@ const listMarkers = [
 	{
 		title: "Синий дворец",
 		nameIcon: "BluePalace",
+		type: "city",
 		id: "id2",
 		scale: 0.5,
 		top: 269,
@@ -55,6 +57,7 @@ const listMarkers = [
 	{
 		title: "Крепость Миствейл",
 		nameIcon: "MistveilKeep",
+		type: "city",
 		id: "id4",
 		scale: 0.5,
 		top: 900,
@@ -63,6 +66,7 @@ const listMarkers = [
 	{
 		title: "Рифтен",
 		nameIcon: "Riften",
+		type: "city",
 		id: "id3",
 		scale: 0.6,
 		top: 885,
@@ -73,6 +77,7 @@ const listMarkers = [
 		description:
 			"Мидден (<q light-blue>30lvl</q>) дремора и драугр. Далее Дремора <q red>босс</q> Первый помошник (<q light-blue>60lvl</q>) <q light-blue>4000xp</q> маг огня, без брони.",
 		secondDescription: "",
+		type: "city",
 		nameIcon: "CollegeofWinterhold",
 		type: "boss",
 		id: "id5",
@@ -83,6 +88,7 @@ const listMarkers = [
 	{
 		title: "Винтерхолд",
 		nameIcon: "Winterhold",
+		type: "city",
 		id: "id6",
 		scale: 0.6,
 		top: 264,
@@ -91,6 +97,7 @@ const listMarkers = [
 	{
 		title: "Подкаменная крепость",
 		nameIcon: "UnderstoneKeep",
+		type: "city",
 		id: "id7",
 		scale: 0.5,
 		top: 578,
@@ -99,6 +106,7 @@ const listMarkers = [
 	{
 		title: "Маркарт",
 		nameIcon: "Markarth",
+		type: "city",
 		id: "id8",
 		scale: 0.6,
 		top: 568,
@@ -107,6 +115,7 @@ const listMarkers = [
 	{
 		title: "Фолкрит",
 		nameIcon: "Falkreath",
+		type: "city",
 		id: "id9",
 		scale: 0.6,
 		top: 858,
@@ -115,6 +124,7 @@ const listMarkers = [
 	{
 		title: "Королевский дворец",
 		nameIcon: "PalaceoftheKings",
+		type: "city",
 		id: "id10",
 		scale: 0.5,
 		top: 449,
@@ -124,6 +134,7 @@ const listMarkers = [
 	{
 		title: "Данстар",
 		nameIcon: "Dawnstar",
+		type: "city",
 		id: "id10.0",
 		scale: 0.6,
 		top: 253.5279884338379,
@@ -133,6 +144,7 @@ const listMarkers = [
 	{
 		title: "Виндхельм",
 		nameIcon: "Windhelm",
+		type: "city",
 		id: "id11",
 		scale: 0.6,
 		top: 477,
@@ -141,6 +153,7 @@ const listMarkers = [
 	{
 		title: "Замок ярла",
 		nameIcon: "JarlResidence",
+		type: "city",
 		id: "id12",
 		scale: 0.5,
 		top: 586,
@@ -149,6 +162,7 @@ const listMarkers = [
 	{
 		title: "Вайтран",
 		nameIcon: "Whiterun",
+		type: "city",
 		description: "в зале мертвых <q green>4</q> скелета за дверью и <q yelow>книга опыта</q>.",
 		id: "id13",
 		scale: 0.6,
@@ -158,6 +172,7 @@ const listMarkers = [
 	{
 		title: "Морфал",
 		nameIcon: "Morthal",
+		type: "city",
 		id: "id14",
 		scale: 0.6,
 		top: 379,
@@ -257,7 +272,7 @@ const listMarkers = [
 		title: "Теснина грабителя (<q light-blue>10lvl</q>)",
 		description: "Бандиты <q green>7</q>.",
 		secondDescription: [""],
-		type: "",
+		type: "bandit",
 		nameIcon: "Campsite",
 		id: "id23",
 		top: 440,
@@ -464,17 +479,6 @@ const listMarkers = [
 		left: 836,
 	},
 	{
-		title: "Высокий Хротгар",
-		description: "",
-		secondDescription: [""],
-		type: "",
-		nameIcon: "Fort",
-		id: "id41",
-		scale: 0.4,
-		top: 702,
-		left: 799,
-	},
-	{
 		title: "Хелген (<q light-blue>10lvl</q>)",
 		description: "Бандиты <q green>5</q> снаружи и <q green>7</q> внутри после босса <q green>2</q> паука и медведь.",
 		secondDescription: [
@@ -628,9 +632,9 @@ const listMarkers = [
 	},
 	{
 		title: "Форт Стражи Pассвета",
-		description: "",
+		description: "Много серебряного оружия.",
 		secondDescription: [""],
-		type: "",
+		type: "loot",
 		nameIcon: "Fort",
 		id: "id54",
 		scale: 0.4,
@@ -846,17 +850,6 @@ const listMarkers = [
 		left: 946,
 	},
 	{
-		title: "Пост Септимия Сегония",
-		description: "",
-		secondDescription: [""],
-		type: "",
-		nameIcon: "Cave",
-		id: "id72",
-		scale: 0.4,
-		top: 140,
-		left: 998,
-	},
-	{
 		title: "Пещера Холодный Берег (<q light-blue>10lvl</q>) (<q light-blue>30lvl</q>)",
 		description:
 			"Внутри <q green>3</q> тролля. Далее <q red>закрываеться</q> решетка и появляються по очереди <q green>3</q> сильных стихийных атронаха. После нахождения Меча Монарха: <q red>Босс</q> и атронахи.",
@@ -911,7 +904,7 @@ const listMarkers = [
 		title: "Пещера Говорящие Холмы (<q light-blue>10lvl</q>)",
 		description: "Бандиты <q green>2</q> снаружи и Бандиты <q green>7</q> внутри.",
 		secondDescription: ["<q light-blue>Предмет</q> на опыт в сундуке."],
-		type: "",
+		type: "bamdit loot",
 		nameIcon: "Cave",
 		id: "id77",
 		scale: 0.4,
@@ -1154,7 +1147,7 @@ const listMarkers = [
 		title: "Гленморильский ковен (<q light-blue>30lvl</q>)",
 		description: "По квесту соратников. Снаружи ведьма Внутри <q green>5</q> ведьм и зверьки / <q green>4</q> ворожей и зверьки",
 		secondDescription: [""],
-		type: "",
+		type: "magic",
 		nameIcon: "Cave",
 		id: "id103",
 		scale: 0.4,
@@ -2217,7 +2210,7 @@ const listMarkers = [
 		title: "Шахта Сануарах",
 		description: "",
 		secondDescription: ["<q yelow>Руда</q> серебро."],
-		type: "",
+		type: "loot",
 		nameIcon: "Mine",
 		id: "id200",
 		top: 451.3008003234863,
@@ -2227,7 +2220,7 @@ const listMarkers = [
 		title: "Шахта ущелье фенна",
 		description: "",
 		secondDescription: ["<q yelow>Руда</q> серебро."],
-		type: "",
+		type: "loot",
 		nameIcon: "Mine",
 		id: "id201",
 		top: 460.3008003234863,
@@ -2986,7 +2979,7 @@ const listMarkers = [
 		left: 1069.3028411865234,
 	},
 	{
-		title: "Крушение «Зимней войны» (<q light-blue>0lvl</q>)",
+		title: "Крушение «Зимней войны» (<q light-blue>10lvl</q>)",
 		description: "Бандиты <q green>4</q>. Около корабля плавает страшная рыба.",
 		secondDescription: ["<q light-blue>Бандиты</q> на опыт."],
 		type: "bandit",
@@ -3370,7 +3363,7 @@ const listMarkers = [
 			"<q red>Босс</q> по квесту Фроки: Дух Маомнта (<q light-blue>62lvl</q>) <q light-blue>5000xp,</q>. Медленный, сильно бьет, может сбить с ног.",
 		],
 		type: "bandit boss",
-		nameIcon: "bandit animl boss",
+		nameIcon: "bandit",
 		scale: 0.2,
 		id: "id298",
 		top: 505.66666412353516,

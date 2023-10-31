@@ -20,26 +20,6 @@ const coppyObject = (top, left) => {
 	navigator.clipboard.writeText(copy);
 };
 
-const scaleIcon = (oImg, mark, isSacle, W, H) => {
-	if (isSacle) {
-		const scaleImg = mark?.scale * W || defaultScaleIcon * W,
-			leftImg = mark?.left || 0,
-			topImg = mark?.top || 0;
-		oImg
-			.scale(scaleImg)
-			.set("left", leftImg - (oImg.get("width") * scaleImg) / 2)
-			.set("top", topImg - (oImg.get("height") * scaleImg) / 2);
-		// .set("left", (leftImg - (oImg.get("width") * scaleImg) / 2) * W) // * W * 1.027
-		// .set("top", (topImg - (oImg.get("height") * scaleImg) / 2) * H); // * H * 1.005
-	} else {
-		oImg
-			.scale(oImg.getObjectScaling().scaleX - 0.2)
-			.set("left", oImg.get("left") + 4)
-			.set("top", oImg.get("top") + 4);
-	}
-	// console.log($(document).width(), $(window).width());
-};
-
 function modal(isOpen = false, mark, element, oImg) {
 	const modal = $(".modal-wrap"),
 		title = modal.find(".title"),
@@ -62,8 +42,18 @@ function modal(isOpen = false, mark, element, oImg) {
 			scrollleft = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0),
 			scrolltop = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
 
-		const modalLeft = element.offset().left + oImg.get("left") - modal.width() / 2 + 10 - scrollleft,
+		let modalLeft = element.offset().left + oImg.get("left") - modal.width() / 2 + 10 - scrollleft,
 			modaTop = element.offset().top + oImg.get("top") - modal.height() - scrolltop;
+
+		if (modalLeft < 0) {
+			modalLeft = 0;
+		}
+		if (modaTop < 0) {
+			modaTop += 5 + modal.height() + oImg.get("width") * oImg.scaleX;
+		}
+		if (modalLeft + modal.width() > element.width()) {
+			modalLeft = element.width() - modal.width() - 5;
+		}
 
 		modal.css({ left: modalLeft });
 		modal.css({ top: modaTop });
@@ -76,23 +66,64 @@ function modal(isOpen = false, mark, element, oImg) {
 	}
 }
 
+const scaleIcon = (oImg, mark, isSacle, W, H) => {
+	if (isSacle) {
+		const scaleImg = mark?.scale * W || defaultScaleIcon * W,
+			leftImg = mark?.left || 0,
+			topImg = mark?.top || 0;
+		oImg
+			.scale(scaleImg)
+			.set("left", leftImg - (oImg.get("width") * scaleImg) / 2)
+			.set("top", topImg - (oImg.get("height") * scaleImg) / 2)
+			.set("opacity", mark.cssOpacity);
+
+		// .set("left", (leftImg - (oImg.get("width") * scaleImg) / 2) * W) // * W * 1.027
+		// .set("top", (topImg - (oImg.get("height") * scaleImg) / 2) * H); // * H * 1.005
+	} else {
+		oImg
+			.scale(oImg.getObjectScaling().scaleX - 0.2)
+			.set("left", oImg.get("left") + 4)
+			.set("top", oImg.get("top") + 4);
+	}
+	// console.log($(document).width(), $(window).width());
+};
+
 function createMarkers(canvas, element, applyTransform, W, H) {
-	let filterList;
-	if (localStorage.getItem("type")?.trim().length > 0) {
-		filterList = listMarkers.filter((mark) => {
-			return Boolean(~mark.type?.trim().indexOf(localStorage.getItem("type")?.trim() || ""));
+	let filterList = [];
+	const type = localStorage.getItem("type");
+	if (type?.trim().length > 0) {
+		// filterList = listMarkers.filter((mark) => {
+		// 	return Boolean(~mark.type?.trim().indexOf(type?.trim() || ""));
+		// });
+		listMarkers.forEach((mark) => {
+			if (~mark.type?.trim().indexOf(type?.trim() || "")) {
+				mark.cssFilter = "_red";
+				mark.scale += 0.05;
+			} else {
+				mark.scale -= 0.05;
+				mark.cssOpacity = 0.8;
+			}
+			filterList.push(mark);
 		});
 	} else {
 		filterList = listMarkers;
 	}
 
 	filterList.forEach((mark) => {
-		fabric.Image.fromURL(`image/icon/${mark?.nameIcon || "circle"}.${mark?.formatIcon || "svg"}`, (oImg) => {
-			mark.type = mark?.type || "";
-			mark.title = mark?.title || "";
-			mark.description = mark?.description || "";
-			mark.secondDescription = mark?.secondDescription || [];
+		mark.cssFilter = mark?.cssFilter || "";
+		mark.cssOpacity = mark?.cssOpacity || 1;
+		mark.type = mark?.type || "";
+		mark.title = mark?.title || "";
+		mark.description = mark?.description || "";
+		mark.secondDescription = mark?.secondDescription || [];
 
+		const postfix = mark.cssFilter;
+
+		const iconPath = `image/icon/${mark?.nameIcon + postfix || "circle"}.${mark?.formatIcon || "svg"}`;
+
+		console.log(postfix);
+
+		fabric.Image.fromURL(iconPath, (oImg) => {
 			oImg.set("hasControls", false).set("hasBorders", false).set("cornerSize", 0);
 
 			scaleIcon(oImg, mark, true, W, H);
@@ -102,6 +133,8 @@ function createMarkers(canvas, element, applyTransform, W, H) {
 					.scale(oImg.getObjectScaling().scaleX + 0.2)
 					.set("left", oImg.get("left") - 4)
 					.set("top", oImg.get("top") - 4);
+
+				// opacity
 
 				modal(true, mark, element, oImg);
 
