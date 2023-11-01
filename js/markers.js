@@ -3914,7 +3914,7 @@ const listMarkers = [
 	},
 
 	{
-		title: "Добавить Древний Каирн (<q light-blue>40lvl</q>)",
+		title: "Древний Каирн (<q light-blue>40lvl</q>)",
 		description:
 			"Драугров <q green>13</q> и воины серебряной крови. Далее двойные двери <q red>закроються</q>, будут <q green>17</q> драугров и <q red>Босс</q>.",
 		secondDescription: [
