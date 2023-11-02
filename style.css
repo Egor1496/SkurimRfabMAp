@@ -180,10 +180,39 @@ body {
 }
 
 .filter-item--active{
-  background-color: #353434;
+  background-color: #515151;
 }
 
 .filter-item:hover{
   cursor: pointer;
-  background-color: #353434;
+  background-color: #515151;
+}
+
+.context-wrap{
+  z-index: 30;
+  position: fixed;
+  left: -500px;
+  top: -500px;
+  border-radius: 5px;
+  border: 2px solid #929292;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* .context{
+
+} */
+
+.context-create-knot{
+  padding: 3px 10px;
+  padding-bottom: 5px;
+}
+
+.context-create-point{
+  padding: 3px 10px;
+  padding-top: 5px;
+}
+
+.context-create-knot:hover, .context-create-point:hover{
+  cursor: pointer;
+  background-color: #515151;
 }

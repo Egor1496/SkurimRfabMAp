@@ -3817,7 +3817,7 @@ const listMarkers = [
 		description: "",
 		secondDescription: ["<q red>Босс</q> Дух Волка (<q light-blue>62lvl</q>) <q light-blue>5000xp</q>, Быстрый, накидывает кровотечение."],
 		type: "skelet animal boss",
-		nameIcon: "Sneg boss",
+		nameIcon: "Sneg",
 		scale: 0.2,
 		id: "id332",
 		top: 812.0000009536743,

@@ -144,11 +144,16 @@ window.onload = (e) => {
 				mouseDown = true;
 				oldPageX = e.pageX;
 				oldPageY = e.pageY;
+
+				// Закрыть вспылвашку.
+				modalClose();
+
 				return false;
 			});
 
 		$(window).mouseup(function () {
 			mouseDown = false;
+			applyTransform();
 		});
 
 		// Масштабирование колесом мыши
@@ -267,6 +272,9 @@ window.onload = (e) => {
 		// Добавить метки на карту
 		createMarkers(canvas, element, applyTransform, W, H);
 
+		// Добавить Пути на карту
+		let line = createPath(canvas, element, applyTransform, W, H);
+
 		// Отмасштабируем, чтобы сразу видеть всё карту
 		curBaseScale = baseScale;
 		if (width / height > baseWidth / baseHeight) {
@@ -281,6 +289,14 @@ window.onload = (e) => {
 		canvas.setWidth(width);
 		canvas.setHeight(height);
 
-		applyTransform();
+		applyTransform(line);
+
+		$(".context-create-point").on("click", function (e) {
+			console.log("точка");
+		});
+
+		$(".context-create-knot").on("click", function (e) {
+			console.log("узел");
+		});
 	});
 };
