@@ -3923,7 +3923,7 @@ const listMarkers = [
 		],
 		type: "draugry boss loot",
 		nameIcon: "Tomb",
-		scale: 0.3,
+		scale: 0.4,
 		id: "id340",
 		top: 531.7142858505249,
 		left: 586.1428604125977,

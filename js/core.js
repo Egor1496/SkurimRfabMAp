@@ -238,7 +238,7 @@ window.onload = (e) => {
 		container.bind("touchmove", handleTouchEvent);
 	};
 
-	fabric.util.loadImage("image/map/SkurimMap.minFilter2.png", function (img) {
+	fabric.util.loadImage("image/map/SkurimMap-min-filter-2.jpg", function (img) {
 		var map = new fabric.Image(img),
 			curBaseScale;
 		if ("ontouchstart" in window || (window.DocumentTouch && document instanceof DocumentTouch)) {
