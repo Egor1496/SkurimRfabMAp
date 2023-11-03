@@ -95,9 +95,6 @@ function createMarkers(canvas, element, applyTransform, W, H) {
 	let filterList = [];
 	const type = localStorage.getItem("type");
 	if (type?.trim().length > 0) {
-		// filterList = listMarkers.filter((mark) => {
-		// 	return Boolean(~mark.type?.trim().indexOf(type?.trim() || ""));
-		// });
 		listMarkers.forEach((mark) => {
 			if (~mark.type?.trim().indexOf(type?.trim() || "")) {
 				mark.cssFilter = "_red";
@@ -163,32 +160,38 @@ function createMarkers(canvas, element, applyTransform, W, H) {
 	});
 }
 
+function createLine({ leftA, topA, leftB, topB }) {
+	return new fabric.Line([leftA, topA, leftB, topB], {
+		fill: "white",
+		stroke: "white",
+		strokeWidth: 1.5,
+		// opacity: 0.7,
+		hasControls: false,
+		hasBorders: false,
+		hasRotatingPoint: false,
+		hasControls: false,
+		selectable: false,
+		cornerSize: 0,
+	});
+}
+
 function createPath(canvas, element, applyTransform, W, H) {
 	listPath.forEach((path) => {
-		path.points = path?.points || [];
-
-		path.points.forEach((point, i) => {
+		path.forEach((point, i) => {
 			fabric.Image.fromURL("image/icon/" + point.type + ".svg", (oImg) => {
 				if (i > 0) {
-					const lineLeft1 = path.points[i - 1].left - 1,
-						lineTop1 = path.points[i - 1].top - 1,
-						lineLeft2 = path.points[i].left - 1,
-						lineTop2 = path.points[i].top - 1;
-
-					point.scale = point.type === "Point" ? 0.3 : 0.1;
-
-					let line = new fabric.Line([lineLeft1, lineTop1, lineLeft2, lineTop2], {
-						fill: "#42ff42",
-						stroke: "#42ff42",
-						strokeWidth: 1.5,
-						hasControls: false,
-						hasBorders: false,
-						cornerSize: 0,
+					const newLine = createLine({
+						leftA: path[i - 1].left - 1,
+						topA: path[i - 1].top - 1,
+						leftB: path[i].left - 1,
+						topB: path[i].top - 1,
 					});
-					canvas.add(line);
+					canvas.add(newLine);
 				}
 
 				oImg.set("hasControls", false).set("hasBorders", false).set("cornerSize", 0);
+
+				point.scale = point.type === "Point" ? 0.3 : 0.1;
 
 				scaleIcon(oImg, point, true, W, H);
 
@@ -222,9 +225,8 @@ function createPath(canvas, element, applyTransform, W, H) {
 
 				// 	modal(mark, element, oImg);
 				// });
-				setTimeout(() => {
-					canvas.add(oImg);
-				}, 200);
+
+				canvas.add(oImg);
 			});
 		});
 	});
@@ -272,3 +274,5 @@ $(document).on("click", function (e) {
 	context.css({ left: -500 });
 	context.css({ top: -500 });
 });
+
+// фокус/индексация

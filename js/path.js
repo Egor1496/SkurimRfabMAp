@@ -1,43 +1,38 @@
 const listPath = [
-	{
-		points: [
-			{
-				type: "Point",
-				left: 200,
-				top: 200,
-				description: "Прыгай в яму.",
-			},
-			{
-				type: "Knot",
-				left: 210,
-				top: 210,
-			},
-			{
-				type: "Knot",
-				left: 220,
-				top: 220,
-			},
-			{
-				type: "Knot",
-				left: 250,
-				top: 210,
-			},
-			{
-				type: "Point",
-				left: 230,
-				top: 230,
-				description: "Прыгай в яму.",
-			},
-			{
-				type: "Knot",
-				left: 230,
-				top: 330,
-			},
-			{
-				type: "Knot",
-				left: 280,
-				top: 430,
-			},
-		],
-	},
+	[
+		{
+			type: "Point",
+			top: 559.661994934082,
+			left: 548.3909759521484,
+			description: "Шкуры.",
+		},
+		{
+			type: "Point",
+			top: 581,
+			left: 589,
+			description: "Опыт.",
+		},
+		{
+			type: "Knot",
+			top: 510.7760009765625,
+			left: 807.9280090332031,
+		},
+		{
+			type: "Point",
+			top: 543,
+			left: 962,
+			description: "Опыт.",
+		},
+		{
+			type: "Knot",
+			top: 546,
+			left: 1013,
+		},
+		{
+			type: "Point",
+			top: 488.3008003234863,
+			left: 1147.8672008514404,
+			description: "Опыт.",
+		},
+	],
 ];

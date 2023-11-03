@@ -269,12 +269,6 @@ window.onload = (e) => {
 
 		canvas.add(map);
 
-		// Добавить метки на карту
-		createMarkers(canvas, element, applyTransform, W, H);
-
-		// Добавить Пути на карту
-		let line = createPath(canvas, element, applyTransform, W, H);
-
 		// Отмасштабируем, чтобы сразу видеть всё карту
 		curBaseScale = baseScale;
 		if (width / height > baseWidth / baseHeight) {
@@ -289,7 +283,28 @@ window.onload = (e) => {
 		canvas.setWidth(width);
 		canvas.setHeight(height);
 
-		applyTransform(line);
+		// Добавить метки на карту
+		createMarkers(canvas, element, applyTransform, W, H);
+
+		listPath.forEach((path) => {
+			path.forEach((point, i) => {
+				if (i > 0) {
+					const newLine = createLine({
+						leftA: path[i - 1].left - 1,
+						topA: path[i - 1].top - 1,
+						leftB: path[i].left - 1,
+						topB: path[i].top - 1,
+					});
+					canvas.add(newLine);
+					console.log(newLine);
+				}
+			});
+		});
+
+		// Добавить Пути на карту
+		createPath(canvas, element, applyTransform, W, H);
+
+		applyTransform();
 
 		$(".context-create-point").on("click", function (e) {
 			console.log("точка");
