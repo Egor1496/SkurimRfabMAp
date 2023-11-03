@@ -106,7 +106,7 @@ body {
 }
 
 .modal-wrap {
-  z-index: 20;
+  z-index: 40;
   position: fixed;
   left: -500px;
   top: -500px;
@@ -191,7 +191,7 @@ body {
 }
 
 .filter-list-wrap .filter-item{
-  padding: 5px 8px;
+  padding: 5px 3px;
 }
 
 .filter-item{
