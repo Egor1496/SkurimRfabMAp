@@ -162,8 +162,8 @@ function createMarkers(canvas, element, applyTransform, W, H) {
 
 function createLine({ leftA, topA, leftB, topB }) {
 	return new fabric.Line([leftA, topA, leftB, topB], {
-		fill: "white",
-		stroke: "white",
+		fill: "#2cf704",
+		stroke: "#2cf704",
 		strokeWidth: 1.5,
 		// opacity: 0.7,
 		hasControls: false,
@@ -181,10 +181,10 @@ function createPath(canvas, element, applyTransform, W, H) {
 			fabric.Image.fromURL("image/icon/" + point.type + ".svg", (oImg) => {
 				if (i > 0) {
 					const newLine = createLine({
-						leftA: path[i - 1].left - 1,
-						topA: path[i - 1].top - 1,
-						leftB: path[i].left - 1,
-						topB: path[i].top - 1,
+						leftA: path[i - 1].left - 0.7,
+						topA: path[i - 1].top - 0.7,
+						leftB: path[i].left - 0.7,
+						topB: path[i].top - 0.7,
 					});
 					canvas.add(newLine);
 				}
@@ -276,3 +276,5 @@ $(document).on("click", function (e) {
 });
 
 // фокус/индексация
+
+// выходит за край

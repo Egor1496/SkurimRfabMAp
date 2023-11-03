@@ -286,23 +286,23 @@ window.onload = (e) => {
 		// Добавить метки на карту
 		createMarkers(canvas, element, applyTransform, W, H);
 
-		listPath.forEach((path) => {
-			path.forEach((point, i) => {
-				if (i > 0) {
-					const newLine = createLine({
-						leftA: path[i - 1].left - 1,
-						topA: path[i - 1].top - 1,
-						leftB: path[i].left - 1,
-						topB: path[i].top - 1,
-					});
-					canvas.add(newLine);
-					console.log(newLine);
-				}
-			});
-		});
+		// listPath.forEach((path) => {
+		// 	path.forEach((point, i) => {
+		// 		if (i > 0) {
+		// 			const newLine = createLine({
+		// 				leftA: path[i - 1].left - 1,
+		// 				topA: path[i - 1].top - 1,
+		// 				leftB: path[i].left - 1,
+		// 				topB: path[i].top - 1,
+		// 			});
+		// 			canvas.add(newLine);
+		// 			console.log(newLine);
+		// 		}
+		// 	});
+		// });
 
 		// Добавить Пути на карту
-		createPath(canvas, element, applyTransform, W, H);
+		// createPath(canvas, element, applyTransform, W, H);
 
 		applyTransform();
 
