@@ -1,7 +1,7 @@
-(<q light-blue>lvl</q>)
+(<q lblue>lvl</q>)
 description: "Бандиты <q green>ЧИСЛО</q> снаружи и <q green>ЧИСЛО</q> внутри.",
 secondDescription: [
-  "<q red>Босс</q> НАЗВАНИЕ <q light-blue>xp</q>. ПОЛОЖЕНИЕиСОСТОЯНИЕ.<br/>&nbsp; -ПОВЕДЕНИЕ.",
+  "<q red>Босс</q> НАЗВАНИЕ <q lblue>xp</q>. ПОЛОЖЕНИЕиСОСТОЯНИЕ.<br/>&nbsp; -ПОВЕДЕНИЕ.",
   "<q yelow>ЦЕННОСТЬ</q>.",
    ],
 
@@ -71,7 +71,7 @@ draugry - Драугры
 
 "red" rgb(255, 58, 58);
 "green" rgb(79, 255, 52);
-"light-blue" rgb(50, 187, 255);
+"lblue" rgb(50, 187, 255);
 "blue" rgb(60, 50, 255);
 "yelow" rgb(255, 238, 49);
 "orange" rgb(253, 162, 35);
@@ -86,7 +86,7 @@ draugry - Драугры
 <q purple></q> - Артефакты
 <q blue></q>
 <q orange></q>
-<q light-blue></q> - Опыт, лвл
+<q lblue></q> - Опыт, лвл
 
 Перенос описания на новую строку.
 <br/>

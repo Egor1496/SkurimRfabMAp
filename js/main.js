@@ -6,11 +6,11 @@ let baseTop = 0,
 const coppyObject = (top, left) => {
 	const copy = `
 		{
-			title: "",
-			description: "",
+			title: "Курган (<q lblue>50lvl</q>)",
+			description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>. Случайный дракон.",
 			secondDescription: [""],
-			type: "",
-			nameIcon: "",
+			type: "dragon boss",
+			nameIcon: "circle2",
 			scale: 0.3,
 			id: "id----------",
 			top: ${top},

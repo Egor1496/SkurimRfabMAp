@@ -17,16 +17,28 @@
   color: rgb(255, 58, 58);
 }
 
+[llred] {
+  color: rgb(255, 161, 161);
+}
+
 [green] {
   color: rgb(79, 255, 52);
+}
+
+[llgreen] {
+  color: rgb(177, 255, 165);
 }
 
 [blue] {
   color: rgb(60, 50, 255);
 }
 
-[light-blue] {
+[lblue] {
   color: rgb(31, 180, 255);
+}
+
+[llblue] {
+  color: rgb(139, 216, 255);
 }
 
 [yelow] {
