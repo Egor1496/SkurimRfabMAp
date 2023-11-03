@@ -13,6 +13,11 @@
   src: url(fonts/Arimo-Italic.ttf);
 }
 
+del {
+	text-decoration: line-through;
+	text-decoration-color: red;
+}
+
 [red] {
   color: rgb(255, 58, 58);
 }
@@ -144,7 +149,7 @@ body {
 }
 
 .filter-wrap{
-  z-index: 20;
+  z-index: 30;
   position: fixed;
   top: 20px;
   left: 20px;
@@ -169,6 +174,7 @@ body {
 
 .filter-list{
   position: absolute;
+  z-index: 31;
   left: 33px;
   top: 3px;
   width: 145px;
@@ -184,6 +190,10 @@ body {
   justify-content: space-around;
 }
 
+.filter-list-wrap .filter-item{
+  padding: 5px 8px;
+}
+
 .filter-item{
   display: flex;
   justify-content: space-between;
@@ -196,6 +206,59 @@ body {
 }
 
 .filter-item:hover{
+  cursor: pointer;
+  background-color: #515151;
+}
+
+.path-wrap{
+  z-index: 20;
+  position: fixed;
+  top: 18px;
+  left: 60px;
+}
+
+.path-button{
+  width: 50px;
+  height: 50px;
+}
+
+.path-button.close + .path-list{
+  display: none;
+}
+
+.path-button img{
+  width: 35px;
+}
+
+.path-button img:hover{
+  cursor: pointer;
+}
+
+.path-list{
+  position: absolute;
+  z-index: 21;
+  left: 35px;
+  top: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: 145px; */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 2px solid #929292;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.path-item{
+  padding: 5px 10px;
+}
+
+.path-item--active{
+  background-color: #515151;
+}
+
+.path-item:hover{
   cursor: pointer;
   background-color: #515151;
 }

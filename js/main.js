@@ -59,9 +59,13 @@ function modal(mark, element, oImg) {
 		}
 		if (modaTop < 0) {
 			modaTop += 5 + modal.height() + oImg.get("width") * oImg.scaleX;
+			if (modaTop + modal.height() > $(window).height()) {
+				modaTop = 0;
+				modalLeft = 0;
+			}
 		}
-		if (modalLeft + modal.width() > element.width()) {
-			modalLeft = element.width() - modal.width() - 5;
+		if (modalLeft + modal.width() > $(window).width()) {
+			modalLeft = $(window).width() - modal.width();
 		}
 
 		modal.css({ left: modalLeft });
@@ -257,6 +261,34 @@ $(".filter-item")
 $(".filter-item--active").on("click", (e) => {
 	$(".filter-item").removeClass("filter-item--active");
 	localStorage.setItem("type", "");
+	location.reload();
+});
+
+$(".path-button").on("click", function (e) {
+	$(this).toggleClass("close");
+});
+
+if (localStorage.getItem("path")?.trim().length > 0) {
+	$(".path-open-icon").show();
+	$(".path-close-icon").hide();
+	$(".path-item[data-path=" + localStorage.getItem("path") + "]").addClass("path-item--active");
+} else {
+	$(".path-close-icon").show();
+	$(".path-open-icon").hide();
+}
+
+$(".path-item")
+	.not(".path-item--active")
+	.on("click", function (e) {
+		$(".path-item").removeClass("path-item--active");
+		$(this).addClass("path-item--active");
+		localStorage.setItem("path", $(this).data("path"));
+		location.reload();
+	});
+
+$(".path-item--active").on("click", (e) => {
+	$(".path-item").removeClass("path-item--active");
+	localStorage.setItem("path", "");
 	location.reload();
 });
 
