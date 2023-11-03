@@ -1801,9 +1801,10 @@ const listMarkers = [
 		nameIcon: "DwemerRuins",
 		id: "id158",
 		scale: 0.4,
-		top: 417,
-		left: 888,
+		top: 342.3008003234863,
+		left: 878.8672008514404,
 	},
+
 	{
 		title: "Мзинчалефта (<q lblue>10lvl</q>) (<q lblue>30lvl</q>) (<q lblue>40lvl</q>)",
 		description:
@@ -4193,6 +4194,18 @@ const listMarkers = [
 		id: "id370",
 		top: 374.30080032348656,
 		left: 205.86720085144043,
+	},
+
+	{
+		title: "Сумка",
+		description: "Банки, свитки, еда.",
+		secondDescription: [""],
+		type: "loot",
+		nameIcon: "Loot",
+		scale: 0.2,
+		id: "id371",
+		top: 806.3008003234863,
+		left: 674.8672008514404,
 	},
 ];
 // «»
