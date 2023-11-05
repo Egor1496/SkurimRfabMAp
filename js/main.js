@@ -43,7 +43,7 @@ function modal(mark, element, oImg) {
 	mark.secondDescription = mark?.secondDescription || [];
 
 	if (ul.length > 1 || title.html().length > 0 || description.html().length > 0) {
-		mark?.secondDescription.forEach((description) => {
+		mark.secondDescription.forEach((description) => {
 			ul.html(ul.html() + `\n <li class="item-info">${description}</li>`);
 		});
 
@@ -117,7 +117,7 @@ function createMarkers(canvas, element, applyTransform, W, H) {
 		mark.type = mark?.type || "";
 		mark.title = mark?.title || "";
 		mark.description = mark?.description || "";
-		mark.secondDescription = mark?.secondDescription || [];
+		mark.secondDescription = mark?.secondDescription || [""];
 
 		const postfix = mark.cssFilter;
 
