@@ -185,6 +185,10 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.filter-list img{
+  width: 30px;
+}
+
 .filter-list-wrap{
   display: flex;
   justify-content: space-around;
