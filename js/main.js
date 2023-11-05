@@ -1,7 +1,9 @@
 let baseTop = 0,
 	baseLeft = 0,
 	baseZoom = 1,
-	defaultScaleIcon = 0.3;
+	defaultScaleIcon = 0.3,
+	mouseLeft = 0,
+	mouseTop = 0;
 
 const coppyObject = (top, left) => {
 	const copy = `
@@ -60,8 +62,13 @@ function modal(mark, element, oImg) {
 		if (modaTop < 0) {
 			modaTop += 5 + modal.height() + oImg.get("width") * oImg.scaleX;
 			if (modaTop + modal.height() > $(window).height()) {
-				modaTop = 0;
-				modalLeft = 0;
+				if (mouseLeft <= modal.width() && mouseTop <= modal.height()) {
+					modaTop = 0;
+					modalLeft = $(window).width() - modal.width();
+				} else {
+					modaTop = 0;
+					modalLeft = 0;
+				}
 			}
 		}
 		if (modalLeft + modal.width() > $(window).width()) {
@@ -305,6 +312,11 @@ $(document).on("click", function (e) {
 	const context = $(".context-wrap");
 	context.css({ left: -500 });
 	context.css({ top: -500 });
+});
+
+$(window).mousemove(function (e) {
+	mouseLeft = e.pageX;
+	mouseTop = e.pageY;
 });
 
 // фокус/индексация
