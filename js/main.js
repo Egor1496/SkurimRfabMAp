@@ -7,18 +7,18 @@ let baseTop = 0,
 
 const coppyObject = (top, left) => {
 	const copy = `
-		{
-			title: "",
-			description: "",
-			secondDescription: [""],
-			type: "",
-			nameIcon: "",
-			scale: 0.3,
-			id: "id----------",
-			top: ${top},
-			left: ${left},
-		},
-						`;
+{
+	title: "",
+	description: "",
+	secondDescription: [""],
+	type: "",
+	nameIcon: "",
+	scale: 0.3,
+	id: "id----------",
+	top: ${top},
+	left: ${left},
+},
+`;
 	navigator.clipboard.writeText(copy);
 };
 
@@ -99,7 +99,6 @@ const scaleIcon = (oImg, mark, isSacle, W, H) => {
 			.set("left", oImg.get("left") + 4)
 			.set("top", oImg.get("top") + 4);
 	}
-	// console.log($(document).width(), $(window).width());
 };
 
 function createMarkers(canvas, element, applyTransform, W, H) {
@@ -187,58 +186,63 @@ function createLine({ leftA, topA, leftB, topB }) {
 }
 
 function createPath(canvas, element, applyTransform, W, H) {
-	listPath.forEach((path) => {
-		path.forEach((point, i) => {
-			fabric.Image.fromURL("image/icon/" + point.type + ".svg", (oImg) => {
-				if (i > 0) {
-					const newLine = createLine({
-						leftA: path[i - 1].left - 0.7,
-						topA: path[i - 1].top - 0.7,
-						leftB: path[i].left - 0.7,
-						topB: path[i].top - 0.7,
-					});
-					canvas.add(newLine);
-				}
+	const numberPath = localStorage.getItem("path");
+	let path = [];
 
-				oImg.set("hasControls", false).set("hasBorders", false).set("cornerSize", 0);
+	if (numberPath) path = listPath[Number(numberPath)];
 
-				point.scale = point.type === "Point" ? 0.3 : 0.1;
-
-				scaleIcon(oImg, point, true, W, H);
-
-				oImg.on("mouseover", function (opt) {
-					if (point.type === "Point")
-						oImg
-							.scale(oImg.getObjectScaling().scaleX + 0.2)
-							.set("left", oImg.get("left") - 4)
-							.set("top", oImg.get("top") - 4);
-
-					applyTransform();
-
-					modal(point, element, oImg);
+	path.forEach((point, i) => {
+		fabric.Image.fromURL("image/icon/" + point.type + ".svg", (oImg) => {
+			if (i > 0) {
+				const newLine = createLine({
+					leftA: path[i - 1].left - 0.7,
+					topA: path[i - 1].top - 0.7,
+					leftB: path[i].left - 0.7,
+					topB: path[i].top - 0.7,
 				});
+				canvas.add(newLine);
+				newLine.moveTo(1);
+			}
 
-				oImg.on("mouseout", function (opt) {
-					if (point.type === "Point") scaleIcon(oImg, null, false);
-					applyTransform();
+			oImg.set("hasControls", false).set("hasBorders", false).set("cornerSize", 0).set("selectable", false);
 
-					modalClose();
-				});
+			point.scale = point.type === "Point" ? 0.3 : 0.1;
 
-				// oImg.on("mouseup", function (opt) {
-				// 	let MarkJSON = JSON.stringify(mark)
-				// 		.split(",")
-				// 		.map((str) => {
-				// 			return "\n" + str;
-				// 		});
+			scaleIcon(oImg, point, true, W, H);
 
-				// 	navigator.clipboard.writeText(mark.id); //MarkJSON.join() + ","
+			oImg.on("mouseover", function (opt) {
+				if (point.type === "Point")
+					oImg
+						.scale(oImg.getObjectScaling().scaleX + 0.2)
+						.set("left", oImg.get("left") - 4)
+						.set("top", oImg.get("top") - 4);
 
-				// 	modal(mark, element, oImg);
-				// });
+				applyTransform();
 
-				canvas.add(oImg);
+				modal(point, element, oImg);
 			});
+
+			oImg.on("mouseout", function (opt) {
+				if (point.type === "Point") scaleIcon(oImg, null, false);
+				applyTransform();
+
+				modalClose();
+			});
+
+			// oImg.on("mouseup", function (opt) {
+			// 	let MarkJSON = JSON.stringify(mark)
+			// 		.split(",")
+			// 		.map((str) => {
+			// 			return "\n" + str;
+			// 		});
+
+			// 	navigator.clipboard.writeText(mark.id); //MarkJSON.join() + ","
+
+			// 	modal(mark, element, oImg);
+			// });
+
+			canvas.add(oImg);
+			if (point.type !== "Point") oImg.moveTo(1);
 		});
 	});
 }
@@ -322,3 +326,5 @@ $(window).mousemove(function (e) {
 // фокус/индексация
 
 // выходит за край
+
+// lockSkewingY

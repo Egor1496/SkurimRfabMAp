@@ -3532,7 +3532,7 @@ const listMarkers = [
 
 	{
 		title: "Картвастен (<q lblue>25lvl</q>)",
-		description: "Наёмники Серебряной Крови <q green>4</q> по квесту. Станешь другом орков если убьешь бандосов.",
+		description: "Наёмники Серебряной Крови <q green>4</q> по квесту. Станешь <q yelow>другом орков</q> если убьешь бандосов.",
 		secondDescription: [""],
 		type: "bandit",
 		nameIcon: "Town",

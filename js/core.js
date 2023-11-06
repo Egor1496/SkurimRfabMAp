@@ -287,12 +287,15 @@ window.onload = (e) => {
 		createMarkers(canvas, element, applyTransform, W, H);
 
 		// Добавить Пути на карту
-		// createPath(canvas, element, applyTransform, W, H);
+		createPath(canvas, element, applyTransform, W, H);
 
 		applyTransform();
 
 		$(".context-create-point").on("click", function (e) {
 			console.log("точка");
+			transX = 100;
+			transY = 100;
+			applyTransform();
 		});
 
 		$(".context-create-knot").on("click", function (e) {
