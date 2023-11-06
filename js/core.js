@@ -12,8 +12,6 @@ window.onload = (e) => {
 	// element[0].width = element[0].width * W;
 	// element[0].height = element[0].height * W;
 
-	// console.log($("body").width(), $("body").height());
-
 	let canvas = new fabric.Canvas(element.get(0), {
 		selection: false, // возможность выбора группы
 		scale: 1, // масштаб по умолчанию

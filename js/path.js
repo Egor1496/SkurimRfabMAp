@@ -10,7 +10,7 @@ const listPath = [
 			type: "Point",
 			top: 581,
 			left: 539,
-			description: "Опыт.",
+			description: "123123123",
 		},
 		{
 			type: "Knot",
@@ -21,18 +21,19 @@ const listPath = [
 			type: "Point",
 			top: 543,
 			left: 952,
-			description: "Опыт.",
+			description: "123123123",
 		},
 		{
 			type: "Knot",
 			top: 546,
 			left: 1013,
+			line: false,
 		},
 		{
 			type: "Point",
 			top: 488.3008003234863,
 			left: 1147.8672008514404,
-			description: "Опыт.",
+			description: "123123123",
 		},
 	],
 	[
@@ -46,7 +47,7 @@ const listPath = [
 			type: "Point",
 			top: 591,
 			left: 589,
-			description: "Опыт.",
+			description: "123123123",
 		},
 		{
 			type: "Knot",
@@ -57,7 +58,7 @@ const listPath = [
 			type: "Point",
 			top: 523,
 			left: 962,
-			description: "Опыт.",
+			description: "123123123",
 		},
 		{
 			type: "Knot",
@@ -68,7 +69,33 @@ const listPath = [
 			type: "Point",
 			top: 458.3008003234863,
 			left: 1147.8672008514404,
-			description: "Опыт.",
+			description: "123123123",
+		},
+	],
+	[
+		{
+			type: "Point",
+			top: 287.3008003234863,
+			left: 403.86720085144043,
+			description: "123123123",
+		},
+		{
+			type: "Knot",
+			top: 269.3008003234863,
+			left: 429.86720085144043,
+			description: "123123123",
+		},
+		{
+			type: "Knot",
+			top: 273.3008003234863,
+			left: 470.86720085144043,
+			description: "123123123",
+		},
+		{
+			type: "Point",
+			top: 305.3008003234863,
+			left: 482.86720085144043,
+			description: "123123123",
 		},
 	],
 ];
