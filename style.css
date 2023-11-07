@@ -175,8 +175,8 @@ body {
 .filter-list{
   position: absolute;
   z-index: 31;
-  left: 33px;
-  top: 3px;
+  left: 3px;
+  top: 33px;
   width: 145px;
   margin: 0;
   padding: 0;
@@ -186,7 +186,7 @@ body {
 }
 
 .filter-list img{
-  width: 30px;
+  width: 25px;
 }
 
 .filter-list-wrap{
@@ -195,6 +195,8 @@ body {
 }
 
 .filter-list-wrap .filter-item{
+  width: 30px;
+  justify-content: center;
   padding: 5px 3px;
 }
 
@@ -282,17 +284,12 @@ body {
 
 } */
 
-.context-create-knot{
-  padding: 3px 10px;
-  padding-bottom: 5px;
-}
-
-.context-create-point{
+.context-item{
   padding: 3px 10px;
   padding-top: 5px;
 }
 
-.context-create-knot:hover, .context-create-point:hover{
+.context-item:hover{
   cursor: pointer;
   background-color: #515151;
 }

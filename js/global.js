@@ -3,7 +3,8 @@ let baseTop = 0,
 	baseZoom = 1,
 	defaultScaleIcon = 0.3,
 	mouseLeft = 0,
-	mouseTop = 0;
+	mouseTop = 0,
+	typeIcon = "map";
 
 $(window).mousemove(function (e) {
 	mouseLeft = e.pageX;

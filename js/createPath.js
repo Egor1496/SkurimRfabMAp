@@ -1,3 +1,19 @@
+let thisPath = null;
+const deletePath = () => console.log("deletePath");
+const editPath = () => console.log("editPath");
+
+const copyPath = () => {
+	let pathJSON =
+		JSON.stringify(thisPath)
+			.split(",")
+			.map((str) => {
+				return "\n" + str;
+			})
+			.join() + ",";
+
+	navigator.clipboard.writeText(pathJSON);
+};
+
 function createLine({ leftA, topA, leftB, topB }) {
 	return new fabric.Line([leftA, topA, leftB, topB], {
 		fill: "#2cf704",
@@ -47,30 +63,36 @@ function createPath(canvas, element, applyTransform, W, H) {
 
 				applyTransform();
 
-				modal(point, element, oImg);
+				openDescription(point, element, oImg);
+				closeContext();
+
+				if (point.type === "Point") {
+					typeIcon = "path";
+					thisPath = path;
+				}
 			});
 
 			oImg.on("mouseout", function (opt) {
 				if (point.type === "Point") scaleIcon(oImg, null, false);
 				applyTransform();
 
-				modalClose();
+				closeDescription();
+
+				typeIcon = "map";
 			});
 
-			// oImg.on("mouseup", function (opt) {
-			// 	let MarkJSON = JSON.stringify(mark)
-			// 		.split(",")
-			// 		.map((str) => {
-			// 			return "\n" + str;
-			// 		});
-
-			// 	navigator.clipboard.writeText(mark.id); //MarkJSON.join() + ","
-
-			// 	modal(mark, element, oImg);
-			// });
+			oImg.on("mouseup", function (opt) {
+				// 	let MarkJSON = JSON.stringify(mark)
+				// 		.split(",")
+				// 		.map((str) => {
+				// 			return "\n" + str;
+				// 		});
+				// 	navigator.clipboard.writeText(mark.id); //MarkJSON.join() + ","
+				// 	openDescription(mark, element, oImg);
+			});
 
 			canvas.add(oImg);
-			if (point.type !== "Point") oImg.moveTo(path.length);
+			if (point.type !== "Point") oImg.moveTo(path.length + 1);
 		});
 	});
 }

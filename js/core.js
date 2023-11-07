@@ -119,9 +119,10 @@ window.onload = (e) => {
 			.mouseup(function (e) {
 				// const h = (e.pageY - baseTop) / baseZoom / H - element.offset().top, // / H
 				// 	w = (e.pageX - baseLeft) / baseZoom / W - element.offset().left; // / W - 15
-				const h = (e.pageY - baseTop) / baseZoom - element.offset().top,
-					w = (e.pageX - baseLeft) / baseZoom - element.offset().left;
-				coppyObject(h, w);
+				// const h = (e.pageY - baseTop) / baseZoom - element.offset().top,
+				// 	w = (e.pageX - baseLeft) / baseZoom - element.offset().left;
+				// coppyObject(h, w);
+				// openContext(e, null, ["Точка", "Узел", "Создать метку", "Координаты"]);
 			})
 			.mousemove(function (e) {
 				// Непосредственно перемещение
@@ -144,7 +145,7 @@ window.onload = (e) => {
 				oldPageY = e.pageY;
 
 				// Закрыть вспылвашку.
-				modalClose();
+				closeDescription();
 
 				return false;
 			});
@@ -287,17 +288,7 @@ window.onload = (e) => {
 		// Добавить Пути на карту
 		createPath(canvas, element, applyTransform, W, H);
 
+		// Обновить карту
 		applyTransform();
-
-		$(".context-create-point").on("click", function (e) {
-			console.log("точка");
-			transX = 100;
-			transY = 100;
-			applyTransform();
-		});
-
-		$(".context-create-knot").on("click", function (e) {
-			console.log("узел");
-		});
 	});
 };

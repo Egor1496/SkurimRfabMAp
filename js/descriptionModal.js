@@ -1,11 +1,13 @@
-function modalClose() {
+const closeDescription = () => {
 	const modal = $(".modal-wrap");
 	modal.css({ left: -500 });
 	modal.css({ top: -500 });
 	modal.addClass("close");
-}
+};
 
-function modal(mark, element, oImg) {
+const openModal = () => {};
+
+const openDescription = (mark, element, oImg) => {
 	const modal = $(".modal-wrap"),
 		title = modal.find(".title"),
 		description = modal.find(".description"),
@@ -55,4 +57,4 @@ function modal(mark, element, oImg) {
 		modal.css({ top: modaTop });
 		modal.removeClass("close");
 	}
-}
+};

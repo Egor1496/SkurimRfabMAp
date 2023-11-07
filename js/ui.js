@@ -1,5 +1,6 @@
 $(".filter-button").on("click", function (e) {
 	$(this).toggleClass("close");
+	$(".path-button").addClass("close");
 });
 
 if (localStorage.getItem("type")?.trim().length > 0) {
@@ -28,6 +29,7 @@ $(".filter-item--active").on("click", (e) => {
 
 $(".path-button").on("click", function (e) {
 	$(this).toggleClass("close");
+	$(".filter-button").addClass("close");
 });
 
 if (localStorage.getItem("path")?.trim().length > 0) {
@@ -42,6 +44,7 @@ if (localStorage.getItem("path")?.trim().length > 0) {
 $(".path-item")
 	.not(".path-item--active")
 	.on("click", function (e) {
+		console.log(123);
 		$(".path-item").removeClass("path-item--active");
 		$(this).addClass("path-item--active");
 		localStorage.setItem("path", $(this).data("path"));
@@ -52,4 +55,10 @@ $(".path-item--active").on("click", (e) => {
 	$(".path-item").removeClass("path-item--active");
 	localStorage.setItem("path", "");
 	location.reload();
+});
+
+$(".canvas-wrap").on("click", function (e) {
+	closeDescription();
+	$(".path-button").addClass("close");
+	$(".filter-button").addClass("close");
 });
