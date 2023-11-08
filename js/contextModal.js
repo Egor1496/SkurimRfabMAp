@@ -1,4 +1,4 @@
-const openContext = (e, handler = () => {}, menuList = []) => {
+const openContext = (e, handler, itemsHtml) => {
 	const context = $(".context-wrap");
 	context.css({ left: e.clientX });
 	context.css({ top: e.clientY });
@@ -7,14 +7,11 @@ const openContext = (e, handler = () => {}, menuList = []) => {
 	const contextHtml = $(".context-wrap .context");
 	contextHtml.html("");
 
-	menuList.forEach((item) => {
-		const newItem = `<div class="context-item">${item}</div>`;
-		contextHtml.html(contextHtml.html() + newItem);
-	});
+	contextHtml.html(contextHtml.html() + itemsHtml);
 
 	$(".context-item").on("click", function (e) {
 		closeContext();
-		handler($(this).text());
+		handler($(this).data("item"));
 	});
 };
 
@@ -44,7 +41,3 @@ $(".canvas-wrap").on("contextmenu", function (e) {
 $(".canvas-wrap").on("click", function (e) {
 	closeContext();
 });
-
-// const handlerContext = (text) => {
-// 	console.log(text);
-// };

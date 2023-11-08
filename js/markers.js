@@ -673,7 +673,7 @@ const listMarkers = [
 
 	{
 		title: "Вечерняя пещера (<q lblue>20lvl</q>)",
-		description: "Мост-ловушка. Падая в низ вернуться нельзя. <q green>6</q> пауков и <q green>4</q> тролля в конце.",
+		description: "Мост-ловушка. <q red>Падая в низ</q> вернуться нельзя. <q green>6</q> пауков и <q green>4</q> тролля в конце.",
 		secondDescription: ["<q yelow>Святилище</q> Ауууууууриэля."],
 		type: "animal",
 		nameIcon: "Cave",
@@ -1498,8 +1498,8 @@ const listMarkers = [
 		nameIcon: "Loot",
 		id: "id132",
 		scale: 0.2,
-		top: 284,
-		left: 292,
+		top: 287,
+		left: 294,
 	},
 	{
 		title: "Пруд Глаз Мары (<q lblue>30lvl</q>)",
@@ -1981,7 +1981,7 @@ const listMarkers = [
 		left: 594.3909912109375,
 	},
 	{
-		title: "Шахта Потерянный Шанс (<q lblue>0lvl</q>)",
+		title: "Шахта Потерянный Шанс",
 		description: "",
 		secondDescription: ["Руда <q yelow>золото</q> за водопадом."],
 		type: "soc",
@@ -2114,7 +2114,7 @@ const listMarkers = [
 	{
 		title: "Шахта",
 		description: "",
-		secondDescription: ["Руда <q yelow>орихалковая</q>."],
+		secondDescription: ["Руда <q yelow>орихалк</q>."],
 		type: "soc",
 		nameIcon: "Mine",
 		id: "id202",
@@ -4193,11 +4193,11 @@ const listMarkers = [
 	},
 
 	{
-		title: "Мамонт",
+		title: "",
 		description: "Мирный великан.",
 		secondDescription: ["<q yelow>Труп мамонта</q>."],
 		type: "soc giant",
-		nameIcon: "Campsite",
+		nameIcon: "GiantCamp",
 		scale: 0.3,
 		id: "id379",
 		top: 669.5714285373688,
@@ -4279,7 +4279,7 @@ const listMarkers = [
 		description: "Великан.",
 		secondDescription: ["<q yelow>Труп мамонта</q>."],
 		type: "soc giant",
-		nameIcon: "Campsite",
+		nameIcon: "GiantCamp",
 		scale: 0.3,
 		id: "id386",
 		top: 433.5714285373688,

@@ -293,3 +293,28 @@ body {
   cursor: pointer;
   background-color: #515151;
 }
+
+.context-item-wrap .context-item{
+  display: flex;
+  align-items: center;
+}
+
+.context-item-wrap{
+  display: flex;
+  justify-content: space-between;
+}
+
+.context-item-wrap img{
+  width: 20px;
+}
+
+.context-item-wrap .knot{
+  width: 10px;
+}
+
+.context-item-wrap .decor-line{
+  width: 10px;
+  height: 2px;
+  background-color: #2cf704;
+  margin-right: -3px;
+}

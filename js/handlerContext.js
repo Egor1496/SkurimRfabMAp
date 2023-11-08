@@ -1,47 +1,75 @@
 const handlerContextMap = (e) => {
-	const items = ["точка +линия", "узел +линия", "точка -линия", "узел -линия", "coord"];
+	const items = [
+		`
+		<div class="context-item-wrap context-item-path">
+			<div class="context-item" data-item="point">
+				<img src="image/icon/Point.svg" />
+			</div>
+			<div class="context-item" data-item="knot">
+				<div class="decor-line"></div>
+				<img src="image/icon/Knot.svg" class="knot" />
+			</div>
+			<div class="context-item" data-item="pointL">
+				<div class="decor-line"></div>
+				<img src="image/icon/Point.svg" />
+			</div>
+		</div>
+		<div class="context-item" data-item="coord"> coord </div>
+		`,
+	];
 	openContext(e, acceptContextMap, items);
 };
 
 const handlerContextMarker = (e) => {
-	const items = ["id", "заголовок", "описание", "obj", "coord"];
+	const items = [
+		`
+		<div class="context-item" data-item="id"> id </div>
+		<div class="context-item" data-item="title"> заголовок </div>
+		<div class="context-item" data-item="description"> описание </div>
+		<div class="context-item" data-item="icon"> иконка </div>
+		<div class="context-item" data-item="obj"> obj </div>
+		<div class="context-item" data-item="coord"> coord </div>
+		`,
+	];
 	openContext(e, acceptContextMarker, items);
 };
 
 const handlerContextPath = (e) => {
-	const items = ["копировать", "редактировать", "удалить"];
+	const items = [
+		`
+		<div class="context-item" data-item="copy"> копировать </div>
+		<div class="context-item" data-item="edit"> редактировать </div>
+		<div class="context-item" data-item="delete"> удалить </div>
+		`,
+	];
 	openContext(e, acceptContextPath, items);
 };
 
-const acceptContextMap = (selectedText) => {
+const acceptContextMap = (selectedNumber) => {
 	const select = {
-		coord: F,
-		"точка +линия": F,
-		"узел +линия": F,
-		"точка -линия": F,
-		"узел -линия": F,
+		point: createPoint,
+		knot: createKnotL,
+		pointL: createPointL,
+		coord: () => navigator.clipboard.writeText(baseTop + "\n" + baseLeft),
 	};
-	select[selectedText]();
+	select[selectedNumber]();
 };
-const acceptContextMarker = (selectedText) => {
+const acceptContextMarker = (selectedNumber) => {
 	const select = {
 		id: copyIdMarker,
-		coord: copyCoordMarker,
-		заголовок: copyTitleMarker,
-		описание: copyDescriptionMarker,
+		title: copyTitleMarker,
+		description: copyDescriptionMarker,
+		icon: copyIconMarker,
 		obj: copyObjMarker,
+		coord: copyCoordMarker,
 	};
-	select[selectedText]();
+	select[selectedNumber]();
 };
-const acceptContextPath = (selectedText) => {
+const acceptContextPath = (selectedNumber) => {
 	const select = {
-		редактировать: editPath,
-		копировать: copyPath,
-		удалить: deletePath,
+		edit: editPath,
+		copy: copyPath,
+		delete: deletePath,
 	};
-	select[selectedText]();
-};
-
-const F = () => {
-	console.log("f");
+	select[selectedNumber]();
 };

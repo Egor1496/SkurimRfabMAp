@@ -4,7 +4,17 @@ let baseTop = 0,
 	defaultScaleIcon = 0.3,
 	mouseLeft = 0,
 	mouseTop = 0,
-	typeIcon = "map";
+	typeIcon = "map",
+	pageY = 0,
+	pageX = 0;
+
+const W = 1;
+H = 1;
+
+// const X = $("body").width() / element[0].width,
+// 	H = $("body").height() / element[0].height;
+
+// const W = X > H ? H : X;
 
 $(window).mousemove(function (e) {
 	mouseLeft = e.pageX;

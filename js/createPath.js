@@ -14,6 +14,10 @@ const copyPath = () => {
 	navigator.clipboard.writeText(pathJSON);
 };
 
+const createPoint = () => console.log("createPath");
+const createPointL = () => console.log("createPathL");
+const createKnotL = () => console.log("createKnotL");
+
 function createLine({ leftA, topA, leftB, topB }) {
 	return new fabric.Line([leftA, topA, leftB, topB], {
 		fill: "#2cf704",

@@ -1,14 +1,6 @@
 window.onload = (e) => {
 	let element = $("#canvas");
 
-	const W = 1;
-	H = 1;
-
-	// const X = $("body").width() / element[0].width,
-	// 	H = $("body").height() / element[0].height;
-
-	// const W = X > H ? H : X;
-
 	// element[0].width = element[0].width * W;
 	// element[0].height = element[0].height * W;
 
@@ -135,6 +127,7 @@ window.onload = (e) => {
 
 					oldPageX = e.pageX;
 					oldPageY = e.pageY;
+
 					return false;
 				}
 			})

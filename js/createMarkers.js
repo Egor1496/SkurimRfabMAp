@@ -4,6 +4,7 @@ const copyIdMarker = () => navigator.clipboard.writeText(thisMark?.id || "");
 const copyCoordMarker = () => navigator.clipboard.writeText(thisMark?.left + "\n" + thisMark?.top || "");
 const copyTitleMarker = () => navigator.clipboard.writeText(thisMark?.title || "");
 const copyDescriptionMarker = () => navigator.clipboard.writeText(thisMark?.description + " \n " + thisMark?.secondDescription.join(" \n ") || "");
+const copyIconMarker = () => navigator.clipboard.writeText(thisMark?.nameIcon || "");
 
 const copyObjMarker = () => {
 	let markJSON =
