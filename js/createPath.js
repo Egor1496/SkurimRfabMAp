@@ -85,6 +85,7 @@ function drawLine(leftA, topA, leftB, topB) {
 }
 
 function drawPoint(top, left, type) {
+	console.log(type);
 	fabric.Image.fromURL(`image/icon/${type}.svg`, (oImg) => {
 		oImg.set("hasControls", false).set("hasBorders", false).set("cornerSize", 0).set("selectable", false);
 
@@ -124,9 +125,9 @@ function createPath() {
 
 			oImg.on("mouseover", function (opt) {
 				if (point.type === "Point") {
+					scaleIcon(oImg, true);
 					typeIcon = "path";
 					thisPath = path;
-					scaleIcon(oImg, true);
 				}
 
 				closeContext();
@@ -142,7 +143,7 @@ function createPath() {
 				applyTransform();
 			});
 
-			oImg.on("mouseup", function (opt) {});
+			// oImg.on("mouseup", function (opt) {});
 
 			canvas.add(oImg);
 			if (point.type !== "Point") oImg.moveTo(path.length + 1);

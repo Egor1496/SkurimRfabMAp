@@ -53,8 +53,8 @@ const handlerContextPath = (e) => {
 const acceptContextMap = (selectedName) => {
 	const select = {
 		point: createPoint,
-		knot: () => drawPath("point"),
-		pointL: () => drawPath("point"),
+		knot: () => drawPath("Knot"),
+		pointL: () => drawPath("Point"),
 		coord: () => navigator.clipboard.writeText("top:" + pageY + "\n" + "left:" + pageX),
 	};
 	select[selectedName]();

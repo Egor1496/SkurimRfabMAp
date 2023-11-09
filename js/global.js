@@ -96,10 +96,10 @@ $(window).mousemove(function (e) {
 	mouseTop = e.pageY;
 });
 
-const coordIcon = (oImg, mark) => {
-	const scale = mark?.scale * W || defaultScaleIcon * W,
-		left = mark?.left || 0,
-		top = mark?.top || 0;
+const coordIcon = (oImg, icon) => {
+	const scale = icon?.scale * W || defaultScaleIcon * W,
+		left = icon?.left || 0,
+		top = icon?.top || 0;
 	oImg
 		.scale(scale)
 		.set("left", left - (oImg.get("width") * scale) / 2)
