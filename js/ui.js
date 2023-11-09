@@ -44,7 +44,6 @@ if (localStorage.getItem("path")?.trim().length > 0) {
 $(".path-item")
 	.not(".path-item--active")
 	.on("click", function (e) {
-		console.log(123);
 		$(".path-item").removeClass("path-item--active");
 		$(this).addClass("path-item--active");
 		localStorage.setItem("path", $(this).data("path"));

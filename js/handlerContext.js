@@ -52,18 +52,30 @@ const handlerContextPath = (e) => {
 
 const acceptContextMap = (selectedName) => {
 	const select = {
-		point: createPoint,
-		knot: () => drawPath("Knot"),
-		pointL: () => drawPath("Point"),
+		point: () => {
+			savePath(createPoint());
+		},
+		knot: () => {
+			savePath(drawPath("Knot"));
+		},
+		pointL: () => {
+			savePath(drawPath("Point"));
+		},
 		coord: () => navigator.clipboard.writeText("top:" + pageY + "\n" + "left:" + pageX),
 	};
 	select[selectedName]();
 };
 const acceptContextMarker = (selectedName) => {
 	const select = {
-		point: createPoint,
-		knot: createKnotL,
-		pointL: createPointL,
+		point: () => {
+			savePath(createPoint());
+		},
+		knot: () => {
+			savePath(drawPath("Knot"));
+		},
+		pointL: () => {
+			savePath(drawPath("Point"));
+		},
 		id: copyIdMarker,
 		title: copyTitleMarker,
 		description: copyDescriptionMarker,

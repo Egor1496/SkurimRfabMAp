@@ -29,33 +29,8 @@ const createPoint = () => {
 	drawPoint(newPageY, newPageX, "Point");
 	oldPageX = pageX;
 	oldPageY = pageY;
+	return null;
 };
-
-// const createPointL = () => {
-// 	newPageY = pageY;
-// 	newPageX = pageX;
-// 	drawPoint(newPageY, newPageX, "Point");
-// 	if (oldPageX > -1 && oldPageY > -1) {
-// 		const newLine = drawLine(oldPageX - 0.7, oldPageY - 0.7, newPageX - 0.7, newPageY - 0.7);
-// 		canvas.add(newLine);
-// 		newLine.moveTo(1);
-// 	}
-// 	oldPageX = pageX;
-// 	oldPageY = pageY;
-// };
-
-// const createKnotL = () => {
-// 	newPageY = pageY;
-// 	newPageX = pageX;
-// 	drawPoint(newPageY, newPageX, "Knot");
-// 	if (oldPageX > -1 && oldPageY > -1) {
-// 		const newLine = drawLine(oldPageX - 0.7, oldPageY - 0.7, newPageX - 0.7, newPageY - 0.7);
-// 		canvas.add(newLine);
-// 		newLine.moveTo(1);
-// 	}
-// 	oldPageX = pageX;
-// 	oldPageY = pageY;
-// };
 
 const drawPath = (type) => {
 	newPageY = pageY;
@@ -68,7 +43,10 @@ const drawPath = (type) => {
 	}
 	oldPageX = pageX;
 	oldPageY = pageY;
+	return null;
 };
+
+const savePath = (path) => {};
 
 function drawLine(leftA, topA, leftB, topB) {
 	return new fabric.Line([leftA, topA, leftB, topB], {
@@ -85,7 +63,6 @@ function drawLine(leftA, topA, leftB, topB) {
 }
 
 function drawPoint(top, left, type) {
-	console.log(type);
 	fabric.Image.fromURL(`image/icon/${type}.svg`, (oImg) => {
 		oImg.set("hasControls", false).set("hasBorders", false).set("cornerSize", 0).set("selectable", false);
 
@@ -96,9 +73,7 @@ function drawPoint(top, left, type) {
 		};
 
 		coordIcon(oImg, point);
-
 		canvas.add(oImg);
-
 		applyTransform();
 	});
 }
