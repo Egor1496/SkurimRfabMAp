@@ -7,7 +7,7 @@ const closeDescription = () => {
 
 const openModal = () => {};
 
-const openDescription = (mark, element, oImg) => {
+const openDescription = (mark, oImg) => {
 	const modal = $(".modal-wrap"),
 		title = modal.find(".title"),
 		description = modal.find(".description"),

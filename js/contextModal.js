@@ -1,7 +1,7 @@
 const openContext = (e, handler, itemsHtml) => {
 	const context = $(".context-wrap");
-	context.css({ left: e.clientX });
-	context.css({ top: e.clientY });
+	context.css({ left: e.clientX - 10 });
+	context.css({ top: e.clientY - 10 });
 	context.removeClass("close");
 
 	const contextHtml = $(".context-wrap .context");

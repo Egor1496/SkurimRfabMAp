@@ -1,19 +1,23 @@
+const PATHHTML = `
+<div class="context-item-wrap context-item-path">
+	<div class="context-item" data-item="knot">
+		<div class="decor-line"></div>
+		<img src="image/icon/Knot.svg" class="knot" />
+	</div>
+	<div class="context-item" data-item="pointL">
+		<div class="decor-line"></div>
+		<img src="image/icon/Point.svg" />
+	</div>
+	<div class="context-item" data-item="point">
+		<img src="image/icon/Point.svg" />
+	</div>
+</div>
+`;
+
 const handlerContextMap = (e) => {
 	const items = [
 		`
-		<div class="context-item-wrap context-item-path">
-			<div class="context-item" data-item="point">
-				<img src="image/icon/Point.svg" />
-			</div>
-			<div class="context-item" data-item="knot">
-				<div class="decor-line"></div>
-				<img src="image/icon/Knot.svg" class="knot" />
-			</div>
-			<div class="context-item" data-item="pointL">
-				<div class="decor-line"></div>
-				<img src="image/icon/Point.svg" />
-			</div>
-		</div>
+		${PATHHTML}
 		<div class="context-item" data-item="coord"> coord </div>
 		`,
 	];
@@ -23,6 +27,7 @@ const handlerContextMap = (e) => {
 const handlerContextMarker = (e) => {
 	const items = [
 		`
+		${PATHHTML}
 		<div class="context-item" data-item="id"> id </div>
 		<div class="context-item" data-item="title"> заголовок </div>
 		<div class="context-item" data-item="description"> описание </div>
@@ -45,17 +50,20 @@ const handlerContextPath = (e) => {
 	openContext(e, acceptContextPath, items);
 };
 
-const acceptContextMap = (selectedNumber) => {
+const acceptContextMap = (selectedName) => {
+	const select = {
+		point: createPoint,
+		knot: () => drawPath("point"),
+		pointL: () => drawPath("point"),
+		coord: () => navigator.clipboard.writeText("top:" + pageY + "\n" + "left:" + pageX),
+	};
+	select[selectedName]();
+};
+const acceptContextMarker = (selectedName) => {
 	const select = {
 		point: createPoint,
 		knot: createKnotL,
 		pointL: createPointL,
-		coord: () => navigator.clipboard.writeText(baseTop + "\n" + baseLeft),
-	};
-	select[selectedNumber]();
-};
-const acceptContextMarker = (selectedNumber) => {
-	const select = {
 		id: copyIdMarker,
 		title: copyTitleMarker,
 		description: copyDescriptionMarker,
@@ -63,13 +71,13 @@ const acceptContextMarker = (selectedNumber) => {
 		obj: copyObjMarker,
 		coord: copyCoordMarker,
 	};
-	select[selectedNumber]();
+	select[selectedName]();
 };
-const acceptContextPath = (selectedNumber) => {
+const acceptContextPath = (selectedName) => {
 	const select = {
 		edit: editPath,
 		copy: copyPath,
 		delete: deletePath,
 	};
-	select[selectedNumber]();
+	select[selectedName]();
 };

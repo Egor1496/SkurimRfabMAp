@@ -1,7 +1,7 @@
 let thisMark = null;
 
 const copyIdMarker = () => navigator.clipboard.writeText(thisMark?.id || "");
-const copyCoordMarker = () => navigator.clipboard.writeText(thisMark?.left + "\n" + thisMark?.top || "");
+const copyCoordMarker = () => navigator.clipboard.writeText("top:" + thisMark?.top + "\n" + "left:" + thisMark?.left || "");
 const copyTitleMarker = () => navigator.clipboard.writeText(thisMark?.title || "");
 const copyDescriptionMarker = () => navigator.clipboard.writeText(thisMark?.description + " \n " + thisMark?.secondDescription.join(" \n ") || "");
 const copyIconMarker = () => navigator.clipboard.writeText(thisMark?.nameIcon || "");
@@ -18,7 +18,7 @@ const copyObjMarker = () => {
 	navigator.clipboard.writeText(markJSON);
 };
 
-function createMarkers(canvas, element, applyTransform, W, H) {
+function createMarkers() {
 	let filterList = [];
 	const type = localStorage.getItem("type");
 	if (type?.trim().length > 0) {
@@ -49,25 +49,20 @@ function createMarkers(canvas, element, applyTransform, W, H) {
 		fabric.Image.fromURL(iconPath, (oImg) => {
 			oImg.set("hasControls", false).set("hasBorders", false).set("cornerSize", 0).set("selectable", false);
 
-			scaleIcon(oImg, mark, true, W, H);
+			coordIcon(oImg, mark);
 
 			oImg.on("mouseover", function (e) {
-				oImg
-					.scale(oImg.getObjectScaling().scaleX + 0.2)
-					.set("left", oImg.get("left") - 4)
-					.set("top", oImg.get("top") - 4);
-
-				openDescription(mark, element, oImg);
-				closeContext();
-
-				applyTransform();
-
 				typeIcon = "marker";
 				thisMark = mark;
+				scaleIcon(oImg, true);
+
+				closeContext();
+				openDescription(mark, oImg);
+				applyTransform();
 			});
 
 			oImg.on("mouseout", function (e) {
-				scaleIcon(oImg, null, false);
+				scaleIcon(oImg, false);
 
 				closeDescription();
 
@@ -77,7 +72,7 @@ function createMarkers(canvas, element, applyTransform, W, H) {
 			});
 
 			oImg.on("mouseup", function (e) {
-				openDescription(mark, element, oImg);
+				openDescription(mark, oImg);
 			});
 
 			canvas.add(oImg);

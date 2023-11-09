@@ -1,6 +1,15 @@
-let thisPath = null;
-const deletePath = () => console.log("deletePath");
-const editPath = () => console.log("editPath");
+let thisPath = null,
+	oldPageX = -1,
+	oldPageY = -1,
+	newPageX = -1,
+	newPageY = -1;
+
+const deletePath = () => {
+	console.log("deletePath");
+};
+const editPath = () => {
+	console.log("editPath");
+};
 
 const copyPath = () => {
 	let pathJSON =
@@ -14,16 +23,58 @@ const copyPath = () => {
 	navigator.clipboard.writeText(pathJSON);
 };
 
-const createPoint = () => console.log("createPath");
-const createPointL = () => console.log("createPathL");
-const createKnotL = () => console.log("createKnotL");
+const createPoint = () => {
+	newPageY = pageY;
+	newPageX = pageX;
+	drawPoint(newPageY, newPageX, "Point");
+	oldPageX = pageX;
+	oldPageY = pageY;
+};
 
-function createLine({ leftA, topA, leftB, topB }) {
+// const createPointL = () => {
+// 	newPageY = pageY;
+// 	newPageX = pageX;
+// 	drawPoint(newPageY, newPageX, "Point");
+// 	if (oldPageX > -1 && oldPageY > -1) {
+// 		const newLine = drawLine(oldPageX - 0.7, oldPageY - 0.7, newPageX - 0.7, newPageY - 0.7);
+// 		canvas.add(newLine);
+// 		newLine.moveTo(1);
+// 	}
+// 	oldPageX = pageX;
+// 	oldPageY = pageY;
+// };
+
+// const createKnotL = () => {
+// 	newPageY = pageY;
+// 	newPageX = pageX;
+// 	drawPoint(newPageY, newPageX, "Knot");
+// 	if (oldPageX > -1 && oldPageY > -1) {
+// 		const newLine = drawLine(oldPageX - 0.7, oldPageY - 0.7, newPageX - 0.7, newPageY - 0.7);
+// 		canvas.add(newLine);
+// 		newLine.moveTo(1);
+// 	}
+// 	oldPageX = pageX;
+// 	oldPageY = pageY;
+// };
+
+const drawPath = (type) => {
+	newPageY = pageY;
+	newPageX = pageX;
+	drawPoint(newPageY, newPageX, type);
+	if (oldPageX > -1 && oldPageY > -1) {
+		const newLine = drawLine(oldPageX - 0.7, oldPageY - 0.7, newPageX - 0.7, newPageY - 0.7);
+		canvas.add(newLine);
+		newLine.moveTo(1);
+	}
+	oldPageX = pageX;
+	oldPageY = pageY;
+};
+
+function drawLine(leftA, topA, leftB, topB) {
 	return new fabric.Line([leftA, topA, leftB, topB], {
 		fill: "#2cf704",
 		stroke: "#2cf704",
 		strokeWidth: 1.5,
-		// opacity: 0.7,
 		hasControls: false,
 		hasBorders: false,
 		hasRotatingPoint: false,
@@ -33,7 +84,25 @@ function createLine({ leftA, topA, leftB, topB }) {
 	});
 }
 
-function createPath(canvas, element, applyTransform, W, H) {
+function drawPoint(top, left, type) {
+	fabric.Image.fromURL(`image/icon/${type}.svg`, (oImg) => {
+		oImg.set("hasControls", false).set("hasBorders", false).set("cornerSize", 0).set("selectable", false);
+
+		const point = {
+			top: top,
+			left: left,
+			scale: type === "Point" ? 0.2 : 0.1,
+		};
+
+		coordIcon(oImg, point);
+
+		canvas.add(oImg);
+
+		applyTransform();
+	});
+}
+
+function createPath() {
 	const numberPath = localStorage.getItem("path");
 	let path = [];
 
@@ -42,12 +111,7 @@ function createPath(canvas, element, applyTransform, W, H) {
 	path.forEach((point, i) => {
 		fabric.Image.fromURL("image/icon/" + point.type + ".svg", (oImg) => {
 			if (i > 0 && point.line !== false) {
-				const newLine = createLine({
-					leftA: path[i - 1].left - 0.7,
-					topA: path[i - 1].top - 0.7,
-					leftB: path[i].left - 0.7,
-					topB: path[i].top - 0.7,
-				});
+				const newLine = drawLine(path[i - 1].left - 0.7, path[i - 1].top - 0.7, path[i].left - 0.7, path[i].top - 0.7);
 				canvas.add(newLine);
 				newLine.moveTo(i);
 			}
@@ -56,44 +120,29 @@ function createPath(canvas, element, applyTransform, W, H) {
 
 			point.scale = point.type === "Point" ? 0.2 : 0.1;
 
-			scaleIcon(oImg, point, true, W, H);
+			coordIcon(oImg, point);
 
 			oImg.on("mouseover", function (opt) {
-				if (point.type === "Point")
-					oImg
-						.scale(oImg.getObjectScaling().scaleX + 0.2)
-						.set("left", oImg.get("left") - 4)
-						.set("top", oImg.get("top") - 4);
-
-				applyTransform();
-
-				openDescription(point, element, oImg);
-				closeContext();
-
 				if (point.type === "Point") {
 					typeIcon = "path";
 					thisPath = path;
+					scaleIcon(oImg, true);
 				}
+
+				closeContext();
+				openDescription(point, oImg);
+				applyTransform();
 			});
 
 			oImg.on("mouseout", function (opt) {
-				if (point.type === "Point") scaleIcon(oImg, null, false);
-				applyTransform();
+				if (point.type === "Point") scaleIcon(oImg, false);
+				typeIcon = "map";
 
 				closeDescription();
-
-				typeIcon = "map";
+				applyTransform();
 			});
 
-			oImg.on("mouseup", function (opt) {
-				// 	let MarkJSON = JSON.stringify(mark)
-				// 		.split(",")
-				// 		.map((str) => {
-				// 			return "\n" + str;
-				// 		});
-				// 	navigator.clipboard.writeText(mark.id); //MarkJSON.join() + ","
-				// 	openDescription(mark, element, oImg);
-			});
+			oImg.on("mouseup", function (opt) {});
 
 			canvas.add(oImg);
 			if (point.type !== "Point") oImg.moveTo(path.length + 1);
