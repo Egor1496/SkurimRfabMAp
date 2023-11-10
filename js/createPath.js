@@ -6,8 +6,7 @@ let thisPath = null,
 	oldPageMX = -1,
 	oldPageMY = -1,
 	newPageMX = -1,
-	newPageMY = -1,
-	newPath = [];
+	newPageMY = -1;
 
 const deletePath = () => {
 	console.log("deletePath");
@@ -48,6 +47,8 @@ const createPoint = () => {
 		left: newPageX,
 		line: false,
 	});
+
+	saveModalOpen();
 };
 
 const createNewPath = (type) => {
@@ -78,11 +79,12 @@ const createNewPath = (type) => {
 		left: newPageX,
 		line: isLine,
 	});
+
+	saveModalOpen();
 };
 
 const savePath = (path) => {
 	newPath.push(path);
-	console.log(newPath);
 };
 
 function drawLine(leftA, topA, leftB, topB) {
@@ -121,7 +123,7 @@ function createPath() {
 
 	if (numberPath) path = listPath[Number(numberPath)];
 
-	path.forEach((point, i) => {
+	path?.forEach((point, i) => {
 		fabric.Image.fromURL("image/icon/" + point.type + ".svg", (oImg) => {
 			if (i > 0 && point.line !== false) {
 				const newLine = drawLine(path[i - 1].left - 0.7, path[i - 1].top - 0.7, path[i].left - 0.7, path[i].top - 0.7);

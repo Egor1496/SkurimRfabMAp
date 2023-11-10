@@ -318,3 +318,45 @@ body {
   background-color: #2cf704;
   margin-right: -3px;
 }
+
+.accept-modal-wrap {
+  position: relative;
+  z-index: 30;
+  left: 50%;
+  top: 40px;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  width: 180px;
+  transition: top, 0.2s;
+}
+
+.accept-modal-wrap.close{
+  top: -100px;
+}
+
+/* .accept-modal{} */
+
+.accept-modal button{
+  background-color: transparent;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 5px;
+  border: 2px solid #929292;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.accept-modal button:hover{
+  cursor: pointer;
+  background-color: rgba(12, 12, 12, 0.547);
+  transform: scale(1.05);
+}
+
+.yes{
+ color: rgb(97, 255, 73);
+}
+
+.no{
+ color: rgb(255, 69, 69);
+}
+

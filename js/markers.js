@@ -4111,7 +4111,7 @@ const listMarkers = [
 	{
 		title: "Труп мага???? (<q lblue>0lvl</q>)",
 		description: "Пару волков.",
-		secondDescription: ["<q yelow>Посох гроз</q>."],
+		secondDescription: ["<q yelow>Посох мороз</q>."],
 		type: "soc",
 		nameIcon: "Loot",
 		scale: 0.2,

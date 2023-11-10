@@ -8,7 +8,8 @@ let baseTop = 0,
 	pageY = 0,
 	pageX = 0,
 	pageMY = 0,
-	pageMX = 0;
+	pageMX = 0,
+	newPath = [];
 
 const W = 1;
 H = 1;
