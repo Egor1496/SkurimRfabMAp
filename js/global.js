@@ -2,11 +2,13 @@ let baseTop = 0,
 	baseLeft = 0,
 	baseZoom = 1,
 	defaultScaleIcon = 0.3,
-	mouseLeft = 0,
-	mouseTop = 0,
+	winMouseLeft = 0,
+	winMouseTop = 0,
 	typeIcon = "map",
 	pageY = 0,
-	pageX = 0;
+	pageX = 0,
+	pageMY = 0,
+	pageMX = 0;
 
 const W = 1;
 H = 1;
@@ -92,8 +94,8 @@ const applyTransform = function () {
 };
 
 $(window).mousemove(function (e) {
-	mouseLeft = e.pageX;
-	mouseTop = e.pageY;
+	winMouseLeft = e.pageX;
+	winMouseTop = e.pageY;
 });
 
 const coordIcon = (oImg, icon) => {

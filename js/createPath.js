@@ -2,11 +2,17 @@ let thisPath = null,
 	oldPageX = -1,
 	oldPageY = -1,
 	newPageX = -1,
-	newPageY = -1;
+	newPageY = -1,
+	oldPageMX = -1,
+	oldPageMY = -1,
+	newPageMX = -1,
+	newPageMY = -1,
+	newPath = [];
 
 const deletePath = () => {
 	console.log("deletePath");
 };
+
 const editPath = () => {
 	console.log("editPath");
 };
@@ -26,27 +32,58 @@ const copyPath = () => {
 const createPoint = () => {
 	newPageY = pageY;
 	newPageX = pageX;
-	drawPoint(newPageY, newPageX, "Point");
+	newPageMY = pageMY;
+	newPageMX = pageMX;
+
+	drawPoint(newPageMY, newPageMX, "Point");
+
 	oldPageX = pageX;
 	oldPageY = pageY;
-	return null;
+	oldPageMX = pageMX;
+	oldPageMY = pageMY;
+
+	savePath({
+		type: "Point",
+		top: newPageY,
+		left: newPageX,
+		line: false,
+	});
 };
 
-const drawPath = (type) => {
+const createNewPath = (type) => {
 	newPageY = pageY;
 	newPageX = pageX;
-	drawPoint(newPageY, newPageX, type);
+	newPageMY = pageMY;
+	newPageMX = pageMX;
+
+	let isLine = false;
+
+	drawPoint(newPageMY, newPageMX, type);
+
 	if (oldPageX > -1 && oldPageY > -1) {
-		const newLine = drawLine(oldPageX - 0.7, oldPageY - 0.7, newPageX - 0.7, newPageY - 0.7);
+		isLine = true;
+		const newLine = drawLine(oldPageMX - 0.7, oldPageMY - 0.7, newPageMX - 0.7, newPageMY - 0.7);
 		canvas.add(newLine);
 		newLine.moveTo(1);
 	}
+
 	oldPageX = pageX;
 	oldPageY = pageY;
-	return null;
+	oldPageMX = pageMX;
+	oldPageMY = pageMY;
+
+	savePath({
+		type: type,
+		top: newPageY,
+		left: newPageX,
+		line: isLine,
+	});
 };
 
-const savePath = (path) => {};
+const savePath = (path) => {
+	newPath.push(path);
+	console.log(newPath);
+};
 
 function drawLine(leftA, topA, leftB, topB) {
 	return new fabric.Line([leftA, topA, leftB, topB], {

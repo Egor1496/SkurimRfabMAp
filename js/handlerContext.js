@@ -53,13 +53,13 @@ const handlerContextPath = (e) => {
 const acceptContextMap = (selectedName) => {
 	const select = {
 		point: () => {
-			savePath(createPoint());
+			createPoint();
 		},
 		knot: () => {
-			savePath(drawPath("Knot"));
+			createNewPath("Knot");
 		},
 		pointL: () => {
-			savePath(drawPath("Point"));
+			createNewPath("Point");
 		},
 		coord: () => navigator.clipboard.writeText("top:" + pageY + "\n" + "left:" + pageX),
 	};
@@ -68,13 +68,13 @@ const acceptContextMap = (selectedName) => {
 const acceptContextMarker = (selectedName) => {
 	const select = {
 		point: () => {
-			savePath(createPoint());
+			createPoint();
 		},
 		knot: () => {
-			savePath(drawPath("Knot"));
+			createNewPath("Knot");
 		},
 		pointL: () => {
-			savePath(drawPath("Point"));
+			createNewPath("Point");
 		},
 		id: copyIdMarker,
 		title: copyTitleMarker,

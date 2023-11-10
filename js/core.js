@@ -40,11 +40,14 @@ window.onload = (e) => {
 				// const h = (e.pageY - baseTop) / baseZoom - element.offset().top,
 				// 	w = (e.pageX - baseLeft) / baseZoom - element.offset().left;
 
-				// pageY = (e.pageY - baseTop) / baseZoom - element.offset().top;
-				// pageX = (e.pageX - baseLeft) / baseZoom - element.offset().left;
+				pageY = (e.pageY - baseTop) / baseZoom - element.offset().top;
+				pageX = (e.pageX - baseLeft) / baseZoom - element.offset().left;
 
-				pageY = e.pageY / baseZoom - element.offset().top;
-				pageX = e.pageX / baseZoom - element.offset().left;
+				pageMY = e.pageY / baseZoom - element.offset().top;
+				pageMX = e.pageX / baseZoom - element.offset().left;
+
+				// pageY = e.pageY / baseZoom - element.offset().top;
+				// pageX = e.pageX / baseZoom - element.offset().left;
 			})
 			.mousemove(function (e) {
 				// Непосредственно перемещение
