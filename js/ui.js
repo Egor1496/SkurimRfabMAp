@@ -32,8 +32,6 @@ $(".path-button").on("click", function (e) {
 	$(".filter-button").addClass("close");
 });
 
-console.log($(".path-list .path-item").length);
-
 if (localStorage.getItem("path")?.trim().length > 0 && $(".path-list .path-item").length > 0) {
 	$(".path-open-icon").show();
 	$(".path-close-icon").hide();
