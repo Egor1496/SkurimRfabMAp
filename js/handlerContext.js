@@ -1,12 +1,15 @@
 const PATHHTML = `
 <div class="context-item-wrap context-item-path">
-	<div class="context-item" data-item="knot">
+	<div class="context-item" data-item="knotL">
 		<div class="decor-line"></div>
 		<img src="image/icon/Knot.svg" class="knot" />
 	</div>
 	<div class="context-item" data-item="pointL">
 		<div class="decor-line"></div>
 		<img src="image/icon/Point.svg" />
+	</div>
+	<div class="context-item" data-item="knot">
+		<img src="image/icon/Knot.svg" class="knot" />
 	</div>
 	<div class="context-item" data-item="point">
 		<img src="image/icon/Point.svg" />
@@ -43,7 +46,7 @@ const handlerContextPath = (e) => {
 	const items = [
 		`
 		<div class="context-item" data-item="copy"> копировать </div>
-		<div class="context-item" data-item="edit"> редактировать </div>
+		<div class="context-item" data-item="edit"> + описание </div>
 		<div class="context-item" data-item="delete"> удалить </div>
 		`,
 	];
@@ -53,28 +56,35 @@ const handlerContextPath = (e) => {
 const acceptContextMap = (selectedName) => {
 	const select = {
 		point: () => {
-			createPoint();
+			createNewPath("Point", false);
 		},
 		knot: () => {
-			createNewPath("Knot");
+			createNewPath("Knot", false);
+		},
+		knotL: () => {
+			createNewPath("Knot", true);
 		},
 		pointL: () => {
-			createNewPath("Point");
+			createNewPath("Point", true);
 		},
 		coord: () => navigator.clipboard.writeText("top:" + pageY + "\n" + "left:" + pageX),
 	};
 	select[selectedName]();
 };
+
 const acceptContextMarker = (selectedName) => {
 	const select = {
 		point: () => {
-			createPoint();
+			createNewPath("Point", false);
 		},
 		knot: () => {
-			createNewPath("Knot");
+			createNewPath("Knot", false);
+		},
+		knotL: () => {
+			createNewPath("Knot", true);
 		},
 		pointL: () => {
-			createNewPath("Point");
+			createNewPath("Point", true);
 		},
 		id: copyIdMarker,
 		title: copyTitleMarker,
@@ -93,3 +103,16 @@ const acceptContextPath = (selectedName) => {
 	};
 	select[selectedName]();
 };
+
+$(".path-list .path-item").on("contextmenu", function (e) {
+	e.preventDefault();
+	const items = [
+		`
+		<div class="context-item" data-item="copy"> копировать </div>
+		<div class="context-item" data-item="delete"> удалить </div>
+		`,
+	];
+	currentPathNumber = Number($(this).data("path"));
+	currentPath = listPath[currentPathNumber];
+	openContext(e, acceptContextPath, items);
+});

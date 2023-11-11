@@ -9,7 +9,10 @@ let baseTop = 0,
 	pageX = 0,
 	pageMY = 0,
 	pageMX = 0,
-	newPath = [];
+	newPath = [],
+	currentPath = null,
+	currentPathNumber = -1,
+	listPath;
 
 const W = 1;
 H = 1;

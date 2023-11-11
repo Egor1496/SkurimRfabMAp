@@ -1,5 +1,4 @@
-let thisPath = null,
-	oldPageX = -1,
+let oldPageX = -1,
 	oldPageY = -1,
 	newPageX = -1,
 	newPageY = -1,
@@ -9,7 +8,11 @@ let thisPath = null,
 	newPageMY = -1;
 
 const deletePath = () => {
-	console.log("deletePath");
+	console.log(currentPathNumber);
+	listPath.splice(currentPathNumber, 1);
+	localStorage.setItem("listPath", JSON.stringify(listPath));
+	localStorage.setItem("path", -1);
+	location.reload();
 };
 
 const editPath = () => {
@@ -18,7 +21,7 @@ const editPath = () => {
 
 const copyPath = () => {
 	let pathJSON =
-		JSON.stringify(thisPath)
+		JSON.stringify(currentPath)
 			.split(",")
 			.map((str) => {
 				return "\n" + str;
@@ -28,44 +31,20 @@ const copyPath = () => {
 	navigator.clipboard.writeText(pathJSON);
 };
 
-const createPoint = () => {
+const createNewPath = (type, isLine) => {
 	newPageY = pageY;
 	newPageX = pageX;
 	newPageMY = pageMY;
 	newPageMX = pageMX;
-
-	drawPoint(newPageMY, newPageMX, "Point");
-
-	oldPageX = pageX;
-	oldPageY = pageY;
-	oldPageMX = pageMX;
-	oldPageMY = pageMY;
-
-	savePath({
-		type: "Point",
-		top: newPageY,
-		left: newPageX,
-		line: false,
-	});
-
-	saveModalOpen();
-};
-
-const createNewPath = (type) => {
-	newPageY = pageY;
-	newPageX = pageX;
-	newPageMY = pageMY;
-	newPageMX = pageMX;
-
-	let isLine = false;
 
 	drawPoint(newPageMY, newPageMX, type);
 
-	if (oldPageX > -1 && oldPageY > -1) {
-		isLine = true;
+	if (oldPageX > -1 && oldPageY > -1 && isLine === true) {
 		const newLine = drawLine(oldPageMX - 0.7, oldPageMY - 0.7, newPageMX - 0.7, newPageMY - 0.7);
 		canvas.add(newLine);
 		newLine.moveTo(1);
+	} else {
+		isLine = false;
 	}
 
 	oldPageX = pageX;
@@ -141,7 +120,8 @@ function createPath() {
 				if (point.type === "Point") {
 					scaleIcon(oImg, true);
 					typeIcon = "path";
-					thisPath = path;
+					currentPath = path;
+					currentPathNumber = Number(numberPath);
 				}
 
 				closeContext();
