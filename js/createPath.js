@@ -7,30 +7,6 @@ let oldPageX = -1,
 	newPageMX = -1,
 	newPageMY = -1;
 
-const deletePath = () => {
-	console.log(currentPathNumber);
-	listPath.splice(currentPathNumber, 1);
-	localStorage.setItem("listPath", JSON.stringify(listPath));
-	localStorage.setItem("path", -1);
-	location.reload();
-};
-
-const editPath = () => {
-	console.log("editPath");
-};
-
-const copyPath = () => {
-	let pathJSON =
-		JSON.stringify(currentPath)
-			.split(",")
-			.map((str) => {
-				return "\n" + str;
-			})
-			.join() + ",";
-
-	navigator.clipboard.writeText(pathJSON);
-};
-
 const createNewPath = (type, isLine) => {
 	newPageY = pageY;
 	newPageX = pageX;

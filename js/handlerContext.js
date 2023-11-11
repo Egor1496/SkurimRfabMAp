@@ -116,3 +116,27 @@ $(".path-list .path-item").on("contextmenu", function (e) {
 	currentPath = listPath[currentPathNumber];
 	openContext(e, acceptContextPath, items);
 });
+
+const deletePath = () => {
+	console.log(currentPathNumber);
+	listPath.splice(currentPathNumber, 1);
+	localStorage.setItem("listPath", JSON.stringify(listPath));
+	localStorage.setItem("path", -1);
+	location.reload();
+};
+
+const editPath = () => {
+	console.log("editPath");
+};
+
+const copyPath = () => {
+	let pathJSON =
+		JSON.stringify(currentPath)
+			.split(",")
+			.map((str) => {
+				return "\n" + str;
+			})
+			.join() + ",";
+
+	navigator.clipboard.writeText(pathJSON);
+};

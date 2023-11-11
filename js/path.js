@@ -1,6 +1,6 @@
-const lP = JSON.parse(localStorage.getItem("listPath"));
+const lP = JSON.parse(localStorage.getItem("listPath")) || [];
 
-if (lP.length > 0) {
+if (lP?.length > 0) {
 	listPath = lP;
 } else {
 	listPath = [
