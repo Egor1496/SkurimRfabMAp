@@ -32,7 +32,7 @@ $(".path-button").on("click", function (e) {
 	$(".filter-button").addClass("close");
 });
 
-if (localStorage.getItem("path")?.trim().length > 0 && $(".path-list .path-item").length > 0) {
+if (Number(localStorage.getItem("path")) > 0 && $(".path-list .path-item").length > 0) {
 	$(".path-open-icon").show();
 	$(".path-close-icon").hide();
 	$(".path-item[data-path=" + localStorage.getItem("path") + "]").addClass("path-item--active");
