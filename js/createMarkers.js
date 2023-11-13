@@ -49,12 +49,12 @@ function createMarkers() {
 		fabric.Image.fromURL(iconPath, (oImg) => {
 			oImg.set("hasControls", false).set("hasBorders", false).set("cornerSize", 0).set("selectable", false);
 
-			coordIcon(oImg, mark);
+			setPosIcon(oImg, mark);
 
 			oImg.on("mouseover", function (e) {
 				typeIcon = "marker";
 				thisMark = mark;
-				scaleIcon(oImg, true);
+				setScaleIcon(oImg, true);
 
 				closeContext();
 				openDescription(mark, oImg);
@@ -62,7 +62,7 @@ function createMarkers() {
 			});
 
 			oImg.on("mouseout", function (e) {
-				scaleIcon(oImg, false);
+				setScaleIcon(oImg, false);
 
 				closeDescription();
 

@@ -4399,7 +4399,7 @@ const listMarkers = [
 	},
 
 	{
-		title: "Аталь Талоса",
+		title: "Алталрь Талоса",
 		description: "",
 		secondDescription: ["<q yelow>Септимы</q>, <q yelow>снаряжение</q>."],
 		type: "soc",

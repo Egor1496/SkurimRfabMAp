@@ -82,7 +82,7 @@ var setScale = function (scaleToSet, anchorX, anchorY) {
 	applyTransform();
 };
 
-const coordIcon = (oImg, icon) => {
+const setPosIcon = (oImg, icon) => {
 	const scale = icon?.scale * W || defaultScaleIcon * W,
 		left = icon?.left || 0,
 		top = icon?.top || 0;
@@ -95,7 +95,7 @@ const coordIcon = (oImg, icon) => {
 	// .set("top", (top - (oImg.get("height") * scale) / 2) * H); // * H * 1.005
 };
 
-const scaleIcon = (oImg, isSacle) => {
+const setScaleIcon = (oImg, isSacle) => {
 	if (isSacle) {
 		oImg
 			.scale(oImg.getObjectScaling().scaleX + 0.2)

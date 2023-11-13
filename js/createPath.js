@@ -57,7 +57,7 @@ function drawPoint(top, left, type) {
 			scale: type === "Point" ? 0.2 : 0.1,
 		};
 
-		coordIcon(oImg, point);
+		setPosIcon(oImg, point);
 		canvas.add(oImg);
 		applyTransform();
 	});
@@ -81,11 +81,11 @@ function createPath() {
 
 			point.scale = point.type === "Point" ? 0.2 : 0.1;
 
-			coordIcon(oImg, point);
+			setPosIcon(oImg, point);
 
 			oImg.on("mouseover", function (opt) {
 				if (point.type === "Point") {
-					scaleIcon(oImg, true);
+					setScaleIcon(oImg, true);
 					typeIcon = "path";
 					currentPath = path;
 					currentPathNumber = Number(numberPath);
@@ -97,7 +97,7 @@ function createPath() {
 			});
 
 			oImg.on("mouseout", function (opt) {
-				if (point.type === "Point") scaleIcon(oImg, false);
+				if (point.type === "Point") setScaleIcon(oImg, false);
 				typeIcon = "map";
 
 				closeDescription();
