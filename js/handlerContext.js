@@ -19,7 +19,9 @@ const PATHHTML = `
 
 const handlerContextMap = (e) => {
 	if (currentZoom === 0) {
-		const items = `${PATHHTML} <div class="context-item" data-item="coord"> coord </div>`;
+		const items = `${PATHHTML}
+		<div class="context-item" data-item="coord"> coord </div>
+		<div class="context-item" data-item="coppyObject"> obj </div>`;
 		openContext(e, acceptContextMap, items);
 	}
 };
@@ -46,19 +48,12 @@ const handlerContextPath = (e) => {
 
 const acceptContextMap = (selectedName) => {
 	const select = {
-		point: () => {
-			createNewPath("Point", false);
-		},
-		knot: () => {
-			createNewPath("Knot", false);
-		},
-		knotL: () => {
-			createNewPath("Knot", true);
-		},
-		pointL: () => {
-			createNewPath("Point", true);
-		},
-		coord: () => navigator.clipboard.writeText("top:" + pageY + "\n" + "left:" + pageX),
+		point: () => createNewPath("Point", false),
+		knot: () => createNewPath("Knot", false),
+		knotL: () => createNewPath("Knot", true),
+		pointL: () => createNewPath("Point", true),
+		coord: () => navigator.clipboard.writeText(`top: ${pageY}, \n left: ${pageX},`),
+		coppyObject: () => coppyObject(pageY, pageX),
 	};
 	select[selectedName]();
 };

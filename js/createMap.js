@@ -58,8 +58,6 @@ var bindContainerEvents = function () {
 		// Отключим скроллирование страницы
 		event.preventDefault();
 
-		console.log(map);
-
 		// 	console.log(`currentZoom - ${currentZoom},
 		// 	e.pageY - ${event.pageY},
 		// 	e.pageX - ${event.pageX},
