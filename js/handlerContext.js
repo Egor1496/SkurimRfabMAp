@@ -18,38 +18,29 @@ const PATHHTML = `
 `;
 
 const handlerContextMap = (e) => {
-	const items = [
-		`
-		${PATHHTML}
-		<div class="context-item" data-item="coord"> coord </div>
-		`,
-	];
-	openContext(e, acceptContextMap, items);
+	if (currentZoom === 0) {
+		const items = `${PATHHTML} <div class="context-item" data-item="coord"> coord </div>`;
+		openContext(e, acceptContextMap, items);
+	}
 };
 
 const handlerContextMarker = (e) => {
-	const items = [
-		`
-		${PATHHTML}
+	const items = `${currentZoom === 0 ? PATHHTML : ""}
 		<div class="context-item" data-item="id"> id </div>
 		<div class="context-item" data-item="title"> заголовок </div>
 		<div class="context-item" data-item="description"> описание </div>
 		<div class="context-item" data-item="icon"> иконка </div>
 		<div class="context-item" data-item="obj"> obj </div>
-		<div class="context-item" data-item="coord"> coord </div>
-		`,
-	];
+		<div class="context-item" data-item="coord"> coord </div>`;
 	openContext(e, acceptContextMarker, items);
 };
 
 const handlerContextPath = (e) => {
-	const items = [
-		`
+	const items = `
 		<div class="context-item" data-item="copy"> копировать </div>
 		<div class="context-item" data-item="edit"> + описание </div>
 		<div class="context-item" data-item="delete"> удалить </div>
-		`,
-	];
+	`;
 	openContext(e, acceptContextPath, items);
 };
 
@@ -118,7 +109,6 @@ $(".path-list .path-item").on("contextmenu", function (e) {
 });
 
 const deletePath = () => {
-	console.log(currentPathNumber);
 	listPath.splice(currentPathNumber, 1);
 	localStorage.setItem("listPath", JSON.stringify(listPath));
 	localStorage.setItem("path", -1);

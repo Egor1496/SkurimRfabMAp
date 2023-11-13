@@ -1,22 +1,13 @@
 let oldPageX = -1,
 	oldPageY = -1,
-	newPageX = -1,
-	newPageY = -1,
 	oldPageMX = -1,
-	oldPageMY = -1,
-	newPageMX = -1,
-	newPageMY = -1;
+	oldPageMY = -1;
 
 const createNewPath = (type, isLine) => {
-	newPageY = pageY;
-	newPageX = pageX;
-	newPageMY = pageMY;
-	newPageMX = pageMX;
-
-	drawPoint(newPageMY, newPageMX, type);
+	drawPoint(pageMY, pageMX, type);
 
 	if (oldPageX > -1 && oldPageY > -1 && isLine === true) {
-		const newLine = drawLine(oldPageMX - 0.7, oldPageMY - 0.7, newPageMX - 0.7, newPageMY - 0.7);
+		const newLine = drawLine(oldPageMX - 0.7, oldPageMY - 0.7, pageMX - 0.7, pageMY - 0.7);
 		canvas.add(newLine);
 		newLine.moveTo(1);
 	} else {
@@ -30,8 +21,8 @@ const createNewPath = (type, isLine) => {
 
 	savePath({
 		type: type,
-		top: newPageY,
-		left: newPageX,
+		top: pageY,
+		left: pageX,
 		line: isLine,
 	});
 

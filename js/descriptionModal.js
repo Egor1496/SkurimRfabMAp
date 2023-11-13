@@ -40,7 +40,7 @@ const openDescription = (mark, oImg) => {
 		if (modaTop < 0) {
 			modaTop += 5 + modal.height() + oImg.get("width") * oImg.scaleX;
 			if (modaTop + modal.height() > $(window).height()) {
-				if (winMouseLeft <= modal.width() && winMouseTop <= modal.height()) {
+				if (winMouseX <= modal.width() && winMouseY <= modal.height()) {
 					modaTop = 0;
 					modalLeft = $(window).width() - modal.width();
 				} else {
