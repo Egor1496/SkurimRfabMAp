@@ -137,7 +137,11 @@ var bindContainerTouchEvents = function () {
 	container.bind("touchmove", handleTouchEvent);
 };
 
-fabric.util.loadImage("image/map/SkurimMap-min-filter-2.jpg", function (img) {
+const skyMap = "image/map/SkurimMap-min-filter-2.jpg",
+	solsMap = "image/map/SolstheimMap-filter-mini.jpg",
+	nameMainMap = TYPE_MAP === "skyrim" ? skyMap : solsMap;
+
+fabric.util.loadImage(nameMainMap, function (img) {
 	map = new fabric.Image(img);
 	let curBaseScale;
 	if ("ontouchstart" in window || (window.DocumentTouch && document instanceof DocumentTouch)) {

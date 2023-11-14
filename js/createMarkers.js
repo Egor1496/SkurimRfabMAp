@@ -20,7 +20,8 @@ const copyObjMarker = () => {
 
 function createMarkers() {
 	let filterList = [];
-	const type = localStorage.getItem("type");
+	const listMarkers = TYPE_MAP === "skyrim" ? listMarkersSky : listMarkersSols;
+	const type = localStorage.getItem(TYPE_MAP === "skyrim" ? "filter-type-sky" : "filter-type-sols");
 	if (type?.trim().length > 0) {
 		listMarkers.forEach((mark) => {
 			if (~mark.type?.trim().indexOf(type?.trim() || "")) {

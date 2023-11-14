@@ -3,10 +3,12 @@ $(".filter-button").on("click", function (e) {
 	$(".path-button").addClass("close");
 });
 
-if (localStorage.getItem("type")?.trim().length > 0) {
+const filterType = TYPE_MAP === "skyrim" ? "filter-type-sky" : "filter-type-sols";
+
+if (localStorage.getItem(filterType)?.trim().length > 0) {
 	$(".filter-open-icon").show();
 	$(".filter-close-icon").hide();
-	$(".filter-item[data-type=" + localStorage.getItem("type") + "]").addClass("filter-item--active");
+	$(`.filter-item[data-${filterType}="${localStorage.getItem(filterType)}"]`).addClass("filter-item--active");
 } else {
 	$(".filter-close-icon").show();
 	$(".filter-open-icon").hide();
@@ -17,13 +19,13 @@ $(".filter-item")
 	.on("click", function (e) {
 		$(".filter-item").removeClass("filter-item--active");
 		$(this).addClass("filter-item--active");
-		localStorage.setItem("type", $(this).data("type"));
+		localStorage.setItem(filterType, $(this).data(filterType));
 		location.reload();
 	});
 
 $(".filter-item--active").on("click", (e) => {
 	$(".filter-item").removeClass("filter-item--active");
-	localStorage.setItem("type", "");
+	localStorage.setItem(filterType, "");
 	location.reload();
 });
 
@@ -32,10 +34,23 @@ $(".path-button").on("click", function (e) {
 	$(".filter-button").addClass("close");
 });
 
-if (Number(localStorage.getItem("path") || -1) >= 0 && $(".path-list .path-item").length > 0) {
+if (TYPE_MAP === "skyrim") {
+	listPathSky.forEach((path, i) => {
+		$(".path-list").html($(".path-list").html() + `<li class="path-item" data-path-sky="${i}">${i + 1}</li>`);
+	});
+
+	if (listPathSky.length > 13) {
+		$(".path-list").css("width", 500);
+		$(".path-list").css("flex-wrap", "wrap");
+	}
+}
+
+const pathType = TYPE_MAP === "skyrim" ? "path-sky" : "path-sols";
+
+if (Number(localStorage.getItem(pathType) || -1) >= 0 && $(".path-list .path-item").length > 0) {
 	$(".path-open-icon").show();
 	$(".path-close-icon").hide();
-	$(".path-item[data-path=" + localStorage.getItem("path") + "]").addClass("path-item--active");
+	$(".path-item[data-" + pathType + "=" + localStorage.getItem(pathType) + "]").addClass("path-item--active");
 } else {
 	$(".path-close-icon").show();
 	$(".path-open-icon").hide();
@@ -46,15 +61,26 @@ $(".path-item")
 	.on("click", function (e) {
 		$(".path-item").removeClass("path-item--active");
 		$(this).addClass("path-item--active");
-		localStorage.setItem("path", $(this).data("path"));
+		localStorage.setItem(pathType, $(this).data(pathType));
 		location.reload();
 	});
 
 $(".path-item--active").on("click", (e) => {
 	$(".path-item").removeClass("path-item--active");
-	localStorage.setItem("path", "");
+	localStorage.setItem(pathType, "");
 	location.reload();
 });
+
+if (TYPE_MAP === "solstheim") {
+	listPathSols.forEach((path, i) => {
+		$(".path-list").html($(".path-list").html() + `<li class="path-item" data-path-sols="${i}">${i + 1}</li>`);
+	});
+
+	if (listPathSols.length > 13) {
+		$(".path-list").css("width", 500);
+		$(".path-list").css("flex-wrap", "wrap");
+	}
+}
 
 $(".canvas-wrap").on("click", function (e) {
 	closeDescription();

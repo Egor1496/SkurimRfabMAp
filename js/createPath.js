@@ -64,10 +64,12 @@ function drawPoint(top, left, type) {
 }
 
 function createPath() {
-	const numberPath = localStorage.getItem("path");
+	const numberPath = localStorage.getItem(TYPE_MAP === "skyrim" ? "path-sky" : "path-sols");
 	let path = [];
 
-	if (numberPath) path = listPath[Number(numberPath)];
+	if (numberPath) {
+		path = TYPE_MAP === "skyrim" ? listPathSky[Number(numberPath)] : listPathSols[Number(numberPath)];
+	}
 
 	path?.forEach((point, i) => {
 		fabric.Image.fromURL("image/icon/" + point.type + ".svg", (oImg) => {

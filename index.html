@@ -3,11 +3,16 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>RFAB Map</title>
+		<title>RFAB Skyrim map</title>
 		<link rel="icon" type="image/png" href="image/fvc/3.png" />
 		<link href="style.css" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
+		<div class="map-link">
+			<a href="solstheim.html">
+				<img src="image/To_Skyrim_e.svg" alt="" class="rotate" />
+			</a>
+		</div>
 		<div class="filter-wrap">
 			<div class="filter-button close">
 				<img src="image/filterClose.svg" class="filter-close-icon" style="display: none" alt="" />
@@ -15,51 +20,50 @@
 			</div>
 			<ul class="filter-list">
 				<div class="filter-list-wrap">
-					<li class="filter-item" data-type="soc">
+					<li class="filter-item" data-filter-type-sky="soc">
 						<img src="image/dollar.svg" alt="" />
 					</li>
-					<li class="filter-item" data-type="xp">
+					<li class="filter-item" data-filter-type-sky="xp">
 						<img src="image/star.svg" alt="" />
 					</li>
-					<li class="filter-item" data-type="loot">
+					<li class="filter-item" data-filter-type-sky="loot">
 						<img src="image/bag.svg" alt="" />
 					</li>
-					<li class="filter-item" data-type="boss">
+					<li class="filter-item" data-filter-type-sky="boss">
 						<img src="image/skull.svg" alt="" />
 					</li>
-					<!-- <li class="filter-item" data-type="boss">Босс</li> -->
 				</div>
-				<li class="filter-item" data-type="bandit">
+				<li class="filter-item" data-filter-type-sky="bandit">
 					Бандиты <span> <span lblue>0</span>-<span lblue>20</span></span>
 				</li>
-				<li class="filter-item" data-type="trash">
+				<li class="filter-item" data-filter-type-sky="trash">
 					Изгои <span> <span lblue>20</span>-<span lblue>30</span></span>
 				</li>
-				<li class="filter-item" data-type="giant">
+				<li class="filter-item" data-filter-type-sky="giant">
 					Великаны <span> <span lblue>20</span>-<span lblue>30</span></span>
 				</li>
-				<li class="filter-item" data-type="skelet">
+				<li class="filter-item" data-filter-type-sky="skelet">
 					Скелеты и <br />призраки<span><span lblue>20</span>-<span lblue>30</span></span>
 				</li>
-				<li class="filter-item" data-type="animal">
+				<li class="filter-item" data-filter-type-sky="animal">
 					Звери <span> <span lblue>20</span>-<span lblue>35</span></span>
 				</li>
-				<li class="filter-item" data-type="falmer">
+				<li class="filter-item" data-filter-type-sky="falmer">
 					Фалмеры <span> <span lblue>30</span>-<span lblue>35</span></span>
 				</li>
-				<li class="filter-item" data-type="magic">
+				<li class="filter-item" data-filter-type-sky="magic">
 					Маги<span> <span lblue>30</span>-<span lblue>40</span></span>
 				</li>
-				<li class="filter-item" data-type="dwemer">
+				<li class="filter-item" data-filter-type-sky="dwemer">
 					Двемеры <span> <span lblue>30</span>-<span lblue>40</span></span>
 				</li>
-				<li class="filter-item" data-type="draugry">
+				<li class="filter-item" data-filter-type-sky="draugry">
 					Драугры <span> <span lblue>30</span>-<span lblue>50</span></span>
 				</li>
-				<li class="filter-item" data-type="vampire">
+				<li class="filter-item" data-filter-type-sky="vampire">
 					Вампиры <span> <span lblue>30</span>-<span lblue>50</span></span>
 				</li>
-				<li class="filter-item" data-type="dragon">
+				<li class="filter-item" data-filter-type-sky="dragon">
 					Драконы <span> <span lblue>40</span>-<span lblue>60</span></span>
 				</li>
 			</ul>
@@ -96,18 +100,20 @@
 			<div class="context"></div>
 		</div>
 
-		<div class="canvas-wrap"><canvas id="canvas" width="1160" height="550"></canvas></div>
+		<div class="canvas-wrap"><canvas id="canvas" width="1160" height="550" data-type="skyrim"></canvas></div>
 	</body>
 	<script src="libs/jquery.js"></script>
 	<script src="libs/jquery.mousewheel.min.js"></script>
 	<script src="libs/fabric.js"></script>
 	<script src="js/global.js"></script>
 	<script src="js/utility.js"></script>
-	<script src="js/markers.js"></script>
-	<script src="js/path.js"></script>
-	<script src="js/descriptionModal.js"></script>
-	<script src="js/contextModal.js"></script>
-	<script src="js/saveModal.js"></script>
+	<script src="js/markers/markersSkyrim.js"></script>
+	<script src="js/markers/pathSkyrim.js"></script>
+	<script src="js/markers/markersSolstheim.js"></script>
+	<script src="js/markers/pathSolstheim.js"></script>
+	<script src="js/modal/descriptionModal.js"></script>
+	<script src="js/modal/contextModal.js"></script>
+	<script src="js/modal/saveModal.js"></script>
 	<script src="js/createMarkers.js"></script>
 	<script src="js/createPath.js"></script>
 	<script src="js/createMap.js"></script>

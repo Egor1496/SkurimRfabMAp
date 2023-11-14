@@ -79,6 +79,7 @@ html {
 }
 
 body {
+  position: relative;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -352,11 +353,32 @@ body {
   transform: scale(1.05);
 }
 
-.yes{
+.accept-modal .yes{
  color: rgb(97, 255, 73);
 }
 
-.no{
+.accept-modal .no{
  color: white;
+}
+
+.map-link{
+  position: relative;
+  z-index: 30;
+  top: 20px;
+  width: 200px;
+  left: calc(100% - 55px);
+}
+
+.map-link a{
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+}
+
+.map-link img{
+  width: 35px;
+}
+.map-link .rotate{
+  transform: rotate(180deg);
 }
 

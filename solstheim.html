@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>RFAB Solstheim map</title>
+		<link rel="icon" type="image/png" href="image/fvc/3.png" />
+		<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<div class="map-link">
+			<a href="index.html">
+				<a href="index.html">
+					<img src="image/To_Skyrim_e.svg" alt="" />
+				</a>
+			</a>
+		</div>
+		<div class="filter-wrap">
+			<div class="filter-button close">
+				<img src="image/filterClose.svg" class="filter-close-icon" style="display: none" alt="" />
+				<img src="image/filterOpen.svg" class="filter-open-icon" style="display: none" alt="" />
+			</div>
+			<ul class="filter-list">
+				<div class="filter-list-wrap">
+					<li class="filter-item" data-filter-type-sols="soc">
+						<img src="image/dollar.svg" alt="" />
+					</li>
+					<li class="filter-item" data-filter-type-sols="xp">
+						<img src="image/star.svg" alt="" />
+					</li>
+					<li class="filter-item" data-filter-type-sols="loot">
+						<img src="image/bag.svg" alt="" />
+					</li>
+					<li class="filter-item" data-filter-type-sols="boss">
+						<img src="image/skull.svg" alt="" />
+					</li>
+				</div>
+				<li class="filter-item" data-filter-type-sols="bandit">
+					Бандиты <span> <span lblue>0</span>-<span lblue>20</span></span>
+				</li>
+				<li class="filter-item" data-filter-type-sols="trash">
+					Изгои <span> <span lblue>20</span>-<span lblue>30</span></span>
+				</li>
+				<li class="filter-item" data-filter-type-sols="giant">
+					Великаны <span> <span lblue>20</span>-<span lblue>30</span></span>
+				</li>
+				<li class="filter-item" data-filter-type-sols="skelet">
+					Скелеты и <br />призраки<span><span lblue>20</span>-<span lblue>30</span></span>
+				</li>
+				<li class="filter-item" data-filter-type-sols="animal">
+					Звери <span> <span lblue>20</span>-<span lblue>35</span></span>
+				</li>
+				<li class="filter-item" data-filter-type-sols="falmer">
+					Фалмеры <span> <span lblue>30</span>-<span lblue>35</span></span>
+				</li>
+				<li class="filter-item" data-filter-type-sols="magic">
+					Маги<span> <span lblue>30</span>-<span lblue>40</span></span>
+				</li>
+				<li class="filter-item" data-filter-type-sols="dwemer">
+					Двемеры <span> <span lblue>30</span>-<span lblue>40</span></span>
+				</li>
+				<li class="filter-item" data-filter-type-sols="draugry">
+					Драугры <span> <span lblue>30</span>-<span lblue>50</span></span>
+				</li>
+				<li class="filter-item" data-filter-type-sols="vampire">
+					Вампиры <span> <span lblue>30</span>-<span lblue>50</span></span>
+				</li>
+				<li class="filter-item" data-filter-type-sols="dragon">
+					Драконы <span> <span lblue>40</span>-<span lblue>60</span></span>
+				</li>
+			</ul>
+		</div>
+
+		<div class="path-wrap">
+			<div class="path-button close">
+				<img src="image/icon/circle2.svg" class="path-close-icon" style="display: none" alt="" />
+				<img src="image/icon/circle2_red.svg" class="path-open-icon" style="display: none" alt="" />
+			</div>
+			<ul class="path-list"></ul>
+		</div>
+		<!-- <li class="path-item" data-path="0">0</li> -->
+
+		<div class="modal-wrap close">
+			<div class="modal">
+				<div class="title">Заголовок</div>
+				<div class="description">Описание</div>
+				<div class="more-info">
+					<ui class="list-info"> </ui>
+				</div>
+			</div>
+		</div>
+		<!-- <li class="item-info">Доп описание</li> -->
+
+		<div class="accept-modal-wrap close">
+			<div class="accept-modal">
+				<button class="yes">Сохранить</button>
+				<button class="no">Отменить</button>
+			</div>
+		</div>
+
+		<div class="context-wrap">
+			<div class="context"></div>
+		</div>
+
+		<div class="canvas-wrap"><canvas id="canvas" width="1160" height="550" data-type="solstheim"></canvas></div>
+	</body>
+	<script src="libs/jquery.js"></script>
+	<script src="libs/jquery.mousewheel.min.js"></script>
+	<script src="libs/fabric.js"></script>
+	<script src="js/global.js"></script>
+	<script src="js/utility.js"></script>
+	<script src="js/markers/markersSkyrim.js"></script>
+	<script src="js/markers/pathSkyrim.js"></script>
+	<script src="js/markers/markersSolstheim.js"></script>
+	<script src="js/markers/pathSolstheim.js"></script>
+	<script src="js/modal/descriptionModal.js"></script>
+	<script src="js/modal/contextModal.js"></script>
+	<script src="js/modal/saveModal.js"></script>
+	<script src="js/createMarkers.js"></script>
+	<script src="js/createPath.js"></script>
+	<script src="js/createMap.js"></script>
+	<script src="js/handlerContext.js"></script>
+	<script src="js/ui.js"></script>
+</html>
