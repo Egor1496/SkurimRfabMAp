@@ -90,23 +90,17 @@ const acceptContextPath = (selectedName) => {
 	select[selectedName]();
 };
 
-$(".path-list .path-item").on("contextmenu", function (e) {
-	e.preventDefault();
-	const items = [
-		`
-		<div class="context-item" data-item="copy"> копировать </div>
-		<div class="context-item" data-item="delete"> удалить </div>
-		`,
-	];
-	currentPathNumber = Number($(this).data("path"));
-	currentPath = listPath[currentPathNumber];
-	openContext(e, acceptContextPath, items);
-});
-
 const deletePath = () => {
-	listPath.splice(currentPathNumber, 1);
-	localStorage.setItem("listPath", JSON.stringify(listPath));
-	localStorage.setItem("path", -1);
+	if (TYPE_MAP === "skyrim") {
+		listPathSky.splice(currentPathNumber, 1);
+		localStorage.setItem("listPathSky", JSON.stringify(listPathSky));
+		localStorage.setItem("path-sky", -1);
+	} else {
+		listPathSols.splice(currentPathNumber, 1);
+		localStorage.setItem("listPathSols", JSON.stringify(listPathSols));
+		localStorage.setItem("path-sols", -1);
+	}
+
 	location.reload();
 };
 

@@ -43,6 +43,15 @@ if (TYPE_MAP === "skyrim") {
 		$(".path-list").css("width", 500);
 		$(".path-list").css("flex-wrap", "wrap");
 	}
+} else {
+	listPathSols.forEach((path, i) => {
+		$(".path-list").html($(".path-list").html() + `<li class="path-item" data-path-sols="${i}">${i + 1}</li>`);
+	});
+
+	if (listPathSols.length > 13) {
+		$(".path-list").css("width", 500);
+		$(".path-list").css("flex-wrap", "wrap");
+	}
 }
 
 const pathType = TYPE_MAP === "skyrim" ? "path-sky" : "path-sols";
@@ -50,7 +59,7 @@ const pathType = TYPE_MAP === "skyrim" ? "path-sky" : "path-sols";
 if (Number(localStorage.getItem(pathType) || -1) >= 0 && $(".path-list .path-item").length > 0) {
 	$(".path-open-icon").show();
 	$(".path-close-icon").hide();
-	$(".path-item[data-" + pathType + "=" + localStorage.getItem(pathType) + "]").addClass("path-item--active");
+	$(`.path-item[data-${pathType}=${localStorage.getItem(pathType)}]`).addClass("path-item--active");
 } else {
 	$(".path-close-icon").show();
 	$(".path-open-icon").hide();
@@ -59,6 +68,7 @@ if (Number(localStorage.getItem(pathType) || -1) >= 0 && $(".path-list .path-ite
 $(".path-item")
 	.not(".path-item--active")
 	.on("click", function (e) {
+		console.log(123);
 		$(".path-item").removeClass("path-item--active");
 		$(this).addClass("path-item--active");
 		localStorage.setItem(pathType, $(this).data(pathType));
@@ -71,19 +81,22 @@ $(".path-item--active").on("click", (e) => {
 	location.reload();
 });
 
-if (TYPE_MAP === "solstheim") {
-	listPathSols.forEach((path, i) => {
-		$(".path-list").html($(".path-list").html() + `<li class="path-item" data-path-sols="${i}">${i + 1}</li>`);
-	});
-
-	if (listPathSols.length > 13) {
-		$(".path-list").css("width", 500);
-		$(".path-list").css("flex-wrap", "wrap");
-	}
-}
-
 $(".canvas-wrap").on("click", function (e) {
 	closeDescription();
 	$(".path-button").addClass("close");
 	$(".filter-button").addClass("close");
+});
+
+$(".path-list .path-item").on("contextmenu", function (e) {
+	e.preventDefault();
+	const items = [
+		`
+		<div class="context-item" data-item="copy"> копировать </div>
+		<div class="context-item" data-item="delete"> удалить </div>
+		`,
+	];
+	const thisPath = TYPE_MAP === "skyrim" ? "path-sky" : "path-sols";
+	currentPathNumber = Number($(this).data(thisPath));
+	currentPath = TYPE_MAP === "skyrim" ? listPathSky[currentPathNumber] : listPathSols[currentPathNumber];
+	openContext(e, acceptContextPath, items);
 });
