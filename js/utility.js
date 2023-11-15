@@ -124,13 +124,13 @@ $(window).mousemove(function (e) {
 const coppyObject = (top, left) => {
 	const copy = `
 {
-	title: "",
+	title: "Жила",
 	description: "",
-	secondDescription: [""],
-	type: "",
-	nameIcon: "",
-	scale: 0.3,
-	id: "id----------",
+	secondDescription: ["<q yelow>Золото</q>."],
+	type: "soc",
+	nameIcon: "Lode",
+	scale: 0.2,
+	id: "id------",
 	top: ${top},
 	left: ${left},
 },
