@@ -1,4 +1,4 @@
-Для создания метки:
+Для создание метки:
 1. Перезагрузи страницу и не трогай колесико мышки (зум) для корректного сохранения координат.
 2. Перед перезагрузкой ты можешь увеличить масштаб страницы браузера для увеличения карты.
 3. Кликни на карту в том месте где хочешь поставить метку. При клике в буфер обмена копируется "объект" метка.
@@ -18,7 +18,7 @@
 
 title - Заголовок.
 description - Описание.
-secondDescription - Доп. описание (масив строк ["строка 1", "строка 2", "строка n..."])
+secondDescription - Доп. описание (массив строк ["строка 1", "строка 2", "строка n..."])
 type - Тип метки для фильтра.
 nameIcon - иконка метки.
 id - уникальный номер метки (игнорируй)
@@ -50,6 +50,7 @@ magic - Маги
 vampire - Вампиры
 skelet - Скелеты и призраки
 draugry - Драугры
+riek - Риклинги
 
 "red" rgb(255, 58, 58);
 "llred"
@@ -80,17 +81,23 @@ draugry - Драугры
 &#9;
 
 Доступные иконки
-"\_undiscovered" - Постфикс для темных иконок (если такая есть в списке)
+Altar_e - Алтарь
+Castle_3_e - Замок 4 крыши
+Castle_4_e - Бутылочный домик с дымоходом
+Miraak_e - Мирак
+Raven_Rock_e - клякса с усами
+Standing_Stones_e - 3 камня-столба
+Telvanni_Tower_e - Гриб
 
-Whiterun | Whiterun_undiscovered - Вайтран (Whiterun)
-Solitude | Solitude_undiscovered - Солитьюд (Solitude)
-Riften | Riften_undiscovered - Рифтен (Riften)
+Whiterun - Вайтран (Whiterun)
+Solitude - Солитьюд (Solitude)
+Riften - Рифтен (Riften)
 Markarth - Маркарт (Markarth)
 Winterhold - Винтерхолд (Winterhold)
-Windhelm | Windhelm_undiscovered - Виндхельм (Windhelm)
-Dawnstar | Dawnstar_undiscovered - Данстар (Dawnstar)
-Morthal | Morthal_undiscovered - Морфал (Morthal)
-Falkreath | Falkreath_undiscovered - Фолкрит (Falkreath)
+Windhelm - Виндхельм (Windhelm)
+Dawnstar - Данстар (Dawnstar)
+Morthal - Морфал (Morthal)
+Falkreath - Фолкрит (Falkreath)
 
 JarlResidence - Замок ярла (Dragonsreach)
 CollegeofWinterhold - Коллегия винтерхолда
@@ -118,7 +125,7 @@ Mine - Шахта (Mine)
 Pass - Проход (Pass)
 Pond - Поляна (Clearing)
 
-ImperialTower - Сторожевая башная (Watchtower)
+ImperialTower - Сторожевая башня (Watchtower)
 GiantCamp - Лагерь великанов (Giant Camp)
 NordicTower - Башня нордов (Nordic Tower)
 PointofInterest - Достопримечательность (Landmark)

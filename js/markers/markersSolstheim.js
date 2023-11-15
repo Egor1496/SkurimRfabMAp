@@ -1,9 +1,9 @@
 const listMarkersSols = [
 	{
 		title: "Ледяная пещера",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		description: "Риклинги.",
+		secondDescription: ["<q yelow>Череп Карстага</q>."],
+		type: "riek loot",
 		nameIcon: "Cave",
 		scale: 0.6,
 		id: "id1",
@@ -12,22 +12,25 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Руины замка Карстаг",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Руины замка Карстаг (<q lblue>???????lvl</q>)",
+		description: "Если положить череп Карстага на стул, появится <q red>босс</q>. Череп в ледяной пещере.",
+		secondDescription: [
+			"<q red>Босс</q> призрак Карстага (<q lblue>100lvl</q>) великан. <br/>&nbsp; -Вызывает морозный шторм, после потери ХП призывает <q green>3</q> ледяных приведений, больно бьет дубинкой",
+			"<q yelow>Бафф Дух Карстага</q>.",
+		],
+		type: "boss",
 		nameIcon: "Cave",
 		scale: 0.6,
 		id: "id2",
-		top: 188.30080032348633,
+		top: 183.30080032348633,
 		left: 419.86720085144043,
 	},
 
 	{
 		title: "Пещеры замка Карстаг",
-		description: "",
+		description: "Риклинги. Проход к <q red>боссу</q> Карстагу.",
 		secondDescription: [""],
-		type: "",
+		type: "riek",
 		nameIcon: "Cave",
 		scale: 0.6,
 		id: "id3",
@@ -133,9 +136,9 @@ const listMarkersSols = [
 
 	{
 		title: "Отмель Хакнира",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		description: "<q green>3</q> бандита.",
+		secondDescription: ["Эксперт <q yelow>сундук</q> с частью брони «Печать смерти»"],
+		type: "loot bandit",
 		nameIcon: "Campsite",
 		scale: 0.5,
 		id: "id12",
@@ -168,10 +171,10 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Верховье Харстрада",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Верховье Харстрада (<q lblue>30lvl</q>)",
+		description: "Снаружи и внутри спригган.",
+		secondDescription: ["<q yelow>Большой сундук</q>."],
+		type: "animal",
 		nameIcon: "Pond",
 		scale: 0.5,
 		id: "id15",
@@ -180,10 +183,10 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Застава Сиринга",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Застава Сиринга (<q lblue>50lvl</q>)",
+		description: "Открытая локация. Дракон и <q green>6</q> драугров.",
+		secondDescription: ["<q yelow>Слово Подчинение Воли</q>."],
+		type: "dragon boss draugry",
 		nameIcon: "Dragon",
 		scale: 0.5,
 		id: "id16",
@@ -432,14 +435,15 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Храм Мирака",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Храм Мирака (<q lblue>50lvl</q>)",
+		description:
+			"На входе <q green>2</q> члена культа. Внутри <q green>25</q> другров, скелеты, <q green>8</q> членов культа и <q green>2</q> <q red>повелителя</q>.",
+		secondDescription: ["<q yelow>Слово Воплощение Дракона</q>, <q yelow>Черная книга Пробуждающие сны</q>"],
+		type: "draugry loot",
 		nameIcon: "Miraak_e",
-		scale: 0.6,
+		scale: 0.8,
 		id: "id37",
-		top: 500.2948003234865,
+		top: 510.2948003234865,
 		left: 677.1118360445737,
 	},
 
