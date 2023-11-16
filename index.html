@@ -77,16 +77,30 @@
 			<ul class="path-list"></ul>
 		</div>
 
-		<div class="modal-wrap close">
+		<div class="add-path">
+			<img src="image/drop_zone2.svg" class="icon-add-path" />
+			<div class="modal close">
+				<h3 class="modal_title">Загрузить путь</h3>
+				<div class="modal_drop-zone">
+					<label>
+						<input type="file" />
+						<img src="image/drop_zone.svg" class="icon-drop-zone" />
+						<span class="zone-description"><span>Выберите фаил</span> или перетащите его сюда</span>
+					</label>
+				</div>
+			</div>
+			<div class="add-path_modal_bg"></div>
+		</div>
+
+		<div class="modal-marker modal-wrap close">
 			<div class="modal">
-				<div class="title">Заголовок</div>
-				<div class="description">Описание</div>
+				<div class="title"></div>
+				<div class="description"></div>
 				<div class="more-info">
-					<ui class="list-info"> </ui>
+					<ui class="list-info"></ui>
 				</div>
 			</div>
 		</div>
-		<!-- <li class="item-info">Доп описание</li> -->
 
 		<div class="accept-modal-wrap close">
 			<div class="accept-modal">
@@ -104,18 +118,24 @@
 	<script src="libs/jquery.js"></script>
 	<script src="libs/jquery.mousewheel.min.js"></script>
 	<script src="libs/fabric.js"></script>
+
 	<script src="js/global.js"></script>
 	<script src="js/utility.js"></script>
+
 	<script src="js/markers/markersSkyrim.js"></script>
 	<script src="js/markers/pathSkyrim.js"></script>
 	<script src="js/markers/markersSolstheim.js"></script>
 	<script src="js/markers/pathSolstheim.js"></script>
+
 	<script src="js/modal/descriptionModal.js"></script>
 	<script src="js/modal/contextModal.js"></script>
 	<script src="js/modal/saveModal.js"></script>
+	<script src="js/modal/loadPathModal.js"></script>
+
 	<script src="js/createMarkers.js"></script>
 	<script src="js/createPath.js"></script>
 	<script src="js/createMap.js"></script>
+
 	<script src="js/handlerContext.js"></script>
 	<script src="js/ui.js"></script>
 </html>

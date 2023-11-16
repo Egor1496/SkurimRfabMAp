@@ -3647,7 +3647,7 @@ const listMarkersSky = [
 	},
 
 	{
-		title: "Квесту Фроки (<q lblue>25lvl</q>)",
+		title: "Квест Фроки (<q lblue>25lvl</q>)",
 		description: "",
 		secondDescription: ["Дух Саблезуба (<q lblue>62lvl</q>) <q lblue>5000xp</q>. Быстрый, сильно бьет, может сбить с ног."],
 		type: "animal boss",

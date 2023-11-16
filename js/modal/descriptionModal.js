@@ -1,5 +1,5 @@
 const closeDescription = () => {
-	const modal = $(".modal-wrap");
+	const modal = $(".modal-marker.modal-wrap");
 	modal.css({ left: -500 });
 	modal.css({ top: -500 });
 	modal.addClass("close");
@@ -8,7 +8,7 @@ const closeDescription = () => {
 const openModal = () => {};
 
 const openDescription = (mark, oImg) => {
-	const modal = $(".modal-wrap"),
+	const modal = $(".modal-marker.modal-wrap"),
 		title = modal.find(".title"),
 		description = modal.find(".description"),
 		ul = modal.find(".list-info");

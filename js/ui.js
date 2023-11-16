@@ -91,7 +91,7 @@ $(".path-list .path-item").on("contextmenu", function (e) {
 	e.preventDefault();
 	const items = [
 		`
-		<div class="context-item" data-item="copy"> копировать </div>
+		<div class="context-item" data-item="copy"> скачать </div>
 		<div class="context-item" data-item="delete"> удалить </div>
 		`,
 	];

@@ -137,3 +137,61 @@ const coppyObject = (top, left) => {
 `;
 	navigator.clipboard.writeText(copy);
 };
+
+const onDrop = (e, callback) => {
+	e.preventDefault();
+	if (e.originalEvent.dataTransfer?.items) {
+		[...e.originalEvent.dataTransfer.items].forEach((item) => {
+			if (item.kind === "file") {
+				const file = item.getAsFile();
+				const reader = new FileReader();
+				reader.readAsText(file);
+				reader.onload = () => {
+					callback(reader.result);
+				};
+				reader.onerror = () => {
+					console.log(reader.error);
+				};
+			}
+		});
+	}
+};
+
+const read = (input, callback) => {
+	const file = input.files[0];
+	const reader = new FileReader();
+
+	reader.readAsText(file);
+
+	reader.onload = () => {
+		callback(reader.result);
+	};
+
+	reader.onerror = () => {
+		console.log(reader.error);
+	};
+};
+
+const savePathFile = (strArr) => {
+	const newPath = JSON.parse(strArr);
+
+	if (TYPE_MAP === "skyrim") {
+		listPathSky.push(newPath);
+		localStorage.setItem("listPathSky", JSON.stringify(listPathSky));
+		localStorage.setItem("path-sky", listPathSky.length - 1);
+	} else {
+		listPathSols.push(newPath);
+		localStorage.setItem("listPathSols", JSON.stringify(listPathSols));
+		localStorage.setItem("path-sols", listPathSols.length - 1);
+	}
+	location.reload();
+};
+
+const downloadTxtFile = (text) => {
+	const elem = document.createElement("a");
+	const file = new Blob([text], { type: "text/plain;charset=utf-8" });
+	elem.href = URL.createObjectURL(file);
+	elem.download = "RFAB-Path.json";
+	document.body.appendChild(elem);
+	elem.click();
+};

@@ -1,7 +1,7 @@
 const $saveModalWrap = $(".accept-modal-wrap");
 const $saveModal = $(".accept-modal");
-const $saveModalYes = $(".yes");
-const $saveModalNo = $(".no");
+const $saveModalYes = $(".accept-modal .yes");
+const $saveModalNo = $(".accept-modal .no");
 
 $saveModalYes.on("click", function (e) {
 	handlerSavePath("yes", e);

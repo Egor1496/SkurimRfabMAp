@@ -39,12 +39,12 @@ const handlerContextMarker = (e) => {
 
 const handlerContextPath = (e) => {
 	const items = `
-		<div class="context-item" data-item="copy"> копировать </div>
-		<div class="context-item" data-item="edit"> + описание </div>
+		<div class="context-item" data-item="copy"> скачать </div>
 		<div class="context-item" data-item="delete"> удалить </div>
 	`;
 	openContext(e, acceptContextPath, items);
 };
+// <div class="context-item" data-item="edit"> + описание </div>
 
 const acceptContextMap = (selectedName) => {
 	const select = {
@@ -109,13 +109,6 @@ const editPath = () => {
 };
 
 const copyPath = () => {
-	let pathJSON =
-		JSON.stringify(currentPath)
-			.split(",")
-			.map((str) => {
-				return "\n" + str;
-			})
-			.join() + ",";
-
-	navigator.clipboard.writeText(pathJSON);
+	let pathJSON = JSON.stringify(currentPath);
+	downloadTxtFile(pathJSON);
 };
