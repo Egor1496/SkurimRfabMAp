@@ -103,8 +103,10 @@ $(".path-list .path-item").on("contextmenu", function (e) {
 
 $(".donat .icon-donat").on("click", function (e) {
 	$(".donat .frame").removeClass("close");
+	$(".donat").addClass("close");
 });
 
 $(".canvas-wrap").on("mouseover", function (e) {
 	$(".donat .frame").addClass("close");
+	$(".donat").removeClass("close");
 });
