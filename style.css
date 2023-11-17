@@ -162,10 +162,12 @@ body {
 .filter-button{
   width: 30px;
   height: 30px;
+  transition: scale;
 }
 
 .filter-button:hover{
   cursor: pointer;
+  transform: scale(1.1);
 }
 
 .filter-button.close + .filter-list{
@@ -242,10 +244,12 @@ body {
 .path-button img{
   width: 35px;
   transform: translate(-2px, -2px);
+  transition: scale;
 }
 
 .path-button img:hover{
   cursor: pointer;
+  transform: scale(1.1) translate(-2px, -2px);
 }
 
 .path-list{
@@ -354,6 +358,7 @@ body {
   border-radius: 5px;
   border: 2px solid #929292;
   background-color: rgba(0, 0, 0, 0.8);
+  transition: scale;
 }
 
 .accept-modal button:hover{
@@ -386,12 +391,22 @@ body {
   font-size: 30px;
 }
 
+
 .map-link img{
   width: 35px;
+  transition: scale;
+}
+
+.map-link img:hover{
+  transform: scale(1.1);
 }
 
 .map-link .rotate{
   transform: rotate(180deg);
+}
+
+.map-link .rotate:hover{
+  transform: scale(1.1) rotate(180deg);
 }
 /* map-link END */
 
@@ -405,10 +420,12 @@ body {
 
 .add-path .icon-add-path{
   width: 30px;
+  transition: scale;
 }
 
 .add-path .icon-add-path:hover{
   cursor: pointer;
+  transform: scale(1.1);
 }
 
 .add-path .modal {
@@ -474,5 +491,47 @@ body {
 .add-path .zone-description span{
 text-decoration: underline;
 }
-
 /* DROP ZONE END */
+
+/* DONAT START */
+.donat{
+  position: fixed;
+  z-index: 40;
+  right: 0;
+  bottom: 0;
+  width: 180px;
+  height: 50px;
+}
+
+.donat .frame{
+  position: absolute;
+  display: block;
+  opacity: 1;
+  top: 0;
+  transition: top, 1s;
+}
+
+.donat .frame.close{
+  top: 100px;
+  display: none;
+  opacity: 0;
+}
+
+.donat img{
+  position: absolute;
+  top: 3px;
+  right: 15px;
+  width: 35px;
+  transition: scale;
+}
+
+.donat img:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.donat img:active{
+  cursor: pointer;
+  transform: scale(1);
+}
+/* DONAT END */

@@ -100,3 +100,11 @@ $(".path-list .path-item").on("contextmenu", function (e) {
 	currentPath = TYPE_MAP === "skyrim" ? listPathSky[currentPathNumber] : listPathSols[currentPathNumber];
 	openContext(e, acceptContextPath, items);
 });
+
+$(".donat .icon-donat").on("click", function (e) {
+	$(".donat .frame").removeClass("close");
+});
+
+$(".canvas-wrap").on("mouseover", function (e) {
+	$(".donat .frame").addClass("close");
+});
