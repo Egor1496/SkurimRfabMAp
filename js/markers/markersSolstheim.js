@@ -508,7 +508,7 @@ const listMarkersSols = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>..",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -520,7 +520,7 @@ const listMarkersSols = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>..",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",

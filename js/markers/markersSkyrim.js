@@ -1726,7 +1726,7 @@ const listMarkersSky = [
 			"Бандиты <q green>3</q> снаружи и <q green>7</q> внутри. Далее <q green>3</q> сферы, баллиста, <q green>3</q> паука, <q green>2</q> защитника (<q lblue>50lvl</q>). <br/> Далее <q green>5</q> фалмеров, ловушка арбалет, <q green>3</q> паука и сфера. <br/> Далее <q green>5</q> Фалмеров и <q red>цинтурион</q> (<q lblue>100lvl</q>). <br/> Далее баллиста, паук, хранитель (<q lblue>70lvl</q>), призрак (<q lblue>45lvl</q>), зач. сфера (<q lblue>60lvl</q>).",
 		secondDescription: [
 			"<q red>Босс</q> Ален Дюфон <q lblue>1000xp</q>. <br/>&nbsp; -Быстрый, удары молота замедляют игрока. Не лови удары, просто уворачивайся.",
-			"<q yelow>Проклятье Эгиды</q>, <q lblue>Книга опыта</q> <q yelow>осколок этерия</q>..",
+			"<q yelow>Проклятье Эгиды</q>, <q lblue>Книга опыта</q> <q yelow>осколок этерия</q>.",
 		],
 		type: "bandit boss dwemer",
 		nameIcon: "DwemerRuins",
@@ -3806,7 +3806,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>..",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3818,7 +3818,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>..",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3830,7 +3830,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>..",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3842,7 +3842,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>..",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3854,7 +3854,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>..",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3866,7 +3866,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>..",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3878,7 +3878,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>..",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3890,7 +3890,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>..",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3902,7 +3902,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>..",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3914,7 +3914,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>..",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3926,7 +3926,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>..",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3938,7 +3938,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>..",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3950,7 +3950,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>..",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3962,7 +3962,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>..",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3974,7 +3974,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>..",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3986,7 +3986,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>..",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3998,7 +3998,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>..",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -4010,7 +4010,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>..",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -4022,7 +4022,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>..",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -4034,7 +4034,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>..",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -4046,7 +4046,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>..",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
