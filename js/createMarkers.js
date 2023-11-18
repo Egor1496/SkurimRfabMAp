@@ -77,8 +77,7 @@ function createMarkers() {
 			});
 
 			canvas.add(oImg);
+			countLoadMarkers++;
 		});
 	});
-
-	isLoadMarkers = true; // локации на своих местах.
 }

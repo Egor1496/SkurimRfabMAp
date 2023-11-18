@@ -191,7 +191,10 @@ fabric.util.loadImage(nameMapURL, function (img) {
 	applyTransform();
 
 	let loadInterval = setInterval(() => {
-		console.log("Загружаюсь");
+		const isLoadMarkers = listMarkers.length === countLoadMarkers,
+			countPath = listPath[NUMBER_PATH_ACTIVE]?.length,
+			isLoadPath = countPath ? countPath === countLoadPath : true;
+
 		if (isLoadMarkers && isLoadPath) {
 			if ("ontouchstart" in window || (window.DocumentTouch && document instanceof DocumentTouch)) {
 				bindContainerTouchEvents();
@@ -199,7 +202,6 @@ fabric.util.loadImage(nameMapURL, function (img) {
 				bindContainerEvents();
 			}
 			clearInterval(loadInterval);
-			console.log("Загрузился");
 		}
-	}, 0);
+	}, 100);
 });

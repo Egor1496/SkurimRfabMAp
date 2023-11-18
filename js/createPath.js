@@ -116,9 +116,9 @@ function createPath() {
 			// oImg.on("mouseup", function (opt) {});
 
 			canvas.add(oImg);
+			countLoadPath++;
+
 			if (point.type !== "Point") oImg.moveTo(path.length + 1);
 		});
 	});
-
-	isLoadPath = true; // пути на своих местах.
 }

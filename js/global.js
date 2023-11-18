@@ -28,8 +28,8 @@ let width = 0, // текущая ширина
 
 let listMarkers = [], // Список маршрутов.
 	listPath = [], // Список путей.
-	isLoadMarkers = false, // Загрузка всех локаций.
-	isLoadPath = false; // Загрузка всех путей.
+	countLoadMarkers = 0, // Кол-во загрузок локаций.
+	countLoadPath = 0; // Кол-во загрузок путей.
 
 let map = null; // карта,
 
@@ -41,6 +41,8 @@ const TYPE_MAP = element.data("type"),
 	LIST_PATH_LOCAL_STORAGE = TYPE_MAP === "skyrim" ? "listPathSky" : "listPathSols",
 	PATH_LOCAL_STORAGE = TYPE_MAP === "skyrim" ? "path-sky" : "path-sols",
 	FILTER_TYPE_LOCAL_STORAGE = TYPE_MAP === "skyrim" ? "filter-type-sky" : "filter-type-sols";
+
+const NUMBER_PATH_ACTIVE = localStorage.getItem(PATH_LOCAL_STORAGE);
 
 const H = 1, // коэфф-нт увеличения карты в высоту. COEFF_HEIGHT
 	W = 1; // коэфф-нт увеличения карты в ширину. COEFF_WIDTH
@@ -58,3 +60,11 @@ let canvas = new fabric.Canvas(element.get(0), {
 	moveCursor: "default", // сброс курсора
 	hoverCursor: "default", // сброс курсора
 });
+
+// console.log(`
+// TYPE_MAP - ${TYPE_MAP},
+// LIST_PATH_LOCAL_STORAGE - ${LIST_PATH_LOCAL_STORAGE},
+// PATH_LOCAL_STORAGE - ${PATH_LOCAL_STORAGE},
+// FILTER_TYPE_LOCAL_STORAGE - ${FILTER_TYPE_LOCAL_STORAGE},
+// NUMBER_PATH_ACTIVE - ${NUMBER_PATH_ACTIVE}
+// `);
