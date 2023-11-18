@@ -1,9 +1,13 @@
+let thisPath = null;
+
 let oldPageX = -1,
 	oldPageY = -1,
 	oldPageMX = -1,
 	oldPageMY = -1,
 	oldMapOffsetY = 0,
 	oldMapOffsetX = 0;
+
+const copyCoordPath = () => navigator.clipboard.writeText(`top: ${thisPath.top},\nleft: ${thisPath.left},` || "");
 
 const createNewPath = (type, isLine) => {
 	drawPoint(pageMY, pageMX, type);
@@ -80,25 +84,21 @@ function createPath() {
 
 	path?.forEach((point, i) => {
 		fabric.Image.fromURL("image/icon/" + point.type + ".svg", (oImg) => {
-			if (i > 0 && point.line !== false) {
-				const newLine = drawLine(path[i - 1].left - 0.7, path[i - 1].top - 0.7, path[i].left - 0.7, path[i].top - 0.7);
-				canvas.add(newLine);
-				newLine.moveTo(i);
-			}
-
 			oImg.set("hasControls", false).set("hasBorders", false).set("cornerSize", 0).set("selectable", false);
 
 			point.scale = point.type === "Point" ? 0.2 : 0.1;
 
 			setPosIcon(oImg, point);
 
+			if (point.type === "Knot") oImg.moveTo(1);
+
 			oImg.on("mouseover", function (opt) {
-				if (point.type === "Point") {
-					setScaleIcon(oImg, true);
-					typeIcon = "path";
-					currentPath = path;
-					currentPathNumber = Number(numberPath);
-				}
+				thisPath = point;
+				typeIcon = point.type === "Point" ? "path" : "knot";
+
+				setScaleIcon(oImg, true);
+				currentPath = path;
+				currentPathNumber = Number(numberPath);
 
 				closeContext();
 				openDescription(point, oImg);
@@ -106,7 +106,7 @@ function createPath() {
 			});
 
 			oImg.on("mouseout", function (opt) {
-				if (point.type === "Point") setScaleIcon(oImg, false);
+				setScaleIcon(oImg, false);
 				typeIcon = "map";
 
 				closeDescription();
@@ -118,7 +118,11 @@ function createPath() {
 			canvas.add(oImg);
 			countLoadPath++;
 
-			if (point.type !== "Point") oImg.moveTo(path.length + 1);
+			if (i > 0 && point.line !== false) {
+				const newLine = drawLine(path[i - 1].left - 0.7, path[i - 1].top - 0.7, path[i].left - 0.7, path[i].top - 0.7);
+				canvas.add(newLine);
+				newLine.moveTo(1);
+			}
 		});
 	});
 }

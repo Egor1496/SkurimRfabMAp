@@ -522,9 +522,9 @@ text-decoration: underline;
 
 .donat img{
   position: absolute;
-  top: 3px;
+  top: 5px;
   right: 15px;
-  width: 35px;
+  width: 30px;
   transition: scale;
 }
 

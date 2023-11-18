@@ -39,8 +39,9 @@ const handlerContextMarker = (e) => {
 
 const handlerContextPath = (e) => {
 	const items = `
-		<div class="context-item" data-item="copy"> скачать </div>
+		<div class="context-item" data-item="download"> скачать </div>
 		<div class="context-item" data-item="delete"> удалить </div>
+		<div class="context-item" data-item="copy"> coord </div>
 	`;
 	openContext(e, acceptContextPath, items);
 };
@@ -84,8 +85,9 @@ const acceptContextMarker = (selectedName) => {
 const acceptContextPath = (selectedName) => {
 	const select = {
 		edit: editPath,
-		copy: copyPath,
+		download: downLoadPath,
 		delete: deletePath,
+		copy: copyCoordPath,
 	};
 	select[selectedName]();
 };
@@ -102,7 +104,7 @@ const editPath = () => {
 	console.log("editPath");
 };
 
-const copyPath = () => {
+const downLoadPath = () => {
 	let pathJSON = JSON.stringify(currentPath);
 	downloadTxtFile(pathJSON);
 };

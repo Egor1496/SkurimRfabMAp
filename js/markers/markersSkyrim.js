@@ -106,8 +106,9 @@ const listMarkersSky = [
 	{
 		title: "Королевский дворец",
 		nameIcon: "PalaceoftheKings",
+		description: "Квест на опыт.",
 		secondDescription: ["<q yelow>Необычный камень</q>"],
-		type: "city soc",
+		type: "city soc xp",
 		id: "id10",
 		scale: 0.5,
 		top: 449,
@@ -129,7 +130,7 @@ const listMarkersSky = [
 		nameIcon: "Windhelm",
 		description: "",
 		secondDescription: [""],
-		type: "city xp",
+		type: "city",
 		id: "id11",
 		scale: 0.6,
 		top: 477,
@@ -1121,7 +1122,7 @@ const listMarkersSky = [
 	},
 	{
 		title: "Гленморильский ковен (<q lblue>30lvl</q>)",
-		description: "По квесту соратников. Снаружи ведьма. Внутри <q green>5</q> ведьм и зверьки  <q green>4</q> ворожей и зверьки [!!!!!!!!!!!!!!!!]",
+		description: "Cнаружи <q red>ведьма</q>. Внутри <q green>5</q> ведьм <q green>4</q> ворожей. <br/>По квесту соратников <q green>4</q> ворожеи.",
 		secondDescription: [""],
 		type: "magic",
 		nameIcon: "Cave",
@@ -1341,7 +1342,7 @@ const listMarkersSky = [
 	{
 		title: "Каирн Холдира (<q lblue>40lvl</q>)",
 		description:
-			"Внутри призраки, ?????? драугров и <q red>повелитель</q> (<q lblue>100lvl</q>) мечник, призывает <q green>2</q> скелетов архимагов.",
+			"Внутри призраки, <q green>2</q> драугра и <q red>повелитель</q> (<q lblue>100lvl</q>) мечник, призывает <q green>2</q> скелетов архимагов.",
 		secondDescription: [
 			"<q red>Босс</q> драугр Холдир (<q lblue>120lvl</q>) <q lblue>7000xp</q> маг электричества <br/>&nbsp; -Призывает грозового атронаха, после потери <q llred>ХП</q> призывает свою копию и становиться бесплотным, нужно убить копию.",
 			"<q lblue>Барабан Рьерна</q> на опыт.",
@@ -1930,10 +1931,10 @@ const listMarkersSky = [
 		left: 476.3909912109375,
 	},
 	{
-		title: "Поляна предков (<q lblue>??????lvl</q>)",
-		description: "Спригганы <q green>3</q>, и квест??????????",
+		title: "Поляна предков (<q lblue>20lvl</q>) (<q lblue>50lvl</q>)",
+		description: "Спригганы <q green>3</q>. После прочтения свитка по квесту выйдут <q green>4</q> вампира и горгулья.",
 		secondDescription: [""],
-		type: "animal",
+		type: "animal vampire",
 		nameIcon: "Grove",
 		id: "id179",
 		top: 886.6619873046875,
@@ -3290,7 +3291,7 @@ const listMarkersSky = [
 		title: "Лагерь снегопад (<q lblue>20lvl</q>)",
 		description: "бандиты <q green>2</q>. Не застрянь на склонах.",
 		secondDescription: [
-			"<q red>Босс</q> Вагнар Одичалый <q lblue>1000xp</q>. Вместе с бандитами.<br/>&nbsp; -Атакует катаной, высасывает <q llgreen>СТ</q>, сбивает с ного.",
+			"<q red>Босс</q> Вагнар Одичалый <q lblue>1000xp</q>. Вместе с бандитами.<br/>&nbsp; -Атакует катаной, высасывает <q llgreen>СТ</q>, сбивает с ног.",
 		],
 		type: "bandit boss",
 		nameIcon: "Campsite",

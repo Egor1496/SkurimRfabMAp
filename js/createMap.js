@@ -181,7 +181,7 @@ fabric.util.loadImage(nameMapURL, function (img) {
 	canvas.setWidth(width);
 	canvas.setHeight(height);
 
-	// Добавить Пути на карту
+	// Добавить пути на карту
 	createPath();
 
 	// Добавить метки на карту

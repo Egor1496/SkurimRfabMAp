@@ -557,8 +557,8 @@ if (lPSKY?.length > 0) {
 			},
 			{
 				type: "Knot",
-				top: 474.30080032348627,
-				left: 1058.197397813714,
+				top: 449,
+				left: 1058,
 				line: false,
 			},
 			{
@@ -587,8 +587,8 @@ if (lPSKY?.length > 0) {
 			},
 			{
 				type: "Knot",
-				top: 475.30080032348616,
-				left: 1058.197397813714,
+				top: 449,
+				left: 1058,
 				line: false,
 			},
 			{
@@ -599,8 +599,8 @@ if (lPSKY?.length > 0) {
 			},
 			{
 				type: "Knot",
-				top: 474.30080032348616,
-				left: 1056.197397813714,
+				top: 449,
+				left: 1058,
 				line: false,
 			},
 			{
@@ -736,3 +736,6 @@ if (lPSKY?.length > 0) {
 }
 
 if (TYPE_MAP === "skyrim") listPath = listPathSky;
+
+// top: 449,
+// left: 1058,

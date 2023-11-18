@@ -35,6 +35,10 @@ $(".canvas-wrap").on("contextmenu", function (e) {
 		case "path":
 			handlerContextPath(e);
 			break;
+
+		case "knot":
+			handlerContextPath(e);
+			break;
 	}
 });
 
