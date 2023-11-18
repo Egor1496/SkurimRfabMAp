@@ -414,8 +414,8 @@ body {
 .add-path{
   z-index: 25;
   position: fixed;
-  bottom: 20px;
-  left: 20px;
+  bottom: 14px;
+  left: 18px;
 }
 
 .add-path .icon-add-path{
