@@ -20,8 +20,8 @@ const copyObjMarker = () => {
 
 function createMarkers() {
 	let filterList = [];
-	const listMarkers = TYPE_MAP === "skyrim" ? listMarkersSky : listMarkersSols;
-	const type = localStorage.getItem(TYPE_MAP === "skyrim" ? "filter-type-sky" : "filter-type-sols");
+	const type = localStorage.getItem(FILTER_TYPE_LOCAL_STORAGE);
+
 	if (type?.trim().length > 0) {
 		listMarkers.forEach((mark) => {
 			if (~mark.type?.trim().indexOf(type?.trim() || "")) {
@@ -79,4 +79,6 @@ function createMarkers() {
 			canvas.add(oImg);
 		});
 	});
+
+	isLoadMarkers = true; // локации на своих местах.
 }

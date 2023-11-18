@@ -14,15 +14,9 @@ $saveModalNo.on("click", function (e) {
 
 const handlerSavePath = (type, e) => {
 	if (type === "yes") {
-		if (TYPE_MAP === "skyrim") {
-			listPathSky.push(newPath);
-			localStorage.setItem("listPathSky", JSON.stringify(listPathSky));
-			localStorage.setItem("path-sky", listPathSky.length - 1);
-		} else {
-			listPathSols.push(newPath);
-			localStorage.setItem("listPathSols", JSON.stringify(listPathSols));
-			localStorage.setItem("path-sols", listPathSols.length - 1);
-		}
+		listPath.push(newPath);
+		localStorage.setItem(LIST_PATH_LOCAL_STORAGE, JSON.stringify(listPath));
+		localStorage.setItem(PATH_LOCAL_STORAGE, listPath.length - 1);
 		location.reload();
 	} else {
 		location.reload();

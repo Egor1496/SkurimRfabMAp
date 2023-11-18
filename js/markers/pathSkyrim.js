@@ -734,3 +734,5 @@ if (lPSKY?.length > 0) {
 	];
 	localStorage.setItem("listPathSky", JSON.stringify(listPathSky));
 }
+
+if (TYPE_MAP === "skyrim") listPath = listPathSky;

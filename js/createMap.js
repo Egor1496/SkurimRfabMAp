@@ -139,16 +139,10 @@ var bindContainerTouchEvents = function () {
 
 const skyMap = "image/map/SkurimMap-min-filter-2.jpg",
 	solsMap = "image/map/SolstheimMap-filter-mini.jpg",
-	nameMainMap = TYPE_MAP === "skyrim" ? skyMap : solsMap;
+	nameMapURL = TYPE_MAP === "skyrim" ? skyMap : solsMap;
 
-fabric.util.loadImage(nameMainMap, function (img) {
+fabric.util.loadImage(nameMapURL, function (img) {
 	map = new fabric.Image(img);
-	let curBaseScale;
-	if ("ontouchstart" in window || (window.DocumentTouch && document instanceof DocumentTouch)) {
-		bindContainerTouchEvents();
-	} else {
-		bindContainerEvents();
-	}
 
 	// Установим начальные и текущие размеры
 	baseWidth = map.width;
@@ -172,8 +166,9 @@ fabric.util.loadImage(nameMainMap, function (img) {
 
 	canvas.add(map);
 
-	// Отмасштабируем, чтобы сразу видеть всё карту
-	curBaseScale = baseScale;
+	// От масштабируем, чтобы сразу видеть всё карту
+	let curBaseScale = baseScale;
+
 	if (width / height > baseWidth / baseHeight) {
 		baseScale = height / baseHeight;
 	} else {
@@ -194,4 +189,17 @@ fabric.util.loadImage(nameMainMap, function (img) {
 
 	// Обновить карту
 	applyTransform();
+
+	let loadInterval = setInterval(() => {
+		console.log("Загружаюсь");
+		if (isLoadMarkers && isLoadPath) {
+			if ("ontouchstart" in window || (window.DocumentTouch && document instanceof DocumentTouch)) {
+				bindContainerTouchEvents();
+			} else {
+				bindContainerEvents();
+			}
+			clearInterval(loadInterval);
+			console.log("Загрузился");
+		}
+	}, 0);
 });

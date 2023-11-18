@@ -639,6 +639,8 @@ const listMarkersSols = [
 	},
 ];
 
+if (TYPE_MAP === "solstheim") listMarkers = listMarkersSols;
+
 // {
 // 	title: "",
 // 	description: "",

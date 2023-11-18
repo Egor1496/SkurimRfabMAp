@@ -4845,6 +4845,8 @@ const listMarkersSky = [
 	},
 ];
 
+if (TYPE_MAP === "skyrim") listMarkers = listMarkersSky;
+
 // {
 // 	title: "",
 // 	description: "",

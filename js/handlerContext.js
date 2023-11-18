@@ -91,15 +91,9 @@ const acceptContextPath = (selectedName) => {
 };
 
 const deletePath = () => {
-	if (TYPE_MAP === "skyrim") {
-		listPathSky.splice(currentPathNumber, 1);
-		localStorage.setItem("listPathSky", JSON.stringify(listPathSky));
-		localStorage.setItem("path-sky", -1);
-	} else {
-		listPathSols.splice(currentPathNumber, 1);
-		localStorage.setItem("listPathSols", JSON.stringify(listPathSols));
-		localStorage.setItem("path-sols", -1);
-	}
+	listPath.splice(currentPathNumber, 1);
+	localStorage.setItem(LIST_PATH_LOCAL_STORAGE, JSON.stringify(listPath));
+	localStorage.setItem(PATH_LOCAL_STORAGE, -1);
 
 	location.reload();
 };

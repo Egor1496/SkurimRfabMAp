@@ -83,7 +83,7 @@ var setScale = function (scaleToSet, anchorX, anchorY) {
 };
 
 const setPosIcon = (oImg, icon) => {
-	const scale = icon?.scale * W || defaultScaleIcon * W,
+	const scale = icon?.scale * W || DEFAULT_SCALE_ICON * W,
 		left = icon?.left || 0,
 		top = icon?.top || 0;
 	oImg
@@ -175,15 +175,9 @@ const read = (input, callback) => {
 const savePathFile = (strArr) => {
 	const newPath = JSON.parse(strArr);
 
-	if (TYPE_MAP === "skyrim") {
-		listPathSky.push(newPath);
-		localStorage.setItem("listPathSky", JSON.stringify(listPathSky));
-		localStorage.setItem("path-sky", listPathSky.length - 1);
-	} else {
-		listPathSols.push(newPath);
-		localStorage.setItem("listPathSols", JSON.stringify(listPathSols));
-		localStorage.setItem("path-sols", listPathSols.length - 1);
-	}
+	listPath.push(newPath);
+	localStorage.setItem(LIST_PATH_LOCAL_STORAGE, JSON.stringify(listPath));
+	localStorage.setItem(PATH_LOCAL_STORAGE, listPath.length - 1);
 	location.reload();
 };
 

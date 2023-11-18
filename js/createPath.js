@@ -11,8 +11,6 @@ const createNewPath = (type, isLine) => {
 	const differenceY = mapOffsetY - oldMapOffsetY,
 		differenceX = mapOffsetX - oldMapOffsetX;
 
-	console.log(differenceY, differenceX);
-
 	if (oldPageX > -1 && oldPageY > -1 && isLine === true) {
 		const newLine = drawLine(oldPageMX + differenceX - 0.7, oldPageMY + differenceY - 0.7, pageMX - 0.7, pageMY - 0.7);
 		canvas.add(newLine);
@@ -73,11 +71,11 @@ function drawPoint(top, left, type) {
 }
 
 function createPath() {
-	const numberPath = localStorage.getItem(TYPE_MAP === "skyrim" ? "path-sky" : "path-sols");
+	const numberPath = localStorage.getItem(PATH_LOCAL_STORAGE);
 	let path = [];
 
 	if (numberPath) {
-		path = TYPE_MAP === "skyrim" ? listPathSky[Number(numberPath)] : listPathSols[Number(numberPath)];
+		path = listPath[Number(numberPath)];
 	}
 
 	path?.forEach((point, i) => {
@@ -121,4 +119,6 @@ function createPath() {
 			if (point.type !== "Point") oImg.moveTo(path.length + 1);
 		});
 	});
+
+	isLoadPath = true; // пути на своих местах.
 }

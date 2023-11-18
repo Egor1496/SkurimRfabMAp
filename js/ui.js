@@ -3,12 +3,10 @@ $(".filter-button").on("click", function (e) {
 	$(".path-button").addClass("close");
 });
 
-const filterType = TYPE_MAP === "skyrim" ? "filter-type-sky" : "filter-type-sols";
-
-if (localStorage.getItem(filterType)?.trim().length > 0) {
+if (localStorage.getItem(FILTER_TYPE_LOCAL_STORAGE)?.trim().length > 0) {
 	$(".filter-open-icon").show();
 	$(".filter-close-icon").hide();
-	$(`.filter-item[data-${filterType}="${localStorage.getItem(filterType)}"]`).addClass("filter-item--active");
+	$(`.filter-item[data-${FILTER_TYPE_LOCAL_STORAGE}="${localStorage.getItem(FILTER_TYPE_LOCAL_STORAGE)}"]`).addClass("filter-item--active");
 } else {
 	$(".filter-close-icon").show();
 	$(".filter-open-icon").hide();
@@ -19,13 +17,13 @@ $(".filter-item")
 	.on("click", function (e) {
 		$(".filter-item").removeClass("filter-item--active");
 		$(this).addClass("filter-item--active");
-		localStorage.setItem(filterType, $(this).data(filterType));
+		localStorage.setItem(FILTER_TYPE_LOCAL_STORAGE, $(this).data(FILTER_TYPE_LOCAL_STORAGE));
 		location.reload();
 	});
 
 $(".filter-item--active").on("click", (e) => {
 	$(".filter-item").removeClass("filter-item--active");
-	localStorage.setItem(filterType, "");
+	localStorage.setItem(FILTER_TYPE_LOCAL_STORAGE, "");
 	location.reload();
 });
 
@@ -34,32 +32,19 @@ $(".path-button").on("click", function (e) {
 	$(".filter-button").addClass("close");
 });
 
-if (TYPE_MAP === "skyrim") {
-	listPathSky.forEach((path, i) => {
-		$(".path-list").html($(".path-list").html() + `<li class="path-item" data-path-sky="${i}">${i + 1}</li>`);
-	});
+listPath.forEach((path, i) => {
+	$(".path-list").html($(".path-list").html() + `<li class="path-item" data-${PATH_LOCAL_STORAGE}="${i}">${i + 1}</li>`);
+});
 
-	if (listPathSky.length > 13) {
-		$(".path-list").css("width", 500);
-		$(".path-list").css("flex-wrap", "wrap");
-	}
-} else {
-	listPathSols.forEach((path, i) => {
-		$(".path-list").html($(".path-list").html() + `<li class="path-item" data-path-sols="${i}">${i + 1}</li>`);
-	});
-
-	if (listPathSols.length > 13) {
-		$(".path-list").css("width", 500);
-		$(".path-list").css("flex-wrap", "wrap");
-	}
+if (listPath.length > 13) {
+	$(".path-list").css("width", 500);
+	$(".path-list").css("flex-wrap", "wrap");
 }
 
-const pathType = TYPE_MAP === "skyrim" ? "path-sky" : "path-sols";
-
-if (Number(localStorage.getItem(pathType) || -1) >= 0 && $(".path-list .path-item").length > 0) {
+if (Number(localStorage.getItem(PATH_LOCAL_STORAGE) || -1) >= 0 && $(".path-list .path-item").length > 0) {
 	$(".path-open-icon").show();
 	$(".path-close-icon").hide();
-	$(`.path-item[data-${pathType}=${localStorage.getItem(pathType)}]`).addClass("path-item--active");
+	$(`.path-item[data-${PATH_LOCAL_STORAGE}=${localStorage.getItem(PATH_LOCAL_STORAGE)}]`).addClass("path-item--active");
 } else {
 	$(".path-close-icon").show();
 	$(".path-open-icon").hide();
@@ -71,13 +56,13 @@ $(".path-item")
 		console.log(123);
 		$(".path-item").removeClass("path-item--active");
 		$(this).addClass("path-item--active");
-		localStorage.setItem(pathType, $(this).data(pathType));
+		localStorage.setItem(PATH_LOCAL_STORAGE, $(this).data(PATH_LOCAL_STORAGE));
 		location.reload();
 	});
 
 $(".path-item--active").on("click", (e) => {
 	$(".path-item").removeClass("path-item--active");
-	localStorage.setItem(pathType, "");
+	localStorage.setItem(PATH_LOCAL_STORAGE, "");
 	location.reload();
 });
 
@@ -95,9 +80,9 @@ $(".path-list .path-item").on("contextmenu", function (e) {
 		<div class="context-item" data-item="delete"> удалить </div>
 		`,
 	];
-	const thisPath = TYPE_MAP === "skyrim" ? "path-sky" : "path-sols";
-	currentPathNumber = Number($(this).data(thisPath));
-	currentPath = TYPE_MAP === "skyrim" ? listPathSky[currentPathNumber] : listPathSols[currentPathNumber];
+
+	currentPathNumber = Number($(this).data(PATH_LOCAL_STORAGE));
+	currentPath = listPath[currentPathNumber];
 	openContext(e, acceptContextPath, items);
 });
 

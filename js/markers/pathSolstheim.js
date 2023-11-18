@@ -6,3 +6,5 @@ if (lPSOLS?.length > 0) {
 	listPathSols = [];
 	localStorage.setItem("listPathSols", JSON.stringify(listPathSols));
 }
+
+if (TYPE_MAP === "solstheim") listPath = listPathSols;
