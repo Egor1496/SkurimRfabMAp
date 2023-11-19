@@ -64,7 +64,13 @@ function drawLine(leftA, topA, leftB, topB) {
 
 function drawPoint(top, left, type) {
 	fabric.Image.fromURL(`image/icon/${type}.svg`, (oImg) => {
-		oImg.set("hasControls", false).set("hasBorders", false).set("cornerSize", 0).set("selectable", false);
+		oImg
+			.set("hasControls", false)
+			.set("hasBorders", false)
+			.set("selectable", false)
+			.set("cornerSize", 0)
+			.set("originX", "center")
+			.set("originY", "center");
 
 		const point = {
 			top: top,
@@ -88,7 +94,13 @@ function createPath() {
 
 	path?.forEach((point, i) => {
 		fabric.Image.fromURL("image/icon/" + point.type + ".svg", (oImg) => {
-			oImg.set("hasControls", false).set("hasBorders", false).set("cornerSize", 0).set("selectable", false);
+			oImg
+				.set("hasControls", false)
+				.set("hasBorders", false)
+				.set("selectable", false)
+				.set("cornerSize", 0)
+				.set("originX", "center")
+				.set("originY", "center");
 
 			point.scale = point.type === "Point" ? 0.2 : 0.1;
 
@@ -100,7 +112,7 @@ function createPath() {
 				thisPath = point;
 				typeIcon = point.type === "Point" ? "path" : "knot";
 
-				setScaleIcon(oImg, true);
+				setScaleHover(oImg, true);
 				currentPath = path;
 				currentPathNumber = Number(numberPath);
 
@@ -110,7 +122,7 @@ function createPath() {
 			});
 
 			oImg.on("mouseout", function (opt) {
-				setScaleIcon(oImg, false);
+				setScaleHover(oImg, false);
 				typeIcon = "map";
 
 				closeDescription();

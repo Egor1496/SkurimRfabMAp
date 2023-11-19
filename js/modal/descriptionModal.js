@@ -31,8 +31,8 @@ const openDescription = (mark, oImg) => {
 			scrollleft = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0),
 			scrolltop = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
 
-		let modalLeft = element.offset().left + oImg.get("left") - modal.width() / 2 + 10 - scrollleft,
-			modaTop = element.offset().top + oImg.get("top") - modal.height() - scrolltop;
+		let modalLeft = element.offset().left + oImg.get("left") - modal.width() / 2 - scrollleft,
+			modaTop = element.offset().top + oImg.get("top") - oImg.get("height") / 3 - modal.height() - scrolltop;
 
 		if (modalLeft < 0) {
 			modalLeft = 0;

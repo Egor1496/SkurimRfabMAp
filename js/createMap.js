@@ -1,15 +1,86 @@
+const skyMap = "image/map/SkurimMap-min-filter-2.jpg",
+	solsMap = "image/map/SolstheimMap-filter-mini.jpg",
+	nameMapURL = TYPE_MAP === "skyrim" ? skyMap : solsMap;
+
+fabric.util.loadImage(nameMapURL, function (img) {
+	map = new fabric.Image(img);
+
+	// Установим начальные и текущие размеры
+	baseWidth = map.width;
+	baseHeight = map.height;
+	width = element.width();
+	height = element.height();
+
+	// Отключим любую возможность редактирования и выбора карты как объекта на холсте
+	map.set({
+		hasRotatingPoint: false,
+		hasBorders: false,
+		hasControls: false,
+		lockScalingY: true,
+		lockScalingX: true,
+		selectable: false,
+		left: map.width / 2,
+		top: map.height / 2,
+		originX: "center",
+		originY: "center",
+	});
+
+	canvas.add(map);
+
+	// От масштабируем, чтобы сразу видеть всё карту
+	let curBaseScale = baseScale;
+
+	if (width / height > baseWidth / baseHeight) {
+		baseScale = height / baseHeight;
+	} else {
+		baseScale = width / baseWidth;
+	}
+	scale *= baseScale / curBaseScale;
+	transX *= baseScale / curBaseScale;
+	transY *= baseScale / curBaseScale;
+
+	canvas.setWidth(width);
+	canvas.setHeight(height);
+
+	// Добавить пути на карту
+	createPath();
+
+	// Добавить метки на карту
+	createMarkers();
+
+	// setScaleIcon();
+
+	// Обновить карту
+	applyTransform();
+
+	let loadInterval = setInterval(() => {
+		const isLoadMarkers = listMarkers.length === countLoadMarkers,
+			countPath = listPath[NUMBER_PATH_ACTIVE]?.length,
+			isLoadPath = countPath ? countPath === countLoadPath : true;
+
+		if (isLoadMarkers && isLoadPath) {
+			if ("ontouchstart" in window || (window.DocumentTouch && document instanceof DocumentTouch)) {
+				bindContainerTouchEvents();
+			} else {
+				bindContainerEvents();
+			}
+			clearInterval(loadInterval);
+		}
+	}, 100);
+});
+
 var bindContainerEvents = function () {
 	var mouseDown = false,
 		oldPageX,
 		oldPageY,
 		container = $(canvas.wrapperEl);
 
-	let kf = 0.3;
+	const COEFF = 0.3;
 
 	container
 		.mouseup(function (e) {
-			pageY = (e.pageY - mapOffsetY) / (1 + kf * currentZoom) - element.offset().top;
-			pageX = (e.pageX - mapOffsetX) / (1 + kf * currentZoom) - element.offset().left;
+			pageY = (e.pageY - mapOffsetY) / (1 + COEFF * currentZoom) - element.offset().top;
+			pageX = (e.pageX - mapOffsetX) / (1 + COEFF * currentZoom) - element.offset().left;
 			pageMY = e.pageY - element.offset().top;
 			pageMX = e.pageX - element.offset().left;
 		})
@@ -54,6 +125,10 @@ var bindContainerEvents = function () {
 		currentZoom += deltaY;
 
 		setScale(scale * zoomStep, centerX, centerY);
+
+		setScaleIcon();
+
+		applyTransform();
 
 		// Отключим скроллирование страницы
 		event.preventDefault();
@@ -136,72 +211,3 @@ var bindContainerTouchEvents = function () {
 	container.bind("touchstart", handleTouchEvent);
 	container.bind("touchmove", handleTouchEvent);
 };
-
-const skyMap = "image/map/SkurimMap-min-filter-2.jpg",
-	solsMap = "image/map/SolstheimMap-filter-mini.jpg",
-	nameMapURL = TYPE_MAP === "skyrim" ? skyMap : solsMap;
-
-fabric.util.loadImage(nameMapURL, function (img) {
-	map = new fabric.Image(img);
-
-	// Установим начальные и текущие размеры
-	baseWidth = map.width;
-	baseHeight = map.height;
-	width = element.width();
-	height = element.height();
-
-	// Отключим любую возможность редактирования и выбора карты как объекта на холсте
-	map.set({
-		hasRotatingPoint: false,
-		hasBorders: false,
-		hasControls: false,
-		lockScalingY: true,
-		lockScalingX: true,
-		selectable: false,
-		left: map.width / 2,
-		top: map.height / 2,
-		originX: "center",
-		originY: "center",
-	});
-
-	canvas.add(map);
-
-	// От масштабируем, чтобы сразу видеть всё карту
-	let curBaseScale = baseScale;
-
-	if (width / height > baseWidth / baseHeight) {
-		baseScale = height / baseHeight;
-	} else {
-		baseScale = width / baseWidth;
-	}
-	scale *= baseScale / curBaseScale;
-	transX *= baseScale / curBaseScale;
-	transY *= baseScale / curBaseScale;
-
-	canvas.setWidth(width);
-	canvas.setHeight(height);
-
-	// Добавить пути на карту
-	createPath();
-
-	// Добавить метки на карту
-	createMarkers();
-
-	// Обновить карту
-	applyTransform();
-
-	let loadInterval = setInterval(() => {
-		const isLoadMarkers = listMarkers.length === countLoadMarkers,
-			countPath = listPath[NUMBER_PATH_ACTIVE]?.length,
-			isLoadPath = countPath ? countPath === countLoadPath : true;
-
-		if (isLoadMarkers && isLoadPath) {
-			if ("ontouchstart" in window || (window.DocumentTouch && document instanceof DocumentTouch)) {
-				bindContainerTouchEvents();
-			} else {
-				bindContainerEvents();
-			}
-			clearInterval(loadInterval);
-		}
-	}, 100);
-});

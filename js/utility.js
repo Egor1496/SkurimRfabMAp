@@ -54,8 +54,8 @@ const applyTransform = function () {
 };
 
 var setScale = function (scaleToSet, anchorX, anchorY) {
-	var zoomMax = 8, // максимально n-ти кратное увеличение
-		zoomMin = 2, // минимальное увеличение - реальный размер картинки
+	var zoomMax = ZOOM_MAX, // максимально n-ти кратное увеличение
+		zoomMin = ZOOM_MIN, // минимальное увеличение - реальный размер картинки
 		zoomStep; // необходимое изменение масштаба
 
 	// Ограничим масштаб, если нужно
@@ -88,22 +88,22 @@ const setPosIcon = (oImg, icon) => {
 		top = icon?.top || 0;
 	oImg
 		.scale(scale)
-		.set("left", (left - (oImg.get("width") * scale) / 2) * COEFF_WIDTH)
-		.set("top", (top - (oImg.get("height") * scale) / 2) * COEFF_HEIGHT);
+		.set("left", left * COEFF_WIDTH)
+		.set("top", top * COEFF_HEIGHT);
 };
 
-const setScaleIcon = (oImg, isSacle) => {
-	if (isSacle) {
-		oImg
-			.scale(oImg.getObjectScaling().scaleX + 0.2)
-			.set("left", oImg.get("left") - 4)
-			.set("top", oImg.get("top") - 4);
-	} else {
-		oImg
-			.scale(oImg.getObjectScaling().scaleX - 0.2)
-			.set("left", oImg.get("left") + 4)
-			.set("top", oImg.get("top") + 4);
-	}
+const setScaleHover = (oImg, isSacle) => {
+	if (isSacle) oImg.scale(oImg.getObjectScaling().scaleX + 0.2);
+	else oImg.scale(oImg.getObjectScaling().scaleX - 0.2);
+};
+
+const setScaleIcon = () => {
+	// const SCALE_ZOOM = (ZOOM_MAX - ZOOM_MIN - currentZoom) * (2 / (ZOOM_MAX - ZOOM_MIN)) + 0.7;
+
+	listMarkersCanvas.forEach((oImg, i) => {
+		// const SCALE_CANVAS = listMarkers[i]?.scale * COEFF_WIDTH || DEFAULT_SCALE_ICON * COEFF_WIDTH;
+		// oImg.scale();
+	});
 };
 
 function getMouseCoord(e) {

@@ -26,8 +26,11 @@ let width = 0, // текущая ширина карты
 	typeIcon = "map", // Текущий тип объекта при наведении.
 	currentZoom = 0; // Текущий шаг увеличения.
 
-let listMarkers = [], // Список маршрутов.
-	listPath = [], // Список путей.
+let listMarkersCanvas = []; // Список маршрутов на холсте.
+let listPathCanvas = []; // Список путей на холсте.
+
+let listMarkers = [], // Список маршрутов json.
+	listPath = [], // Список путей json.
 	countLoadMarkers = 0, // Кол-во загрузок локаций.
 	countLoadPath = 0; // Кол-во загрузок путей.
 
@@ -37,6 +40,9 @@ const element = $("#canvas"); // Холст.
 
 const DEFAULT_SCALE_ICON = 0.3; // Размер иконок по умолчанию.
 
+const ZOOM_MAX = 8,
+	ZOOM_MIN = 2;
+
 const TYPE_MAP = element.data("type"), // Тип карты.
 	LIST_PATH_LOCAL_STORAGE = TYPE_MAP === "skyrim" ? "listPathSky" : "listPathSols",
 	PATH_LOCAL_STORAGE = TYPE_MAP === "skyrim" ? "path-sky" : "path-sols",
@@ -44,12 +50,12 @@ const TYPE_MAP = element.data("type"), // Тип карты.
 
 const NUMBER_PATH_ACTIVE = localStorage.getItem(PATH_LOCAL_STORAGE); // Номер выбранного пути.
 
-const COEFF_HEIGHT = 1, // коэфф-нт увеличения карты в высоту. (!) COEFF_HEIGHT
-	COEFF_WIDTH = 1; // коэфф-нт увеличения карты в ширину. (!) COEFF_WIDTH
+const CFW = $("body").width() / element[0].width, // коэфф-нт увеличения размера карты в высоту.
+	CFH = $("body").height() / element[0].height, // коэфф-нт увеличения размера карты в ширину.
+	CFA = CFW > CFH ? CFW : CFH; // коэфф-нт увеличения размера карты.
 
-// const X = $("body").width() / element[0].width,
-// 	COEFF_HEIGHT = $("body").height() / element[0].height;
-// const COEFF_WIDTH = X > COEFF_HEIGHT ? COEFF_HEIGHT : X;
+const COEFF_HEIGHT = Math.ceil(CFA * 100) / 100,
+	COEFF_WIDTH = Math.ceil(CFA * 100) / 100;
 
 element[0].height = element[0].height * COEFF_HEIGHT;
 element[0].width = element[0].width * COEFF_WIDTH;

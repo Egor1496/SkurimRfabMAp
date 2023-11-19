@@ -48,14 +48,20 @@ function createMarkers() {
 		const iconPath = `image/icon/${(mark?.nameIcon || "circle") + postfix}.${mark?.formatIcon || "svg"}`;
 
 		fabric.Image.fromURL(iconPath, (oImg) => {
-			oImg.set("hasControls", false).set("hasBorders", false).set("cornerSize", 0).set("selectable", false);
+			oImg
+				.set("hasControls", false)
+				.set("hasBorders", false)
+				.set("selectable", false)
+				.set("cornerSize", 0)
+				.set("originX", "center")
+				.set("originY", "center");
 
 			setPosIcon(oImg, mark);
 
 			oImg.on("mouseover", function (e) {
 				typeIcon = "marker";
 				thisMark = mark;
-				setScaleIcon(oImg, true);
+				setScaleHover(oImg, true);
 
 				closeContext();
 				openDescription(mark, oImg);
@@ -63,7 +69,7 @@ function createMarkers() {
 			});
 
 			oImg.on("mouseout", function (e) {
-				setScaleIcon(oImg, false);
+				setScaleHover(oImg, false);
 
 				closeDescription();
 
@@ -77,6 +83,7 @@ function createMarkers() {
 			});
 
 			canvas.add(oImg);
+			listMarkersCanvas.push(oImg);
 			countLoadMarkers++;
 		});
 	});
