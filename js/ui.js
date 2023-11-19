@@ -1,6 +1,8 @@
 $(".filter-button").on("click", function (e) {
 	$(this).toggleClass("close");
 	$(".path-button").addClass("close");
+	$(".books-button").addClass("close");
+	$(".books-button").removeClass("disable");
 });
 
 if (localStorage.getItem(FILTER_TYPE_LOCAL_STORAGE)?.trim().length > 0) {
@@ -30,6 +32,8 @@ $(".filter-item--active").on("click", (e) => {
 $(".path-button").on("click", function (e) {
 	$(this).toggleClass("close");
 	$(".filter-button").addClass("close");
+	$(".books-button").addClass("close");
+	if ($(".path-list .path-item").length > 0) $(".books-button").toggleClass("disable");
 });
 
 listPath.forEach((path, i) => {
@@ -70,6 +74,8 @@ $(".canvas-wrap").on("click", function (e) {
 	closeDescription();
 	$(".path-button").addClass("close");
 	$(".filter-button").addClass("close");
+	$(".books-button").addClass("close");
+	$(".books-button").removeClass("disable");
 });
 
 $(".path-list .path-item").on("contextmenu", function (e) {
@@ -94,4 +100,16 @@ $(".donat .icon-donat").on("click", function (e) {
 $(".canvas-wrap").on("mouseover", function (e) {
 	$(".donat .frame").addClass("close");
 	$(".donat").removeClass("close");
+});
+
+$(".books-button").on("click", function (e) {
+	$(this).toggleClass("close");
+	$(".filter-button").addClass("close");
+	$(".path-button").addClass("close");
+});
+
+$(".books-item").on("mouseenter ", function (e) {
+	$(".descr-item").removeClass("descr-item--active");
+	const item = $(".descr-item").get(Number($(this).data("number")));
+	if ($(item).find(".descr").html().trim().length > 0) $(item).addClass("descr-item--active");
 });

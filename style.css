@@ -188,6 +188,7 @@ body {
   padding: 0;
   list-style: none;
   border: 2px solid #929292;
+  border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -264,6 +265,7 @@ body {
   padding: 0;
   list-style: none;
   border: 2px solid #929292;
+  border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
@@ -280,6 +282,129 @@ body {
   background-color: #515151;
 }
 /* path END */
+
+/* books START */
+.books-wrap{
+  z-index: 29;
+  position: fixed;
+  top: 18px;
+  left: 105px;
+}
+
+.books-button{
+  width: 30px;
+  height: 30px;
+  transform: translate(2px, 2px);
+}
+
+.books-button.disable{
+  display: none;
+}
+
+.books-button.close + .wrap-list{
+  display: none;
+}
+
+.books-button img{
+  width: 35px;
+  transform: translate(-2px, -2px);
+  transition: scale;
+}
+
+.books-button img:hover{
+  cursor: pointer;
+  transform: scale(1.1) translate(-2px, -2px);
+}
+
+.wrap-list{
+  position: absolute;
+  z-index: 21;
+  left: 35px;
+  top: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.books-list{
+  width: 265px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 2px solid #929292;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.books-list-descr{
+  position: absolute;
+  left: calc(100% + 5px);
+  top: 0px;
+  width: 265px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.descr-item{
+  padding: 5px 10px;
+  border: 2px solid #929292;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.books-item{
+  padding: 5px 10px;
+}
+
+.books-item--active{
+  background-color: #515151;
+}
+
+.books-item:hover{
+  cursor: pointer;
+  background-color: #515151;
+}
+
+.descr-item{
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.descr-item--active{
+  opacity: 1;
+}
+
+.books-list-descr .descr-item{
+
+}
+
+.books-list-descr .sec-desrc{
+  font-size: 14px;
+  color: rgb(217, 217, 217);
+}
+
+.books-list-descr .descr{
+
+}
+
+.books-list-descr .loot{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Arimo-Italic';
+  padding: 5px;
+}
+
+.books-list-descr .loot > div{
+  text-align: center;
+}
+/* books END */
 
 /* context START */
 .context-wrap{

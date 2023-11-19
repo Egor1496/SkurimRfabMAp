@@ -30,7 +30,7 @@ const openDescription = (mark, oImg) => {
 		const doc = document.documentElement,
 			scrollleft = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0),
 			scrolltop = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-		console.log(scale);
+
 		let modalLeft = element.offset().left + oImg.get("left") - modal.width() / 2 - scrollleft,
 			modaTop = element.offset().top + oImg.get("top") - modal.height() - scrolltop - 20 - currentZoom * 2;
 

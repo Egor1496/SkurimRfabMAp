@@ -3182,9 +3182,9 @@ const listMarkersSky = [
 	},
 	{
 		title: "Бандиты (<q lblue>0lvl</q>) (<q lblue>25lvl</q>)",
-		description: "<q green>2</q> скамят мамонта.",
+		description: "<q green>2</q> бандита скамят мамонта.",
 		secondDescription: [
-			"<q red>Босс</q> по квесту Фроки: Дух Мамонта (<q lblue>62lvl</q>) <q lblue>5000xp,</q>. Медленный, сильно бьет, может сбить с ног.",
+			"<q red>Босс</q> по квесту Фроки: Дух Мамонта (<q lblue>62lvl</q>) <q lblue>5000xp</q>. Медленный, сильно бьет, может сбить с ног.",
 			"<q yelow>Труп мамонта</q>.",
 		],
 		type: "bandit boss soc",
