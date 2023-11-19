@@ -53,8 +53,8 @@ const acceptContextMap = (selectedName) => {
 		knot: () => createNewPath("Knot", false),
 		knotL: () => createNewPath("Knot", true),
 		pointL: () => createNewPath("Point", true),
-		coord: () => navigator.clipboard.writeText(`top: ${pageY}, \n left: ${pageX},`),
-		coppyObject: () => coppyObject(pageY, pageX),
+		coord: () => navigator.clipboard.writeText(`top: ${pageY / COEFF_HEIGHT}, \n left: ${pageX / COEFF_WIDTH},`),
+		coppyObject: () => coppyObject(pageY / COEFF_HEIGHT, pageX / COEFF_WIDTH),
 	};
 	select[selectedName]();
 };

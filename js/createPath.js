@@ -10,13 +10,17 @@ let oldPageX = -1,
 const copyCoordPath = () => navigator.clipboard.writeText(`top: ${thisPath.top},\nleft: ${thisPath.left},` || "");
 
 const createNewPath = (type, isLine) => {
-	drawPoint(pageMY, pageMX, type);
+	drawPoint(pageMY / COEFF_HEIGHT, pageMX / COEFF_WIDTH, type);
 
 	const differenceY = mapOffsetY - oldMapOffsetY,
 		differenceX = mapOffsetX - oldMapOffsetX;
 
 	if (oldPageX > -1 && oldPageY > -1 && isLine === true) {
-		const newLine = drawLine(oldPageMX + differenceX - 0.7, oldPageMY + differenceY - 0.7, pageMX - 0.7, pageMY - 0.7);
+		const lineX1 = oldPageMX + differenceX - 0.7,
+			lineY1 = oldPageMY + differenceY - 0.7,
+			lineX2 = pageMX - 0.7,
+			lineY2 = pageMY - 0.7;
+		const newLine = drawLine(lineX1, lineY1, lineX2, lineY2);
 		canvas.add(newLine);
 		newLine.moveTo(1);
 	} else {
@@ -32,8 +36,8 @@ const createNewPath = (type, isLine) => {
 
 	savePath({
 		type: type,
-		top: pageY,
-		left: pageX,
+		top: pageY / COEFF_HEIGHT,
+		left: pageX / COEFF_WIDTH,
 		line: isLine,
 	});
 
@@ -118,8 +122,12 @@ function createPath() {
 			canvas.add(oImg);
 			countLoadPath++;
 
-			if (i > 0 && point.line !== false) {
-				const newLine = drawLine(path[i - 1].left - 0.7, path[i - 1].top - 0.7, path[i].left - 0.7, path[i].top - 0.7);
+			if (i > 0 && point.line) {
+				const lineX1 = path[i - 1].left - 0.7,
+					lineY1 = path[i - 1].top - 0.7,
+					lineX2 = path[i].left - 0.7,
+					lineY2 = path[i].top - 0.7;
+				const newLine = drawLine(lineX1 * COEFF_WIDTH, lineY1 * COEFF_HEIGHT, lineX2 * COEFF_WIDTH, lineY2 * COEFF_HEIGHT);
 				canvas.add(newLine);
 				newLine.moveTo(1);
 			}

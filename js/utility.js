@@ -83,16 +83,13 @@ var setScale = function (scaleToSet, anchorX, anchorY) {
 };
 
 const setPosIcon = (oImg, icon) => {
-	const scale = icon?.scale * W || DEFAULT_SCALE_ICON * W,
+	const scale = icon?.scale * COEFF_WIDTH || DEFAULT_SCALE_ICON * COEFF_WIDTH,
 		left = icon?.left || 0,
 		top = icon?.top || 0;
 	oImg
 		.scale(scale)
-		.set("left", left - (oImg.get("width") * scale) / 2)
-		.set("top", top - (oImg.get("height") * scale) / 2);
-
-	// .set("left", (left - (oImg.get("width") * scale) / 2) * W) // * W * 1.027
-	// .set("top", (top - (oImg.get("height") * scale) / 2) * H); // * H * 1.005
+		.set("left", (left - (oImg.get("width") * scale) / 2) * COEFF_WIDTH)
+		.set("top", (top - (oImg.get("height") * scale) / 2) * COEFF_HEIGHT);
 };
 
 const setScaleIcon = (oImg, isSacle) => {
@@ -124,12 +121,12 @@ $(window).mousemove(function (e) {
 const coppyObject = (top, left) => {
 	const copy = `
 {
-	title: "Жила",
+	title: "",
 	description: "",
-	secondDescription: ["<q yelow>Золото</q>."],
-	type: "soc",
-	nameIcon: "Lode",
-	scale: 0.2,
+	secondDescription: [""],
+	type: "",
+	nameIcon: "",
+	scale: 0.6,
 	id: "id------",
 	top: ${top},
 	left: ${left},

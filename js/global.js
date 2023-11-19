@@ -44,14 +44,15 @@ const TYPE_MAP = element.data("type"), // Тип карты.
 
 const NUMBER_PATH_ACTIVE = localStorage.getItem(PATH_LOCAL_STORAGE); // Номер выбранного пути.
 
-const H = 1, // коэфф-нт увеличения карты в высоту. (!) COEFF_HEIGHT
-	W = 1; // коэфф-нт увеличения карты в ширину. (!) COEFF_WIDTH
+const COEFF_HEIGHT = 1, // коэфф-нт увеличения карты в высоту. (!) COEFF_HEIGHT
+	COEFF_WIDTH = 1; // коэфф-нт увеличения карты в ширину. (!) COEFF_WIDTH
 
 // const X = $("body").width() / element[0].width,
-// 	H = $("body").height() / element[0].height;
-// const W = X > H ? H : X;
-// element[0].width = element[0].width * W;
-// element[0].height = element[0].height * W;
+// 	COEFF_HEIGHT = $("body").height() / element[0].height;
+// const COEFF_WIDTH = X > COEFF_HEIGHT ? COEFF_HEIGHT : X;
+
+element[0].height = element[0].height * COEFF_HEIGHT;
+element[0].width = element[0].width * COEFF_WIDTH;
 
 let canvas = new fabric.Canvas(element.get(0), {
 	selection: false, // возможность выбора группы
