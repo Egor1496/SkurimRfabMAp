@@ -12,7 +12,7 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Руины замка Карстаг (<q lblue>???????lvl</q>)",
+		title: "Руины замка Карстаг (<q lblue>40lvl</q>)",
 		description: "Если положить череп Карстага на стул, появится <q red>босс</q>. Череп в ледяной пещере.",
 		secondDescription: [
 			"<q red>Босс</q> призрак Карстага (<q lblue>100lvl</q>) великан. <br/>&nbsp; -Вызывает морозный шторм, после потери ХП призывает <q green>3</q> ледяных приведений, больно бьет дубинкой",
@@ -39,10 +39,10 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Пещера Щетиноспин",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Пещера Щетиноспин (<q lblue>30lvl</q>)",
+		description: "Много Риклингов",
+		secondDescription: ["Маст сундук <q yelow>Зельям и камни</q>"],
+		type: "riek",
 		nameIcon: "Cave",
 		scale: 0.6,
 		id: "id4",
@@ -87,10 +87,10 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Алтарь пещеры Тронд",
-		description: "",
+		title: "Алтарь пещеры Тронд (<q lblue>30lvl</q>)",
+		description: "Ворожеи <q green>3</q>.",
 		secondDescription: [""],
-		type: "",
+		type: "bandit",
 		nameIcon: "Cave",
 		scale: 0.6,
 		id: "id8",
@@ -99,10 +99,10 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Утес Морозной Луны",
-		description: "",
+		title: "Утес Морозной Луны (<q lblue>30lvl</q>)",
+		description: "Снаружи <q green>4</q> мирных оборотней-ликантропов.",
 		secondDescription: [""],
-		type: "",
+		type: "bandit",
 		nameIcon: "Cave",
 		scale: 0.6,
 		id: "id9",
@@ -123,10 +123,10 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Бенконгерик",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Бенконгерик (<q lblue>30lvl</q>)",
+		description: "Много Риклингов.",
+		secondDescription: ["Слово <q yelow>Циклон</q>, Черная Книга <q yelow>Нерассказанные Легенды</q>."],
+		type: "riek",
 		nameIcon: "Cave",
 		scale: 0.6,
 		id: "id11",
@@ -195,10 +195,11 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Фалбтарз",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Фалбтарз (<q lblue>????????????????lvl</q>)",
+		description:
+			"Снаружи риклинги. Внутри <q green>9</q> механизмов, <q green>4</q> паучков, много ловушек и загадок. <br/>&nbsp; Большой зал Фальбтарза: <q green>2</q> <q red>центуриона</q> спят и <q green>2</q> баллисты. Чтобы пройти дальше нужны <q green>2</q> сердечника центурионов.",
+		secondDescription: ["<q yelow>Камень Кагрумеза</q>, <q yelow>Проницательность Мзунда</q>."],
+		type: "dwemer riek",
 		nameIcon: "DwemerRuins",
 		scale: 0.7,
 		id: "id17",
@@ -255,10 +256,13 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Форт Морозного Мотылька",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Форт Морозного Мотылька (<q lblue>40lvl</q>)",
+		description: "Снаружи <q green>11</q> порождений. Внутри <q green>3</q> порождения.",
+		secondDescription: [
+			"<q red>Босс</q> бандит Генерал Фалкс Карий (<q lblue>75lvl</q>) - <q lblue>7000xp</q>, быстрый воин с молотом.",
+			"<q yelow>Сет Имперского Генерала</q>, <q yelow>Дубина Защитника</q>, <q yelow>Жилы камней и рубинов</q>.",
+		],
+		type: "ash",
 		nameIcon: "Fort",
 		scale: 0.6,
 		id: "id22",
@@ -291,10 +295,10 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Душная шахта",
-		description: "",
+		title: "Душная шахта (<q lblue>30lvl</q>)",
+		description: "Снаружи бандит. Внутри <q green>16</q> бандитов.",
 		secondDescription: [""],
-		type: "",
+		type: "bandit",
 		nameIcon: "Mine",
 		scale: 0.6,
 		id: "id25",
@@ -315,10 +319,13 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Курган Белого Хребта",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Курган Белого Хребта (<q lblue>50lvl</q>)",
+		description: "Стихийные Паучки и Бандосы. После закрытой паутиной комнаты спит <q red>босс</q>.",
+		secondDescription: [
+			"<q red>Босс</q> Драконий Жрец Дукан (<q lblue>175lvl</q>) - <q lblue>xp</q>. Призывает <q green>3</q> лед атронахов, юзает оберег. Морозным криком режет СТ и скорость. <br/>&nbsp; -Используй: бессплотность, 75+ холод резов, просто уворачивайся.",
+			"Слово <q yelow>Циклон</q>, Черная Книга <q yelow>Болезненый Регент</q>.",
+		],
+		type: "boss",
 		nameIcon: "Tomb",
 		scale: 0.7,
 		id: "id27",
@@ -387,10 +394,10 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Проход Моэсринг",
-		description: "",
+		title: "Проход Моэсринг (<q lblue>30lvl</q>)",
+		description: "Риклинги.",
 		secondDescription: [""],
-		type: "",
+		type: "riek",
 		nameIcon: "Pass",
 		scale: 0.5,
 		id: "id33",
@@ -472,10 +479,10 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Заброшенный постоялый двор",
-		description: "",
+		title: "Заброшенный постоялый двор (<q lblue>30lvl</q>)",
+		description: "Талморцы <q green>3</q> «по квесту Новый источник сталгрима».",
 		secondDescription: [""],
-		type: "",
+		type: "bandit",
 		nameIcon: "Shack",
 		scale: 0.5,
 		id: "id40",
@@ -555,10 +562,10 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Камень Зверя",
-		description: "",
+		title: "Камень Зверя (<q lblue>30???lvl</q>)",
+		description: "Камень охраняют <q green>2</q> члена культа.",
 		secondDescription: [""],
-		type: "",
+		type: "magic",
 		nameIcon: "Standing_Stones_e",
 		scale: 0.5,
 		id: "id47",
@@ -591,10 +598,10 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Камень Воды",
-		description: "",
+		title: "Камень Воды (<q lblue>40lvl</q>)",
+		description: "Луркер после очистки. Часто появляется <q red>Дракон</q>",
 		secondDescription: [""],
-		type: "",
+		type: "dragon boss",
 		nameIcon: "Standing_Stones_e",
 		scale: 0.5,
 		id: "id50",
@@ -636,6 +643,69 @@ const listMarkersSols = [
 		id: "id53",
 		top: 395.3008003234863,
 		left: 1032.8672008514404,
+	},
+
+	{
+		title: "Северная Пристань (<q lblue>30lvl</q>)",
+		description: "На корабле <q green>5</q> талморцев по квесту Новый источник сталгрима.",
+		secondDescription: ["<q yelow>Карта</q> Сталгримовой Руды"],
+		type: "bandit",
+		nameIcon: "Dock",
+		scale: 0.4,
+		id: "id54",
+		top: 151.31578947368422,
+		left: 293.5672525773969,
+	},
+
+	{
+		title: "Сталгримовая шахта",
+		description: "Нужна Древненордская Кирка в Вороньей Скале.",
+		secondDescription: ["<q yelow>Жил Сталгрима</q> <q green>10</q>."],
+		type: "loot",
+		nameIcon: "PointofInterest",
+		scale: 0.3,
+		id: "id55",
+		top: 309.2105263157895,
+		left: 373.3918139809057,
+	},
+
+	{
+		title: "Жила",
+		description: "",
+		secondDescription: ["<q yelow>Сталгрим</q>."],
+		type: "loot",
+		nameIcon: "Lode",
+		scale: 0.3,
+		id: "id56",
+		top: 77.63157894736842,
+		left: 361.9883052089758,
+	},
+
+	{
+		title: "Роща Бродира (<q lblue>30lvl</q>)",
+		description: "Бандиты <q green>3</q>",
+		secondDescription: ["<q yelow>Штормовой Клык</q>."],
+		type: "bandit",
+		nameIcon: "Pond",
+		scale: 0.5,
+		id: "id57",
+		top: 741.5446901276867,
+		left: 540.4914299736772,
+	},
+
+	{
+		title: "Курган Джолгейрр (<q lblue>60lvl</q>)",
+		description: "Нажав на труп, появится <q red>босс</q> и <q red>закроется</q> дверь.",
+		secondDescription: [
+			"<q red>Босс</q> призрак Снежный Принц (<q lblue>300lvl</q>) <q lblue>50000xp</q>. Издалека больно стреляет холодом, юзает ледяную броню на себя, бьет копьем и меняет на щит с копьем. Парировать опасно для здоровья. Кастит морозный шторм, потеряв ХП призывает <q green>2</q> ледяных атронахов каждые 30 сек. <br/>&nbsp; -Используй проклятие или ослабление нежети, увядание, крик разоружение, святые чары, заклинание Гнев Азуры.",
+			"<q yelow>Щит Ауриэля</q>, <q yelow>Копье Снежного Принца</q>.",
+		],
+		type: "boss",
+		nameIcon: "Tomb",
+		scale: 0.7,
+		id: "id58",
+		top: 469.7368421052622,
+		left: 579.5321648580987,
 	},
 ];
 
