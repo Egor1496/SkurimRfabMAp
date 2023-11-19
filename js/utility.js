@@ -99,11 +99,10 @@ const setScaleHover = (oImg, isSacle) => {
 
 const setScaleIcon = () => {
 	// const SCALE_ZOOM = (ZOOM_MAX - ZOOM_MIN - currentZoom) * (2 / (ZOOM_MAX - ZOOM_MIN)) + 0.7;
-
-	listMarkersCanvas.forEach((oImg, i) => {
-		// const SCALE_CANVAS = listMarkers[i]?.scale * COEFF_WIDTH || DEFAULT_SCALE_ICON * COEFF_WIDTH;
-		// oImg.scale();
-	});
+	// listMarkersCanvas.forEach((oImg, i) => {
+	// const SCALE_CANVAS = listMarkers[i]?.scale * COEFF_WIDTH || DEFAULT_SCALE_ICON * COEFF_WIDTH;
+	// oImg.scale();
+	// });
 };
 
 function getMouseCoord(e) {

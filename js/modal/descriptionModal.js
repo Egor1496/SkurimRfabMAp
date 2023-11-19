@@ -30,15 +30,15 @@ const openDescription = (mark, oImg) => {
 		const doc = document.documentElement,
 			scrollleft = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0),
 			scrolltop = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-
+		console.log(scale);
 		let modalLeft = element.offset().left + oImg.get("left") - modal.width() / 2 - scrollleft,
-			modaTop = element.offset().top + oImg.get("top") - oImg.get("height") / 3 - modal.height() - scrolltop;
+			modaTop = element.offset().top + oImg.get("top") - modal.height() - scrolltop - 20 - currentZoom * 2;
 
 		if (modalLeft < 0) {
 			modalLeft = 0;
 		}
 		if (modaTop < 0) {
-			modaTop += 5 + modal.height() + oImg.get("width") * oImg.scaleX;
+			modaTop += 10 + modal.height() + oImg.get("width") * oImg.scaleX;
 			if (modaTop + modal.height() > $(window).height()) {
 				if (winMouseX <= modal.width() && winMouseY <= modal.height()) {
 					modaTop = 0;
