@@ -986,7 +986,7 @@ const listMarkersSky = [
 	{
 		title: "Оротхейм (<q lblue>10lvl</q>)",
 		description: "Бандиты <q green>5</q> внутри.",
-		secondDescription: ["Мастер <сундук с q yelow>Броней Странствующего Рыцаря</Сундук>, <br/> <q lblue>Книга опыта</q>."],
+		secondDescription: ["Мастер сундук <q yelow>Броня Странствующего Рыцаря</q>, <br/> <q lblue>Книга опыта</q>."],
 		type: "bandit",
 		nameIcon: "Cave",
 		id: "id86",
@@ -994,7 +994,6 @@ const listMarkersSky = [
 		top: 467,
 		left: 419,
 	},
-
 	{
 		title: "Провал Сквозняков (<q lblue>30lvl</q>)",
 		description: "Внутри <q green>15</q> фалмеров и <q green>3</q> корусов.",

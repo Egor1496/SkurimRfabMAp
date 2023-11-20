@@ -46,9 +46,12 @@ const ZOOM_MAX = 8,
 const TYPE_MAP = element.data("type"), // Тип карты.
 	LIST_PATH_LOCAL_STORAGE = TYPE_MAP === "skyrim" ? "listPathSky" : "listPathSols",
 	PATH_LOCAL_STORAGE = TYPE_MAP === "skyrim" ? "path-sky" : "path-sols",
-	FILTER_TYPE_LOCAL_STORAGE = TYPE_MAP === "skyrim" ? "filter-type-sky" : "filter-type-sols";
+	FILTER_TYPE_LOCAL_STORAGE = TYPE_MAP === "skyrim" ? "filter-type-sky" : "filter-type-sols",
+	CLEAN_TYPE = TYPE_MAP === "skyrim" ? "clean-locations-sky" : "clean-locations-sols";
 
 const NUMBER_PATH_ACTIVE = localStorage.getItem(PATH_LOCAL_STORAGE); // Номер выбранного пути.
+
+const cleanLoc = JSON.parse(localStorage.getItem(CLEAN_TYPE) || "[]");
 
 const CFW = $("body").width() / element[0].width, // коэфф-нт увеличения размера карты в высоту.
 	CFH = $("body").height() / element[0].height, // коэфф-нт увеличения размера карты в ширину.

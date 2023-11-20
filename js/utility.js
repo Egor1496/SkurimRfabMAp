@@ -105,6 +105,12 @@ const setScaleIcon = () => {
 	// });
 };
 
+function replaceImage(imgUrl, oImg) {
+	var imgElem = oImg._element;
+	imgElem.src = imgUrl;
+	imgElem.onload = () => canvas.renderAll();
+}
+
 function getMouseCoord(e) {
 	var pointer = canvas.getPointer(e);
 	var posX = pointer.x;

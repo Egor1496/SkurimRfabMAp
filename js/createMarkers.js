@@ -46,8 +46,14 @@ function createMarkers() {
 		const postfix = mark.cssFilter;
 
 		const iconPath = `image/icon/${(mark?.nameIcon || "circle") + postfix}.${mark?.formatIcon || "svg"}`;
+		const iconClean = "image/icon/cross.svg";
+		let iconOImg = iconPath;
 
-		fabric.Image.fromURL(iconPath, (oImg) => {
+		cleanLoc.forEach((id) => {
+			if (id === mark.id) iconOImg = iconClean;
+		});
+
+		fabric.Image.fromURL(iconOImg, (oImg) => {
 			oImg
 				.set("hasControls", false)
 				.set("hasBorders", false)
@@ -58,11 +64,33 @@ function createMarkers() {
 
 			setPosIcon(oImg, mark);
 
+			oImg.on("mousedblclick", function (e) {
+				let newList = JSON.parse(localStorage.getItem(CLEAN_TYPE) || "[]");
+				let isClean = false;
+
+				newList.forEach((id) => {
+					if (id === mark.id) isClean = true;
+				});
+
+				if (isClean) {
+					newList = newList.filter((id) => !(id === mark.id));
+					replaceImage(iconPath, oImg);
+					oImg.set("left", oImg.get("left") - 2);
+					oImg.set("top", oImg.get("top") - 2);
+				} else {
+					newList.push(mark.id);
+					replaceImage(iconClean, oImg);
+					oImg.set("left", oImg.get("left") + 2);
+					oImg.set("top", oImg.get("top") + 2);
+				}
+
+				localStorage.setItem(CLEAN_TYPE, JSON.stringify(newList));
+			});
+
 			oImg.on("mouseover", function (e) {
 				typeIcon = "marker";
 				thisMark = mark;
 				setScaleHover(oImg, true);
-
 				closeContext();
 				openDescription(mark, oImg);
 				applyTransform();
