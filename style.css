@@ -356,11 +356,20 @@ body {
   list-style: none;
 }
 
-.descr-item{
+.books-wrap .descr-item{
+  position: absolute;
+  left: 0;
+  top: 0;
   padding: 5px 10px;
   border: 2px solid #929292;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.books-wrap .descr-item--active{
+  opacity: 1;
 }
 
 .books-item{
@@ -376,29 +385,20 @@ body {
   background-color: #515151;
 }
 
-.descr-item{
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  transition: opacity 0.2s;
+.books-list-descr .title{
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Arimo-Italic';
+  color: rgb(244, 83, 255);
 }
 
-.descr-item--active{
-  opacity: 1;
-}
-
-.books-list-descr .descr-item{
-
+.books-list-descr .descr{
+  margin-top: 5px;
 }
 
 .books-list-descr .sec-desrc{
   font-size: 14px;
   color: rgb(217, 217, 217);
-}
-
-.books-list-descr .descr{
-
 }
 
 .books-list-descr .loot{
@@ -740,20 +740,12 @@ body {
   border-radius: 5px;
   color: white;
   background-color: rgba(0, 0, 0, 0.8);
-  transition: transform 0.1s;
+  transition: transform 0.05s;
 }
 
 .modal-settings button:hover{
   cursor: pointer;
-  transform: scale(1.05);
-}
-
-.clear-path{
-
-}
-
-.clear-clean{
-
+  transform: scale(1.03);
 }
 
 .modal-settings-bg{
@@ -764,3 +756,69 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 /* SETTINGS-MODAL START */
+
+/* QUESTION-MODAL END */
+.modal-question{
+  position: fixed;
+  z-index: 40;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.modal-question.close{
+  opacity: 0;
+  left: -110%;
+}
+
+.modal-question-body{
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  border: 2px solid #929292;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-question .features-list{
+  list-style-type: none;
+  padding: 0;
+}
+.modal-question .features-list_items{
+  margin-bottom: 5px;
+}
+
+.modal-question-title{
+  font-size: 30px;
+}
+
+.modal-question .button-link-video{
+  text-decoration: none;
+  font-style: 30px;
+  padding: 5px 10px;
+  border: 2px solid rgb(97, 255, 73);
+  border-radius: 5px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: transform 0.05s;
+}
+
+.modal-question .button-link-video:hover{
+  transform: scale(1.1);
+}
+
+.modal-question-bg{
+  position: absolute;
+  z-index: 35;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* QUESTION-MODAL START */

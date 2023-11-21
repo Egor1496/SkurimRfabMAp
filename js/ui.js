@@ -117,10 +117,10 @@ $(".books-button").on("click", function (e) {
 	$(".path-button").addClass("close");
 });
 
-$(".books-item").on("mouseenter ", function (e) {
+$(".books-item").on("mouseenter", function (e) {
 	$(".descr-item").removeClass("descr-item--active");
 	const item = $(".descr-item").get(Number($(this).data("number")));
-	if ($(item).find(".descr").html().trim().length > 0) $(item).addClass("descr-item--active");
+	$(item).addClass("descr-item--active");
 });
 // BOOKS END
 
@@ -140,3 +140,9 @@ $(".modal-settings .clear-clean").on("click", function (e) {
 	location.reload();
 });
 // SETTINGS END
+
+// question START
+$(".icon-link-video, .modal-question-bg").on("click", function (e) {
+	$(".modal-question").toggleClass("close");
+});
+// question END

@@ -111,18 +111,6 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Пещера Холодный Уголь",
-		description: "",
-		secondDescription: [""],
-		type: "",
-		nameIcon: "Cave",
-		scale: 0.6,
-		id: "id10",
-		top: 846.6117577375298,
-		left: 443.86720085144043,
-	},
-
-	{
 		title: "Бенконгерик (<q lblue>30lvl</q>)",
 		description: "Много Риклингов.",
 		secondDescription: ["Слово <q yelow>Циклон</q>, Черная Книга <q yelow>Нерассказанные Легенды</q>."],
@@ -195,7 +183,7 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Фалбтарз (<q lblue>????????????????lvl</q>)",
+		title: "Фалбтарз (<q lblue>50lvl</q>)",
 		description:
 			"Снаружи риклинги. Внутри <q green>9</q> механизмов, <q green>4</q> паучков, много ловушек и загадок. <br/>&nbsp; Большой зал Фальбтарза: <q green>2</q> <q red>центуриона</q> спят и <q green>2</q> баллисты. Чтобы пройти дальше нужны <q green>2</q> сердечника центурионов.",
 		secondDescription: ["<q yelow>Камень Кагрумеза</q>, <q yelow>Проницательность Мзунда</q>."],
@@ -307,10 +295,17 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Шахта Вороньей Скалы",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Шахта Вороньей Скалы (<q lblue>50lvl</q>)",
+		description:
+			"Квест старика. Внутри <q green>12</q> драугров, <q green>2</q> повелителя. <q red>Упав</q> вниз к <q red>боссам</q> атронахам (стоят вместе), вернуться нельзя. После комнаты с ловушками <q red>Босс</q>, который появляется подойдя к сундуку.",
+		secondDescription: [
+			"<q red>Босс</q> Грозовой атронах Сош (<q lblue>100lvl</q>) <q lblue>2000xp</q>.",
+			"<q red>Босс</q> Грозовой атронах Крий (<q lblue>75lvl</q>) <q lblue>2000xp</q>.",
+			"<q red>Босс</q> Грозовой атронах За (<q lblue>50lvl</q>) <q lblue>2000xp</q>.",
+			"<q red>Босс</q> Драконий Жрец Закрисош (<q lblue>175lvl</q>) <q lblue>20000xp</q>, кричит грозовым криком, призывает <q green>3</q> гроз. атронахов (<q lblue>90lvl</q>), которые стреляют элек. лучом, быстро ломает щиты магии, использует щит магии и больно стреляет цепной молнией. Используй: зелье хождения по воде, 75% рез. электр.",
+			"Жила <q yelow>Сталгрим</q> <q green>3</q>, Слово <q yelow>Воплощение Дракона</q>, <q yelow>Маска Закрисош</q>, Черная Книга <q yelow>Ветры Перемен</q>, Справа от алхим. стола <q yelow>Зелье хождения по воде</q>, За фонтаном запертая дверь (ученик) <q yelow>Жила Сталгрим</q> <q green>2</q>.",
+		],
+		type: "draugry boss priests",
 		nameIcon: "Mine",
 		scale: 0.6,
 		id: "id26",
@@ -323,7 +318,7 @@ const listMarkersSols = [
 		description: "Стихийные Паучки и Бандосы. После закрытой паутиной комнаты спит <q red>босс</q>.",
 		secondDescription: [
 			"<q red>Босс</q> Драконий Жрец Дукан (<q lblue>175lvl</q>) - <q lblue>xp</q>. Призывает <q green>3</q> лед атронахов, юзает оберег. Морозным криком режет СТ и скорость. <br/>&nbsp; -Используй: бессплотность, 75+ холод резов, просто уворачивайся.",
-			"Слово <q yelow>Циклон</q>, Черная Книга <q yelow>Болезненый Регент</q>.",
+			"Слово <q yelow>Циклон</q>, Черная Книга <q yelow>Болезненый Регент</q>, <q yelow>Маска Дукана</q>.",
 		],
 		type: "boss",
 		nameIcon: "Tomb",
@@ -346,10 +341,10 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Курган Бладскал",
-		description: "",
+		title: "Курган Бладскал (<q lblue>30lvl</q>)",
+		description: "Бандиты снаружи <q green>14</q>. Внутри <q green>8</q>.",
 		secondDescription: [""],
-		type: "",
+		type: "bandit",
 		nameIcon: "Tomb",
 		scale: 0.7,
 		id: "id29",
@@ -467,10 +462,10 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Дом Хродульфа",
-		description: "",
+		title: "Дом Хродульфа (<q lblue>30lvl</q>)",
+		description: "Снаружи Порождения пепла <q green>2</q>. Внутри <q green>2</q> бандита",
 		secondDescription: [""],
-		type: "",
+		type: "bandit ash",
 		nameIcon: "Shack",
 		scale: 0.5,
 		id: "id39",
@@ -562,7 +557,7 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Камень Зверя (<q lblue>30???lvl</q>)",
+		title: "Камень Зверя (<q lblue>40lvl</q>)",
 		description: "Камень охраняют <q green>2</q> члена культа.",
 		secondDescription: [""],
 		type: "magic",
@@ -706,6 +701,42 @@ const listMarkersSols = [
 		id: "id58",
 		top: 469.7368421052622,
 		left: 579.5321648580987,
+	},
+
+	{
+		title: "Луркер (<q lblue>40lvl</q>)",
+		description: "",
+		secondDescription: [""],
+		type: "",
+		nameIcon: "Star",
+		scale: 0.5,
+		id: "id59",
+		top: 460.9649122807,
+		left: 782.596693131572,
+	},
+
+	{
+		title: "Событие???? (<q lblue>40lvl</q>)",
+		description: "Сприганы <q green>2</q>, зверь.",
+		secondDescription: [""],
+		type: "animal",
+		nameIcon: "Star",
+		scale: 0.5,
+		id: "id60",
+		top: 588.1578947368422,
+		left: 947.5089738333264,
+	},
+
+	{
+		title: "Событие???? (<q lblue>30lvl</q>)",
+		description: "Порождения <q green>3</q>.",
+		secondDescription: [""],
+		type: "ash",
+		nameIcon: "Star",
+		scale: 0.5,
+		id: "id61",
+		top: 857.4561403508776,
+		left: 430.4093578405548,
 	},
 ];
 
