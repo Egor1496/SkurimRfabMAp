@@ -111,13 +111,6 @@ function replaceImage(imgUrl, oImg) {
 	imgElem.onload = () => canvas.renderAll();
 }
 
-function getMouseCoord(e) {
-	var pointer = canvas.getPointer(e);
-	var posX = pointer.x;
-	var posY = pointer.y;
-	console.log(posX + ", " + posY);
-}
-
 $(window).mousemove(function (e) {
 	winMouseX = e.pageX;
 	winMouseY = e.pageY;

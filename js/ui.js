@@ -1,3 +1,4 @@
+// FILTER START
 $(".filter-button").on("click", function (e) {
 	$(this).toggleClass("close");
 	$(".path-button").addClass("close");
@@ -28,7 +29,9 @@ $(".filter-item--active").on("click", (e) => {
 	localStorage.setItem(FILTER_TYPE_LOCAL_STORAGE, "");
 	location.reload();
 });
+// FILTER END
 
+// PATH START
 $(".path-button").on("click", function (e) {
 	$(this).toggleClass("close");
 	$(".filter-button").addClass("close");
@@ -70,14 +73,6 @@ $(".path-item--active").on("click", (e) => {
 	location.reload();
 });
 
-$(".canvas-wrap").on("click", function (e) {
-	closeDescription();
-	$(".path-button").addClass("close");
-	$(".filter-button").addClass("close");
-	$(".books-button").addClass("close");
-	$(".books-button").removeClass("disable");
-});
-
 $(".path-list .path-item").on("contextmenu", function (e) {
 	e.preventDefault();
 	const items = [
@@ -91,7 +86,19 @@ $(".path-list .path-item").on("contextmenu", function (e) {
 	currentPath = listPath[currentPathNumber];
 	openContext(e, acceptContextPath, items);
 });
+// PATH END
 
+// FILTER-PATH-BOOKS START
+$(".canvas-wrap").on("click", function (e) {
+	closeDescription();
+	$(".path-button").addClass("close");
+	$(".filter-button").addClass("close");
+	$(".books-button").addClass("close");
+	$(".books-button").removeClass("disable");
+});
+// FILTER-PATH-BOOKS END
+
+// DONAT START
 $(".donat .icon-donat").on("click", function (e) {
 	$(".donat .frame").removeClass("close");
 	$(".donat").addClass("close");
@@ -101,7 +108,9 @@ $(".canvas-wrap").on("mouseover", function (e) {
 	$(".donat .frame").addClass("close");
 	$(".donat").removeClass("close");
 });
+// DONAT END
 
+// BOOKS START
 $(".books-button").on("click", function (e) {
 	$(this).toggleClass("close");
 	$(".filter-button").addClass("close");
@@ -113,3 +122,21 @@ $(".books-item").on("mouseenter ", function (e) {
 	const item = $(".descr-item").get(Number($(this).data("number")));
 	if ($(item).find(".descr").html().trim().length > 0) $(item).addClass("descr-item--active");
 });
+// BOOKS END
+
+// SETTINGS START
+$(".settings .icon-settings, .modal-settings-bg").on("click", function (e) {
+	$(".modal-settings").toggleClass("close");
+});
+
+$(".modal-settings .clear-path").on("click", function (e) {
+	localStorage.removeItem(LIST_PATH_LOCAL_STORAGE);
+	localStorage.removeItem(PATH_LOCAL_STORAGE);
+	location.reload();
+});
+
+$(".modal-settings .clear-clean").on("click", function (e) {
+	localStorage.removeItem(CLEAN_TYPE);
+	location.reload();
+});
+// SETTINGS END

@@ -69,7 +69,10 @@ function createMarkers() {
 				let isClean = false;
 
 				newList.forEach((id) => {
-					if (id === mark.id) isClean = true;
+					if (id === mark.id) {
+						isClean = true;
+						return;
+					}
 				});
 
 				if (isClean) {
@@ -98,11 +101,8 @@ function createMarkers() {
 
 			oImg.on("mouseout", function (e) {
 				setScaleHover(oImg, false);
-
 				closeDescription();
-
 				applyTransform();
-
 				typeIcon = "map";
 			});
 
