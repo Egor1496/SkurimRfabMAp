@@ -22,6 +22,10 @@ del {
   color: rgb(255, 69, 69);
 }
 
+[lred] {
+  color: rgb(255, 81, 81);
+}
+
 [llred] {
   color: rgb(255, 161, 161);
 }
@@ -48,6 +52,10 @@ del {
 
 [yelow] {
   color: rgb(255, 240, 76);
+}
+
+[greenyelow] {
+  color: rgb(146, 105, 44)
 }
 
 [orange] {
@@ -325,10 +333,10 @@ body {
   transform: scale(1.1) translate(-2px, -2px);
 }
 
-.wrap-list{
+.books-wrap .wrap-list{
   position: absolute;
   z-index: 21;
-  left: 35px;
+  left: 38px;
   top: 3px;
   display: flex;
   flex-direction: column;
@@ -414,6 +422,150 @@ body {
   text-align: center;
 }
 /* books END */
+
+/* dragon START */
+.dragon-wrap{
+  z-index: 29;
+  position: fixed;
+  top: 59px;
+  left: 67px;
+}
+
+.dragon-button{
+  width: 30px;
+  height: 30px;
+  transform: translate(2px, 2px);
+}
+
+.dragon-button.disable{
+  display: none;
+}
+
+.dragon-button.close + .wrap-list{
+  display: none;
+}
+
+.dragon-button img{
+  width: 23px;
+  transform: translate(-2px, -2px);
+  transition: scale;
+}
+
+.dragon-button img:hover{
+  cursor: pointer;
+  transform: scale(1.1) translate(-2px, -2px);
+}
+
+.dragon-wrap .wrap-list{
+  position: absolute;
+  z-index: 21;
+  left: 27px;
+  top: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dragon-list{
+  width: 197px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border: 2px solid #929292;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dragon-wrap .dragon-stats-list{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.dragon-wrap .dragon-stats-item{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.dragon-wrap .dragon-stats-item--key{
+  margin-top: 10px;
+}
+
+.dragon-wrap .stats-wrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center
+}
+
+.dragon-list-descr{
+  position: absolute;
+  left: calc(100% + 5px);
+  top: 0px;
+  width: 350px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.dragon-wrap .descr-item{
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 5px 10px;
+  border: 2px solid #929292;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+}
+
+.dragon-wrap .descr-item--active{
+  opacity: 1;
+}
+
+.dragon-item{
+  padding: 5px 10px;
+}
+
+.dragon-item--active{
+  background-color: #515151;
+}
+
+.dragon-item:hover{
+  cursor: pointer;
+  background-color: #515151;
+}
+
+.dragon-list-descr .title{
+  font-size: 20px;
+  text-align: center;
+  font-family: 'Arimo-Italic';
+  color: rgb(244, 83, 255);
+}
+
+.dragon-list-descr .descr{
+  margin-top: 5px;
+}
+
+.dragon-list-descr .sec-desrc{
+  font-size: 16px;
+  color: rgb(237, 237, 237);
+}
+
+.dragon-list-descr .loot{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Arimo-Italic';
+  padding: 5px;
+}
+
+.dragon-list-descr .loot > div{
+  text-align: center;
+}
+/* dragon END */
 
 /* context START */
 .context-wrap{

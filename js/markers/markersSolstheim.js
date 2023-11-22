@@ -63,10 +63,10 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Фроссель",
-		description: "",
+		title: "Фроссель (<q lblue>30lvl</q>)",
+		description: "Много Риклингов",
 		secondDescription: [""],
-		type: "",
+		type: "riek",
 		nameIcon: "Cave",
 		scale: 0.6,
 		id: "id6",
@@ -125,7 +125,7 @@ const listMarkersSols = [
 	{
 		title: "Отмель Хакнира",
 		description: "<q green>3</q> бандита.",
-		secondDescription: ["Эксперт <q yelow>сундук</q> с частью брони «Печать смерти»"],
+		secondDescription: ["Эксперт сундук <q yelow>Шлем Печать Смерти</q>."],
 		type: "loot bandit",
 		nameIcon: "Campsite",
 		scale: 0.5,
@@ -196,18 +196,6 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Большой зал Фалбтарза",
-		description: "",
-		secondDescription: [""],
-		type: "",
-		nameIcon: "DwemerRuins",
-		scale: 0.7,
-		id: "id18",
-		top: 553.9508967071914,
-		left: 428.86720085144043,
-	},
-
-	{
 		title: "Кагрумез",
 		description: "",
 		secondDescription: [""],
@@ -271,10 +259,10 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Шахта Сломанный Клык",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Шахта Сломанный Клык (<q lblue>30lvl</q>)",
+		description: "Риклинги.",
+		secondDescription: ["<q yelow>Жилы Камней</q>."],
+		type: "riek",
 		nameIcon: "Mine",
 		scale: 0.6,
 		id: "id24",
@@ -303,7 +291,7 @@ const listMarkersSols = [
 			"<q red>Босс</q> Грозовой атронах Крий (<q lblue>75lvl</q>) <q lblue>2000xp</q>.",
 			"<q red>Босс</q> Грозовой атронах За (<q lblue>50lvl</q>) <q lblue>2000xp</q>.",
 			"<q red>Босс</q> Драконий Жрец Закрисош (<q lblue>175lvl</q>) <q lblue>20000xp</q>, кричит грозовым криком, призывает <q green>3</q> гроз. атронахов (<q lblue>90lvl</q>), которые стреляют элек. лучом, быстро ломает щиты магии, использует щит магии и больно стреляет цепной молнией. Используй: зелье хождения по воде, 75% рез. электр.",
-			"Жила <q yelow>Сталгрим</q> <q green>3</q>, Слово <q yelow>Воплощение Дракона</q>, <q yelow>Маска Закрисош</q>, Черная Книга <q yelow>Ветры Перемен</q>, Справа от алхим. стола <q yelow>Зелье хождения по воде</q>, За фонтаном запертая дверь (ученик) <q yelow>Жила Сталгрим</q> <q green>2</q>.",
+			"Жила <q yelow>Сталгрим</q> <q green>3</q> что тут убрать?, Слово <q yelow>Воплощение Дракона</q>, <q yelow>Маска Закрисош</q>, Черная Книга <q yelow>Ветры Перемен</q>, Справа от алхим. стола <q yelow>Зелье хождения по воде</q>, За фонтаном запертая дверь (ученик) <q yelow>Жила Сталгрим</q> <q green>2</q> что тут убрать?.",
 		],
 		type: "draugry boss priests",
 		nameIcon: "Mine",
@@ -377,10 +365,14 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Курган Гильденхул",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Курган Гильденхул (<q lblue>45lvl</q>)",
+		description:
+			"Снаружи <q green>2</q> бандита. Внутри собрав все части брони печати смерти дадут ключ. За сталгримом проход. Забрав клинок <q red>закроется</q> дверь и будет <q red>босс</q>.",
+		secondDescription: [
+			"<q red>Босс</q> призрак Хакнир Печать Смерти (<q lblue>200lvl</q>) <q lblue>7000xp</q>. Дуальщик, медленные больные расскрутки. Потеряв ХП исчезает, пока не убьешь всех призраков.",
+			"<q yelow>Заклинание Трансмутация Деревяшка</q>, <q yelow>Много септимов</q>, <q yelow>Кровавая Коса</q>, <q yelow>Душитель</q>, <q yelow>Жилы Сталгрима</q> <q green>2</q>.",
+		],
+		type: "bandit boss",
 		nameIcon: "Tomb",
 		scale: 0.7,
 		id: "id32",
@@ -569,8 +561,8 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Камень Солнца",
-		description: "",
+		title: "Камень Солнца (<q lblue>40lvl</q>)",
+		description: "После очистки появятся <q green>3</q> Луркера (<q lblue>40-50lvl</q>).",
 		secondDescription: [""],
 		type: "",
 		nameIcon: "Standing_Stones_e",
@@ -581,8 +573,8 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Камень Земли",
-		description: "",
+		title: "Камень Земли (<q lblue>40lvl</q>)",
+		description: "После очистки появятся <q green>2</q> Луркера (<q lblue>40-50lvl</q>).",
 		secondDescription: [""],
 		type: "",
 		nameIcon: "Standing_Stones_e",
@@ -622,7 +614,7 @@ const listMarkersSols = [
 		secondDescription: ["<q yelow>Эбонит</q>."],
 		type: "loot",
 		nameIcon: "Lode",
-		scale: 0.3,
+		scale: 0.4,
 		id: "id52",
 		top: 158.30080032348633,
 		left: 314.86720085144043,
@@ -634,7 +626,7 @@ const listMarkersSols = [
 		secondDescription: ["<q yelow>Эбонит</q>."],
 		type: "loot",
 		nameIcon: "Lode",
-		scale: 0.3,
+		scale: 0.4,
 		id: "id53",
 		top: 395.3008003234863,
 		left: 1032.8672008514404,
@@ -646,7 +638,7 @@ const listMarkersSols = [
 		secondDescription: ["<q yelow>Карта</q> Сталгримовой Руды"],
 		type: "bandit",
 		nameIcon: "Dock",
-		scale: 0.4,
+		scale: 0.5,
 		id: "id54",
 		top: 151.31578947368422,
 		left: 293.5672525773969,
@@ -654,11 +646,11 @@ const listMarkersSols = [
 
 	{
 		title: "Сталгримовая шахта",
-		description: "Нужна Древненордская Кирка в Вороньей Скале.",
+		description: "Используй древне нордскую кирку в Вороньей Скале.",
 		secondDescription: ["<q yelow>Жил Сталгрима</q> <q green>10</q>."],
 		type: "loot",
 		nameIcon: "PointofInterest",
-		scale: 0.3,
+		scale: 0.4,
 		id: "id55",
 		top: 309.2105263157895,
 		left: 373.3918139809057,
@@ -670,7 +662,7 @@ const listMarkersSols = [
 		secondDescription: ["<q yelow>Сталгрим</q>."],
 		type: "loot",
 		nameIcon: "Lode",
-		scale: 0.3,
+		scale: 0.4,
 		id: "id56",
 		top: 77.63157894736842,
 		left: 361.9883052089758,
@@ -716,7 +708,7 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Событие???? (<q lblue>40lvl</q>)",
+		title: "Событие (<q lblue>40lvl</q>)",
 		description: "Сприганы <q green>2</q>, зверь.",
 		secondDescription: [""],
 		type: "animal",
@@ -728,8 +720,8 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Событие???? (<q lblue>30lvl</q>)",
-		description: "Порождения <q green>3</q>.",
+		title: "Событие (<q lblue>30lvl</q>)",
+		description: "Порождения <q green>3</q> деруться со стражником.",
 		secondDescription: [""],
 		type: "ash",
 		nameIcon: "Star",
@@ -737,6 +729,42 @@ const listMarkersSols = [
 		id: "id61",
 		top: 857.4561403508776,
 		left: 430.4093578405548,
+	},
+
+	{
+		title: "По квесту Печать Смерти (<q lblue>30lvl</q>)",
+		description: "бандитов <q green>2</q>.",
+		secondDescription: ["Эксперт сундук <q yelow>Нагрудник Печати Смерти</q>."],
+		type: "bandit",
+		nameIcon: "Star",
+		scale: 0.5,
+		id: "id62",
+		top: 739.0350877192988,
+		left: 272.9475703245544,
+	},
+
+	{
+		title: "По квесту Печать Смерти (<q lblue>30lvl</q>)",
+		description: "Порождений <q green>3</q> и сприган.",
+		secondDescription: ["Эксперт сундук <q yelow>Сапоги Печати Смерти</q>."],
+		type: "ash",
+		nameIcon: "Star",
+		scale: 0.5,
+		id: "id63",
+		top: 936.4035087719303,
+		left: 864.175640499993,
+	},
+
+	{
+		title: "По квесту Печать Смерти (<q lblue>30lvl</q>)",
+		description: "Риклинги и крабики.",
+		secondDescription: ["Эксперт сундук <q yelow>Перчатки Печати Смерти</q>."],
+		type: "riek",
+		nameIcon: "Star",
+		scale: 0.5,
+		id: "id64",
+		top: 356.5789473684205,
+		left: 244.44444555985302,
 	},
 ];
 

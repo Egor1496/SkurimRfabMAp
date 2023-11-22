@@ -4,6 +4,7 @@ $(".filter-button").on("click", function (e) {
 	$(".path-button").addClass("close");
 	$(".books-button").addClass("close");
 	$(".books-button").removeClass("disable");
+	$(".dragon-button").addClass("close");
 });
 
 if (localStorage.getItem(FILTER_TYPE_LOCAL_STORAGE)?.trim().length > 0) {
@@ -36,6 +37,7 @@ $(".path-button").on("click", function (e) {
 	$(this).toggleClass("close");
 	$(".filter-button").addClass("close");
 	$(".books-button").addClass("close");
+	$(".dragon-button").addClass("close");
 	if ($(".path-list .path-item").length > 0) $(".books-button").toggleClass("disable");
 });
 
@@ -88,15 +90,16 @@ $(".path-list .path-item").on("contextmenu", function (e) {
 });
 // PATH END
 
-// FILTER-PATH-BOOKS START
+// FILTER-PATH-BOOKS-DRAGON START
 $(".canvas-wrap").on("click", function (e) {
 	closeDescription();
 	$(".path-button").addClass("close");
 	$(".filter-button").addClass("close");
 	$(".books-button").addClass("close");
 	$(".books-button").removeClass("disable");
+	$(".dragon-button").addClass("close");
 });
-// FILTER-PATH-BOOKS END
+// FILTER-PATH-BOOKS-DRAGON END
 
 // DONAT START
 $(".donat .icon-donat").on("click", function (e) {
@@ -115,14 +118,31 @@ $(".books-button").on("click", function (e) {
 	$(this).toggleClass("close");
 	$(".filter-button").addClass("close");
 	$(".path-button").addClass("close");
+	$(".dragon-button").addClass("close");
 });
 
 $(".books-item").on("mouseenter", function (e) {
-	$(".descr-item").removeClass("descr-item--active");
-	const item = $(".descr-item").get(Number($(this).data("number")));
+	$(".books-wrap .descr-item").removeClass("descr-item--active");
+	const item = $(".books-wrap .descr-item").get(Number($(this).data("number")));
 	$(item).addClass("descr-item--active");
 });
 // BOOKS END
+
+// DRAGON START
+$(".dragon-button").on("click", function (e) {
+	$(this).toggleClass("close");
+	$(".filter-button").addClass("close");
+	$(".path-button").addClass("close");
+	$(".books-button").addClass("close");
+	$(".books-button").removeClass("disable");
+});
+
+$(".dragon-item").on("mouseenter", function (e) {
+	$(".dragon-wrap .descr-item").removeClass("descr-item--active");
+	const item = $(".dragon-wrap .descr-item").get(Number($(this).data("number")));
+	$(item).addClass("descr-item--active");
+});
+// DRAGON END
 
 // SETTINGS START
 $(".settings .icon-settings, .modal-settings-bg").on("click", function (e) {

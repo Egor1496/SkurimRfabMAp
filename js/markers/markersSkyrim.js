@@ -1228,7 +1228,7 @@ const listMarkersSky = [
 			"<q red>Босс</q> Халвар Нетрезвый <q lblue>3000xp</q>. <br/>&nbsp; -Замедляет передвижение.",
 			"<q lblue>Книга опыта</q> <q green>2</q>, <q yelow>Молот Опьянения</q>.",
 		],
-		type: "bandit boss loon",
+		type: "bandit boss xp",
 		nameIcon: "Cave",
 		id: "id111",
 		scale: 0.4,
@@ -1739,11 +1739,20 @@ const listMarkersSky = [
 		left: 916,
 	},
 	{
-		title: "Альфтанд (<q lblue>40lvl</q>)",
-		description:
-			"Внутри <q green>3</q> защитника, <q green>7</q> пауков, <q green>2</q> сферы. Далее <q green>2</q> хранителя (<q lblue>70lvl</q>), призрак, <q green>3</q> паука, баллиста, <q green>15</q> фалмеров. Далее <q green>3</q> фалмера, большой паук, центурион (<q lblue>100lvl</q>). и что-то по квесту????",
-		secondDescription: [""],
-		type: "dwemer falmer",
+		title: "Альфтанд (<q lblue>40lvl</q>) (<q lblue>50lvl</q>)",
+		description: `Внутри <q green>3</q> защитника, <q green>7</q> пауков, <q green>2</q> сферы. Далее <q green>2</q> хранителя (<q lblue>70lvl</q>), призрак, <q green>3</q> паука, баллиста, <q green>18</q> фалмеров и <q red>центурион</q> (<q lblue>100lvl</q>). <br/> Черный предел по квесту Септимия Сегония. <br/> Черный предел: После входа в упоре атакуют <q green>6</q> сфер и паук.
+		Далее <q green>96</q> фалмеры. <br/>
+		<q red>Центурион</q> (<q lblue>100lvl</q>) в начале на дороге. <br/>
+		<q red>Центурион</q> (<q lblue>100lvl</q>) в середине локации. <br/>
+		<q red>Центурион</q> (<q lblue>100lvl</q>) не подалеку от «Главный подьемник Мзинчалефта». <br/>
+		Если крикнуть бесжалостной силой в огромную сферу то появится <q red>дракон</q>.
+			`,
+		secondDescription: [
+			"<q red>Босс</q> Вультурьйол (<q lblue>70lvl</q>) <q lblue>20000xp</q>. Теневой дракон.",
+			"<q red>Босс</q> Мзарк (<q lblue>80lvl</q>) <q lblue>20000xp</q>. Башня Мзарка. Маг гроз. Посох потоковой цепной молнии. Быстро сбивает оберег. Каждые 30с привызает гроз. атронахов. Используй 40% маг и 50% электро реза.",
+			"<q yelow>Головоломка Мзарка</q>, <q yelow>Заполненый словарь</q>, <q yelow>Посох Мзарка</q>, <q yelow>Свиток Мастрерский Стук</q>.",
+		],
+		type: "dwemer falmer dragon boss",
 		nameIcon: "DwemerRuins",
 		id: "id158",
 		scale: 0.4,
@@ -3793,8 +3802,8 @@ const listMarkersSky = [
 		nameIcon: "Loot",
 		scale: 0.2,
 		id: "id348-0",
-		top: 147.7142858505249,
-		left: 995.1428604125977,
+		top: 135.7142858505249,
+		left: 985.1428604125977,
 	},
 
 	{
@@ -4847,6 +4856,30 @@ const listMarkersSky = [
 		id: "id436",
 		top: 658.2948003234865,
 		left: 1091.197397813714,
+	},
+
+	{
+		title: "Алтарь акатоша (<q lblue>10lvl</q>)",
+		description: "Скелкты <q green>3</q>.",
+		secondDescription: [""],
+		type: "skelet",
+		nameIcon: "DaedricShrine",
+		scale: 0.2,
+		id: "id437",
+		top: 656.9446153778296,
+		left: 1097.9507684707642,
+	},
+
+	{
+		title: "Пост Септимия Сегония",
+		description: "Квест для входа в черный предел.",
+		secondDescription: [""],
+		type: "",
+		nameIcon: "Cave",
+		scale: 0.3,
+		id: "id438",
+		top: 141.6369230701373,
+		left: 998.0965614455502,
 	},
 ];
 
