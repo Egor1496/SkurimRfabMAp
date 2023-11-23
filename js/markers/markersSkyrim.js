@@ -149,7 +149,7 @@ const listMarkersSky = [
 		title: "Вайтран (<q lblue>0lvl</q>)",
 		description: "В зале мертвых <q green>4</q> скелета за дверью.",
 		secondDescription: [
-			"<q lblue>Книга опыта</q>, <q yelow>Необычный Камень</q> у соратников, <q yelow>Покои ярла</q>, <q yelow>Дом соратников</q>, <q yelow>Кузница</q>.",
+			"<q lblue>Книга опыта</q>, <q yelow>Необычный Камень</q> у соратников и скелетов?, <q yelow>Покои ярла</q>, <q yelow>Дом соратников</q>, <q yelow>Кузница</q>.",
 		],
 		nameIcon: "Whiterun",
 		type: "city skelet soc",
