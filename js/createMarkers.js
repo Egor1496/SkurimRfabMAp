@@ -108,6 +108,9 @@ function createMarkers() {
 				closeContext();
 				openDescription(mark, oImg);
 				applyTransform();
+
+				closeAllMenu();
+				closeAllmodal();
 			});
 
 			oImg.on("mouseout", function (e) {

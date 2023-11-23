@@ -125,7 +125,7 @@ body {
 
 /* modal-marker START */
 .modal-marker.modal-wrap {
-  z-index: 40;
+  z-index: 50;
   position: fixed;
   left: -500px;
   top: -500px;

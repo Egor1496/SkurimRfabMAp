@@ -4881,6 +4881,30 @@ const listMarkersSky = [
 		top: 141.6369230701373,
 		left: 998.0965614455502,
 	},
+
+	{
+		title: "Скелеты (<q lblue>30lvl</q>)",
+		description: "Сильный скелет-маг и <q green>2</q> воина-скелкта.",
+		secondDescription: [""],
+		type: "skelet",
+		nameIcon: "Star",
+		scale: 0.2,
+		id: "id439",
+		top: 665.5475442390543,
+		left: 534.5860622279855,
+	},
+
+	{
+		title: "Сундук с загадкой",
+		description: "<q yelow>Снаряжение</q>.",
+		secondDescription: [""],
+		type: "soc",
+		nameIcon: "Loot",
+		scale: 0.2,
+		id: "id440",
+		top: 678.3905448728642,
+		left: 523.9123069323026,
+	},
 ];
 
 if (TYPE_MAP === "skyrim") listMarkers = listMarkersSky;
