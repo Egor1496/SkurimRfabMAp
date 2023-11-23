@@ -170,7 +170,7 @@ body {
 
 /* filter START */
 .filter-wrap{
-  z-index: 35;
+  z-index: 50;
   position: fixed;
   top: 20px;
   left: 20px;
@@ -243,7 +243,7 @@ body {
 
 /* path START */
 .path-wrap{
-  z-index: 30;
+  z-index: 50;
   position: fixed;
   top: 18px;
   left: 60px;
@@ -302,7 +302,7 @@ body {
 
 /* books START */
 .books-wrap{
-  z-index: 29;
+  z-index: 50;
   position: fixed;
   top: 18px;
   left: 105px;
@@ -425,7 +425,7 @@ body {
 
 /* dragon START */
 .dragon-wrap{
-  z-index: 29;
+  z-index: 49;
   position: fixed;
   top: 59px;
   left: 67px;
@@ -541,7 +541,6 @@ body {
   font-size: 20px;
   text-align: center;
   font-family: 'Arimo-Italic';
-  color: rgb(244, 83, 255);
 }
 
 .dragon-list-descr .descr{
@@ -677,7 +676,6 @@ body {
   font-size: 30px;
 }
 
-
 .map-link img{
   width: 35px;
   transition: scale;
@@ -697,26 +695,27 @@ body {
 /* map-link END */
 
 /* DROP ZONE START */
-.add-path{
-  z-index: 25;
+.add-path--button{
+  z-index: 45;
   position: fixed;
   bottom: 53px;
   left: 20px;
 }
 
-.add-path .icon-add-path{
+.add-path--button .icon-add-path{
+  position: relative;
   width: 30px;
   transition: scale;
 }
 
-.add-path .icon-add-path:hover{
+.add-path--button .icon-add-path:hover{
   cursor: pointer;
   transform: scale(1.1);
 }
 
-.add-path .modal {
+.add-path--modal .modal {
   position: fixed;
-  z-index: 36;
+  z-index: 40;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -725,6 +724,8 @@ body {
   border: 2px solid #929292;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.8);
+  opacity: 1;
+  transition: opacity 0.4s;
 }
 
 .add-path_modal_bg{
@@ -735,29 +736,33 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  transition: opacity 0.4s;
 }
 
-.add-path .modal input{
+.add-path--modal .modal input{
   display: none;
 }
 
-.add-path .modal.close,
-.add-path .modal.close + .add-path_modal_bg{
-  display: none;
+.add-path--modal .modal.close,
+.add-path--modal .modal.close + .add-path_modal_bg{
+  left: -110%;
+  opacity: 0;
+  transition: opacity 0.4s, left 0s 0.4s;
 }
 
-.add-path .modal_title{
+.add-path--modal .modal_title{
   margin: 0;
 }
 
-.add-path .modal_drop-zone{
+.add-path--modal .modal_drop-zone{
   margin: 10px;
   margin-top: 15px;
   border: 4px dashed #929292;
   border-radius: 5px;
 }
 
-.add-path .modal_drop-zone label{
+.add-path--modal .modal_drop-zone label{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -765,16 +770,16 @@ body {
   padding: 20px;
 }
 
-.add-path .modal_drop-zone label:hover{
+.add-path--modal .modal_drop-zone label:hover{
   cursor: pointer;
 }
 
-.add-path .icon-drop-zone{
+.add-path--modal .icon-drop-zone{
   width: 50px;
   margin-bottom: 20px;
 }
 
-.add-path .zone-description span{
+.add-path--modal .zone-description span{
   text-decoration: underline;
 }
 /* DROP ZONE END */
@@ -828,7 +833,7 @@ body {
 /* LINK_VIDEO START */
 .link-video{
   position: fixed;
-  z-index: 30;
+  z-index: 41;
   top: 62px;
   left: 18px;
 }
@@ -862,11 +867,14 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  opacity: 1;
+  transition: opacity 0.4s;
 }
 
 .modal-settings.close{
   opacity: 0;
   left: -110%;
+  transition: opacity 0.4s, left 0s 0.4s;
 }
 
 .modal-settings-body{
@@ -905,7 +913,7 @@ body {
   z-index: 35;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 /* SETTINGS-MODAL START */
 
@@ -920,11 +928,14 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  opacity: 1;
+  transition: opacity 0.4s;
 }
 
 .modal-question.close{
   opacity: 0;
   left: -110%;
+  transition: opacity 0.4s, left 0s 0.4s;
 }
 
 .modal-question-body{
@@ -971,6 +982,6 @@ body {
   z-index: 35;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.5);
 }
 /* QUESTION-MODAL START */

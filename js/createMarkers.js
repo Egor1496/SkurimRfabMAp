@@ -48,9 +48,13 @@ function createMarkers() {
 		const iconPath = `image/icon/${(mark?.nameIcon || "circle") + postfix}.${mark?.formatIcon || "svg"}`;
 		const iconClean = "image/icon/cross.svg";
 		let iconOImg = iconPath;
+		let isClean = false;
 
 		cleanLoc.forEach((id) => {
-			if (id === mark.id) iconOImg = iconClean;
+			if (id === mark.id) {
+				iconOImg = iconClean;
+				// isClean = true;
+			}
 		});
 
 		fabric.Image.fromURL(iconOImg, (oImg) => {
@@ -61,6 +65,13 @@ function createMarkers() {
 				.set("cornerSize", 0)
 				.set("originX", "center")
 				.set("originY", "center");
+
+			// oImg.data = {
+			// 	id: mark.id,
+			// 	nameIcon: mark.nameIcon,
+			// 	type: mark.type,
+			// 	isClean: isClean,
+			// };
 
 			setPosIcon(oImg, mark);
 

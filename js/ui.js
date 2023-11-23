@@ -5,6 +5,7 @@ $(".filter-button").on("click", function (e) {
 	$(".books-button").addClass("close");
 	$(".books-button").removeClass("disable");
 	$(".dragon-button").addClass("close");
+	closeAllmodal();
 });
 
 if (localStorage.getItem(FILTER_TYPE_LOCAL_STORAGE)?.trim().length > 0) {
@@ -23,6 +24,19 @@ $(".filter-item")
 		$(this).addClass("filter-item--active");
 		localStorage.setItem(FILTER_TYPE_LOCAL_STORAGE, $(this).data(FILTER_TYPE_LOCAL_STORAGE));
 		location.reload();
+		// const type = $(this).data(FILTER_TYPE_LOCAL_STORAGE);
+		// listMarkersCanvas.forEach((oImg, i) => {
+		// 	if (type?.trim().length > 0 && oImg.data.isClean === false) {
+		// 		let urlImg = "image/icon/" + oImg.data.nameIcon;
+		// 		if (~oImg.data.type?.trim().indexOf(type?.trim() || "")) {
+		// 			replaceImage(urlImg + "_red.svg", oImg);
+		// 			// oImg.scale += 0.05;
+		// 		} else {
+		// 			replaceImage(urlImg + ".svg", oImg);
+		// 			// oImg.scale -= 0.05;
+		// 		}
+		// 	}
+		// });
 	});
 
 $(".filter-item--active").on("click", (e) => {
@@ -38,6 +52,7 @@ $(".path-button").on("click", function (e) {
 	$(".filter-button").addClass("close");
 	$(".books-button").addClass("close");
 	$(".dragon-button").addClass("close");
+	closeAllmodal();
 	if ($(".path-list .path-item").length > 0) $(".books-button").toggleClass("disable");
 });
 
@@ -93,11 +108,7 @@ $(".path-list .path-item").on("contextmenu", function (e) {
 // FILTER-PATH-BOOKS-DRAGON START
 $(".canvas-wrap").on("click", function (e) {
 	closeDescription();
-	$(".path-button").addClass("close");
-	$(".filter-button").addClass("close");
-	$(".books-button").addClass("close");
-	$(".books-button").removeClass("disable");
-	$(".dragon-button").addClass("close");
+	closeAllMenu();
 });
 // FILTER-PATH-BOOKS-DRAGON END
 
@@ -119,6 +130,7 @@ $(".books-button").on("click", function (e) {
 	$(".filter-button").addClass("close");
 	$(".path-button").addClass("close");
 	$(".dragon-button").addClass("close");
+	closeAllmodal();
 });
 
 $(".books-item").on("mouseenter", function (e) {
@@ -135,6 +147,7 @@ $(".dragon-button").on("click", function (e) {
 	$(".path-button").addClass("close");
 	$(".books-button").addClass("close");
 	$(".books-button").removeClass("disable");
+	closeAllmodal();
 });
 
 $(".dragon-item").on("mouseenter", function (e) {
@@ -145,8 +158,15 @@ $(".dragon-item").on("mouseenter", function (e) {
 // DRAGON END
 
 // SETTINGS START
-$(".settings .icon-settings, .modal-settings-bg").on("click", function (e) {
+$(".settings .icon-settings").on("click", function (e) {
 	$(".modal-settings").toggleClass("close");
+	$(".modal-question").addClass("close");
+	closeLoadPath();
+	closeAllMenu();
+});
+
+$(".modal-settings-bg").on("click", function (e) {
+	$(".modal-settings").addClass("close");
 });
 
 $(".modal-settings .clear-path").on("click", function (e) {
@@ -162,7 +182,14 @@ $(".modal-settings .clear-clean").on("click", function (e) {
 // SETTINGS END
 
 // question START
-$(".icon-link-video, .modal-question-bg").on("click", function (e) {
+$(".icon-link-video").on("click", function (e) {
 	$(".modal-question").toggleClass("close");
+	closeLoadPath();
+	$(".modal-settings").addClass("close");
+	closeAllMenu();
+});
+
+$(".modal-question-bg").on("click", function (e) {
+	closeAllmodal();
 });
 // question END

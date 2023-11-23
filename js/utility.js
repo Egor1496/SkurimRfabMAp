@@ -184,3 +184,17 @@ const downloadTxtFile = (text) => {
 	document.body.appendChild(elem);
 	elem.click();
 };
+
+const closeAllMenu = () => {
+	$(".path-button").addClass("close");
+	$(".filter-button").addClass("close");
+	$(".books-button").addClass("close");
+	$(".books-button").removeClass("disable");
+	$(".dragon-button").addClass("close");
+};
+
+const closeAllmodal = () => {
+	closeLoadPath();
+	$(".modal-question").addClass("close");
+	$(".modal-settings").addClass("close");
+};

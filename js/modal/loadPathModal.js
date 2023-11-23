@@ -1,11 +1,14 @@
-const $loadPathButton = $(".add-path .icon-add-path"),
-	$modalLoadPath = $(".add-path .modal"),
-	$modalLoadPathClose = $(".add-path .modal.close"),
+const $loadPathButton = $(".add-path--button .icon-add-path"),
+	$modalLoadPath = $(".add-path--modal .modal"),
+	$modalLoadPathClose = $(".add-path--modal .modal.close"),
 	$dropZone = $(".modal_drop-zone"),
 	$dropZoneInput = $(".modal_drop-zone input");
 
 const openLoadPath = () => {
 	$modalLoadPath.removeClass("close");
+	$(".modal-question").addClass("close");
+	$(".modal-settings").addClass("close");
+	closeAllMenu();
 };
 
 const closeLoadPath = () => {
