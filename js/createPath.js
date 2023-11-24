@@ -80,7 +80,9 @@ function drawPoint(top, left, type) {
 
 		setPosIcon(oImg, point);
 		canvas.add(oImg);
-		applyTransform();
+		// Рендер холста
+		canvas.renderAll();
+		// applyTransform();
 	});
 }
 
@@ -118,7 +120,9 @@ function createPath() {
 
 				closeContext();
 				openDescription(point, oImg);
-				applyTransform();
+				// Рендер холста
+				canvas.renderAll();
+				// applyTransform();
 			});
 
 			oImg.on("mouseout", function (opt) {
@@ -126,7 +130,10 @@ function createPath() {
 				typeIcon = "map";
 
 				closeDescription();
-				applyTransform();
+
+				// Рендер холста
+				canvas.renderAll();
+				// applyTransform();
 			});
 
 			// oImg.on("mouseup", function (opt) {});

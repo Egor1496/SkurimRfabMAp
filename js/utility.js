@@ -49,7 +49,7 @@ const applyTransform = function () {
 	// Обновим глобальный масштаб на холсте
 	canvas.scale = scale;
 
-	// Отрисуем холст с изменёнными объектами
+	// Рендер холста
 	canvas.renderAll();
 };
 
