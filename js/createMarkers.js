@@ -66,12 +66,8 @@ function createMarkers() {
 				.set("originX", "center")
 				.set("originY", "center");
 
-			oImg.data = {
-				id: mark.id,
-				nameIcon: mark.nameIcon,
-				type: mark.type,
-				isClean: isClean,
-			};
+			oImg.data = mark;
+			oImg.data.isClean = isClean;
 
 			setPosIcon(oImg, mark);
 

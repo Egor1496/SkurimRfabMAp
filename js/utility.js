@@ -230,7 +230,7 @@ function replaceImageList(imgUrl, oImgList) {
 	}, 100);
 }
 
-const filterRender = (type = "-") => {
+const filterRender = (type = "false") => {
 	const redList = [],
 		urlRedList = [],
 		whiteList = [],
@@ -238,7 +238,7 @@ const filterRender = (type = "-") => {
 	listMarkersCanvas.forEach((oImg, i) => {
 		if (oImg.data.isClean === false) {
 			let urlImg = "image/icon/" + oImg.data.nameIcon;
-			if (~oImg.data.type?.trim().indexOf(type?.trim() || "")) {
+			if (~oImg.data.type?.trim().indexOf(type.trim())) {
 				redList.push(oImg);
 				urlRedList.push(urlImg + "_red.svg");
 			} else {
