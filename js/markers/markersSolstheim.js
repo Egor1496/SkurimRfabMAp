@@ -51,10 +51,10 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Пещера Харстрад",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Пещера Харстрад (<q lblue>30lvl</q>)",
+		description: "Снаружи и внутри спригган.",
+		secondDescription: ["<q yelow>Большой сундук</q>."],
+		type: "animal",
 		nameIcon: "Cave",
 		scale: 0.6,
 		id: "id5",
@@ -135,10 +135,10 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Пристанище Буйольд",
-		description: "",
+		title: "Пристанище Буйольд (<q lblue>30lvl</q>)",
+		description: "Мирные бандиты <q green>5</q>. Убить бандитов можно по квесту риклингов.",
 		secondDescription: [""],
-		type: "",
+		type: "bandit",
 		nameIcon: "Campsite",
 		scale: 0.5,
 		id: "id13",
@@ -147,8 +147,9 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Воронья Скала",
-		description: "",
+		title: "Воронья Скала (<q lblue>40lvl</q>)",
+		description:
+			"Квест на убийство <q green>10</q> порождений пепла. У алхимика можно получить <q green>3</q> превосходных зелья восстановления за <q green>5</q> желе нетча.",
 		secondDescription: [""],
 		type: "",
 		nameIcon: "Raven_Rock_e",
@@ -156,18 +157,6 @@ const listMarkersSols = [
 		id: "id14",
 		top: 794.7898684852884,
 		left: 422.2457940379535,
-	},
-
-	{
-		title: "Верховье Харстрада (<q lblue>30lvl</q>)",
-		description: "Снаружи и внутри спригган.",
-		secondDescription: ["<q yelow>Большой сундук</q>."],
-		type: "animal",
-		nameIcon: "Pond",
-		scale: 0.5,
-		id: "id15",
-		top: 318.3008003234863,
-		left: 650.8672008514404,
 	},
 
 	{
@@ -196,10 +185,11 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Кагрумез",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Кагрумез (<q lblue>30lvl</q>) (<q lblue>40lvl</q>)",
+		description:
+			"Внутри <q green>3</q> бандита. <br/> Если вставлять камни Кагрумеза: <br/> &nbsp; (<q red>двери закываются каждый бой</q>) <br/> &nbsp; Бой первый: <q green>3</q> паучка и <q green>3</q> баллисты. <br/> &nbsp; Бой второй: <q green>4</q> баллисты и <q green>3</q> сферы. <br/> &nbsp; Бой третий: <q green>2</q> баллисты, <q green>2</q> сферы, паучки и зачарованная сфера.",
+		secondDescription: ["Приручение <q yelow>Двемерского Паучка и Сферу</q>, <q yelow>Двемерский Черный Лук Судьбы</q>."],
+		type: "dwemer",
 		nameIcon: "DwemerRuins",
 		scale: 0.7,
 		id: "id19",
@@ -208,10 +198,14 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Нчардак",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Нчардак (<q lblue>30lvl</q>) (<q lblue>50lvl</q>)",
+		description:
+			"Снаружи <q green>5</q> бандитов. Внутри <q green>2</q> зачар сферы, <q green>2</q> <q red>Центуриона</q>, Баллисты <q green>6</q>. Собрав все кубики и включив все генераторы выйдет <q red>босс</q>. <br/> После выхода с локации, появится <q red>Змеевидный Дракон</q> (<q lblue>200lvl</q>).",
+		secondDescription: [
+			"<q red>Босс</q> Двемерский Центурион Смотритель Нчардака (<q lblue>80lvl</q>) <q lblue>7000xp</q>, сильнее обычного двемерского центуриона.",
+			"<q yelow>Черная Книга Острое Перо</q>, <q yelow>Камень Кагрумеза</q>.",
+		],
+		type: "bandit dwemer boss",
 		nameIcon: "DwemerRuins",
 		scale: 0.7,
 		id: "id20",
@@ -317,18 +311,6 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Святилище Белый хребет",
-		description: "",
-		secondDescription: [""],
-		type: "",
-		nameIcon: "Tomb",
-		scale: 0.7,
-		id: "id28",
-		top: 407.3008003234862,
-		left: 417.86720085144043,
-	},
-
-	{
 		title: "Курган Бладскал (<q lblue>30lvl</q>)",
 		description: "Бандиты снаружи <q green>14</q>. Внутри <q green>8</q>.",
 		secondDescription: [""],
@@ -341,9 +323,9 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Курган Колбьорн ",
+		title: "Курган Колбьорн (<q lblue>50lvl</q>)??????",
 		description: "",
-		secondDescription: [""],
+		secondDescription: ["Черная Книга <q yelow>Филармент и Филигрань</q>"],
 		type: "",
 		nameIcon: "Tomb",
 		scale: 0.7,
@@ -353,10 +335,14 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Гробница Валока",
-		description: "",
-		secondDescription: [""],
-		type: "",
+		title: "Гробница Валока (<q lblue>50lvl</q>)",
+		description:
+			"Справа: <q green>4</q> драугра и <q red>повелитель</q>. <br/> &nbsp; <q yelow>Аметистовый Коготь</q>, Слово <q yelow>Ярость Боя</q>. <br/> Слева: <q green>7</q> драугров и <q red>повелитель</q>. <br/> &nbsp; <q yelow>Аметистовый Коготь</q>, Слово <q yelow>Ярость Боя</q>. <br/> По центру: собрав части когтей, внизу будут скелеты. После комнаты загадки босс, пройдя чуть дальше дверь <q red>закроется</q>.",
+		secondDescription: [
+			"<q red>Босс</q> Маг Валок Тюремщик (<q lblue>200lvl</q>) <q lblue>20000xp</q>, вначале бессмертный, использует стихийный плащ. Бьет мечем и стреляет цепной молнией. В комнате много ловушек, которые дамажат больнее Валока. <br/> &nbsp; -Используй: 75% стих и 60% маг реза, Крик Бесплотность.",
+			"<q yelow>Сет Валока</q>, Слово <q yelow>Ярость Боя</q> (все слова), <q yelow>Драконий Страж</q>, <q yelow>Амик</q>, Заклинание <q yelow>Зеркало Шалидора</q>.",
+		],
+		type: "draugry boss",
 		nameIcon: "Tomb",
 		scale: 0.7,
 		id: "id31",
@@ -393,10 +379,10 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Заснеженные руины",
-		description: "",
+		title: "Заснеженные руины (<q lblue>30lvl</q>)",
+		description: "<q green>3</q> оборотня.",
 		secondDescription: [""],
-		type: "",
+		type: "bandit",
 		nameIcon: "NordicDwelling",
 		scale: 0.7,
 		id: "id34",
@@ -405,10 +391,10 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Медовый зал Тирска",
-		description: "",
+		title: "Медовый зал Тирска (<q lblue>30lvl</q>)",
+		description: "Мирные риклинги. Убить риклингов можно по квесту бандитов.",
 		secondDescription: [""],
-		type: "",
+		type: "riek",
 		nameIcon: "Settlement",
 		scale: 0.5,
 		id: "id35",
@@ -418,8 +404,8 @@ const listMarkersSols = [
 
 	{
 		title: "Тель-Митрин",
-		description: "",
-		secondDescription: [""],
+		description: "За выполнения квестов Нелота вы получите ключ от комнаты.",
+		secondDescription: ["Черная Книга <q yelow>Скрытый Сумрак</q>, Книга <q yelow>Высшие Чары</q>."],
 		type: "",
 		nameIcon: "Telvanni_Tower_e",
 		scale: 1,
@@ -467,7 +453,7 @@ const listMarkersSols = [
 
 	{
 		title: "Заброшенный постоялый двор (<q lblue>30lvl</q>)",
-		description: "Талморцы <q green>3</q> «по квесту Новый источник сталгрима».",
+		description: "Талморцы <q green>4</q> «по квесту Новый источник сталгрима».",
 		secondDescription: [""],
 		type: "bandit",
 		nameIcon: "Shack",
@@ -502,7 +488,7 @@ const listMarkersSols = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -514,7 +500,7 @@ const listMarkersSols = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -525,8 +511,8 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Камень Ветра",
-		description: "",
+		title: "Камень Ветра (<q lblue>40lvl</q>)",
+		description: "Луркер после очистки. Освобдив Скаалов, откроются квесты на сталгрим и Валока.",
 		secondDescription: [""],
 		type: "",
 		nameIcon: "Standing_Stones_e",
@@ -537,8 +523,8 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Камень????",
-		description: "",
+		title: "Камень Древа",
+		description: "Открывается после убийства Мирака.",
 		secondDescription: [""],
 		type: "",
 		nameIcon: "Standing_Stones_e",
@@ -586,7 +572,7 @@ const listMarkersSols = [
 
 	{
 		title: "Камень Воды (<q lblue>40lvl</q>)",
-		description: "Луркер после очистки. Часто появляется <q red>Дракон</q>",
+		description: "Луркер и член культа после очистки. Часто появляется <q red>Дракон</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "Standing_Stones_e",
@@ -597,8 +583,8 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "",
-		description: "",
+		title: "????????????",
+		description: "Квесты на Сталгрим и Валока, если очищен камень Ветра.",
 		secondDescription: [""],
 		type: "",
 		nameIcon: "Town",
@@ -634,7 +620,7 @@ const listMarkersSols = [
 
 	{
 		title: "Северная Пристань (<q lblue>30lvl</q>)",
-		description: "На корабле <q green>5</q> талморцев по квесту Новый источник сталгрима.",
+		description: "На корабле <q green>4</q> талморцев по квесту Новый источник сталгрима.",
 		secondDescription: ["<q yelow>Карта</q> Сталгримовой Руды"],
 		type: "bandit",
 		nameIcon: "Dock",
@@ -765,6 +751,42 @@ const listMarkersSols = [
 		id: "id64",
 		top: 356.5789473684205,
 		left: 244.44444555985302,
+	},
+
+	{
+		title: "(<q lblue>30lvl</q>)",
+		description: "Бандиты <q green>5</q>",
+		secondDescription: ["Книга Похотливая Арганианская дева"],
+		type: "bandit",
+		nameIcon: "Campsite",
+		scale: 0.5,
+		id: "id65",
+		top: 1067.1052631578948,
+		left: 449.7076034545899,
+	},
+
+	{
+		title: "Палатка торговца",
+		description: "",
+		secondDescription: ["Продает <q yelow>Камень Кагрумеза</q>."],
+		type: "bandit",
+		nameIcon: "Star",
+		scale: 0.5,
+		id: "id66",
+		top: 867.1052631578948,
+		left: 812.865498191432,
+	},
+
+	{
+		title: "Кладбище (<q lblue>30lvl</q>)",
+		description: "Порождение пепла.",
+		secondDescription: ["<q yelow>Посох Упокоения</q>."],
+		type: "bandit",
+		nameIcon: "Star",
+		scale: 0.5,
+		id: "id67",
+		top: 869.7368421052632,
+		left: 940.0584806475724,
 	},
 ];
 

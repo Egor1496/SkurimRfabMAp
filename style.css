@@ -404,6 +404,10 @@ body {
   margin-top: 5px;
 }
 
+.books-list-descr .descr--mirak{
+  width: 500px;
+}
+
 .books-list-descr .sec-desrc{
   font-size: 14px;
   color: rgb(217, 217, 217);

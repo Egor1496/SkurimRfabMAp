@@ -139,6 +139,7 @@ const listMarkersSky = [
 	{
 		title: "Замок ярла",
 		nameIcon: "JarlResidence",
+		secondDescription: ["Покои ярла: <q yelow>Паралич</q>, <q yelow>Серебряные слитки</q>, <q yelow>Необычный Камень</q>, <q yelow>Посуда</q>."],
 		type: "city soc",
 		id: "id12",
 		scale: 0.5,
@@ -1247,8 +1248,8 @@ const listMarkersSky = [
 		left: 872,
 	},
 	{
-		title: "Пещера Кронвангр (<q lblue>10lvl</q>) (<q lblue>40lvl</q>)?",
-		description: "Внутри <q green>18</q> пауков и <q red>вампиры</q>?сколько?.",
+		title: "Пещера Кронвангр (<q lblue>10lvl</q>) (<q lblue>40lvl</q>)",
+		description: "Внутри <q green>18</q> пауков и <q green>3</q> <q red>вампира</q> .",
 		secondDescription: ["<q yelow>Труп мамонта</q> на входе, <q lblue>Щит роге</q> на опыт, Рецепт <q yelow>Концентрированный паучий яд</q>."],
 		type: "xp soc animal",
 		nameIcon: "Cave",
@@ -1515,7 +1516,7 @@ const listMarkersSky = [
 		title: "Кратер Драконий Зуб (<q lblue>20lvl</q>) (<q lblue>50lvl</q>)",
 		description: "Изгои <q green>2</q> и ворожея.",
 		secondDescription: [
-			"<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+			"<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 			"Слово <q yelow>Элементарная Ярость</q>, мастер сундук <q yelow>Камни</q>.",
 		],
 		type: "trash dragon boss loot",
@@ -1528,7 +1529,7 @@ const listMarkersSky = [
 	{
 		title: "Пик Древних (<q lblue>50lvl</q>)",
 		description: "",
-		secondDescription: ["<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.", "Слово <q yelow>Разоружение</q>."],
+		secondDescription: ["<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.", "Слово <q yelow>Разоружение</q>."],
 		type: "dragon boss",
 		nameIcon: "Dragon",
 		id: "id137",
@@ -1539,7 +1540,7 @@ const listMarkersSky = [
 	{
 		title: "Алтарь Рожденного Небом (<q lblue>50lvl</q>)",
 		description: "",
-		secondDescription: ["<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.", "Слово <q yelow>Морозное дыхание</q>."],
+		secondDescription: ["<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.", "Слово <q yelow>Морозное дыхание</q>."],
 		type: "dragon boss",
 		nameIcon: "Dragon",
 		id: "id138",
@@ -1550,7 +1551,7 @@ const listMarkersSky = [
 	{
 		title: "Гора Антор (<q lblue>50lvl</q>)",
 		description: "",
-		secondDescription: ["<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.", "Слово <q yelow>Ледяная форма</q>."],
+		secondDescription: ["<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.", "Слово <q yelow>Ледяная форма</q>."],
 		type: "dragon boss",
 		nameIcon: "Dragon",
 		id: "id139",
@@ -1563,7 +1564,7 @@ const listMarkersSky = [
 		description: "После квеста <q red>Дракон</q>.",
 		secondDescription: [
 			"<q red>Босс</q> Драконий жрец Кросис (<q lblue>125lvl</q>) <q lblue>7000xp</q>. Лучник. <br/>&nbsp; -Стреляет замедляющими стрелами (холодными), кричит замедляющим криком, призывает <q green>2</q> адских гончих.",
-			"<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+			"<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 			"Слово <q yelow>Голосовой бросок</q>.",
 		],
 		type: "dragon boss",
@@ -1577,7 +1578,7 @@ const listMarkersSky = [
 		title: "Скелетный гребень (<q lblue>10lvl</q>) (<q lblue>50lvl</q>)",
 		description: "<q green>3</q> скелета.",
 		secondDescription: [
-			"<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+			"<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 			"Мастер сундук <q yelow>Камни</q>, Слово <q yelow>Морозное дыхание</q>.",
 		],
 		type: "skelet dragon boss loot",
@@ -1590,7 +1591,7 @@ const listMarkersSky = [
 	{
 		title: "Вершина Северный Ветер (<q lblue>10lvl</q>) (<q lblue>50lvl</q>)",
 		description: "<q green>3</q> скелета.",
-		secondDescription: ["<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.", "Слово <q yelow>Шепот ауры</q>."],
+		secondDescription: ["<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.", "Слово <q yelow>Шепот ауры</q>."],
 		type: "skelet dragon boss",
 		nameIcon: "Dragon",
 		id: "id142",
@@ -1601,7 +1602,7 @@ const listMarkersSky = [
 	{
 		title: "Откушенный Язык (<q lblue>20lvl</q>) (<q lblue>50lvl</q>)",
 		description: "Некромант и <q green>3</q> скелета.",
-		secondDescription: ["<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.", "Слово <q yelow>Испуг</q>."],
+		secondDescription: ["<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.", "Слово <q yelow>Испуг</q>."],
 		type: "dragon boss magic",
 		nameIcon: "Dragon",
 		id: "id143",
@@ -1613,7 +1614,7 @@ const listMarkersSky = [
 		title: "Осенняя сторож. башня (<q lblue>10lvl</q>) (<q lblue>50lvl</q>)",
 		description: "Бандиты <q green>4</q>.",
 		secondDescription: [
-			"<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+			"<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 			"Слово <q yelow>Смертный приговор</q>, Мастер сундук <q yelow>Камнями</q>, <q lblue>Книга опыта</q>, 2 <q yelow>Праха вампира</q>.",
 		],
 		type: "bandit boss loot",
@@ -1626,7 +1627,7 @@ const listMarkersSky = [
 	{
 		title: "Ход Древних (<q lblue>50lvl</q>)",
 		description: "",
-		secondDescription: ["<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.", "Слово <q yelow>Мощь Хищника</q>."],
+		secondDescription: ["<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.", "Слово <q yelow>Мощь Хищника</q>."],
 		type: "dragon boss",
 		nameIcon: "Dragon",
 		id: "id145",
@@ -1749,7 +1750,7 @@ const listMarkersSky = [
 			`,
 		secondDescription: [
 			"<q red>Босс</q> Вультурьйол (<q lblue>70lvl</q>) <q lblue>20000xp</q>. Теневой дракон.",
-			"<q red>Босс</q> Мзарк (<q lblue>80lvl</q>) <q lblue>20000xp</q>. Башня Мзарка. Маг гроз. Посох потоковой цепной молнии. Быстро сбивает оберег. Каждые 30с привызает гроз. атронахов. Используй 40% маг и 50% электро реза.",
+			"<q red>Босс</q> Мзарк (<q lblue>80lvl</q>) <q lblue>20000xp</q>. Башня Мзарка. Призрак маг гроз. Посох потоковой цепной молнии. Быстро сбивает оберег. Каждые 30с привызает гроз. атронахов. Используй 40% маг и 50% электро реза.",
 			"<q yelow>Головоломка Мзарка</q>, <q yelow>Заполненый словарь</q>, <q yelow>Посох Мзарка</q>, <q yelow>Свиток Мастрерский Стук</q>.",
 		],
 		type: "dwemer falmer dragon boss",
@@ -2169,7 +2170,7 @@ const listMarkersSky = [
 	{
 		title: "Упокоище (<q lblue>40lvl</q>)",
 		description:
-			"Драугры <q green>4</q> крепко спят, можно убить по одному. Дальше <q green>3</q> драугра и пауки. <q red>Падая</q> в яму вернуться нельзя. Далее <q green>12</q> драугров и <q red>закр</q>. решетка. Босс в конце локации за дверью с когтем. Далее <q green>14</q> драугров и <q red>закр</q>. решетка.",
+			"Драугры <q green>4</q> <q yelow>крепко спят</q>, можно убить по одному. Дальше <q green>3</q> драугра и пауки. <q red>Падая</q> в яму вернуться нельзя. Далее <q green>12</q> драугров и <q red>закр</q>. решетка. Босс в конце локации за дверью с когтем. Далее <q green>14</q> драугров и <q red>закр</q>. решетка.",
 		secondDescription: [
 			"<q red>Босс</q> Король Олаф Одноглазый (<q lblue>100lvl</q>) <q lblue>5000xp</q> в конце арены с молотом. <br/>&nbsp; -Призывает <q green>2</q> призраков (<q lblue>100lvl</q>) бьет силовые холодом, грозовая аура. Убей драугров как можно быстрее.",
 			"<q yelow>Призрачный Крушитель</q>, <q yelow>Превосходное Зелье</q> <q llred>ХП</q>.",
@@ -2183,7 +2184,7 @@ const listMarkersSky = [
 	},
 	{
 		title: "Лабиринтиан (<q lblue>20lvl</q>)",
-		description: "Ледяные тролли <q green>10</q>.",
+		description: "Ледяные тролли <q green>10</q> снаружи.",
 		secondDescription: [""],
 		type: "animal",
 		nameIcon: "Tomb",
@@ -2482,7 +2483,7 @@ const listMarkersSky = [
 			"Открытая локация. В начале <q green>14</q> скелетов, <q green>2</q> драугра спят, после лестницы наверх <q red>Босс</q> и драугр (<q lblue>100lvl</q>), далее <q green>2</q> другра. <q red>Дракон</q> после квеста.",
 		secondDescription: [
 			"<q red>Босс</q> Агнар Железная Борода (<q lblue>100lvl</q>) <q lblue>5000xp</q>, вместе с ним <q green>5</q> скелетов. <br/>&nbsp; -Кричит холодом, больно стреляет из лука.",
-			"<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+			"<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 			"<q yelow>Нордский героик</q> топор и лук, <q yelow>Шлем Инквизитора</q>, <q lblue>Книга опыта</q>, Слово <q yelow>Высасывание жизни</q>.",
 		],
 		type: "draugry boss",
@@ -3820,7 +3821,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3832,7 +3833,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3844,7 +3845,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3856,7 +3857,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3868,7 +3869,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3880,7 +3881,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3892,7 +3893,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3904,7 +3905,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3916,7 +3917,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3928,7 +3929,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3940,7 +3941,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3952,7 +3953,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3964,7 +3965,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3976,7 +3977,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3988,7 +3989,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -4000,7 +4001,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -4012,7 +4013,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -4024,7 +4025,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -4036,7 +4037,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -4048,7 +4049,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -4060,7 +4061,7 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-250lvl</q>) <q lblue>16000-20000xp</q>.",
+		description: "<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
