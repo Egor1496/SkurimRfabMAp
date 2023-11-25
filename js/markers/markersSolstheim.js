@@ -423,7 +423,7 @@ const listMarkersSols = [
 		nameIcon: "Miraak_e",
 		scale: 0.8,
 		id: "id37",
-		top: 510.2948003234865,
+		top: 525.2948003234865,
 		left: 677.1118360445737,
 	},
 
@@ -530,8 +530,8 @@ const listMarkersSols = [
 		nameIcon: "Standing_Stones_e",
 		scale: 0.5,
 		id: "id46",
-		top: 478.3008003234863,
-		left: 675.8672008514404,
+		top: 490.3008003234863,
+		left: 676.8672008514404,
 	},
 
 	{
