@@ -25,7 +25,7 @@ function createMarkers() {
 	if (type?.trim().length > 0) {
 		listMarkers.forEach((mark) => {
 			if (~mark.type?.trim().indexOf(type?.trim() || "")) {
-				mark.cssFilter = "_red";
+				mark.filter = "_red";
 				mark.scale += 0.05;
 			} else {
 				mark.scale -= 0.05;
@@ -37,13 +37,13 @@ function createMarkers() {
 	}
 
 	filterList.forEach((mark) => {
-		mark.cssFilter = mark?.cssFilter || "";
+		mark.filter = mark?.filter || "";
 		mark.type = mark?.type || "";
 		mark.title = mark?.title || "";
 		mark.description = mark?.description || "";
 		mark.secondDescription = mark?.secondDescription || [""];
 
-		const postfix = mark.cssFilter;
+		const postfix = mark.filter;
 
 		const iconPath = `image/icon/${(mark?.nameIcon || "circle") + postfix}.${mark?.formatIcon || "svg"}`;
 		const iconClean = "image/icon/cross.svg";
@@ -53,7 +53,7 @@ function createMarkers() {
 		cleanLoc.forEach((id) => {
 			if (id === mark.id) {
 				iconOImg = iconClean;
-				// isClean = true;
+				isClean = true;
 			}
 		});
 
@@ -66,12 +66,12 @@ function createMarkers() {
 				.set("originX", "center")
 				.set("originY", "center");
 
-			// oImg.data = {
-			// 	id: mark.id,
-			// 	nameIcon: mark.nameIcon,
-			// 	type: mark.type,
-			// 	isClean: isClean,
-			// };
+			oImg.data = {
+				id: mark.id,
+				nameIcon: mark.nameIcon,
+				type: mark.type,
+				isClean: isClean,
+			};
 
 			setPosIcon(oImg, mark);
 
@@ -91,11 +91,13 @@ function createMarkers() {
 					replaceImage(iconPath, oImg);
 					oImg.set("left", oImg.get("left") - 2);
 					oImg.set("top", oImg.get("top") - 2);
+					oImg.data.isClean = false;
 				} else {
 					newList.push(mark.id);
 					replaceImage(iconClean, oImg);
 					oImg.set("left", oImg.get("left") + 2);
 					oImg.set("top", oImg.get("top") + 2);
+					oImg.data.isClean = true;
 				}
 
 				localStorage.setItem(CLEAN_TYPE, JSON.stringify(newList));

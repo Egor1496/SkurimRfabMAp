@@ -903,7 +903,7 @@ const listMarkersSky = [
 	},
 	{
 		title: "Пещера Говорящие Холмы (<q lblue>20lvl</q>)",
-		description: "Бандиты <q green>2</q> снаружи и Бандиты <q green>7</q> внутри.",
+		description: "Бандиты <q green>2</q> снаружи и <q green>7</q> внутри.",
 		secondDescription: ["<q lblue>Предмет</q> на опыт в сундуке."],
 		type: "bandit xp",
 		nameIcon: "Cave",
@@ -1248,7 +1248,7 @@ const listMarkersSky = [
 	},
 	{
 		title: "Пещера Кронвангр (<q lblue>10lvl</q>) (<q lblue>40lvl</q>)?",
-		description: "Внутри <q green>18</q> пауков и вампиры?.",
+		description: "Внутри <q green>18</q> пауков и <q red>вампиры</q>?сколько?.",
 		secondDescription: ["<q yelow>Труп мамонта</q> на входе, <q lblue>Щит роге</q> на опыт, Рецепт <q yelow>Концентрированный паучий яд</q>."],
 		type: "xp soc animal",
 		nameIcon: "Cave",
@@ -2601,7 +2601,7 @@ const listMarkersSky = [
 		description: "Бандиты <q green>4</q> снаружи и <q green>13</q> внутри. Много лучников.",
 		secondDescription: [
 			"<q red>Босс</q> Элси Спайкер <q lblue>1000xp</q>. В конце моста. <br/> &nbsp;  -Электрический Боевой посох.",
-			"<q lblue>Книга опыта</q>.",
+			"<q yelow>Скума</q>, <q lblue>Книга опыта</q>.",
 		],
 		type: "bandit boss",
 		nameIcon: "NordicTower",
@@ -2812,7 +2812,7 @@ const listMarkersSky = [
 	},
 	{
 		title: "Крушение «Зимней войны» (<q lblue>10lvl</q>)",
-		description: "Бандиты <q green>4</q>. Около корабля плавает страшная рыба.",
+		description: "Бандиты <q green>4</q>. <br/> Рядом может плавать <q red>огромная</q> рыба.",
 		secondDescription: ["<q lblue>Бандиты</q> на опыт."],
 		type: "bandit xp",
 		nameIcon: "Shipwreck",
@@ -4160,7 +4160,7 @@ const listMarkersSky = [
 		secondDescription: [""],
 		type: "skelet",
 		nameIcon: "Star",
-		scale: 0.3,
+		scale: 0.2,
 		id: "id378",
 		top: 673.5714285373688,
 		left: 1066.7739925206965,
@@ -4277,7 +4277,7 @@ const listMarkersSky = [
 		description: "",
 		secondDescription: ["<q yelow>Безупречный изумруд</q>."],
 		type: "soc",
-		nameIcon: "loot",
+		nameIcon: "Loot",
 		scale: 0.2,
 		id: "id388",
 		top: 759.7142858505251,
@@ -4904,6 +4904,30 @@ const listMarkersSky = [
 		id: "id440",
 		top: 678.3905448728642,
 		left: 523.9123069323026,
+	},
+
+	{
+		title: "Событие (<q lblue>10lvl</q>)",
+		description: "Разбойник (<q lblue>29lvl</q>)",
+		secondDescription: [""],
+		type: "bandit",
+		nameIcon: "Bandit",
+		scale: 0.2,
+		id: "id441",
+		top: 496.5089410016525,
+		left: 1000.9811768301655,
+	},
+
+	{
+		title: "Зверь? (<q lblue>10lvl</q>)",
+		description: "проверь",
+		secondDescription: [""],
+		type: "animal",
+		nameIcon: "Star",
+		scale: 0.2,
+		id: "id442",
+		top: 496.0700177943121,
+		left: 1020.2119460609347,
 	},
 ];
 

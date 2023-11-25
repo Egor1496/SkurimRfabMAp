@@ -105,12 +105,6 @@ const setScaleIcon = () => {
 	// });
 };
 
-function replaceImage(imgUrl, oImg) {
-	var imgElem = oImg._element;
-	imgElem.src = imgUrl;
-	imgElem.onload = () => canvas.renderAll();
-}
-
 $(window).mousemove(function (e) {
 	winMouseX = e.pageX;
 	winMouseY = e.pageY;
@@ -197,4 +191,63 @@ const closeAllmodal = () => {
 	closeLoadPath();
 	$(".modal-question").addClass("close");
 	$(".modal-settings").addClass("close");
+};
+
+function replaceImage(imgUrl, oImg) {
+	var imgElem = oImg._element;
+	imgElem.src = imgUrl;
+	imgElem.onload = () => canvas.renderAll();
+}
+
+function replaceImageList(imgUrl, oImgList) {
+	let countLoad = 0;
+	oImgList.forEach((oImg, i) => {
+		var imgElem = oImg._element;
+		const urlIcon = imgElem.src.split("/"),
+			urlNewIcon = imgUrl[i].split("/");
+		const nameIcon = urlIcon[urlIcon.length - 1],
+			nameNewIcon = urlNewIcon[urlNewIcon.length - 1];
+		if (nameIcon !== nameNewIcon) {
+			imgElem.src = imgUrl[i];
+			imgElem.onload = () => countLoad++;
+		} else {
+			countLoad++;
+		}
+	});
+
+	let time = 0;
+	const loadInterval = setInterval(() => {
+		if (countLoad >= oImgList.length) {
+			canvas.renderAll();
+			clearInterval(loadInterval);
+		}
+		time += 100;
+
+		if (time > 5000) {
+			clearInterval(loadInterval);
+			canvas.renderAll();
+		}
+	}, 100);
+}
+
+const filterRender = (type = "-") => {
+	const redList = [],
+		urlRedList = [],
+		whiteList = [],
+		urlWhiteList = [];
+	listMarkersCanvas.forEach((oImg, i) => {
+		if (oImg.data.isClean === false) {
+			let urlImg = "image/icon/" + oImg.data.nameIcon;
+			if (~oImg.data.type?.trim().indexOf(type?.trim() || "")) {
+				redList.push(oImg);
+				urlRedList.push(urlImg + "_red.svg");
+			} else {
+				whiteList.push(oImg);
+				urlWhiteList.push(urlImg + ".svg");
+			}
+		}
+	});
+
+	replaceImageList(urlRedList, redList);
+	replaceImageList(urlWhiteList, whiteList);
 };

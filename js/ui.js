@@ -17,32 +17,18 @@ if (localStorage.getItem(FILTER_TYPE_LOCAL_STORAGE)?.trim().length > 0) {
 	$(".filter-open-icon").hide();
 }
 
-$(".filter-item")
-	.not(".filter-item--active")
-	.on("click", function (e) {
+$(".filter-item").on("click", function (e) {
+	if (!$(this).hasClass("filter-item--active")) {
 		$(".filter-item").removeClass("filter-item--active");
 		$(this).addClass("filter-item--active");
 		localStorage.setItem(FILTER_TYPE_LOCAL_STORAGE, $(this).data(FILTER_TYPE_LOCAL_STORAGE));
-		location.reload();
-		// const type = $(this).data(FILTER_TYPE_LOCAL_STORAGE);
-		// listMarkersCanvas.forEach((oImg, i) => {
-		// 	if (type?.trim().length > 0 && oImg.data.isClean === false) {
-		// 		let urlImg = "image/icon/" + oImg.data.nameIcon;
-		// 		if (~oImg.data.type?.trim().indexOf(type?.trim() || "")) {
-		// 			replaceImage(urlImg + "_red.svg", oImg);
-		// 			// oImg.scale += 0.05;
-		// 		} else {
-		// 			replaceImage(urlImg + ".svg", oImg);
-		// 			// oImg.scale -= 0.05;
-		// 		}
-		// 	}
-		// });
-	});
-
-$(".filter-item--active").on("click", (e) => {
-	$(".filter-item").removeClass("filter-item--active");
-	localStorage.setItem(FILTER_TYPE_LOCAL_STORAGE, "");
-	location.reload();
+		const type = $(this).data(FILTER_TYPE_LOCAL_STORAGE);
+		filterRender(type);
+	} else {
+		$(".filter-item").removeClass("filter-item--active");
+		localStorage.setItem(FILTER_TYPE_LOCAL_STORAGE, "");
+		filterRender();
+	}
 });
 // FILTER END
 
