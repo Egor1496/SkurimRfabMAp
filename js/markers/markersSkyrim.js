@@ -4912,7 +4912,7 @@ const listMarkersSky = [
 		description: "Разбойник (<q lblue>29lvl</q>)",
 		secondDescription: [""],
 		type: "bandit",
-		nameIcon: "Bandit",
+		nameIcon: "bandit",
 		scale: 0.2,
 		id: "id441",
 		top: 496.5089410016525,
