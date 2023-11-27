@@ -19,7 +19,7 @@ const copyObjMarker = () => {
 };
 
 function createMarkers() {
-	let filterList = [];
+	let filtredList = [];
 	const type = localStorage.getItem(FILTER_TYPE_LOCAL_STORAGE);
 
 	if (type?.trim().length > 0) {
@@ -30,13 +30,13 @@ function createMarkers() {
 			} else {
 				mark.scale -= 0.05;
 			}
-			filterList.push(mark);
+			filtredList.push(mark);
 		});
 	} else {
-		filterList = listMarkers;
+		filtredList = listMarkers;
 	}
 
-	filterList.forEach((mark) => {
+	filtredList.forEach((mark) => {
 		mark.filter = mark?.filter || "";
 		mark.type = mark?.type || "";
 		mark.title = mark?.title || "";
@@ -68,6 +68,7 @@ function createMarkers() {
 
 			oImg.data = mark;
 			oImg.data.isClean = isClean;
+			oImg.data.currUrlImg = iconPath;
 
 			setPosIcon(oImg, mark);
 
@@ -84,7 +85,7 @@ function createMarkers() {
 
 				if (isClean) {
 					newList = newList.filter((id) => !(id === mark.id));
-					replaceImage(iconPath, oImg);
+					replaceImage(oImg.data.currUrlImg, oImg);
 					oImg.set("left", oImg.get("left") - 2);
 					oImg.set("top", oImg.get("top") - 2);
 					oImg.data.isClean = false;
@@ -106,7 +107,6 @@ function createMarkers() {
 				closeContext();
 				openDescription(mark, oImg);
 				applyTransform();
-
 				closeAllMenu();
 				closeAllmodal();
 			});

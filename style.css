@@ -239,6 +239,10 @@ body {
   cursor: pointer;
   background-color: #515151;
 }
+
+.filter-item--roc img{
+  width: 19px;
+}
 /* filter END */
 
 /* path START */
@@ -973,7 +977,7 @@ body {
   padding: 0;
 }
 .modal-question .features-list_items{
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .modal-question-title{

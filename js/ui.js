@@ -19,12 +19,16 @@ if (localStorage.getItem(FILTER_TYPE_LOCAL_STORAGE)?.trim().length > 0) {
 
 $(".filter-item").on("click", function (e) {
 	if (!$(this).hasClass("filter-item--active")) {
+		$(".filter-open-icon").show();
+		$(".filter-close-icon").hide();
 		$(".filter-item").removeClass("filter-item--active");
 		$(this).addClass("filter-item--active");
 		localStorage.setItem(FILTER_TYPE_LOCAL_STORAGE, $(this).data(FILTER_TYPE_LOCAL_STORAGE));
 		const type = $(this).data(FILTER_TYPE_LOCAL_STORAGE);
 		filterRender(type);
 	} else {
+		$(".filter-close-icon").show();
+		$(".filter-open-icon").hide();
 		$(".filter-item").removeClass("filter-item--active");
 		localStorage.setItem(FILTER_TYPE_LOCAL_STORAGE, "");
 		filterRender();

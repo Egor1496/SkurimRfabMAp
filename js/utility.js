@@ -93,8 +93,11 @@ const setPosIcon = (oImg, icon) => {
 };
 
 const setScaleHover = (oImg, isSacle) => {
-	if (isSacle) oImg.scale(oImg.getObjectScaling().scaleX + 0.2);
-	else oImg.scale(oImg.getObjectScaling().scaleX - 0.2);
+	if (isSacle) {
+		oImg.scale(oImg.getObjectScaling().scaleX + 0.2);
+	} else {
+		oImg.scale(oImg.getObjectScaling().scaleX - 0.2);
+	}
 };
 
 const setScaleIcon = () => {
@@ -199,7 +202,7 @@ function replaceImage(imgUrl, oImg) {
 	imgElem.onload = () => canvas.renderAll();
 }
 
-function replaceImageList(imgUrl, oImgList) {
+function replaceImageList(imgUrl, oImgList, typeIcon) {
 	let countLoad = 0;
 	oImgList.forEach((oImg, i) => {
 		var imgElem = oImg._element;
@@ -210,6 +213,11 @@ function replaceImageList(imgUrl, oImgList) {
 		if (nameIcon !== nameNewIcon) {
 			imgElem.src = imgUrl[i];
 			imgElem.onload = () => countLoad++;
+			if (typeIcon === "red") {
+				oImg.scale(oImg.getObjectScaling().scaleX + 0.1);
+			} else {
+				oImg.scale(oImg.getObjectScaling().scaleX - 0.1);
+			}
 		} else {
 			countLoad++;
 		}
@@ -235,19 +243,27 @@ const filterRender = (type = "false") => {
 		urlRedList = [],
 		whiteList = [],
 		urlWhiteList = [];
+
 	listMarkersCanvas.forEach((oImg, i) => {
-		if (oImg.data.isClean === false) {
-			let urlImg = "image/icon/" + oImg.data.nameIcon;
-			if (~oImg.data.type?.trim().indexOf(type.trim())) {
+		const urlImg = "image/icon/" + oImg.data.nameIcon;
+
+		if (~oImg.data.type?.trim().indexOf(type.trim())) {
+			if (oImg.data.isClean === false) {
 				redList.push(oImg);
 				urlRedList.push(urlImg + "_red.svg");
-			} else {
+			}
+
+			oImg.data.currUrlImg = urlImg + "_red.svg";
+		} else {
+			if (oImg.data.isClean === false) {
 				whiteList.push(oImg);
 				urlWhiteList.push(urlImg + ".svg");
 			}
+
+			oImg.data.currUrlImg = urlImg + ".svg";
 		}
 	});
 
-	replaceImageList(urlRedList, redList);
-	replaceImageList(urlWhiteList, whiteList);
+	replaceImageList(urlRedList, redList, "red");
+	replaceImageList(urlWhiteList, whiteList, "white");
 };
