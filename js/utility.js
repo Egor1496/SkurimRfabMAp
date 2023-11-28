@@ -42,8 +42,8 @@ const applyTransform = function () {
 	mapOffsetY = group.top;
 	mapOffsetX = group.left;
 
-	group.left = transX * scale; // group.getWidth() / 2 + transX * scale;
-	group.top = transY * scale; //group.getHeight() / 2 + transY * scale;
+	group.left = transX * scale;
+	group.top = transY * scale;
 	group.destroy();
 
 	// Обновим глобальный масштаб на холсте
@@ -53,26 +53,15 @@ const applyTransform = function () {
 	canvas.renderAll();
 };
 
-var setScale = function (scaleToSet, anchorX, anchorY) {
-	var zoomMax = ZOOM_MAX, // максимально n-ти кратное увеличение
-		zoomMin = ZOOM_MIN, // минимальное увеличение - реальный размер картинки
-		zoomStep; // необходимое изменение масштаба
+var setScale = function (anchorX, anchorY) {
+	const scaleToSet = currentZoom * baseZoom + baseScale;
 
-	// Ограничим масштаб, если нужно
-	if (scaleToSet > zoomMax * baseScale) {
-		scaleToSet = zoomMax * baseScale;
-		currentZoom = zoomMax - zoomMin;
-	} else if (scaleToSet < zoomMin * baseScale) {
-		scaleToSet = zoomMin * baseScale;
-		currentZoom = 0;
-	}
-	// Центр масштабирования - точка, которая должна остаться на месте.
-	// Задаётся параметрами anchorX и anchorY.
-	// По сути это позиция курсора в момент масштабирования.
+	let zoomStep; // необходимое изменение масштаба
+
+	// Центр масштабирования
 	if (typeof anchorX != "undefined" && typeof anchorY != "undefined") {
+		// Рассчитаем, сместить все объекты, чтобы центр масштабирования остался на месте.
 		zoomStep = scaleToSet / scale;
-		// Рассчитаем, на сколько нужно сместить все объекты,
-		// чтобы центр масштабирования остался на месте.
 		transX -= ((zoomStep - 1) / scaleToSet) * anchorX;
 		transY -= ((zoomStep - 1) / scaleToSet) * anchorY;
 	}

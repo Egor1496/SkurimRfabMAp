@@ -28,16 +28,18 @@ fabric.util.loadImage(nameMapURL, function (img) {
 	canvas.add(map);
 
 	// От масштабируем, чтобы сразу видеть всё карту
-	let curBaseScale = baseScale;
-
+	let newScale;
 	if (width / height > baseWidth / baseHeight) {
-		baseScale = height / baseHeight;
+		newScale = height / baseHeight;
 	} else {
-		baseScale = width / baseWidth;
+		newScale = width / baseWidth;
 	}
-	scale *= baseScale / curBaseScale;
-	transX *= baseScale / curBaseScale;
-	transY *= baseScale / curBaseScale;
+
+	scale *= newScale;
+	transX *= newScale;
+	transY *= newScale;
+
+	baseScale = scale;
 
 	canvas.setWidth(width);
 	canvas.setHeight(height);
@@ -75,7 +77,7 @@ var bindContainerEvents = function () {
 		oldPageY,
 		container = $(canvas.wrapperEl);
 
-	const COEFF = 0.3;
+	const COEFF = 0.3; // ???????????????????????????????????????????
 
 	container
 		.mouseup(function (e) {
@@ -120,17 +122,24 @@ var bindContainerEvents = function () {
 	container.mousewheel(function (event, delta, deltaX, deltaY) {
 		var offset = element.offset(), // положение холста на странице
 			centerX = event.pageX - offset.left, // координата x центра масштабирования
-			centerY = event.pageY - offset.top, // координата y центра масштабирования
-			zoomStep = Math.pow(1.3, deltaY); // шаг масштабирования, удобный для пользователя.
-		currentZoom += deltaY;
+			centerY = event.pageY - offset.top; // координата y центра масштабирования
 
-		setScale(scale * zoomStep, centerX, centerY);
+		currentZoom += deltaY; // получить текущий шаг зумма
+
+		// Ограничим масштаб
+		if (currentZoom > ZOOM_MAX - ZOOM_MIN) {
+			currentZoom = ZOOM_MAX - ZOOM_MIN;
+		} else if (currentZoom <= 0) {
+			currentZoom = 0;
+		}
+
+		setScale(centerX, centerY, deltaY);
 
 		setScaleIcon();
 
 		applyTransform();
 
-		// Отключим скроллирование страницы
+		// Отключим скролл страницы
 		event.preventDefault();
 
 		// 	console.log(`currentZoom - ${currentZoom},
