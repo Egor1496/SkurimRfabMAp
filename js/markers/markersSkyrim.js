@@ -2995,7 +2995,7 @@ const listMarkersSky = [
 		secondDescription: [""],
 		type: "bandit",
 		nameIcon: "bandit",
-		scale: 0.3,
+		scale: 0.2,
 		id: "id282",
 		top: 906.0000009536743,
 		left: 1233.4285774230957,

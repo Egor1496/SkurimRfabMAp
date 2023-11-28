@@ -26,9 +26,9 @@ function createMarkers() {
 		listMarkers.forEach((mark) => {
 			if (~mark.type?.trim().indexOf(type?.trim() || "")) {
 				mark.filter = "_red";
-				mark.scale += 0.05;
+				mark.scale *= ZOOM_ICON_HOVER;
 			} else {
-				mark.scale -= 0.05;
+				mark.scale /= ZOOM_ICON_HOVER;
 			}
 			filtredList.push(mark);
 		});

@@ -54,7 +54,14 @@ const applyTransform = function () {
 };
 
 var setScale = function (anchorX, anchorY) {
-	const scaleToSet = currentZoom * baseZoom + baseScale;
+	// Ограничим масштаб
+	if (currentZoom > ZOOM_MAX - ZOOM_MIN) {
+		currentZoom = ZOOM_MAX - ZOOM_MIN;
+	} else if (currentZoom <= 0) {
+		currentZoom = 0;
+	}
+
+	const scaleToSet = currentZoom * stepZoomMap + baseScale;
 
 	let zoomStep; // необходимое изменение масштаба
 
@@ -72,29 +79,31 @@ var setScale = function (anchorX, anchorY) {
 };
 
 const setPosIcon = (oImg, icon) => {
-	const scale = icon?.scale * COEFF_WIDTH || DEFAULT_SCALE_ICON * COEFF_WIDTH,
-		left = icon?.left || 0,
-		top = icon?.top || 0;
+	const coeffMapScale = map.scaleX / baseScale;
+	const scale = icon.scale * COEFF_WIDTH || DEFAULT_SCALE_ICON * COEFF_WIDTH,
+		left = icon.left || 0,
+		top = icon.top || 0;
 	oImg
-		.scale(scale)
+		.scale(scale * coeffMapScale * (1.3 - currentZoom * 0.08))
 		.set("left", left * COEFF_WIDTH)
 		.set("top", top * COEFF_HEIGHT);
 };
 
 const setScaleHover = (oImg, isSacle) => {
 	if (isSacle) {
-		oImg.scale(oImg.getObjectScaling().scaleX + 0.2);
+		oImg.scale(oImg.getObjectScaling().scaleX * ZOOM_ICON_HOVER);
 	} else {
-		oImg.scale(oImg.getObjectScaling().scaleX - 0.2);
+		oImg.scale(oImg.getObjectScaling().scaleX / ZOOM_ICON_HOVER);
 	}
 };
 
 const setScaleIcon = () => {
-	// const SCALE_ZOOM = (ZOOM_MAX - ZOOM_MIN - currentZoom) * (2 / (ZOOM_MAX - ZOOM_MIN)) + 0.7;
-	// listMarkersCanvas.forEach((oImg, i) => {
-	// const SCALE_CANVAS = listMarkers[i]?.scale * COEFF_WIDTH || DEFAULT_SCALE_ICON * COEFF_WIDTH;
-	// oImg.scale();
-	// });
+	const coeffMapScale = map.scaleX / baseScale;
+	listMarkersCanvas.forEach((oImg) => {
+		const baseScaleIcon = oImg.data.scale * COEFF_WIDTH || DEFAULT_SCALE_ICON * COEFF_WIDTH;
+
+		oImg.scale(baseScaleIcon * coeffMapScale * (1.3 - currentZoom * 0.08));
+	});
 };
 
 $(window).mousemove(function (e) {
@@ -203,9 +212,9 @@ function replaceImageList(imgUrl, oImgList, typeIcon) {
 			imgElem.src = imgUrl[i];
 			imgElem.onload = () => countLoad++;
 			if (typeIcon === "red") {
-				oImg.scale(oImg.getObjectScaling().scaleX + 0.1);
+				oImg.scale(oImg.getObjectScaling().scaleX * ZOOM_ICON_HOVER);
 			} else {
-				oImg.scale(oImg.getObjectScaling().scaleX - 0.1);
+				oImg.scale(oImg.getObjectScaling().scaleX / ZOOM_ICON_HOVER);
 			}
 		} else {
 			countLoad++;

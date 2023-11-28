@@ -1,7 +1,7 @@
 let baseWidth = 0, // Начальная ширина.
 	baseHeight = 0, // Начальная высота.
 	baseScale = 1, // Начальный масштаб.
-	baseZoom = 0.07; // Шаг увеличения карты.
+	stepZoomMap = 0.07; // Шаг увеличения карты.
 
 let mapOffsetY = 0, // Внутренний отступ карты от холста (top).
 	mapOffsetX = 0; // Внутренний отступ карты от холста (left).
@@ -41,8 +41,9 @@ const element = $("#canvas"); // Холст.
 
 const DEFAULT_SCALE_ICON = 0.3; // Размер иконок по умолчанию.
 
-const ZOOM_MAX = 8,
-	ZOOM_MIN = 2;
+const ZOOM_MAX = 10,
+	ZOOM_MIN = 2,
+	ZOOM_ICON_HOVER = 1.3;
 
 const TYPE_MAP = element.data("type"), // Тип карты.
 	LIST_PATH_LOCAL_STORAGE = TYPE_MAP === "skyrim" ? "listPathSky" : "listPathSols",
@@ -80,19 +81,9 @@ let canvas = new fabric.Canvas(element.get(0), {
 // NUMBER_PATH_ACTIVE - ${NUMBER_PATH_ACTIVE}
 // `);
 
-// DOMContentLoaded: 7.55 сек.
-// DOMContentLoaded: 7.58 сек.
-// DOMContentLoaded: 7.53 сек
-
-//
-//
-//
-
-// Скеил меток при зуме.
+// Баг. Мылит карту при зумме core.
 // Позиционирование описания локаций.
 // Замена метки element oImg.
-// Сохранение и загрузка положения камеры при перезагрузки, после загрузки меток до фикса зумма.
-// Оптимизация svg иконок
-// Создание путей и меток с зуммом.
-// Загрузка меток с учетом смещения и зумма.
-// Поиск?
+// Сохранение и загрузка положения камеры при перезагрузки.
+// Отрисовка меток после загрузки путей
+// Создание путей и меток с учетом зумма и отступа.

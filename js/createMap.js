@@ -50,8 +50,6 @@ fabric.util.loadImage(nameMapURL, function (img) {
 	// Добавить метки на карту
 	createMarkers();
 
-	// setScaleIcon();
-
 	// Обновить карту
 	applyTransform();
 
@@ -125,13 +123,6 @@ var bindContainerEvents = function () {
 			centerY = event.pageY - offset.top; // координата y центра масштабирования
 
 		currentZoom += deltaY; // получить текущий шаг зумма
-
-		// Ограничим масштаб
-		if (currentZoom > ZOOM_MAX - ZOOM_MIN) {
-			currentZoom = ZOOM_MAX - ZOOM_MIN;
-		} else if (currentZoom <= 0) {
-			currentZoom = 0;
-		}
 
 		setScale(centerX, centerY, deltaY);
 
