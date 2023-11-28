@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.1"
+   width="20.85"
+   height="42"
+   viewBox="0 0 20.85 42"
+   id="svg3105"
+   style="overflow:visible">
+  <metadata
+     id="metadata3123">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3107" />
+  <g
+     transform="translate(10.4,21)"
+     id="g3111">
+    <g
+       id="g3113">
+      <g
+         id="g3115">
+        <path
+           d="m 6.25,-7.7 -4.75,0 0,-2.7 -2.5,0 0,2.7 -4.8,0 0,-6 12.35,-2.35 -12.35,-2.3 0,-0.7 -2.5,0 0,30.55 8.45,7.1 8.6,-7.1 0.05,-21.9 -2.55,0 0,2.7 z m -2.15,4.6 0,3.95 -2.05,0 0,-3.95 2.05,0 z m -8.25,-16.9 12.95,2.55 -0.95,2.95 -10.95,2.15 13.55,0 L 10.4,12.3 -0.05,21 -10.4,12.25 l 0,-33.25 6.25,0 0,1 z"
+           id="path3117"
+           style="fill:#000000;stroke-linecap:round;stroke-linejoin:round" />
+        <path
+           d="m 1.5,-7.7 4.75,0 0,-2.7 2.55,0 -0.05,21.9 -8.6,7.1 -8.45,-7.1 0,-30.55 2.5,0 0,0.7 12.35,2.3 -12.35,2.35 0,6 4.8,0 0,-2.7 2.5,0 0,2.7 z m 2.6,8.55 0,-3.95 -2.05,0 0,3.95 2.05,0 z"
+           id="path3119"
+           style="fill:#ffffff;stroke-linecap:round;stroke-linejoin:round" />
+      </g>
+    </g>
+  </g>
+</svg>

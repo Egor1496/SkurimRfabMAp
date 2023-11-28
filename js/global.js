@@ -80,6 +80,14 @@ let canvas = new fabric.Canvas(element.get(0), {
 // NUMBER_PATH_ACTIVE - ${NUMBER_PATH_ACTIVE}
 // `);
 
+// DOMContentLoaded: 7.55 сек.
+// DOMContentLoaded: 7.58 сек.
+// DOMContentLoaded: 7.53 сек
+
+//
+//
+//
+
 // Скеил меток при зуме.
 // Позиционирование описания локаций.
 // Замена метки element oImg.
