@@ -65,7 +65,7 @@ const openDescription = (mark, oImg) => {
 
 				if (modalTop < margin) {
 					modalTop = margin;
-				} else if (modalTop + modalHeight - margin > $(window).height()) {
+				} else if (modalTop + modalHeight + margin > $(window).height()) {
 					modalTop = $(window).height() - modalHeight - margin;
 				}
 			}
