@@ -75,18 +75,6 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Курган Хротмунда",
-		description: "",
-		secondDescription: [""],
-		type: "",
-		nameIcon: "Cave",
-		scale: 0.6,
-		id: "id7",
-		top: 348.61175773752984,
-		left: 533.0825033514404,
-	},
-
-	{
 		title: "Алтарь пещеры Тронд (<q lblue>30lvl</q>)",
 		description: "Ворожеи <q green>3</q>.",
 		secondDescription: [""],
@@ -429,8 +417,8 @@ const listMarkersSols = [
 
 	{
 		title: "Старый торговый пост",
-		description: "",
-		secondDescription: [""],
+		description: "Подает лук.",
+		secondDescription: ["<q yelow>Стеклянный Лук Короля Оленя</q>."],
 		type: "",
 		nameIcon: "Shack",
 		scale: 0.5,

@@ -9,29 +9,33 @@
 	</head>
 
 	<body>
+		<!-- MAP-LINK START -->
 		<div class="map-link">
 			<a href="solstheim.html">
-				<img src="image/ui/To_Skyrim_e.svg" alt="" class="rotate" />
+				<img src="image/ui/To_Skyrim_e.svg" class="rotate" />
 			</a>
 		</div>
+		<!-- MAP-LINK END -->
+
+		<!-- FILTER START -->
 		<div class="filter-wrap">
 			<div class="filter-button close">
-				<img src="image/ui/filterClose.svg" class="filter-close-icon" style="display: none" alt="" />
-				<img src="image/ui/filterOpen.svg" class="filter-open-icon" style="display: none" alt="" />
+				<img src="image/ui/filterClose.svg" class="filter-close-icon" style="display: none" />
+				<img src="image/ui/filterOpen.svg" class="filter-open-icon" style="display: none" />
 			</div>
 			<ul class="filter-list">
 				<div class="filter-list-wrap">
 					<li class="filter-item" data-filter-type-sky="soc">
-						<img src="image/ui/dollar.svg" alt="" />
+						<img src="image/ui/dollar.svg" />
 					</li>
 					<li class="filter-item" data-filter-type-sky="xp">
-						<img src="image/ui/star.svg" alt="" />
+						<img src="image/ui/star.svg" />
 					</li>
 					<li class="filter-item" data-filter-type-sky="loot">
-						<img src="image/ui/bag.svg" alt="" />
+						<img src="image/ui/bag.svg" />
 					</li>
 					<li class="filter-item" data-filter-type-sky="boss">
-						<img src="image/ui/skull.svg" alt="" />
+						<img src="image/ui/skull.svg" />
 					</li>
 				</div>
 				<li class="filter-item" data-filter-type-sky="bandit">
@@ -69,7 +73,9 @@
 				</li>
 			</ul>
 		</div>
+		<!-- FILTER END -->
 
+		<!-- PATH START -->
 		<div class="path-wrap">
 			<div class="path-button close">
 				<img src="image/icon/circle2.svg" class="path-close-icon" style="display: none" />
@@ -77,11 +83,12 @@
 			</div>
 			<ul class="path-list"></ul>
 		</div>
+		<!-- PATH END -->
 
+		<!-- ADD-PATH START -->
 		<div class="add-path add-path--button">
 			<img src="image/ui/drop_zone2.svg" class="icon-add-path" />
 		</div>
-
 		<div class="add-path add-path--modal">
 			<div class="modal close">
 				<h3 class="modal_title">Загрузить путь</h3>
@@ -95,7 +102,9 @@
 			</div>
 			<div class="add-path_modal_bg"></div>
 		</div>
+		<!-- ADD-PATH END -->
 
+		<!-- MODAL-QUESTION START -->
 		<div class="link-video scale-icon">
 			<img src="image/ui/question.svg" class="icon-link-video" />
 		</div>
@@ -108,7 +117,41 @@
 					<li class="features-list_items">
 						<q llblue>Копирование</q> заголовка, описания, координат, типа иконки и id через контекстное меню локации.
 					</li>
-					<li class="features-list_items"><q llblue>Фильтр</q> меню (левый верхний угол карты).</li>
+					<li class="features-list_items features-list_items--img">
+						<span
+							><q llblue><h2>Фильтры</h2></q>
+						</span>
+						<div class="img-wrap">
+							<span>
+								<img src="image/ui/dollar.svg" />
+								<span>Социалка</span>
+							</span>
+							<span>
+								<img src="image/ui/star.svg" />
+								<span>Квесты</span>
+							</span>
+							<span>
+								<img src="image/ui/bag.svg" />
+								<span>Ценности</span>
+							</span>
+							<span>
+								<img src="image/ui/skull.svg" />
+								<span>Боссы</span>
+							</span>
+							<span>
+								<img src="image/ui/lode.svg" />
+								<span>Сталгрим</span>
+							</span>
+							<span>
+								<img src="image/icon/Standing_Stones_e.svg" style="width: 25px" />
+								<span>Камни</span>
+							</span>
+							<span>
+								<img src="image/ui/book.svg" />
+								<span>Книги</span>
+							</span>
+						</div>
+					</li>
 					<li class="features-list_items"><q llgreen>Выбор</q> маршрута в меню (левый верхний угол карты).</li>
 					<li class="features-list_items"><q llgreen>Создание</q> маршрута через контекстное меню карты (правая кнопка мышки).</li>
 					<li class="features-list_items"><q llgreen>Удаление</q> выбранного маршрута через контекстное меню в списке маршрутов.</li>
@@ -125,7 +168,9 @@
 			</div>
 			<div class="modal-question-bg"></div>
 		</div>
+		<!-- MODAL-QUESTION END -->
 
+		<!-- DRAGON START -->
 		<div class="dragon-wrap">
 			<div class="dragon-button close">
 				<img src="image/icon/Dragon.svg" class="dragon-close-icon" />
@@ -583,11 +628,12 @@
 				</ul>
 			</div>
 		</div>
+		<!-- DRAGON END -->
 
+		<!-- SETTINGS START -->
 		<div class="settings scale-icon">
 			<img src="image/ui/settings.svg" class="icon-settings" />
 		</div>
-
 		<div class="modal-settings close">
 			<div class="modal-settings-body">
 				<div class="modal-settings-title">Настройки</div>
@@ -601,7 +647,9 @@
 			</div>
 			<div class="modal-settings-bg"></div>
 		</div>
+		<!-- SETTINGS END -->
 
+		<!-- MODAL-MARKER START -->
 		<div class="modal-marker modal-wrap close">
 			<div class="modal">
 				<div class="title"></div>
@@ -611,20 +659,28 @@
 				</div>
 			</div>
 		</div>
+		<!-- MODAL-MARKER END -->
 
+		<!-- ACCEPT-MODAL START -->
 		<div class="accept-modal-wrap close">
 			<div class="accept-modal">
 				<button class="yes">Сохранить</button>
 				<button class="no">Отменить</button>
 			</div>
 		</div>
+		<!-- ACCEPT-MODAL END -->
 
+		<!-- CONTEXT START -->
 		<div class="context-wrap">
 			<div class="context"></div>
 		</div>
+		<!-- CONTEXT END -->
 
+		<!-- CANVAS START -->
 		<div class="canvas-wrap"><canvas id="canvas" width="1160" height="550" data-type="skyrim"></canvas></div>
+		<!-- CANVAS END -->
 
+		<!-- DONAT START -->
 		<div class="donat">
 			<img src="image/ui/snow.svg" class="icon-donat" />
 			<iframe
@@ -637,6 +693,7 @@
 				scrolling="no"
 			></iframe>
 		</div>
+		<!-- DONAT END -->
 
 		<!-- Yandex.Metrika counter -->
 		<script type="text/javascript">
@@ -662,7 +719,7 @@
 			});
 		</script>
 		<noscript
-			><div><img src="https://mc.yandex.ru/watch/95659560" style="position: absolute; left: -9999px" alt="" /></div
+			><div><img src="https://mc.yandex.ru/watch/95659560" style="position: absolute; left: -9999px" /></div
 		></noscript>
 		<!-- /Yandex.Metrika counter -->
 	</body>

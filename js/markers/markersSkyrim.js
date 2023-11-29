@@ -88,7 +88,7 @@ const listMarkersSky = [
 		description: "<q yelow>Ожерелье</q> в Благодарность.",
 		type: "city soc",
 		id: "id8",
-		scale: 0.6,
+		scale: 0.55,
 		top: 568,
 		left: 92,
 	},
