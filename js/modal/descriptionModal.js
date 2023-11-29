@@ -5,8 +5,6 @@ const closeDescription = () => {
 	modal.addClass("close");
 };
 
-const openModal = () => {};
-
 const openDescription = (mark, oImg) => {
 	const modal = $(".modal-marker.modal-wrap"),
 		title = modal.find(".title"),
@@ -28,33 +26,53 @@ const openDescription = (mark, oImg) => {
 		});
 
 		const doc = document.documentElement,
-			scrollleft = (window.pageXOffset || doc.scrollLeft) - (doc.clientLeft || 0),
-			scrolltop = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+			scrollOffsetX = (window.scrollX || doc.scrollLeft) - (doc.clientLeft || 0),
+			scrollOffsetY = (window.scrollY || doc.scrollTop) - (doc.clientTop || 0);
 
-		let modalLeft = element.offset().left + oImg.get("left") - modal.width() / 2 - scrollleft,
-			modaTop = element.offset().top + oImg.get("top") - modal.height() - scrolltop - 20 - currentZoom * 2;
+		const winOffsetX = element.offset().left - scrollOffsetX,
+			winOffsetY = element.offset().top - scrollOffsetY;
 
-		if (modalLeft < 0) {
-			modalLeft = 0;
+		const modalWidth = modal.width(),
+			modalWidthMid = modal.width() / 2,
+			modalHeight = modal.height(),
+			modalHeightMid = modal.height() / 2;
+
+		const iconWidth = ((oImg.get("width") * oImg.scaleX) / 2) * 1.1,
+			iconHeight = ((oImg.get("height") * oImg.scaleY) / 2) * 1.1;
+
+		const margin = 10;
+
+		let modalLeft = winOffsetX + oImg.get("left") - modalWidthMid,
+			modalTop = winOffsetY + oImg.get("top") - modalHeight - iconHeight;
+
+		if (modalLeft < margin) {
+			modalLeft = margin;
+		} else if (modalLeft + modal.width() > $(window).width()) {
+			modalLeft = $(window).width() - modal.width() - margin;
 		}
-		if (modaTop < 0) {
-			modaTop += 10 + modal.height() + oImg.get("width") * oImg.scaleX;
-			if (modaTop + modal.height() > $(window).height()) {
-				if (winMouseX <= modal.width() && winMouseY <= modal.height()) {
-					modaTop = 0;
-					modalLeft = $(window).width() - modal.width();
+
+		if (modalTop < margin) {
+			modalTop = winOffsetY + oImg.get("top") + iconHeight;
+
+			if (modalTop + modal.height() > $(window).height() - margin) {
+				if (oImg.get("left") > element.width() / 2) {
+					modalLeft = winOffsetX + oImg.get("left") - modalWidth - iconWidth;
+					modalTop = winOffsetY + oImg.get("top") - modalHeightMid;
 				} else {
-					modaTop = 0;
-					modalLeft = 0;
+					modalLeft = winOffsetX + oImg.get("left") + iconWidth;
+					modalTop = winOffsetY + oImg.get("top") - modalHeightMid;
+				}
+
+				if (modalTop < margin) {
+					modalTop = margin;
+				} else if (modalTop + modalHeight - margin > $(window).height()) {
+					modalTop = $(window).height() - modalHeight - margin;
 				}
 			}
 		}
-		if (modalLeft + modal.width() > $(window).width()) {
-			modalLeft = $(window).width() - modal.width();
-		}
 
 		modal.css({ left: modalLeft });
-		modal.css({ top: modaTop });
+		modal.css({ top: modalTop });
 		modal.removeClass("close");
 	}
 };
