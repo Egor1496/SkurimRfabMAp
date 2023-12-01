@@ -576,7 +576,7 @@ body {
 
 /* context START */
 .context-wrap{
-  z-index: 30;
+  z-index: 50;
   position: fixed;
   left: -500px;
   top: -500px;

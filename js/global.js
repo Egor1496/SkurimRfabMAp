@@ -65,7 +65,7 @@ const COEFF_HEIGHT = Math.ceil(CFA * 100) / 100,
 element[0].height = element[0].height * COEFF_HEIGHT;
 element[0].width = element[0].width * COEFF_WIDTH;
 
-let canvas = new fabric.Canvas(element.get(0), {
+const canvas = new fabric.Canvas(element.get(0), {
 	selection: false, // возможность выбора группы
 	scale: 1, // масштаб по умолчанию
 	// renderOnAddRemove: false, // авто-отрисовка
@@ -73,17 +73,8 @@ let canvas = new fabric.Canvas(element.get(0), {
 	hoverCursor: "default", // сброс курсора
 });
 
-// console.log(`
-// TYPE_MAP - ${TYPE_MAP},
-// LIST_PATH_LOCAL_STORAGE - ${LIST_PATH_LOCAL_STORAGE},
-// PATH_LOCAL_STORAGE - ${PATH_LOCAL_STORAGE},
-// FILTER_TYPE_LOCAL_STORAGE - ${FILTER_TYPE_LOCAL_STORAGE},
-// NUMBER_PATH_ACTIVE - ${NUMBER_PATH_ACTIVE}
-// `);
-
-// Хранение описания драконов и книг обьектом.
 // Замена метки element oImg.
-// Сохранение и загрузка положения камеры при перезагрузки.
 // Отрисовка меток после загрузки путей
+// Сохранение и загрузка положения камеры при перезагрузки.
 // Создание путей и меток с учетом зумма и отступа.
 // Баг. Мылит карту при зумме core.
