@@ -39,7 +39,8 @@ let map = null; // Карта.
 
 const element = $("#canvas"); // Холст.
 
-const DEFAULT_SCALE_ICON = 0.3; // Размер иконок по умолчанию.
+const DEFAULT_SCALE_ICON = 0.3,
+	ICON_CLEAN_URL = "image/icon/cross.svg"; // Размер иконок по умолчанию.
 
 const ZOOM_MAX = 10,
 	ZOOM_MIN = 2,
@@ -73,7 +74,8 @@ const canvas = new fabric.Canvas(element.get(0), {
 	hoverCursor: "default", // сброс курсора
 });
 
-// Замена метки element oImg.
+// mark scale
+// Замена метки element oImg. создать метку, создать метки.
 // Отрисовка меток после загрузки путей
 // Сохранение и загрузка положения камеры при перезагрузки.
 // Создание путей и меток с учетом зумма и отступа.

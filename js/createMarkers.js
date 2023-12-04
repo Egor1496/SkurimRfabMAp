@@ -18,6 +18,76 @@ const copyObjMarker = () => {
 	navigator.clipboard.writeText(markJSON);
 };
 
+const createMarker = (mark, iconOImg, data) => {
+	fabric.Image.fromURL(iconOImg, (oImg) => {
+		oImg
+			.set("hasControls", false)
+			.set("hasBorders", false)
+			.set("selectable", false)
+			.set("cornerSize", 0)
+			.set("originX", "center")
+			.set("originY", "center");
+
+		oImg.data = data;
+
+		setPosIcon(oImg, mark);
+
+		oImg.on("mousedblclick", function (e) {
+			let newList = JSON.parse(localStorage.getItem(CLEAN_TYPE) || "[]");
+			let isClean = false;
+
+			newList.forEach((id) => {
+				if (id === mark.id) {
+					isClean = true;
+					return;
+				}
+			});
+
+			if (isClean) {
+				newList = newList.filter((id) => !(id === mark.id));
+				replaceImage(oImg.data.currUrlImg, oImg);
+				oImg.set("left", oImg.get("left") - 2);
+				oImg.set("top", oImg.get("top") - 2);
+				oImg.data.isClean = false;
+			} else {
+				newList.push(mark.id);
+				replaceImage(ICON_CLEAN_URL, oImg);
+				oImg.set("left", oImg.get("left") + 2);
+				oImg.set("top", oImg.get("top") + 2);
+				oImg.data.isClean = true;
+			}
+
+			localStorage.setItem(CLEAN_TYPE, JSON.stringify(newList));
+		});
+
+		oImg.on("mouseover", function (e) {
+			typeIcon = "marker";
+			thisMark = mark;
+			setScaleHover(oImg, true);
+			closeContext();
+			openDescription(mark, oImg);
+			applyTransform();
+			closeAllMenu();
+			closeAllmodal();
+		});
+
+		oImg.on("mouseout", function (e) {
+			setScaleHover(oImg, false);
+			closeDescription();
+			applyTransform();
+			typeIcon = "map";
+		});
+
+		oImg.on("mouseup", function (e) {
+			openDescription(mark, oImg);
+		});
+
+		canvas.add(oImg);
+		listMarkersCanvas.push(oImg);
+		countLoadMarkers++;
+	});
+};
+
 function createMarkers() {
 	let filtredList = [];
 	const type = localStorage.getItem(FILTER_TYPE_LOCAL_STORAGE);
@@ -27,8 +97,6 @@ function createMarkers() {
 			if (~mark.type?.trim().indexOf(type?.trim() || "")) {
 				mark.filter = "_red";
 				mark.scale *= ZOOM_ICON_HOVER;
-			} else {
-				mark.scale /= ZOOM_ICON_HOVER;
 			}
 			filtredList.push(mark);
 		});
@@ -43,88 +111,25 @@ function createMarkers() {
 		mark.description = mark?.description || "";
 		mark.secondDescription = mark?.secondDescription || [""];
 
-		const postfix = mark.filter;
+		const iconPath = `image/icon/${(mark?.nameIcon || "circle") + mark.filter}.svg`;
 
-		const iconPath = `image/icon/${(mark?.nameIcon || "circle") + postfix}.${mark?.formatIcon || "svg"}`;
-		const iconClean = "image/icon/cross.svg";
 		let iconOImg = iconPath;
+
 		let isClean = false;
 
 		cleanLoc.forEach((id) => {
 			if (id === mark.id) {
-				iconOImg = iconClean;
+				iconOImg = ICON_CLEAN_URL;
 				isClean = true;
 			}
 		});
 
-		fabric.Image.fromURL(iconOImg, (oImg) => {
-			oImg
-				.set("hasControls", false)
-				.set("hasBorders", false)
-				.set("selectable", false)
-				.set("cornerSize", 0)
-				.set("originX", "center")
-				.set("originY", "center");
+		const data = {
+			...mark,
+			isClean: isClean,
+			currUrlImg: iconPath,
+		};
 
-			oImg.data = mark;
-			oImg.data.isClean = isClean;
-			oImg.data.currUrlImg = iconPath;
-
-			setPosIcon(oImg, mark);
-
-			oImg.on("mousedblclick", function (e) {
-				let newList = JSON.parse(localStorage.getItem(CLEAN_TYPE) || "[]");
-				let isClean = false;
-
-				newList.forEach((id) => {
-					if (id === mark.id) {
-						isClean = true;
-						return;
-					}
-				});
-
-				if (isClean) {
-					newList = newList.filter((id) => !(id === mark.id));
-					replaceImage(oImg.data.currUrlImg, oImg);
-					oImg.set("left", oImg.get("left") - 2);
-					oImg.set("top", oImg.get("top") - 2);
-					oImg.data.isClean = false;
-				} else {
-					newList.push(mark.id);
-					replaceImage(iconClean, oImg);
-					oImg.set("left", oImg.get("left") + 2);
-					oImg.set("top", oImg.get("top") + 2);
-					oImg.data.isClean = true;
-				}
-
-				localStorage.setItem(CLEAN_TYPE, JSON.stringify(newList));
-			});
-
-			oImg.on("mouseover", function (e) {
-				typeIcon = "marker";
-				thisMark = mark;
-				setScaleHover(oImg, true);
-				closeContext();
-				openDescription(mark, oImg);
-				applyTransform();
-				closeAllMenu();
-				closeAllmodal();
-			});
-
-			oImg.on("mouseout", function (e) {
-				setScaleHover(oImg, false);
-				closeDescription();
-				applyTransform();
-				typeIcon = "map";
-			});
-
-			oImg.on("mouseup", function (e) {
-				openDescription(mark, oImg);
-			});
-
-			canvas.add(oImg);
-			listMarkersCanvas.push(oImg);
-			countLoadMarkers++;
-		});
+		createMarker(mark, iconOImg, data);
 	});
 }

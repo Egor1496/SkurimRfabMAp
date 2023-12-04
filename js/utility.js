@@ -195,6 +195,7 @@ const closeAllmodal = () => {
 };
 
 function replaceImage(imgUrl, oImg) {
+	console.log(oImg);
 	var imgElem = oImg._element;
 	imgElem.src = imgUrl;
 	imgElem.onload = () => canvas.renderAll();

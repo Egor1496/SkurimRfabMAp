@@ -2158,7 +2158,7 @@ const listMarkersSky = [
 			"Пару некромантов и <q green>9</q> драугров. Далее <q green>5</q> драугров, несколько скелетов и <q red>повелитель</q> внизу в фонтане. После загадки, комната с нажимными огненными <q red>ловушками</q>.",
 		secondDescription: [
 			"<q red>Босс</q> Драугр посошник Повелитель (<q lblue>100lvl</q>) <q lblue>11000xp</q> призывает <q green>2</q> сильных скелетов архимагов, сильно бьет стихиями. <br/>&nbsp; -Подожди пока он выйдет.",
-			"<q yelow>Сет Языка</q>.",
+			"<q yelow>Сет Языка</q>, Слово <q yelow>Замедление времени</q>,.",
 		],
 		type: "draugry boss",
 		nameIcon: "Tomb",
@@ -2256,7 +2256,7 @@ const listMarkersSky = [
 			"Бандиты <q green>2</q> снаружи. Внутри на нижнем уровне есть дверь загадка и <q green>5</q> драугров. Далее <q green>2</q> ловушки и <q green>10</q> другров.",
 		secondDescription: [
 			"<q red>Босс</q> драугр повелитель Маг (<q lblue>100lvl</q>) <q lblue>11000xp</q> в конце локации, вместе с ним <q green>2</q> драугра (<q lblue>80lvl</q>) маги яда.  <br/>&nbsp; -Призывает <q green>2</q> сильных бойцов ближнего боя. Потеряв пол <q llred>ХП</q> восстанавливается и поднимает драугров.",
-			"Слово <q yelow>Бесплотность</q>.",
+			"Слово <q yelow>Разаружение</q>.",
 		],
 		type: "bandit draugry boss",
 		nameIcon: "Tomb",
@@ -2814,7 +2814,7 @@ const listMarkersSky = [
 	{
 		title: "Крушение «Зимней войны» (<q lblue>10lvl</q>)",
 		description: "Бандиты <q green>4</q>. <br/> Рядом может плавать <q red>огромная</q> рыба.",
-		secondDescription: ["<q lblue>Бандиты</q> на опыт."],
+		secondDescription: ["<q lblue>Книга опыта</q>, <q lblue>бандиты</q> на опыт."],
 		type: "bandit xp",
 		nameIcon: "Shipwreck",
 		id: "id266",
@@ -2899,7 +2899,7 @@ const listMarkersSky = [
 	},
 	{
 		title: "Пост Предателя (<q lblue>0lvl</q>)",
-		description: "Бандиты <q green>3</q>.",
+		description: "Бандиты <q green>3</q>-<q green>4</q>.",
 		secondDescription: ["<q lblue>Предмет</q> на опыт в сейфе."],
 		type: "bandit xp",
 		nameIcon: "Shack",
@@ -3419,7 +3419,7 @@ const listMarkersSky = [
 	},
 	{
 		title: "Старый Хроланд",
-		description: "Поспи в таверне для квеста на опыт.",
+		description: "Спи в таверне для квеста на опыт.",
 		secondDescription: [""],
 		type: "xp",
 		nameIcon: "Settlement",
@@ -4255,7 +4255,7 @@ const listMarkersSky = [
 		secondDescription: ["<q yelow>Труп мамонта</q>."],
 		type: "soc giant",
 		nameIcon: "GiantCamp",
-		scale: 0.3,
+		scale: 0.2,
 		id: "id386",
 		top: 433.5714285373688,
 		left: 733.4285736083984,
@@ -4735,7 +4735,7 @@ const listMarkersSky = [
 		nameIcon: "Lode",
 		scale: 0.2,
 		id: "id426",
-		top: 859.2948003234864,
+		top: 865.2948003234864,
 		left: 518.1617983795381,
 	},
 
@@ -4920,8 +4920,8 @@ const listMarkersSky = [
 	},
 
 	{
-		title: "Зверь? (<q lblue>10lvl</q>)",
-		description: "проверь",
+		title: "Зверьи (<q lblue>10lvl</q>)",
+		description: "",
 		secondDescription: [""],
 		type: "animal",
 		nameIcon: "Star",
@@ -4929,6 +4929,18 @@ const listMarkersSky = [
 		id: "id442",
 		top: 496.0700177943121,
 		left: 1020.2119460609347,
+	},
+
+	{
+		title: "Событие????? (<q lblue>10lvl</q>)",
+		description: "Два охотника за сокровищами (<q lblue>20lvl</q>)",
+		secondDescription: [""],
+		type: "bandit",
+		nameIcon: "Star",
+		scale: 0.2,
+		id: "id443",
+		top: 796.0632047624033,
+		left: 955.2851779484428,
 	},
 ];
 
