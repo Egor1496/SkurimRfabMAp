@@ -1,3 +1,16 @@
+@-moz-keyframes spin {
+  100% { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+  }
+}
+
 @font-face {
   font-family: 'Arimo-Regular';
   src: url(fonts/Arimo-Regular.ttf);
@@ -825,6 +838,7 @@ body {
   right: 15px;
   width: 30px;
   transition: scale;
+  animation:spin 10s linear infinite;
 }
 
 .donat img:hover{
