@@ -992,7 +992,7 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 10px;
+  padding: 15px;
   padding-top: 5px;
   color: rgb(231, 231, 231);
   border: 2px solid #929292;
@@ -1050,6 +1050,18 @@ body {
   margin-bottom: 10px;
   font-size: 1.4em;
   font-weight: bold;
+}
+
+.modal-question .modal-question-report{
+  position: relative;
+  margin-top: 10px;
+  transform: translateX(-50px);
+}
+
+.modal-question .modal-question-report a{
+  position: absolute;
+  right: -120px;
+  top: 4px;
 }
 
 .modal-question .button-link-video{
