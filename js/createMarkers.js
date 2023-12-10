@@ -1,5 +1,4 @@
 let thisMark = null;
-let isClickDown = false;
 
 let timerMouse;
 
@@ -8,7 +7,7 @@ const startTimerMouse = (mark, oImg) => {
 	clearTimeout(timerMouse);
 	timerMouse = setTimeout(() => {
 		if (isClickDown) handlerCleanM(mark, oImg);
-	}, 200);
+	}, 300);
 };
 
 const copyIdMarker = () => navigator.clipboard.writeText(thisMark?.id || "");

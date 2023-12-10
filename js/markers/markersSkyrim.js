@@ -1250,7 +1250,9 @@ const listMarkersSky = [
 	{
 		title: "Пещера Кронвангр (<q lblue>10lvl</q>) (<q lblue>40lvl</q>)",
 		description: "Внутри <q green>18</q> пауков и <q green>3</q> <q red>вампира</q> .",
-		secondDescription: ["<q yelow>Труп мамонта</q> на входе, <q lblue>Щит роге</q> на опыт, Рецепт <q yelow>Концентрированный паучий яд</q>."],
+		secondDescription: [
+			"<q yelow>Труп мамонта</q> на входе, <q lblue>Щит роге</q> на опыт, Рецепт <q yelow>Концентрированный паучий яд</q>, <q yelow>Черная вдова</q>",
+		],
 		type: "xp soc animal",
 		nameIcon: "Cave",
 		id: "id113",

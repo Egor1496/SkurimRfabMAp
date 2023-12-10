@@ -88,6 +88,8 @@ var bindContainerEvents = function () {
 		.mousemove(function (e) {
 			// Непосредственно перемещение
 			if (mouseDown) {
+				isClickDown = false; // отменить отметку локации
+
 				// Рассчитываем смещение с учётом масштаба
 				transX -= (oldPageX - e.pageX) / scale;
 				transY -= (oldPageY - e.pageY) / scale;
