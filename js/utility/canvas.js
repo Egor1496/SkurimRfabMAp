@@ -126,7 +126,7 @@ function replaceOImg(mark, imgUrl, oImg, isClean) {
 		URL: imgUrl,
 		left: oImg.get("left"),
 		top: oImg.get("top"),
-		scaleM: oImg.get("scaleX"),
+		scaleM: getScaleIcon(mark.scale),
 	};
 
 	createMarker(propM, { ...oImg.data, isClean });
