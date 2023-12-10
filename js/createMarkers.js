@@ -1,10 +1,23 @@
 let thisMark = null;
+let isClickDown = false;
+
+let timerMouse;
+
+const startTimerMouse = (mark, oImg) => {
+	isClickDown = true;
+	clearTimeout(timerMouse);
+	timerMouse = setTimeout(() => {
+		if (isClickDown) handlerCleanM(mark, oImg);
+	}, 200);
+};
 
 const copyIdMarker = () => navigator.clipboard.writeText(thisMark?.id || "");
 const copyCoordMarker = () => navigator.clipboard.writeText(`top: ${thisMark?.top},\nleft: ${thisMark?.left},`);
 const copyTitleMarker = () => navigator.clipboard.writeText(thisMark?.title || "");
-const copyDescriptionMarker = () => navigator.clipboard.writeText(thisMark?.description + " \n " + thisMark?.secondDescription.join(" \n ") || "");
 const copyIconMarker = () => navigator.clipboard.writeText(thisMark?.nameIcon || "");
+const copyDescriptionMarker = () => {
+	navigator.clipboard.writeText(thisMark?.description + " \n " + thisMark?.secondDescription.join(" \n ") || "");
+};
 
 const copyObjMarker = () => {
 	let markJSON =
@@ -18,8 +31,8 @@ const copyObjMarker = () => {
 	navigator.clipboard.writeText(markJSON);
 };
 
-const createMarker = (mark, iconOImg, data) => {
-	fabric.Image.fromURL(iconOImg, (oImg) => {
+const createMarker = ({ mark, URL, left, top, scaleM }, data) => {
+	fabric.Image.fromURL(URL, (oImg) => {
 		oImg
 			.set("hasControls", false)
 			.set("hasBorders", false)
@@ -30,56 +43,30 @@ const createMarker = (mark, iconOImg, data) => {
 
 		oImg.data = data;
 
-		setPosIcon(oImg, mark);
+		oImg.scale(scaleM).set("left", left).set("top", top);
 
-		oImg.on("mousedblclick", function (e) {
-			let newList = JSON.parse(localStorage.getItem(CLEAN_TYPE) || "[]");
-			let isClean = false;
-
-			newList.forEach((id) => {
-				if (id === mark.id) {
-					isClean = true;
-					return;
-				}
-			});
-
-			if (isClean) {
-				newList = newList.filter((id) => !(id === mark.id));
-				replaceImage(oImg.data.currUrlImg, oImg);
-				oImg.set("left", oImg.get("left") - 2);
-				oImg.set("top", oImg.get("top") - 2);
-				oImg.data.isClean = false;
-			} else {
-				newList.push(mark.id);
-				replaceImage(ICON_CLEAN_URL, oImg);
-				oImg.set("left", oImg.get("left") + 2);
-				oImg.set("top", oImg.get("top") + 2);
-				oImg.data.isClean = true;
-			}
-
-			localStorage.setItem(CLEAN_TYPE, JSON.stringify(newList));
-		});
+		oImg.on("mousedblclick", () => handlerCleanM(mark, oImg));
 
 		oImg.on("mouseover", function (e) {
 			typeIcon = "marker";
 			thisMark = mark;
-			setScaleHover(oImg, true);
-			closeContext();
-			openDescription(mark, oImg);
-			applyTransform();
-			closeAllMenu();
-			closeAllmodal();
+			handlerMouseover(mark, oImg);
 		});
 
 		oImg.on("mouseout", function (e) {
+			typeIcon = "map";
 			setScaleHover(oImg, false);
 			closeDescription();
-			applyTransform();
-			typeIcon = "map";
+			canvas.renderAll();
 		});
 
 		oImg.on("mouseup", function (e) {
+			isClickDown = false;
 			openDescription(mark, oImg);
+		});
+
+		oImg.on("mousedown", (e) => {
+			startTimerMouse(mark, oImg);
 		});
 
 		canvas.add(oImg);
@@ -124,12 +111,22 @@ function createMarkers() {
 			}
 		});
 
-		const data = {
+		const posM = getPosMark(mark);
+
+		const dataMark = {
 			...mark,
 			isClean: isClean,
 			currUrlImg: iconPath,
 		};
 
-		createMarker(mark, iconOImg, data);
+		const propMark = {
+			mark: mark,
+			URL: iconOImg,
+			left: posM.left,
+			top: posM.top,
+			scaleM: getScaleIcon(dataMark.scale),
+		};
+
+		createMarker(propMark, dataMark);
 	});
 }

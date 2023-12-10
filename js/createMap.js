@@ -39,8 +39,6 @@ fabric.util.loadImage(nameMapURL, function (img) {
 	transX *= newScale;
 	transY *= newScale;
 
-	baseScale = scale;
-
 	canvas.setWidth(width);
 	canvas.setHeight(height);
 
@@ -49,6 +47,8 @@ fabric.util.loadImage(nameMapURL, function (img) {
 
 	// Добавить метки на карту
 	createMarkers();
+
+	baseScale = scale;
 
 	// Обновить карту
 	applyTransform();
@@ -64,6 +64,7 @@ fabric.util.loadImage(nameMapURL, function (img) {
 			} else {
 				bindContainerEvents();
 			}
+			// canvas.update();
 			clearInterval(loadInterval);
 		}
 	}, 100);

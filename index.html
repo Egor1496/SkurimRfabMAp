@@ -102,13 +102,7 @@
 		</div>
 		<div class="modal-question close">
 			<div class="modal-question-body">
-				<div class="modal-question-title">Функции</div>
 				<ul class="features-list">
-					<li class="features-list_items"><q llred>Отметить</q> зачищенные локации на двойной щелчок мышки.</li>
-					<li class="features-list_items"><q llblue>Описание</q> всех видов драконов иконка дракона в углу карты.</li>
-					<li class="features-list_items">
-						<q llblue>Копирование</q> заголовка, описания, координат, типа иконки и id через контекстное меню локации.
-					</li>
 					<li class="features-list_items features-list_items--img">
 						<h2><q llblue>Фильтры</q></h2>
 						<div class="img-wrap">
@@ -121,12 +115,43 @@
 							<span><img src="image/ui/book.svg" /><span>Книги</span></span>
 						</div>
 					</li>
-					<li class="features-list_items"><q llgreen>Выбор</q> маршрута в меню (левый верхний угол карты).</li>
-					<li class="features-list_items"><q llgreen>Создание</q> маршрута через контекстное меню карты (правая кнопка мышки).</li>
-					<li class="features-list_items"><q llgreen>Удаление</q> выбранного маршрута через контекстное меню в списке маршрутов.</li>
-					<li class="features-list_items"><q llgreen>Скачивание</q> файла выбранного маршрута через контекстное меню в списке маршрутов.</li>
-					<li class="features-list_items"><q llgreen>Загрузка</q> файла маршрута с помощью кнопки в нижнем углу карты.</li>
-					<li class="features-list_items"><q red>Удаление</q> ВСЕХ маршрутов или ВСЕХ отмеченных локаций конкретной карты через настройки.</li>
+					<li class="modal-question-title">Функции</li>
+					<li class="features-list_items">
+						<q llred>Отметить</q> зачищенные локации - <span white class="underline">двойной щелчок</span> или
+						<span white class="underline">зажатие кнопки</span> мыши.
+					</li>
+					<li class="features-list_items">
+						<q llblue>Копирование</q> заголовка, описания, координат, типа иконки и id через <span white class="underline">контекстное</span> меню
+						локации.
+					</li>
+					<li class="features-list_items features-list_items--icon-big">
+						<q llblue>Описание</q> всех видов драконов - иконка <img src="image/icon/Dragon.svg" /> (левый верхний угол карты).
+					</li>
+					<li class="features-list_items features-list_items--icon-small">
+						<q llblue>Выбор</q> фильтра в меню <img src="image/ui/filterClose.svg" /> (левый верхний угол карты).
+					</li>
+					<li class="features-list_items features-list_items--icon-small">
+						<q llgreen>Выбор</q> маршрута в меню <img src="image/icon/circle2.svg" /> (левый верхний угол карты).
+					</li>
+					<li class="features-list_items">
+						<q llgreen>Создание</q> маршрута через <span white class="underline">контекстное</span> меню карты (правая кнопка мышки).
+					</li>
+					<li class="features-list_items">
+						<q llgreen>Удаление</q> выбранного маршрута через <span white class="underline">контекстное</span> меню в списке маршрутов.
+					</li>
+					<li class="features-list_items">
+						<q llgreen>Скачивание</q> файла выбранного маршрута через <span white class="underline">контекстное</span> меню в списке маршрутов.
+					</li>
+					<li class="features-list_items features-list_items--icon-small">
+						<q llgreen>Загрузка</q> файла маршрута с помощью кнопки <img src="image/ui/drop_zone.svg" /> в нижнем углу карты.
+					</li>
+					<li class="features-list_items">
+						<q red>Удаление</q> <span white class="underline">ВСЕХ</span> маршрутов или <span white class="underline">ВСЕХ</span> отмеченных локаций
+						<span white class="underline">конкретной</span> карты через настройки.
+					</li>
+					<li class="features-list_items">
+						<span white>Изменить</span> размер интерфейса можно с помощью масштабирования <span white class="underline">страницы браузера</span>.
+					</li>
 				</ul>
 				<a class="button-link-video" href="https://youtu.be/_YOT0f5Ll2w" target="_blank" rel="noopener noreferrer">Видео инструкция</a>
 				<h4>
@@ -252,7 +277,11 @@
 	<script src="js/stats.js"></script>
 
 	<script src="js/global.js"></script>
-	<script src="js/utility.js"></script>
+
+	<script src="js/utility/canvas.js"></script>
+	<script src="js/utility/else.js"></script>
+
+	<script src="js/handlerMarkers.js"></script>
 
 	<script src="js/markers/markersSkyrim.js"></script>
 	<script src="js/markers/pathSkyrim.js"></script>

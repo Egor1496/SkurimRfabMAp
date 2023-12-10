@@ -79,14 +79,19 @@ var setScale = function (anchorX, anchorY) {
 };
 
 const setPosIcon = (oImg, icon) => {
-	const coeffMapScale = map.scaleX / baseScale;
-	const scale = icon.scale * COEFF_WIDTH || DEFAULT_SCALE_ICON * COEFF_WIDTH,
-		left = icon.left || 0,
+	const left = icon.left || 0,
 		top = icon.top || 0;
 	oImg
-		.scale(scale * coeffMapScale * (1.3 - currentZoom * 0.08))
+		.scale(getScaleIcon(icon.scale))
 		.set("left", left * COEFF_WIDTH)
 		.set("top", top * COEFF_HEIGHT);
+};
+
+const getPosMark = (mark) => {
+	const left = mark.left * COEFF_WIDTH || 0,
+		top = mark.top * COEFF_HEIGHT || 0;
+
+	return { left, top };
 };
 
 const setScaleHover = (oImg, isSacle) => {
@@ -97,108 +102,34 @@ const setScaleHover = (oImg, isSacle) => {
 	}
 };
 
-const setScaleIcon = () => {
+const getScaleIcon = (scaleIcon) => {
 	const coeffMapScale = map.scaleX / baseScale;
-	listMarkersCanvas.forEach((oImg) => {
-		const baseScaleIcon = oImg.data.scale * COEFF_WIDTH || DEFAULT_SCALE_ICON * COEFF_WIDTH;
+	const baseScaleIcon = scaleIcon * COEFF_WIDTH || DEFAULT_SCALE_ICON * COEFF_WIDTH;
+	return baseScaleIcon * coeffMapScale * (1.3 - currentZoom * 0.08);
+};
 
-		oImg.scale(baseScaleIcon * coeffMapScale * (1.3 - currentZoom * 0.08));
+const setScaleIcon = () => {
+	listMarkersCanvas.forEach((oImg) => {
+		oImg.scale(getScaleIcon(oImg.data.scale));
 	});
 };
 
-$(window).mousemove(function (e) {
-	winMouseX = e.pageX;
-	winMouseY = e.pageY;
-});
+function replaceOImg(mark, imgUrl, oImg, isClean) {
+	listMarkersCanvas.forEach((markerCanvas, i) => {
+		if (markerCanvas.data.id === mark.id) listMarkersCanvas.splice(i, 1);
+	});
 
-const coppyObject = (top, left) => {
-	const copy = `
-{
-	title: "",
-	description: "",
-	secondDescription: [""],
-	type: "",
-	nameIcon: "",
-	scale: 0.6,
-	id: "id------",
-	top: ${top},
-	left: ${left},
-},
-`;
-	navigator.clipboard.writeText(copy);
-};
+	canvas.remove(oImg);
 
-const onDrop = (e, callback) => {
-	e.preventDefault();
-	if (e.originalEvent.dataTransfer?.items) {
-		[...e.originalEvent.dataTransfer.items].forEach((item) => {
-			if (item.kind === "file") {
-				const file = item.getAsFile();
-				const reader = new FileReader();
-				reader.readAsText(file);
-				reader.onload = () => {
-					callback(reader.result);
-				};
-				reader.onerror = () => {
-					console.log(reader.error);
-				};
-			}
-		});
-	}
-};
-
-const read = (input, callback) => {
-	const file = input.files[0];
-	const reader = new FileReader();
-
-	reader.readAsText(file);
-
-	reader.onload = () => {
-		callback(reader.result);
+	const propM = {
+		mark,
+		URL: imgUrl,
+		left: oImg.get("left"),
+		top: oImg.get("top"),
+		scaleM: oImg.get("scaleX"),
 	};
 
-	reader.onerror = () => {
-		console.log(reader.error);
-	};
-};
-
-const savePathFile = (strArr) => {
-	const newPath = JSON.parse(strArr);
-
-	listPath.push(newPath);
-	localStorage.setItem(LIST_PATH_LOCAL_STORAGE, JSON.stringify(listPath));
-	localStorage.setItem(PATH_LOCAL_STORAGE, listPath.length - 1);
-	location.reload();
-};
-
-const downloadTxtFile = (text) => {
-	const elem = document.createElement("a");
-	const file = new Blob([text], { type: "text/plain;charset=utf-8" });
-	elem.href = URL.createObjectURL(file);
-	elem.download = "RFAB-Path.json";
-	document.body.appendChild(elem);
-	elem.click();
-};
-
-const closeAllMenu = () => {
-	$(".path-button").addClass("close");
-	$(".filter-button").addClass("close");
-	$(".books-button").addClass("close");
-	$(".books-button").removeClass("disable");
-	$(".dragon-button").addClass("close");
-};
-
-const closeAllmodal = () => {
-	closeLoadPath();
-	$(".modal-question").addClass("close");
-	$(".modal-settings").addClass("close");
-};
-
-function replaceImage(imgUrl, oImg) {
-	console.log(oImg);
-	var imgElem = oImg._element;
-	imgElem.src = imgUrl;
-	imgElem.onload = () => canvas.renderAll();
+	createMarker(propM, { ...oImg.data, isClean });
 }
 
 function replaceImageList(imgUrl, oImgList, typeIcon) {

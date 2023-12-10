@@ -31,6 +31,14 @@ del {
 	text-decoration-color: red;
 }
 
+.underline{
+  text-decoration: underline;
+}
+
+[white] {
+  color: rgb(255, 255, 255);
+}
+
 [red] {
   color: rgb(255, 69, 69);
 }
@@ -984,22 +992,21 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding: 20px;
+  padding: 10px;
+  padding-top: 5px;
+  color: rgb(231, 231, 231);
   border: 2px solid #929292;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
 .modal-question .features-list{
-  list-style-type: none;
+  margin-top: 0;
   padding: 0;
+  list-style-type: none;
 }
 .modal-question .features-list_items{
   margin-bottom: 5px;
-}
-
-.modal-question .features-list_items img{
-  width: 30px;
 }
 
 .modal-question .features-list_items--img{
@@ -1009,6 +1016,20 @@ body {
   align-items: center;
   gap: 5px;
   margin: 10px 0;
+}
+
+.modal-question .features-list_items--img img{
+  width: 30px;
+}
+
+.modal-question .features-list_items--icon-big img{
+  margin: -10px 0px;
+  width: 20px;
+}
+
+.modal-question .features-list_items--icon-small img{
+  margin: -5px 0px;
+  width: 25px;
 }
 
 .modal-question .features-list_items .img-wrap{
@@ -1025,7 +1046,10 @@ body {
 }
 
 .modal-question-title{
-  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-size: 1.4em;
+  font-weight: bold;
 }
 
 .modal-question .button-link-video{
@@ -1048,7 +1072,7 @@ body {
   z-index: 35;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.678);
 }
 /* QUESTION-MODAL START */
 
