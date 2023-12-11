@@ -5,17 +5,18 @@ $(window).mousemove(function (e) {
 
 const coppyObject = (top, left) => {
 	const copy = `
-{
-	title: "",
-	description: "",
-	secondDescription: [""],
-	type: "",
-	nameIcon: "",
-	scale: 0.6,
-	id: "id------",
-	top: ${top},
-	left: ${left},
-},
+
+	{
+		title: "Торговый пост",
+		description: "Скупают хлам.",
+		secondDescription: ["Продают <q yelow>Свитки телепортации</q> и <q yelow>Камни душ</q>."],
+		type: "trade",
+		nameIcon: "Town",
+		scale: 0.3,
+		id: "id------",
+		top: ${top},
+		left: ${left},
+	},
 `;
 	navigator.clipboard.writeText(copy);
 };

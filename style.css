@@ -241,6 +241,18 @@ body {
   width: 25px;
 }
 
+.filter-list [data-filter-type-sky="trade"] img{
+  width: 22px;
+}
+
+.filter-list [data-filter-type-sky="set"] img{
+  width: 24px;
+}
+
+.filter-list [data-filter-type-sky="word"] img{
+  width: 26px;
+}
+
 .filter-list-wrap{
   display: flex;
   justify-content: space-around;
