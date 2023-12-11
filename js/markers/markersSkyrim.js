@@ -571,7 +571,7 @@ const listMarkersSky = [
 		description: "Бандиты <q green>5</q> снаружи и <q green>5</q> внутри.",
 		secondDescription: [
 			"<q red>Босс</q> Фьела <q lblue>3000xp</q> в конце локации пассивный бос если не убит муж. <br/>&nbsp; -Сильный воин с щитом, cбивает с ног, резисты к холоду.",
-			"<q yelow>Сет Фьелы</q>.",
+			`<q yelow>Сет Фьелы</q>. <br/> <img src="image/fela.gif" />`,
 		],
 		type: "bandit boss",
 		nameIcon: "Fort",
