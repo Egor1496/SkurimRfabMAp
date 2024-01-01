@@ -149,9 +149,10 @@ const listMarkersSols = [
 
 	{
 		title: "Застава Сиринга (<q lblue>50lvl</q>)",
-		description: "Открытая локация. Дракон и <q green>6</q> драугров.",
+		description:
+			"Открытая локация. <q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q> и <q green>6</q> драугров.",
 		secondDescription: ["<q yelow>Слово Подчинение Воли</q>."],
-		type: "dragon boss draugry word",
+		type: "dragon draugry word",
 		nameIcon: "Dragon",
 		scale: 0.5,
 		id: "id16",
@@ -476,9 +477,9 @@ const listMarkersSols = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
+		description: "<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
 		secondDescription: [""],
-		type: "dragon boss",
+		type: "dragon",
 		nameIcon: "circle2",
 		scale: 0.5,
 		id: "id43",
@@ -488,9 +489,9 @@ const listMarkersSols = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Босс</q> Дракон (<q lblue>150-200lvl</q>) <q lblue>16000-20000xp</q>.",
+		description: "<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
 		secondDescription: [""],
-		type: "dragon boss",
+		type: "dragon",
 		nameIcon: "circle2",
 		scale: 0.5,
 		id: "id44",
