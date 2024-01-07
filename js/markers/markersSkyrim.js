@@ -2,7 +2,7 @@ const listMarkersSky = [
 	{
 		title: "Солитьюд (<q lblue>50lvl</q>)",
 		description:
-			"Квест на Хризамер. Достав Хризамер из ножен вас телепортит в другое измерение, из которого <q red>нельзя</q> выбраться не победив босса. Внутри <q green>8</q> сильных огне. атронахов и <q green>3</q> <q red>повелителя</q> в конце.",
+			"<q lblue>Квест</q> на Хризамер. Достав Хризамер из ножен вас телепортит в другое измерение, из которого <q red>нельзя</q> выбраться не победив босса. Внутри <q green>8</q> сильных огне. атронахов и <q green>3</q> <q red>повелителя</q> в конце.",
 		secondDescription: [
 			"<q red>Босс</q> дремора Сей Джин (<q lblue>150lvl</q>) <q lblue>16000xp</q> появляется за спиной игрока, если взять хризамер. Может бить из бесплотности. Силовые атаки вызывают огненную нову (500 урона) из далека спамит фаерболами.",
 			"<q purple>Хризамер</q>, <q yelow>Необычный Камень</q>.",
@@ -17,10 +17,10 @@ const listMarkersSky = [
 	{
 		title: "Синий дворец (<q lblue>50lvl</q>)",
 		description:
-			"Квест на убийство Потемы. После входа на тумбе лежит ключ от хризамера. Внутри <q green>12</q> драугров, <q green>4</q> вампира. Папа вампир (<q lblue>125lvl</q>) после дверей загадок, у него ключ от следующей комнаты. В конце дверь <q red>закроется</q> и восстанут <q green>6</q> драугров.",
+			"<q lblue>Квест</q> на убийство Потемы. После входа на тумбе лежит ключ от хризамера. Внутри <q green>12</q> драугров, <q green>4</q> вампира. Папа вампир (<q lblue>125lvl</q>) после дверей загадок, у него ключ от следующей комнаты. В конце дверь <q red>закроется</q> и восстанут <q green>6</q> драугров.",
 		secondDescription: [
 			"<q red>Босс</q> призрак Потемы (<q lblue>150lvl</q>) <q lblue>7000xp</q> призывает скелетов архимагов, воскрешает мертвых, потеряв <q llred>ХП</q>, вначале стреляет в игрока магией наносящей чистый урон (300). Очень больно бьет посохом, и криком высасывает <q llgreen>СТ</q>,<q llred>ХП</q>,<q llblue>МП</q>.",
-			"Мастер Сундук <q yelow>Превосходное Зелье</q> <q llred>ХП</q>, <q lblue>Квест на убийство вампиров</q>.",
+			"Мастер Сундук <q yelow>Превосходное Зелье</q> <q llred>ХП</q>, <q lblue><q lblue>Квест</q> на убийство вампиров</q>.",
 		],
 		nameIcon: "BluePalace",
 		type: "city boss bottle draugry xp",
@@ -42,7 +42,8 @@ const listMarkersSky = [
 	{
 		title: "Рифтен",
 		nameIcon: "Riften",
-		description: "Убей грелод добрую для квеста. <br/> Квест на уничтожение гильдии воров (<q lblue>30lvl</q>) (<q lblue>35lvl</q>)",
+		description:
+			"Убей грелод добрую для квеста. <br/> <q lblue>Квест</q>: Мадези - <q yelow>1000р</q>. Принеси бивень и золотую руду. <br/> <q lblue>Квест</q>: Уничтожение гильдии воров (<q lblue>30lvl</q>) (<q lblue>35lvl</q>).",
 		type: "city soc",
 		id: "id3",
 		scale: 0.6,
@@ -84,9 +85,13 @@ const listMarkersSky = [
 		left: 76,
 	},
 	{
-		title: "Маркарт",
+		title: "Маркарт (<q lblue>35lvl</q>)",
 		nameIcon: "Markarth",
-		description: "<q yelow>Ожерелье</q> в Благодарность.",
+		description: "<q lblue>Квест</q>: Убийство Турана - <q lblue>35lvl</q>, После <q lblue>30lvl</q>???.",
+		secondDescription: [
+			"<q red>Босс</q> Дозорный Туран (<q lblue>100lvl</q>) <q lblue>16000xp</q>. Щит и булава, ударами разрушает броню и снижает <q llgreen>СТ</q>. Раз в 2м создает солнечную сферу, высасывающую <q llred>ХП</q>. Использует солнечную ауру, стреляет солнечным огнем. Небольшая арена, двери <q red>закрываются</q>, можно отдохнуть на столе (<q llred>абуз</q>).",
+			"<q yelow>Ожерелье</q> если спасти от изгоя, <q yelow>Бичь Даэдра</q>, <q yelow>Сет Турана</q>, <q yelow>Символ Элейдона</q>.",
+		],
 		type: "city soc",
 		id: "id8",
 		scale: 0.55,
@@ -95,7 +100,7 @@ const listMarkersSky = [
 	},
 	{
 		title: "Фолкрит (<q lblue>25lvl</q>)",
-		description: "Квест Хирсина",
+		description: "<q lblue>Квест</q> Хирсина",
 		secondDescription: ["<q yelow>Кольцо Хирсина</q>."],
 		nameIcon: "Falkreath",
 		type: "city",
@@ -419,7 +424,7 @@ const listMarkersSky = [
 	},
 	{
 		title: "Западная сторожевая башня (<q lblue>40lvl</q>)",
-		description: "После убийства босса появляются <q red>драконы</q>!",
+		description: "После убийства босса появляются <q red>драконы</q>! Убивай драконов до квеста с мираком что бы получить больше душ.",
 		secondDescription: [
 			"<q red>Босс</q> Огненный <q red>Дракон</q> (<q lblue>40lvl</q>) <q lblue>7000xp</q>, вызывает огне. град и луч огня. <br/>&nbsp; -Постоянно двигайся, луч оч сильно дамажит.",
 		],
@@ -1035,7 +1040,8 @@ const listMarkersSky = [
 	},
 	{
 		title: "Пещера Отвесный Утес (<q lblue>20lvl</q>)",
-		description: "Изгои <q green>3</q> снаружи и <q green>4</q> внутри потом <q green>4</q> внутри и <q green>2</q> ворожеи (квест с мелкой)",
+		description:
+			"Изгои <q green>3</q> снаружи и <q green>4</q> внутри потом <q green>4</q> внутри и <q green>2</q> ворожеи (<q lblue>квест</q> с мелкой)",
 		secondDescription: ["<q lblue>Книга Опыта</q> <q green>3</q>, <q yelow>Глаз Мелки</q>, <q yelow>Веревское сердце</q>."],
 		type: "trash",
 		nameIcon: "Cave",
@@ -1490,9 +1496,9 @@ const listMarkersSky = [
 		left: 294,
 	},
 	{
-		title: "Пруд Глаз Мары (<q lblue>30lvl</q>)",
-		description: "Вампиры <q green>2</q> внутри. Маленькая комната. ",
-		secondDescription: ["Сундук с <q yelow>Эбонитовым лутом</q>, <q lblue>Книга Опыта</q>."],
+		title: "Пруд Глаз Мары (<q lblue>35lvl</q>)",
+		description: "Внутри <q green>2</q> вампира в упоре. Маленькая комната, есть пространство для уклонения.",
+		secondDescription: ["Сундук с <q yelow>Эбонитовым лутом</q>???, <q lblue>Книга Опыта</q>."],
 		type: "vampire",
 		nameIcon: "Pond",
 		id: "id133",
@@ -1526,7 +1532,7 @@ const listMarkersSky = [
 		title: "Кратер Драконий Зуб (<q lblue>20lvl</q>) (<q lblue>50lvl</q>)",
 		description: "Изгои <q green>2</q> и ворожея.",
 		secondDescription: [
-			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 			"Слово <q yelow>Элементарная Ярость</q>, мастер сундук <q yelow>Камни</q>.",
 		],
 		type: "trash dragon loot word",
@@ -1540,7 +1546,7 @@ const listMarkersSky = [
 		title: "Пик Древних (<q lblue>50lvl</q>)",
 		description: "",
 		secondDescription: [
-			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 			"Слово <q yelow>Разоружение</q>.",
 		],
 		type: "dragon word",
@@ -1554,7 +1560,7 @@ const listMarkersSky = [
 		title: "Алтарь Рожденного Небом (<q lblue>50lvl</q>)",
 		description: "",
 		secondDescription: [
-			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 			"Слово <q yelow>Морозное дыхание</q>.",
 		],
 		type: "dragon word",
@@ -1568,7 +1574,7 @@ const listMarkersSky = [
 		title: "Гора Антор (<q lblue>50lvl</q>)",
 		description: "",
 		secondDescription: [
-			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 			"Слово <q yelow>Ледяная форма</q>.",
 		],
 		type: "dragon word",
@@ -1583,7 +1589,7 @@ const listMarkersSky = [
 		description: "После квеста <q red><q red>Дракон</q></q>.",
 		secondDescription: [
 			"<q red>Босс</q> Драконий жрец Кросис (<q lblue>125lvl</q>) <q lblue>7000xp</q>. Лучник. <br/>&nbsp; -Стреляет замедляющими стрелами (холодными), кричит замедляющим криком, призывает <q green>2</q> адских гончих.",
-			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 			"Слово <q yelow>Голосовой бросок</q>.",
 		],
 		type: "dragon boss word",
@@ -1597,7 +1603,7 @@ const listMarkersSky = [
 		title: "Скелетный гребень (<q lblue>10lvl</q>) (<q lblue>50lvl</q>)",
 		description: "<q green>3</q> скелета.",
 		secondDescription: [
-			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 			"Мастер сундук <q yelow>Камни</q>, Слово <q yelow>Морозное дыхание</q>.",
 		],
 		type: "skelet dragon loot word",
@@ -1611,7 +1617,7 @@ const listMarkersSky = [
 		title: "Вершина Северный Ветер (<q lblue>10lvl</q>) (<q lblue>50lvl</q>)",
 		description: "<q green>3</q> скелета.",
 		secondDescription: [
-			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 			"Слово <q yelow>Шепот ауры</q>.",
 		],
 		type: "skelet dragon word",
@@ -1625,7 +1631,7 @@ const listMarkersSky = [
 		title: "Откушенный Язык (<q lblue>20lvl</q>) (<q lblue>50lvl</q>)",
 		description: "Некромант и <q green>3</q> скелета.",
 		secondDescription: [
-			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 			"Слово <q yelow>Испуг</q>.",
 		],
 		type: "dragon magic word",
@@ -1639,7 +1645,7 @@ const listMarkersSky = [
 		title: "Осенняя сторож. башня (<q lblue>10lvl</q>) (<q lblue>50lvl</q>)",
 		description: "Бандиты <q green>4</q>.",
 		secondDescription: [
-			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 			"Слово <q yelow>Смертный приговор</q>, Мастер сундук <q yelow>Камнями</q>, <q lblue>Книга Опыта</q>, 2 <q yelow>Праха вампира</q>.",
 		],
 		type: "bandit boss loot word",
@@ -1653,7 +1659,7 @@ const listMarkersSky = [
 		title: "Ход Древних (<q lblue>50lvl</q>)",
 		description: "",
 		secondDescription: [
-			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 			"Слово <q yelow>Мощь Хищника</q>.",
 		],
 		type: "dragon word",
@@ -1692,7 +1698,7 @@ const listMarkersSky = [
 	{
 		title: "Аванчнзел (<q lblue>40lvl</q>)",
 		description:
-			"Взять квест в Рифтане. Внутри <q green>20</q> Двемерских паучков, двемеры <q green>8</q>, и двемерский призрак. Каратели <q green>2</q>, смертальная <q red>ловушка</q> у двойной двери. В финальной комнате двемерский центурион (<q lblue>100lvl</q>) <q lblue>2000xp</q> ждет игрока.",
+			"Взять <q lblue>квест</q> в Рифтане. Внутри <q green>20</q> Двемерских паучков, двемеры <q green>8</q>, и двемерский призрак. Каратели <q green>2</q>, смертальная <q red>ловушка</q> у двойной двери. В финальной комнате двемерский центурион (<q lblue>100lvl</q>) <q lblue>2000xp</q> ждет игрока.",
 		secondDescription: [
 			"<q red>Босс</q> призрак Кадак Мезальф (<q lblue>60lvl</q>) <q lblue>5000xp</q>",
 			"<q yelow>Кольцо Кадака Мезальфа</q>, <q yelow>бафф Двемерские Знания</q>.",
@@ -2154,9 +2160,9 @@ const listMarkersSky = [
 	{
 		title: "Фолгунтур (<q lblue>40lvl</q>)",
 		description:
-			"Внутри <q green>18</q> другров. Перед комнатой с загадкой <q red>закроются</q> двери и начнут восставать <q green>6</q> драугров, используй священный круг. После захода в Фолгундур Крипта, двери <q red>закроются</q>.",
+			"Внутри <q green>18</q> другров. Перед комнатой с загадкой <q red>закроются</q> двери и начнут восставать <q green>6</q> драугров, Используй свиток «священный круг». После захода в Фолгундур Крипта, двери <q red>закроются</q>.",
 		secondDescription: [
-			"<q red>Босс</q> Микрул Голдурсон (<q lblue>100lvl</q>) <q lblue>5000xp</q>, вместе с ним поднимает <q green>9</q> драугров. <br/>&nbsp; -Легче убить босса, тогда все драугры умрут. используй священный круг. Можно получить больше опыта убивая драугров. Рычаг от выхода около моста.",
+			"<q red>Босс</q> Микрул Голдурсон (<q lblue>100lvl</q>) <q lblue>5000xp</q>, вместе с ним поднимает <q green>9</q> драугров. <br/>&nbsp; -Легче убить босса, тогда все драугры умрут. Используй свиток «священный круг». Можно получить больше опыта убивая драугров. Рычаг от выхода около моста.",
 			"<q yelow>Часть амулета Голдура</q>, Слово <q yelow>Морозное дыхание</q>.",
 		],
 		type: "draugry boss word",
@@ -2183,7 +2189,7 @@ const listMarkersSky = [
 	{
 		title: "Устенгрев (<q lblue>40lvl</q>)",
 		description:
-			"Пару некромантов и <q green>9</q> драугров. Далее <q green>5</q> драугров, несколько скелетов и <q red>повелитель</q> внизу в фонтане. После загадки, комната с нажимными огненными <q red>ловушками</q>.",
+			"<q lblue>Квест</q>: Рог Юргена - <q lblue>40lvl</q>. <br/> Пару некромантов и <q green>9</q> драугров. Далее <q green>5</q> драугров, несколько скелетов и <q red>повелитель</q> внизу в фонтане. После загадки, комната с нажимными огненными <q red>ловушками</q>.",
 		secondDescription: [
 			"<q red>Босс</q> Драугр посошник Повелитель (<q lblue>100lvl</q>) <q lblue>11000xp</q> призывает <q green>2</q> сильных скелетов архимагов, сильно бьет стихиями. <br/>&nbsp; -Подожди пока он выйдет.",
 			"<q yelow>Сет Языка</q>, Слово <q yelow>Замедление времени</q>.",
@@ -2198,7 +2204,7 @@ const listMarkersSky = [
 	{
 		title: "Упокоище (<q lblue>40lvl</q>)",
 		description:
-			"Драугры <q green>4</q> <q yelow>крепко спят</q>, можно убить по одному. Дальше <q green>3</q> драугра и пауки. <q red>Падая</q> в яму вернуться нельзя. Далее <q red>закрывается</q> решетка с <q green>12</q> драуграми. Босс в конце локации за дверью с когтем. Далее решетка <q red>закрывается</q> с <q green>14</q> драуграми и <q red>боссом</q>. Убивай драугров как можно быстрее, используй Священный круг.",
+			"Драугры <q green>4</q> <q yelow>крепко спят</q>, можно убить по одному. Дальше <q green>3</q> драугра и пауки. <q red>Падая</q> в яму вернуться нельзя. Далее <q red>закрывается</q> решетка с <q green>12</q> драуграми. Босс в конце локации за дверью с когтем. Далее решетка <q red>закрывается</q> с <q green>14</q> драуграми и <q red>боссом</q>. Убивай драугров как можно быстрее, Используй свиток «священный круг».",
 		secondDescription: [
 			"<q red>Босс</q> Король Олаф Одноглазый (<q lblue>100lvl</q>) <q lblue>5000xp</q> в конце арены с молотом. <br/>&nbsp; -Призывает <q green>2</q> призраков (<q lblue>100lvl</q>) бьет силовые холодом, грозовая аура.",
 			"<q yelow>Призрачный Крушитель</q>, <q yelow>Превосходное Зелье</q> <q llred>ХП</q>.",
@@ -2351,7 +2357,7 @@ const listMarkersSky = [
 	{
 		title: "Снежная Завеса - Святилище (<q lblue>30lvl</q>) (<q lblue>40lvl</q>)",
 		description:
-			"При открытии сундука восстают <q green>2</q> драугра. Дальше <q green>20</q> драугров. Далее <q green>9</q> драугров, <q red>повелитель</q> (<q lblue>100lvl</q>) посошник с архимагами и <q green>2</q> драуграми.",
+			"<q lblue>Квест</q> локация. При открытии сундука восстают <q green>2</q> драугра. Дальше <q green>20</q> драугров. Далее <q green>9</q> драугров, <q red>повелитель</q> (<q lblue>100lvl</q>) посошник с архимагами и <q green>2</q> драуграми.",
 		secondDescription: ["<q yelow>Превосходное Зелье</q> <q llgreen>СТ</q>, Слово <q yelow>Разоружение</q>."],
 		type: "draugry bottle word",
 		nameIcon: "Tomb",
@@ -2496,12 +2502,10 @@ const listMarkersSky = [
 		left: 915.3909759521484,
 	},
 	{
-		title: "Курган Погребальный Огонь (<q lblue>40lvl</q>)",
+		title: "Курган Погребальный Огонь (<q lblue>45lvl</q>)",
 		description:
-			"Драугров <q green>13</q> и несколько скелетов. Дальше <q red>закроется</q> дверь, там будут <q green>12</q> драгров и <q red>повелитель</q>.",
-		secondDescription: [
-			"<q red>Повелитель</q> маг (<q lblue>100lvl</q>) <q lblue>11000xp</q> <br/>&nbsp; -Сильно бьет всеми стихиями, призывает <q green>2</q> сильных скелетов воинов.",
-		],
+			"В локации две опасные, незаметные ловушки. Драугров <q green>13</q> и несколько скелетов. Дальше небольшая арена (<q red>закроется</q> дверь). Сразу восстанут почти все <q green>12</q> драгров и <q red>повелитель</q>. Беги на левую колонну, уворачивайся от криков. Используй свиток «священный круг», «Передышка» (восстановление 50). В конце арены, за мостом есть полка для отдыха (<q llred>абуз</q>).",
+		secondDescription: ["<q red>Повелитель</q> (<q lblue>100lvl</q>) <q lblue>11000xp</q>."],
 		type: "draugry",
 		nameIcon: "Tomb",
 		scale: 0.4,
@@ -2515,7 +2519,7 @@ const listMarkersSky = [
 			"Открытая локация. В начале <q green>14</q> скелетов, <q green>2</q> драугра спят, после лестницы наверх <q red>Босс</q> и драугр (<q lblue>100lvl</q>), далее <q green>2</q> другра. <q red><q red>Дракон</q></q> после квеста.",
 		secondDescription: [
 			"<q red>Босс</q> Агнар Железная Борода (<q lblue>100lvl</q>) <q lblue>5000xp</q>, вместе с ним <q green>5</q> скелетов. <br/>&nbsp; -Кричит холодом, больно стреляет из лука.",
-			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 			"<q yelow>Нордский героик</q> топор и лук, <q yelow>Шлем Инквизитора</q>, <q lblue>Книга Опыта</q>, Слово <q yelow>Высасывание жизни</q>.",
 		],
 		type: "draugry boss word",
@@ -2541,11 +2545,11 @@ const listMarkersSky = [
 		left: 991.3028564453125,
 	},
 	{
-		title: "Форелхост (<q lblue>50lvl</q>)",
+		title: "Форелхост (<q lblue>55lvl</q>)",
 		description:
-			"Призраки <q green>10</q> и <q green>3</q> драугра. Дальше <q green>2</q> призрака, драугры <q green>27</q> и <q red>повелитель</q> мечник в конце. Далее <q green>11</q> драугров и <q red>повелитель</q> мечник. За дверью с загадкой (двери <q red>закроются</q>) босс, <q green>4</q> яд. драугров (<q lblue>90lvl</q>) и <q green>3</q> слабых яд. драугров.",
+			"Не заходи если не уверен. Ключ в сундуке. Призраки <q green>10</q> и <q green>3</q> драугра. Дальше <q green>2</q> призрака, драугры <q green>27</q> и <q red>повелитель</q> милишник. Далее <q green>11</q> драугров и <q red>повелитель</q> маг. За дверью с загадкой (двери <q red>закроются</q>) босс, <q green>4</q> яд. драугров (<q lblue>90lvl</q>) и <q green>3</q> слабых яд. драугров.",
 		secondDescription: [
-			"<q red>Босс</q> Драконий жрец Рагот (<q lblue>100lvl</q>) использует (большой по площади) плащ яда. <br/>&nbsp; -Сильный ядовитый маг. Используй: Аура упокоения, заклинания лечения.",
+			"<q red>Босс</q> Драконий жрец Рагот (<q lblue>100lvl</q>) использует (большой по площади) плащ яда. <br/>&nbsp; -Сильный ядовитый маг. Очень сильно ухудшет видимость. Настакивают ядами, ядорез не поможет. Нужно много <q llred>ХП</q> и <q llred>ХП</q> регена, Прячся за колоннами с боку арены. Прячся/бей/беги. Используй: Аура упокоения, заклинания лечения, свиток «священный круг».",
 			"<q yelow>Кинжал Квазейна</q>, Слово <q yelow>Грозовой Зов</q>.",
 		],
 		type: "draugry boss word",
@@ -3666,7 +3670,7 @@ const listMarkersSky = [
 	},
 
 	{
-		title: "Квест Фроки (<q lblue>25lvl</q>)",
+		title: "<q lblue>Квест</q> Фроки (<q lblue>25lvl</q>)",
 		description: "",
 		secondDescription: ["<q red>Босс</q> Дух Волка (<q lblue>62lvl</q>) <q lblue>5000xp</q>, Быстрый, накидывает кровотечение."],
 		type: "skelet animal boss",
@@ -3678,7 +3682,7 @@ const listMarkersSky = [
 	},
 
 	{
-		title: "Квест Фроки (<q lblue>25lvl</q>)",
+		title: "<q lblue>Квест</q> Фроки (<q lblue>25lvl</q>)",
 		description: "",
 		secondDescription: [
 			"<q red>Босс</q> Дух краба (<q lblue>62lvl</q>) <q lblue>5000xp</q>, быстрый, больно бьет, достает далеко. Используй серебро, блокируй удары.",
@@ -3692,7 +3696,7 @@ const listMarkersSky = [
 	},
 
 	{
-		title: "Квест Фроки (<q lblue>25lvl</q>)",
+		title: "<q lblue>Квест</q> Фроки (<q lblue>25lvl</q>)",
 		description: "",
 		secondDescription: ["<q red>Босс</q> Дух Медведя (<q lblue>62lvl</q>) <q lblue>5000xp</q><br/>&nbsp; -Быстрый, сильно бьет, может сбить с ног."],
 		type: "animal boss",
@@ -3704,7 +3708,7 @@ const listMarkersSky = [
 	},
 
 	{
-		title: "Квест Фроки (<q lblue>25lvl</q>)",
+		title: "<q lblue>Квест</q> Фроки (<q lblue>25lvl</q>)",
 		description: "",
 		secondDescription: ["Дух Саблезуба (<q lblue>62lvl</q>) <q lblue>5000xp</q>. Быстрый, сильно бьет, может сбить с ног. Крутись вокруг зверя."],
 		type: "animal boss",
@@ -3731,7 +3735,7 @@ const listMarkersSky = [
 	},
 
 	{
-		title: "Квест музея (<q lblue>30lvl</q>)",
+		title: "<q lblue>Квест</q> музея (<q lblue>30lvl</q>)",
 		description: "Случайный <q red>дремора</q>.",
 		secondDescription: [
 			"<q yelow>Бритва Мерунеса</q>, <q yelow>Книга Даэдрического Ремесла</q>, <q yelow>Превосходное Зелье</q> <q llred>ХП</q> и веса.",
@@ -3771,9 +3775,9 @@ const listMarkersSky = [
 	{
 		title: "Древний Каирн (<q lblue>45lvl</q>)",
 		description:
-			"Драугров <q green>13</q> и воины серебряной крови. Далее двойные двери <q red>закроются</q> с <q green>17</q> драуграми и <q red>Боссом</q>. Далее <q red>закрывающаяся</q> железная дверь и <q green>18</q> драугров восстают из могил при взятии предмета со стенда. Используй священный круг.",
+			"Драугров <q green>13</q> и воины серебряной крови. Далее двойные двери <q red>закроются</q> с <q green>17</q> драуграми и <q red>Боссом</q>. Далее <q red>закрывающаяся</q> железная дверь и <q green>18</q> драугров восстают из могил при взятии предмета со стенда. Используй свиток «священный круг».",
 		secondDescription: [
-			"<q red>Босс</q> Хранитель Крипты (<q lblue>100lvl</q>) <q lblue>5000xp</q>. Призрак с молотом. Бьет силовой <q llred>250</q>??? урона чистой физой на большое расстояние, замедляет, сбивает с ног. Узкий тоннель арены, могут зажать. Используй священный круг.",
+			"<q red>Босс</q> Хранитель Крипты (<q lblue>100lvl</q>) <q lblue>5000xp</q>. Призрак с молотом. Бьет силовой <q llred>250</q>??? урона чистой физой на большое расстояние, замедляет, сбивает с ног. Узкий тоннель арены, могут зажать. Используй свиток «священный круг».",
 			"<q yelow>Превосходное Зелье</q> <q llred>ХП</q>, Слово <q yelow>Огненное Дыхание</q>.",
 		],
 		type: "draugry boss bottle word",
@@ -3787,7 +3791,7 @@ const listMarkersSky = [
 	{
 		title: "<q red>Дракон</q> (<q lblue>50lvl</q>)",
 		description:
-			"<q red>Босс</q> <q red>Дракон</q> Салокнир (<q lblue>200lvl</q>) <q lblue>20000xp</q> спавнит взрывающиеся ледяные кристаллы, активирует пассивку, призывает холодный шторм. Пассивка дракона: удары по дракону накладывают (стакают) дебафф замедления и наносят урон холодом персонажу.",
+			"<q red>Босс</q> <q red>Дракон</q> Салокнир (<q lblue>200lvl</q>) <q lblue>20000xp</q>. Спавнит взрывающиеся ледяные кристаллы, призывает холодный шторм. Удары по дракону накладывают (стакают) дебафф замедления и наносят урон холодом персонажу. Очень быстро высасывает <q llgreen>СТ</q>. Используй «Передышка» (восстановление 50).",
 		secondDescription: [""],
 		type: "dragon boss",
 		nameIcon: "circle2",
@@ -3863,7 +3867,8 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+		description:
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 		secondDescription: [""],
 		type: "dragon",
 		nameIcon: "circle2",
@@ -3875,7 +3880,8 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+		description:
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 		secondDescription: [""],
 		type: "dragon",
 		nameIcon: "circle2",
@@ -3887,7 +3893,8 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+		description:
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 		secondDescription: [""],
 		type: "dragon",
 		nameIcon: "circle2",
@@ -3899,7 +3906,8 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "Он там есть?. <q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+		description:
+			"Он там есть?. <q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 		secondDescription: [""],
 		type: "dragon",
 		nameIcon: "circle2",
@@ -3911,7 +3919,8 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+		description:
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 		secondDescription: [""],
 		type: "dragon",
 		nameIcon: "circle2",
@@ -3923,7 +3932,8 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+		description:
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 		secondDescription: [""],
 		type: "dragon",
 		nameIcon: "circle2",
@@ -3935,7 +3945,8 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+		description:
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 		secondDescription: [""],
 		type: "dragon",
 		nameIcon: "circle2",
@@ -3947,7 +3958,8 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+		description:
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 		secondDescription: [""],
 		type: "dragon",
 		nameIcon: "circle2",
@@ -3959,7 +3971,8 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+		description:
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 		secondDescription: [""],
 		type: "dragon",
 		nameIcon: "circle2",
@@ -3971,7 +3984,8 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+		description:
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 		secondDescription: [""],
 		type: "dragon",
 		nameIcon: "circle2",
@@ -3983,7 +3997,8 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+		description:
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 		secondDescription: [""],
 		type: "dragon",
 		nameIcon: "circle2",
@@ -3995,7 +4010,8 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+		description:
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 		secondDescription: [""],
 		type: "dragon",
 		nameIcon: "circle2",
@@ -4007,7 +4023,8 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+		description:
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 		secondDescription: [""],
 		type: "dragon",
 		nameIcon: "circle2",
@@ -4019,7 +4036,8 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+		description:
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 		secondDescription: [""],
 		type: "dragon",
 		nameIcon: "circle2",
@@ -4031,7 +4049,8 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+		description:
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 		secondDescription: [""],
 		type: "dragon",
 		nameIcon: "circle2",
@@ -4043,7 +4062,8 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+		description:
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 		secondDescription: [""],
 		type: "dragon",
 		nameIcon: "circle2",
@@ -4055,7 +4075,8 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+		description:
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 		secondDescription: [""],
 		type: "dragon",
 		nameIcon: "circle2",
@@ -4067,7 +4088,8 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+		description:
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 		secondDescription: [""],
 		type: "dragon",
 		nameIcon: "circle2",
@@ -4079,7 +4101,8 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+		description:
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 		secondDescription: [""],
 		type: "dragon",
 		nameIcon: "circle2",
@@ -4091,7 +4114,8 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+		description:
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 		secondDescription: [""],
 		type: "dragon",
 		nameIcon: "circle2",
@@ -4103,7 +4127,8 @@ const listMarkersSky = [
 
 	{
 		title: "Курган (<q lblue>50lvl</q>)",
-		description: "<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>.",
+		description:
+			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
 		secondDescription: [""],
 		type: "dragon",
 		nameIcon: "circle2",
@@ -4414,7 +4439,7 @@ const listMarkersSky = [
 	{
 		title: "Хижина Фроки",
 		description: "Квесты на убийства духов зверей.",
-		secondDescription: ["<q yelow>Амулет Кин</q> за квест."],
+		secondDescription: ["<q yelow>Амулет Кин</q> за <q lblue>квест</q>."],
 		type: "soc",
 		nameIcon: "Shack",
 		scale: 0.3,
@@ -4915,7 +4940,7 @@ const listMarkersSky = [
 
 	{
 		title: "Пост Септимия Сегония",
-		description: "Квест для входа в черный предел.",
+		description: "<q lblue>Квест</q> для входа в черный предел.",
 		secondDescription: [""],
 		type: "",
 		nameIcon: "Cave",
@@ -5141,17 +5166,17 @@ const listMarkersSky = [
 		left: 370.2586206896552,
 	},
 
-	// {
-	// 	title: "",
-	// 	description: "",
-	// 	secondDescription: [""],
-	// 	type: "",
-	// 	nameIcon: "",
-	// 	scale: 0.3,
-	// 	id: "id457",
-	// 	top: 0,
-	// 	left: 0,
-	// },
+	{
+		title: "Корабль (<q lblue>10lvl</q>)",
+		description: "<q lblue>Квест</q>: Убить бандита <q yelow>1000р</q>.",
+		secondDescription: [""],
+		type: "",
+		nameIcon: "Shipwreck",
+		scale: 0.3,
+		id: "id457",
+		top: 480.14205963632736,
+		left: 1081.0133711897554,
+	},
 
 	// {
 	// 	title: "",

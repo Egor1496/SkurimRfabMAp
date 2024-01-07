@@ -215,7 +215,7 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Форт Морозного Мотылька (<q lblue>40lvl</q>)",
+		title: "Форт Морозного Мотылька (<q lblue>30lvl</q>)",
 		description: "Снаружи <q green>11</q> порождений. Внутри <q green>3</q> порождения.",
 		secondDescription: [
 			"<q red>Босс</q> бандит Генерал Фалкс Карий (<q lblue>75lvl</q>) - <q lblue>7000xp</q>, быстрый воин с молотом.",
@@ -404,7 +404,7 @@ const listMarkersSols = [
 	},
 
 	{
-		title: "Храм Мирака (<q lblue>50lvl</q>)",
+		title: "Храм Мирака (<q lblue>45lvl</q>)",
 		description:
 			"На входе <q green>2</q> члена культа. Внутри <q green>25</q> другров, скелеты, <q green>8</q> членов культа и <q green>2</q> <q red>повелителя</q>.",
 		secondDescription: ["<q yelow>Слово Воплощение Дракона</q>, <q yelow>Черная книга Пробуждающие сны</q>"],
@@ -776,6 +776,18 @@ const listMarkersSols = [
 		id: "id67",
 		top: 869.7368421052632,
 		left: 940.0584806475724,
+	},
+
+	{
+		title: "Водопад (<q lblue>40lvl</q>)",
+		description: "Луркер и пару бандитов неподалеку.",
+		secondDescription: [""],
+		type: "",
+		nameIcon: "Star",
+		scale: 0.5,
+		id: "id68",
+		top: 737.6436780238971,
+		left: 752.2402693503033,
 	},
 ];
 
