@@ -1003,6 +1003,45 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.modal-settings .modal-settings-select-fps{
+  margin-bottom: 20px;
+}
+
+.modal-settings input{
+  display: none;
+}
+
+.modal-settings .input-description{
+  margin-bottom: 10px;
+}
+
+.modal-settings .input-label{
+  display: inline-flex;
+  justify-content: center;
+  margin-right: 5px;
+  padding: 3px 5px;
+  border: 2px solid silver;
+  border-radius: 4px;
+  transition: transform 0.1s;
+}
+
+.modal-settings .input-label:hover{
+  cursor: pointer;
+  transform: scale(1.05);
+  color: rgb(50, 187, 255);
+  border: 2px solid rgb(50, 187, 255);
+}
+
+
+.modal-settings .input-label--active{
+  color: rgb(79, 255, 52);
+  border: 2px solid rgb(79, 255, 52);
+}
+
+.modal-settings .input-fps{
+
+}
+
 .dev-mode{
   position: absolute;
   bottom: 0;

@@ -76,7 +76,18 @@ const canvas = new fabric.Canvas(element.get(0), {
 	hoverCursor: "default", // сброс курсора
 });
 
-// Мастер сундук <q lblue>Превосходное зелье</q> <q llblue>МП</q>
+let isMove = true;
+const fpsIntervalMap = JSON.parse(localStorage.getItem("rfabMapSettings"))?.fps || 16;
+const $inputFps = $("[data-fps]");
+
+$inputFps.each((i) => {
+	if ($($inputFps[i]).attr("data-fps") == fpsIntervalMap) $($inputFps[i]).addClass("input-label--active");
+});
+
+const intervalMove = setInterval(() => {
+	isMove = true;
+}, fpsIntervalMap);
+
 // Отрисовка меток после загрузки путей
 // Сохранение и загрузка положения камеры при перезагрузки.
 // Создание путей и меток с учетом зумма и отступа.

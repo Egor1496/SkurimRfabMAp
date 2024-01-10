@@ -191,6 +191,14 @@ $(".modal-settings .clear-clean").on("click", function (e) {
 	localStorage.removeItem(CLEAN_TYPE);
 	location.reload();
 });
+
+$(".modal-settings-select-fps .input-label").on("click", function (e) {
+	$(".modal-settings-select-fps .input-label").removeClass("input-label--active");
+	$(this).addClass("input-label--active");
+	const settings = { fps: $(this).attr("data-fps") || 16 };
+	localStorage.setItem("rfabMapSettings", JSON.stringify(settings));
+	location.reload();
+});
 // SETTINGS END
 
 // question START
