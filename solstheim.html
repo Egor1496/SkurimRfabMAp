@@ -73,42 +73,92 @@
 			</div>
 			<ul class="filter-list">
 				<div class="filter-list-wrap">
-					<li class="filter-item" data-filter-type-sols="stal">
+					<li class="filter-item filter-item--icon" data-filter-type-sols="stal">
 						<img src="image/ui/lode.svg" />
 					</li>
-					<li class="filter-item filter-item--roc" data-filter-type-sols="roc">
+					<li class="filter-item filter-item--icon filter-item--roc" data-filter-type-sols="roc">
 						<img src="image/icon/Standing_Stones_e.svg" />
 					</li>
-					<li class="filter-item" data-filter-type-sols="book">
+					<li class="filter-item filter-item--icon" data-filter-type-sols="book">
 						<img src="image/ui/book.svg" />
 					</li>
-					<li class="filter-item" data-filter-type-sols="boss">
-						<img src="image/ui/skull.svg" />
-					</li>
 				</div>
-				<li class="filter-item" data-filter-type-sols="bandit">Бандиты <span lblue>30</span></li>
-				<li class="filter-item" data-filter-type-sols="riek">Риклинги <span lblue>30</span></li>
-				<li class="filter-item" data-filter-type-sols="ash">
-					Порождения <br />пепла <span> <span lblue>30</span></span>
+				<li class="filter-item">
+					<div class="filter-item_inner" data-filter-type-sols="riek">
+						<div class="filter-item_text">Риклинги</div>
+						<div class="filter-item_lvl"><q lblue>30</q></div>
+					</div>
+					<!-- <div class="filter-item_icon" data-filter-type-sols="rB">
+						<img src="image/ui/skull.svg" />
+					</div> -->
 				</li>
-				<li class="filter-item" data-filter-type-sols="magic">
-					Маги<span> <span lblue>30</span>-<span lblue>40</span></span>
+				<li class="filter-item">
+					<div class="filter-item_inner" data-filter-type-sols="ash">
+						<div class="filter-item_text">Порождения <br />пепла</div>
+						<div class="filter-item_lvl"><q lblue>30</q></div>
+					</div>
+					<!-- <div class="filter-item_icon" data-filter-type-sols="asB">
+						<img src="image/ui/skull.svg" />
+					</div> -->
 				</li>
-				<li class="filter-item" data-filter-type-sols="dwemer">
-					Двемеры <span> <span lblue>30</span>-<span lblue>40</span></span>
+				<li class="filter-item">
+					<div class="filter-item_inner" data-filter-type-sols="bandit">
+						<div class="filter-item_text">Бандиты</div>
+						<div class="filter-item_lvl"><q lblue>30</q></div>
+					</div>
+					<div class="filter-item_icon" data-filter-type-sols="bB">
+						<img src="image/ui/skull.svg" />
+					</div>
 				</li>
-				<li class="filter-item" data-filter-type-sols="draugry">
-					Драугры <span> <span lblue>30</span>-<span lblue>50</span></span>
+				<li class="filter-item">
+					<div class="filter-item_inner" data-filter-type-sols="magic">
+						<div class="filter-item_text">Маги</div>
+						<div class="filter-item_lvl"><q lblue>40</q></div>
+					</div>
+					<div class="filter-item_icon" data-filter-type-sols="mB">
+						<img src="image/ui/skull.svg" />
+					</div>
 				</li>
-				<li class="filter-item" data-filter-type-sols="priests">
-					Драконьи <br />жрецы <span> <span lblue>50</span>-<span lblue>60</span></span>
+				<li class="filter-item">
+					<div class="filter-item_inner" data-filter-type-sols="dwemer">
+						<div class="filter-item_text">Двемеры</div>
+						<div class="filter-item_lvl"><q lblue>40</q>-<q lblue>50</q></div>
+					</div>
+					<div class="filter-item_icon" data-filter-type-sols="dwB">
+						<img src="image/ui/skull.svg" />
+					</div>
 				</li>
-				<li class="filter-item" data-filter-type-sols="dragon">
-					Драконы <span> <span lblue>50</span>-<span lblue>60</span></span>
+				<li class="filter-item">
+					<div class="filter-item_inner" data-filter-type-sols="draugry">
+						<div class="filter-item_text">Драугры</div>
+						<div class="filter-item_lvl"><q lblue>45</q>-<q lblue>50</q></div>
+					</div>
+					<div class="filter-item_icon" data-filter-type-sols="drB">
+						<img src="image/ui/skull.svg" />
+					</div>
+				</li>
+				<li class="filter-item">
+					<div class="filter-item_inner" data-filter-type-sols="dragon">
+						<div class="filter-item_text">Драконы</div>
+						<div class="filter-item_lvl"><q lblue>50</q>-<q lblue>60</q></div>
+					</div>
+					<div class="filter-item_icon" data-filter-type-sols="dragonB">
+						<img src="image/ui/skull.svg" />
+					</div>
+				</li>
+				<li class="filter-item">
+					<div class="filter-item_inner" data-filter-type-sols="priests">
+						<div class="filter-item_text">Драконьи <br />жрецы</div>
+						<div class="filter-item_lvl"><q lblue>50</q>-<q lblue>60</q></div>
+					</div>
+					<!-- <div class="filter-item_icon" data-filter-type-sols="prB">
+						<img src="image/ui/skull.svg" />
+					</div> -->
 				</li>
 				<div class="filter-list-wrap filter-list-wrap--bottom">
-					<li class="filter-item" data-filter-type-sols="set"><img src="image/ui/set.svg" /></li>
-					<li class="filter-item" data-filter-type-sols="word"><img src="image/ui/word.svg" /></li>
+					<li class="filter-item filter-item--icon" data-filter-type-sols="priest"><img src="image/ui/priest.svg" /></li>
+					<li class="filter-item filter-item--icon" data-filter-type-sols="set"><img src="image/ui/set.svg" /></li>
+					<li class="filter-item filter-item--icon" data-filter-type-sols="word"><img src="image/ui/word.svg" /></li>
 				</div>
 			</ul>
 		</div>

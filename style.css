@@ -228,7 +228,6 @@ body {
   z-index: 31;
   left: 3px;
   top: 33px;
-  width: 145px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -261,21 +260,58 @@ body {
 .filter-list-wrap .filter-item{
   width: 30px;
   justify-content: center;
-  padding: 5px 3px;
 }
 
 .filter-item{
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 10px;
 }
 
 .filter-item--active{
   background-color: #515151;
 }
 
-.filter-item:hover{
+.filter-item--icon{
+  padding: 5px 5px;
+}
+
+.filter-item--icon:hover{
+  cursor: pointer;
+  background-color: #515151;
+}
+
+.filter-item_inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  gap: 5px;
+  padding: 5px 10px;
+}
+
+.filter-item_inner:hover{
+  cursor: pointer;
+  background-color: #515151;
+}
+
+.filter-item_text{
+}
+
+.filter-item_lvl{
+  display: flex;
+}
+
+.filter-item_icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter-item_icon img{
+  width: 20px;
+  padding: 5px 5px;
+}
+
+.filter-item_icon:hover{
   cursor: pointer;
   background-color: #515151;
 }

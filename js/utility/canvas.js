@@ -168,7 +168,7 @@ function replaceImageList(imgUrl, oImgList, typeIcon) {
 	}, 100);
 }
 
-const filterRender = (type = "false") => {
+const filterRender = (type = "qwerty") => {
 	const redList = [],
 		urlRedList = [],
 		whiteList = [],

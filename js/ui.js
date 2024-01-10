@@ -8,32 +8,55 @@ $(".filter-button").on("click", function (e) {
 	closeAllmodal();
 });
 
+const deleteActive = () => {
+	$(".filter-open-icon").hide();
+	$(".filter-close-icon").show();
+	$(".filter-item--icon").removeClass("filter-item--active");
+	$(".filter-item_icon").removeClass("filter-item--active");
+	$(".filter-item_inner").removeClass("filter-item--active");
+};
+
 if (localStorage.getItem(FILTER_TYPE_LOCAL_STORAGE)?.trim().length > 0) {
 	$(".filter-open-icon").show();
 	$(".filter-close-icon").hide();
-	$(`.filter-item[data-${FILTER_TYPE_LOCAL_STORAGE}="${localStorage.getItem(FILTER_TYPE_LOCAL_STORAGE)}"]`).addClass("filter-item--active");
+	$(`.filter-list [data-${FILTER_TYPE_LOCAL_STORAGE}="${localStorage.getItem(FILTER_TYPE_LOCAL_STORAGE)}"]`).addClass("filter-item--active");
 } else {
-	$(".filter-close-icon").show();
 	$(".filter-open-icon").hide();
+	$(".filter-close-icon").show();
 }
 
-$(".filter-item").on("click", function (e) {
-	if (!$(this).hasClass("filter-item--active")) {
-		$(".filter-open-icon").show();
-		$(".filter-close-icon").hide();
-		$(".filter-item").removeClass("filter-item--active");
-		$(this).addClass("filter-item--active");
-		localStorage.setItem(FILTER_TYPE_LOCAL_STORAGE, $(this).data(FILTER_TYPE_LOCAL_STORAGE));
-		const type = $(this).data(FILTER_TYPE_LOCAL_STORAGE);
-		filterRender(type);
-	} else {
-		$(".filter-close-icon").show();
-		$(".filter-open-icon").hide();
-		$(".filter-item").removeClass("filter-item--active");
-		localStorage.setItem(FILTER_TYPE_LOCAL_STORAGE, "");
+const setActive = (el) => {
+	$(".filter-open-icon").show();
+	$(".filter-close-icon").hide();
+	$(el).addClass("filter-item--active");
+};
+
+const setStore = (str) => {
+	localStorage.setItem(FILTER_TYPE_LOCAL_STORAGE, str);
+};
+
+const handlerClick = (el, isMulti) => {
+	if ($(el).hasClass("filter-item--active")) {
+		deleteActive();
+		setStore("");
 		filterRender();
+	} else {
+		deleteActive();
+		setActive(el);
+		setStore($(el).data(FILTER_TYPE_LOCAL_STORAGE));
+		const type = $(el).data(FILTER_TYPE_LOCAL_STORAGE);
+		filterRender(type, isMulti);
 	}
+};
+
+$(".filter-item--icon, .filter-item_inner").on("click", function (e) {
+	handlerClick(this);
 });
+
+$(".filter-item_icon").on("click", function (e) {
+	handlerClick(this, true);
+});
+
 // FILTER END
 
 // PATH START
@@ -67,7 +90,6 @@ if (Number(localStorage.getItem(PATH_LOCAL_STORAGE) || -1) >= 0 && $(".path-list
 $(".path-item")
 	.not(".path-item--active")
 	.on("click", function (e) {
-		console.log(123);
 		$(".path-item").removeClass("path-item--active");
 		$(this).addClass("path-item--active");
 		localStorage.setItem(PATH_LOCAL_STORAGE, $(this).data(PATH_LOCAL_STORAGE));
