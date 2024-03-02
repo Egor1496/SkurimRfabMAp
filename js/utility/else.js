@@ -7,13 +7,13 @@ const coppyObject = (top, left) => {
 	const copy = `
 
 	{
-		title: "Торговый пост",
-		description: "Скупают хлам.",
-		secondDescription: ["Продают <q yelow>Свитки телепортации</q> и <q yelow>Камни душ</q>."],
-		type: "trade",
-		nameIcon: "Town",
+		title: "",
+		description: "",
+		secondDescription: [""],
+		type: "",
+		nameIcon: "",
 		scale: 0.3,
-		id: "id------",
+		id: "id",
 		top: ${top},
 		left: ${left},
 	},
