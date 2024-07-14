@@ -2425,7 +2425,7 @@ const listMarkersSky = [
 	{
 		title: "Рагнвальд (<q lblue>50lvl</q>)",
 		description:
-			"Снаружи <q green>2</q> драугра. Внутри <q green>4</q> Драугра и <q red>Босс</q>. <br/>&nbsp; -С лева <q green>8</q> драугров, <q green>2</q> драугра и <q red>Босс</q>. <br/>&nbsp; -С права <q green>3</q> драугра, <q green>2</q> драугра и <q red>Босс</q>.",
+			"Снаружи <q green>2</q> драугра. Внутри <q green>4</q> Драугра и <q red>Босс</q>. <br/>&nbsp; -Слева <q green>8</q> драугров, <q green>2</q> драугра и <q red>Босс</q>. <br/>&nbsp; -Справа <q green>3</q> драугра, <q green>2</q> драугра и <q red>Босс</q>.",
 		secondDescription: [
 			"<q red>Босс</q> Страж Сирек (<q lblue>100lvl</q>) <q lblue>5000xp.</q> Огненный драугр в гробу.  <br/>&nbsp; -Призыв. атронаха (<q lblue>90lvl</q>). Щитовик, кричит и бьет силовые <q llred>огнем</q>, огне плащ.",
 			"<q red>Босс</q> Страж Торстен (<q lblue>100lvl</q>) <q lblue>5000xp.</q> Ледяной драугр в гробу. <br/>&nbsp; -Призыв. атронаха (<q lblue>90lvl</q>). Щитовик, кричит и бьет силовые холодом, ледяной плащ.",
