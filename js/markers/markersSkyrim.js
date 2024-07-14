@@ -89,7 +89,8 @@ const listMarkersSky = [
 	{
 		title: "Маркарт (<q lblue>35lvl</q>)",
 		nameIcon: "Markarth",
-		description: "<q lblue>Квест</q>: Убийство Турана - <q lblue>35lvl</q>, После <q lblue>30lvl</q>???.",
+		description:
+			"<q lblue>Квест</q>: Убийство Турана - <q lblue>35lvl</q>, После <q lblue>30lvl</q>???.",
 		secondDescription: [
 			"<q red>Босс</q> Дозорный Туран (<q lblue>100lvl</q>) <q lblue>16000xp</q>. Щит и булава, ударами разрушает броню и снижает <q llgreen>СТ</q>. Раз в 2м создает солнечную сферу, высасывающую <q llred>ХП</q>. Использует солнечную ауру, стреляет солнечным огнем. Небольшая арена, двери <q red>закрываются</q>, можно отдохнуть на столе (<q llred>абуз</q>).",
 			"<q yelow>Ожерелье</q> если спасти от изгоя, <q yelow>Бичь Даэдра</q>, <q yelow>Сет Турана</q>, <q yelow>Символ Элейдона</q>. Сокровищиница: <q yelow>Необычный камень</q>.",
@@ -147,7 +148,9 @@ const listMarkersSky = [
 	{
 		title: "Замок ярла",
 		nameIcon: "JarlResidence",
-		secondDescription: ["Покои ярла: <q yelow>Паралич</q>, <q yelow>Серебряные слитки</q>, <q yelow>Необычный Камень</q>, <q yelow>Посуда</q>."],
+		secondDescription: [
+			"Покои ярла: <q yelow>Паралич</q>, <q yelow>Серебряные слитки</q>, <q yelow>Необычный Камень</q>, <q yelow>Посуда</q>.",
+		],
 		type: "city soc",
 		id: "id12",
 		scale: 0.5,
@@ -215,7 +218,8 @@ const listMarkersSky = [
 	},
 	{
 		title: "Хребет Острие Ножа (<q lblue>10lvl</q>) (<q lblue>30lvl</q>)",
-		description: "Бандиты <q green>9</q> снаружи и <q green>6</q> внутри. после 20лвл <q red>босс</q> по квесту.",
+		description:
+			"Бандиты <q green>9</q> снаружи и <q green>6</q> внутри. после 20лвл <q red>босс</q> по квесту.",
 		secondDescription: [
 			"<q red>Босс</q> Воин Боэтии (<q lblue>75lvl</q>) <q lblue>7000xp</q> эбонитовый бандит, быстрый и умеет сбивать с ног, из далека стреляет из лука.",
 			"<q yelow>Эбонитова Кольчуга</q>, <q yelow>Лук Честный Обмен</q>, <q yelow>Паралич III</q>.",
@@ -239,7 +243,9 @@ const listMarkersSky = [
 	{
 		title: "Оплот Змеиный Утес (<q lblue>20lvl</q>)",
 		description: "Изгои <q green>5</q> снаружи и <q green>3</q> внутри и ворожея.",
-		secondDescription: ["<q lblue>Предмет</q> на опыт по квесту Хроланда, <q lblue>Книга Опыта</q>."],
+		secondDescription: [
+			"<q lblue>Предмет</q> на опыт по квесту Хроланда, <q lblue>Книга Опыта</q>.",
+		],
 		type: "trash xp",
 		nameIcon: "Campsite",
 		id: "id20",
@@ -314,7 +320,8 @@ const listMarkersSky = [
 	},
 	{
 		title: "Северная сторожевая крепость (<q lblue>30lvl</q>)",
-		description: "Эльфы <q green>8</q> снаружи и <q green>7</q> внутри, Нужны резисты к стихиям и магии",
+		description:
+			"Эльфы <q green>8</q> снаружи и <q green>7</q> внутри, Нужны резисты к стихиям и магии",
 		secondDescription: [
 			"<q red>Босс</q> Маг <q lblue>500xp</q>. Спит в закрытой комнате.<br/>&nbsp; -Сильный маг разрушения",
 			"<q red>Босс</q> Дознаватель Крепости <q lblue>4000xp</q>.<br/>&nbsp; -Сильный призыватель и маг разрушения призывает огненого атронаха",
@@ -355,7 +362,9 @@ const listMarkersSky = [
 	{
 		title: "Сломанная башня (<q lblue>20lvl</q>)",
 		description: "Изгои <q green>4</q> снаружи и <q green>7</q> внутри, руна гроз.",
-		secondDescription: ["<q lblue>Книга Опыта</q> <q green>2</q>, Мастер сундук <q yelow>Превосходное Зелье</q> <q llgreen>СТ</q>."],
+		secondDescription: [
+			"<q lblue>Книга Опыта</q> <q green>2</q>, Мастер сундук <q yelow>Превосходное Зелье</q> <q llgreen>СТ</q>.",
+		],
 		type: "trash bottle",
 		nameIcon: "Fort",
 		id: "id30",
@@ -402,7 +411,8 @@ const listMarkersSky = [
 	},
 	{
 		title: "Глубины Илиналты (<q lblue>35lvl</q>)",
-		description: "Cкелетов <q green>6</q> и <q green>7</q> некромантов. Далее <q green>5</q> скелетов и <q green>4</q> некроманта.",
+		description:
+			"Cкелетов <q green>6</q> и <q green>7</q> некромантов. Далее <q green>5</q> скелетов и <q green>4</q> некроманта.",
 		secondDescription: [
 			"<q lblue>Книга Опыта</q>, <q yelow>Посох Даэдрического Приказа</q>, Мастер сундук <q lblue>Превосходное зелье</q> <q llblue>МП</q>, <q yelow>Звезда Азуры</q> по квесту.",
 		],
@@ -426,7 +436,8 @@ const listMarkersSky = [
 	},
 	{
 		title: "Западная сторожевая башня (<q lblue>40lvl</q>)",
-		description: "После убийства босса появляются <q red>драконы</q>! Убивай драконов до квеста с мираком что бы получить больше душ.",
+		description:
+			"После убийства босса появляются <q red>драконы</q>! Убивай драконов до квеста с мираком что бы получить больше душ.",
 		secondDescription: [
 			"<q red>Босс</q> Огненный <q red>Дракон</q> (<q lblue>40lvl</q>) <q lblue>7000xp</q>, вызывает огне. град и луч огня. <br/>&nbsp; -Постоянно двигайся, луч оч сильно дамажит.",
 		],
@@ -439,7 +450,8 @@ const listMarkersSky = [
 	},
 	{
 		title: "Дрифтшейд - Приют (<q lblue>25lvl</q>)",
-		description: "Воины серебряной руки <q green>2</q> снаружи и <q green>17</q> внутри. Много огне. арбалетов.",
+		description:
+			"Воины серебряной руки <q green>2</q> снаружи и <q green>17</q> внутри. Много огне. арбалетов.",
 		secondDescription: ["<q lblue>Книги опыта</q> <q green>2</q>."],
 		type: "bandit",
 		nameIcon: "Fort",
@@ -488,7 +500,8 @@ const listMarkersSky = [
 
 	{
 		title: "Хелген (<q lblue>10lvl</q>)",
-		description: "Бандиты <q green>5</q> снаружи и <q green>7</q> внутри после босса <q green>2</q> паука и медведь.",
+		description:
+			"Бандиты <q green>5</q> снаружи и <q green>7</q> внутри после босса <q green>2</q> паука и медведь.",
 		secondDescription: [
 			"<q red>Босс</q> До`Скахар <q lblue>1000xp</q>. В конце локации. <br/> &nbsp; -Копье. Используй паралич, или крутись вокруг, можно выбежать из локации.",
 			"<q yelow>Кольцо льва</q>, <q yelow>Банки V</q> в бочке.",
@@ -502,7 +515,8 @@ const listMarkersSky = [
 	},
 	{
 		title: "Форт Нойград (<q lblue>30lvl</q>)",
-		description: "Маги (гроз/холод/огн) <q green>5</q> снаружи и <q green>8</q> внутри. Опасный босс за закрытой дверью.",
+		description:
+			"Маги (гроз/холод/огн) <q green>5</q> снаружи и <q green>8</q> внутри. Опасный босс за закрытой дверью.",
 		secondDescription: [
 			"<q red>Босс</q> Старший ученик <q lblue>1000xp</q>. Маг холода на втором этаже. -Слабый.",
 			"<q red>Босс</q> Брандиш <q lblue>7000xp</q>. За закрытой дверью. <br/>&nbsp; -Сильный маг холода спамит бурями как с автомата, быстро ест стамину. Разрывает дистанцию. Зажимай в узких пространствах или убивай на дистанции снаружи.",
@@ -517,7 +531,8 @@ const listMarkersSky = [
 	},
 	{
 		title: "Кровавый Трон (<q lblue>50lvl</q>)",
-		description: "Внутри вампиры (2 спят ночью) <q green>8</q>, гончии <q green>3</q>, горгульи <q green>2</q> (Притворяються статуями)",
+		description:
+			"Внутри вампиры (2 спят ночью) <q green>8</q>, гончии <q green>3</q>, горгульи <q green>2</q> (Притворяються статуями)",
 		secondDescription: [
 			"<q red>Босс</q> Вампир (<q lblue>125lvl</q>) <q lblue>2000xp</q>. Стоит с вампиром на втором этаже. <br/>&nbsp; -Вампир помощник и босс призывают горгулей, сильно бьет булавой, стреляет молнией.",
 			"<q yelow>Сет Древнего Вампира</q>.",
@@ -657,7 +672,8 @@ const listMarkersSky = [
 
 	{
 		title: "Вечерняя пещера (<q lblue>20lvl</q>)",
-		description: "Мост-ловушка. <q red>Падая в низ</q> вернуться нельзя. <q green>6</q> пауков и <q green>4</q> тролля в конце.",
+		description:
+			"Мост-ловушка. <q red>Падая в низ</q> вернуться нельзя. <q green>6</q> пауков и <q green>4</q> тролля в конце.",
 		secondDescription: ["<q yelow>Святилище</q> Ауриэля."],
 		type: "animal",
 		nameIcon: "Cave",
@@ -742,7 +758,9 @@ const listMarkersSky = [
 	{
 		title: "Дымящаяся пещера (<q lblue>10lvl</q>)",
 		description: "Морозный тролль.",
-		secondDescription: ["<q lblue>Книга Опыта</q>, <q yelow>Необычный Камень</q>, <q yelow>Труп мага</q>."],
+		secondDescription: [
+			"<q lblue>Книга Опыта</q>, <q yelow>Необычный Камень</q>, <q yelow>Труп мага</q>.",
+		],
 		type: "animal",
 		nameIcon: "Cave",
 		id: "id61",
@@ -753,7 +771,9 @@ const listMarkersSky = [
 	{
 		title: "Воронья нора (<q lblue>25lvl</q>)",
 		description: "Ворожеи <q green>2</q> и медведь с пауком.",
-		secondDescription: ["<q lblue>Книга Опыта</q>, Мастер сундук <q yelow>Превосходное Зелье</q> <q llblue>МП</q>."],
+		secondDescription: [
+			"<q lblue>Книга Опыта</q>, Мастер сундук <q yelow>Превосходное Зелье</q> <q llblue>МП</q>.",
+		],
 		type: "magic bottle",
 		nameIcon: "Cave",
 		id: "id62",
@@ -764,7 +784,9 @@ const listMarkersSky = [
 	{
 		title: "Пещера Зеленая Тень (<q lblue>20lvl</q>)",
 		description: "Спригганы <q green>6</q> и медведи.",
-		secondDescription: ["<q lblue>Шлем ностера</q>, <q yelow>Превосходное Зелье</q> <q llgreen>СТ</q>"],
+		secondDescription: [
+			"<q lblue>Шлем ностера</q>, <q yelow>Превосходное Зелье</q> <q llgreen>СТ</q>",
+		],
 		type: "animal xp bottle",
 		nameIcon: "Cave",
 		id: "id63",
@@ -774,7 +796,8 @@ const listMarkersSky = [
 	},
 	{
 		title: "Грот Сломанное Весло (<q lblue>20lvl</q>)",
-		description: "Бандиты <q green>12</q>. Много ядо-магов-автоматчиков настакивают долгое отравление.",
+		description:
+			"Бандиты <q green>12</q>. Много ядо-магов-автоматчиков настакивают долгое отравление.",
 		secondDescription: [
 			"<q red>Босс</q> Джарира <q lblue>3000xp</q> по квесту. <br/>&nbsp; -Сильный лучник с огне/гроз стрелами.",
 			"<q red>Босс</q> Харгар <q lblue>3000xp</q>. Двуруч в конце локации. <br/>&nbsp; -Быстрый, сбивает с ног, ест <q llgreen>СТ</q>.",
@@ -800,7 +823,8 @@ const listMarkersSky = [
 	},
 	{
 		title: "Логово Моварта (<q lblue>40lvl</q>) (<q lblue>50lvl</q>)",
-		description: "Внутри <q green>3</q> вампира (1 спит ночью), <q green>6</q> треллов и <q red>Босс</q> по квесту.",
+		description:
+			"Внутри <q green>3</q> вампира (1 спит ночью), <q green>6</q> треллов и <q red>Босс</q> по квесту.",
 		secondDescription: [
 			"<q red>Босс</q> Вампир воин Моварт (<q lblue>125lvl</q>) <q lblue>16000xp</q> призывает горгулью <br/>&nbsp; -Стреляет вампирской магией, сильно бьет топором, использует вампирский плащ.",
 			"<q yelow>Сет Моварта</q>.",
@@ -814,7 +838,8 @@ const listMarkersSky = [
 	},
 	{
 		title: "Ингвильд (<q lblue>35lvl</q>)",
-		description: "Другры и призраки. <q green>6</q> другров внутри, <q green>5</q> призраков внутри.",
+		description:
+			"Другры и призраки. <q green>6</q> другров внутри, <q green>5</q> призраков внутри.",
 		secondDescription: [
 			"<q red>Босс</q> Арондил (<q lblue>60lvl</q>) маг холода, призывает <q green>3</q> воинов призраков, находиться в конце локации, <q red>дверь закрывается</q>",
 			"<q yelow>Холодное ожерелье</q>, <q yelow>Необычный Камень</q>.",
@@ -828,7 +853,8 @@ const listMarkersSky = [
 	},
 	{
 		title: "Пещера Хоба (<q lblue>35lvl</q>)",
-		description: "Внутри <q green>9</q> некромантов, <q green>6</q> скелетов, под мостом некромант и скелет.",
+		description:
+			"Внутри <q green>9</q> некромантов, <q green>6</q> скелетов, под мостом некромант и скелет.",
 		secondDescription: [
 			"<q yelow>Холодня ярость</q>, <q lblue>Флейта Пантеи</q> на опыт, <q yelow>Необычный Камень</q>, <q lblue>Книги опыта</q> <q green>2</q>.",
 		],
@@ -890,7 +916,8 @@ const listMarkersSky = [
 	},
 	{
 		title: "Забытая пещера (<q lblue>35lvl</q>)",
-		description: "Драугров <q green>12</q>. Далее <q green>7</q> драугров. В конце локации двойные двери <q red>закроются</q>.",
+		description:
+			"Драугров <q green>12</q>. Далее <q green>7</q> драугров. В конце локации двойные двери <q red>закроются</q>.",
 		secondDescription: [
 			"<q red>Босс</q> драугр Куралмил (<q lblue>100lvl</q>) <q lblue>7000xp</q>. Сильный маг яда кричит красным криком? Вместе с ним восстают <q green>3</q> ядо. драугра (<q lblue>90lvl</q>) <br/> &nbsp; -Используй <q llgreen>100</q>%??? <q llgreen>ядо</q> реза. Убивай драугров первыми.",
 			"Слово <q yelow>Смертный Приговор</q>, <q yelow>Рецепт</q> Превосходка резистов, <q green>3</q> <q yelow>Превосходных Зелья</q>, <q yelow>Белый флакон</q> (По квесту Нурелиона), <q lblue>Предмет</q> на опыт в маленьком сейфе.",
@@ -999,7 +1026,9 @@ const listMarkersSky = [
 	{
 		title: "Оротхейм (<q lblue>10lvl</q>)",
 		description: "Бандиты <q green>5</q> внутри.",
-		secondDescription: ["Мастер сундук <q yelow>Броня Странствующего Рыцаря</q>, <br/> <q lblue>Книга Опыта</q>."],
+		secondDescription: [
+			"Мастер сундук <q yelow>Броня Странствующего Рыцаря</q>, <br/> <q lblue>Книга Опыта</q>.",
+		],
 		type: "bandit",
 		nameIcon: "Cave",
 		id: "id86",
@@ -1044,7 +1073,9 @@ const listMarkersSky = [
 		title: "Пещера Отвесный Утес (<q lblue>20lvl</q>)",
 		description:
 			"Изгои <q green>3</q> снаружи и <q green>4</q> внутри потом <q green>4</q> внутри и <q green>2</q> ворожеи (<q lblue>квест</q> с мелкой)",
-		secondDescription: ["<q lblue>Книга Опыта</q> <q green>3</q>, <q yelow>Глаз Мелки</q>, <q yelow>Веревское сердце</q>."],
+		secondDescription: [
+			"<q lblue>Книга Опыта</q> <q green>3</q>, <q yelow>Глаз Мелки</q>, <q yelow>Веревское сердце</q>.",
+		],
 		type: "trash",
 		nameIcon: "Cave",
 		id: "id91",
@@ -1067,7 +1098,8 @@ const listMarkersSky = [
 	},
 	{
 		title: "Оплот Красный Орел (<q lblue>20lvl</q>)",
-		description: "Изгои <q green>2</q> снаружи и <q green>5</q> внутри потом <q green>11</q> и папаша снаружи.",
+		description:
+			"Изгои <q green>2</q> снаружи и <q green>5</q> внутри потом <q green>11</q> и папаша снаружи.",
 		secondDescription: ["<q yelow>Ярость Красного Орла</q>."],
 		type: "trash",
 		nameIcon: "Cave",
@@ -1138,7 +1170,8 @@ const listMarkersSky = [
 	},
 	{
 		title: "Гленморильский ковен (<q lblue>30lvl</q>)",
-		description: "Cнаружи <q red>ведьма</q>. Внутри <q green>5</q> ведьм и <q green>4</q> ворожей. <br/>По квесту соратников.",
+		description:
+			"Cнаружи <q red>ведьма</q>. Внутри <q green>5</q> ведьм и <q green>4</q> ворожей. <br/>По квесту соратников.",
 		secondDescription: [""],
 		type: "magic",
 		nameIcon: "Cave",
@@ -1162,7 +1195,8 @@ const listMarkersSky = [
 	},
 	{
 		title: "Пещера Сломанный Клык (<q lblue>35lvl</q>)",
-		description: "В упоре <q red>вампир</q> и <q green>4</q> скелета, в конце локации <q red>вампир</q> (спит ночью).",
+		description:
+			"В упоре <q red>вампир</q> и <q green>4</q> скелета, в конце локации <q red>вампир</q> (спит ночью).",
 		secondDescription: [
 			"Мастер сундук <q yelow>Превосходное Зелье</q> <q llred>ХП</q>, <q yelow>Одеяние Мастера Колдовства</q>, <q lblue>Книги опыта</q> <q green>2</q>.",
 		],
@@ -1264,7 +1298,8 @@ const listMarkersSky = [
 	},
 	{
 		title: "Пещера Кронвангр (<q lblue>10lvl</q>) (<q lblue>40lvl</q>)",
-		description: "Внутри <q green>18</q> пауков и <q green>3</q> <q red>вампира</q> (3 спят ночью).",
+		description:
+			"Внутри <q green>18</q> пауков и <q green>3</q> <q red>вампира</q> (3 спят ночью).",
 		secondDescription: [
 			"<q yelow>Труп мамонта</q> на входе, <q lblue>Щит роге</q> на опыт, Рецепт <q yelow>Концентрированный паучий яд</q>, <q yelow>Черная вдова</q>",
 		],
@@ -1299,8 +1334,11 @@ const listMarkersSky = [
 	},
 	{
 		title: "Откос Крегвеллоу (<q lblue>30lvl</q>)",
-		description: "Снаружи маг (<q lblue>40lvl</q>). Внутри <q green>7</q> сильных мага и <q green>3</q> атронаха.",
-		secondDescription: ["Мастер сундук <q yelow>Превосходное Зелье</q> <q llblue>МП</q>, <q lblue>Книга Опыта</q>."],
+		description:
+			"Снаружи маг (<q lblue>40lvl</q>). Внутри <q green>7</q> сильных мага и <q green>3</q> атронаха.",
+		secondDescription: [
+			"Мастер сундук <q yelow>Превосходное Зелье</q> <q llblue>МП</q>, <q lblue>Книга Опыта</q>.",
+		],
 		type: "magic bottle",
 		nameIcon: "Cave",
 		id: "id116",
@@ -1415,7 +1453,8 @@ const listMarkersSky = [
 	},
 	{
 		title: "Пещера Хеймара (<q lblue>40lvl</q>)",
-		description: "Ловушка на входе. Вампиры <q green>4</q> и несколько треллов. Далее вампиры <q green>4</q> (<q lblue>100lvl</q>) и пару треллов.",
+		description:
+			"Ловушка на входе. Вампиры <q green>4</q> и несколько треллов. Далее вампиры <q green>4</q> (<q lblue>100lvl</q>) и пару треллов.",
 		secondDescription: [""],
 		type: "vampire",
 		nameIcon: "Cave",
@@ -1451,7 +1490,9 @@ const listMarkersSky = [
 		title: "Пещера Каменный Ручей (<q lblue>0lvl</q>)",
 		description:
 			"Бандиты <q green>4</q>. В пещере есть тайный вход в Кагрензел, а в нем сундук и далеко двемерский <q red>этеринавт-предводитель</q> (<q lblue>50lvl</q>) и фалмеры.",
-		secondDescription: ["<q lblue>Лютня</q> на опыт, <q yelow>Перчатки этеринавта</q>, <q purple>Шлем этеринавта</q>."],
+		secondDescription: [
+			"<q lblue>Лютня</q> на опыт, <q yelow>Перчатки этеринавта</q>, <q purple>Шлем этеринавта</q>.",
+		],
 		type: "bandit loot xp",
 		nameIcon: "Cave",
 		id: "id128-0",
@@ -1499,7 +1540,8 @@ const listMarkersSky = [
 	},
 	{
 		title: "Пруд Глаз Мары (<q lblue>35lvl</q>)",
-		description: "Внутри <q green>2</q> вампира в упоре (спят ночью). Маленькая комната, есть пространство для уклонения.",
+		description:
+			"Внутри <q green>2</q> вампира в упоре (спят ночью). Маленькая комната, есть пространство для уклонения.",
 		secondDescription: ["Сундук с <q yelow>Эбонитовым лутом</q>???, <q lblue>Книга Опыта</q>."],
 		type: "vampire",
 		nameIcon: "Pond",
@@ -1535,7 +1577,7 @@ const listMarkersSky = [
 		description: "Изгои <q green>2</q> и ворожея.",
 		secondDescription: [
 			"<q red>Дракон</q> (<q lblue>150</q>-<q lblue>200lvl</q>) <q lblue>16000</q>-<q lblue>20000xp</q>. <br/> Используй Слово «Разоружение».",
-			"Слово <q yelow>Элементарная Ярость</q>, мастер сундук <q yelow>Камни</q>.",
+			"Слово <q yelow>Элементная Ярость</q>, мастер сундук <q yelow>Камни</q>.",
 		],
 		type: "trash dragon loot word",
 		nameIcon: "Dragon",
@@ -1673,7 +1715,8 @@ const listMarkersSky = [
 	},
 	{
 		title: "Бтардамз (<q lblue>40lvl</q>)",
-		description: "Снаружи <q green>5</q> одержимых. Внутри <q green>40</q> одержимых, <q green>12</q> паучков <q green>7</q> двемеров и Центурион.",
+		description:
+			"Снаружи <q green>5</q> одержимых. Внутри <q green>40</q> одержимых, <q green>12</q> паучков <q green>7</q> двемеров и Центурион.",
 		secondDescription: [
 			"<q red>Босс</q> Оркендор (<q lblue>80lvl</q>) <q lblue>7000xp</q> стреляет огне болами, бьет больно посохом, очень быстрый.",
 			"<q yelow>Сет Двемеского Архитектора</q>, <q yelow>Боевой Посох Оркендора</q>.",
@@ -1980,7 +2023,8 @@ const listMarkersSky = [
 	},
 	{
 		title: "Поляна предков (<q lblue>20lvl</q>) (<q lblue>50lvl</q>)",
-		description: "Спригганы <q green>3</q>. После прочтения свитка по квесту выйдут <q green>4</q> вампира и горгулья.",
+		description:
+			"Спригганы <q green>3</q>. После прочтения свитка по квесту выйдут <q green>4</q> вампира и горгулья.",
 		secondDescription: [""],
 		type: "animal vampire",
 		nameIcon: "Grove",
@@ -2070,7 +2114,8 @@ const listMarkersSky = [
 	},
 	{
 		title: "Мрачный Предел (<q lblue>30lvl</q>)",
-		description: "Внутри <q green>5</q> фалмеров, <q green>2</q> корусов. Далее <q green>6</q> фалмеров и корус.",
+		description:
+			"Внутри <q green>5</q> фалмеров, <q green>2</q> корусов. Далее <q green>6</q> фалмеров и корус.",
 		secondDescription: [""],
 		type: "falmer",
 		nameIcon: "Cave",
@@ -2322,8 +2367,11 @@ const listMarkersSky = [
 	},
 	{
 		title: "Гробница Исграмора (<q lblue>????lvl</q>)",
-		description: "Внутри <q green>11</q> призраков (<q lblue>60lvl</q>) и пауки. Дальше <q green>10</q> призраков и босс????",
-		secondDescription: ["<q yelow>Сет предвестника</q>, <q yelow>Бафф Истинный Соратник</q>, <q yelow>Превосходное Зелье</q>????."],
+		description:
+			"Внутри <q green>11</q> призраков (<q lblue>60lvl</q>) и пауки. Дальше <q green>10</q> призраков и босс????",
+		secondDescription: [
+			"<q yelow>Сет предвестника</q>, <q yelow>Бафф Истинный Соратник</q>, <q yelow>Превосходное Зелье</q>????.",
+		],
 		type: "skelet loot bottle set",
 		nameIcon: "Tomb",
 		scale: 0.4,
@@ -2364,7 +2412,9 @@ const listMarkersSky = [
 		title: "Снежная Завеса - Святилище (<q lblue>30lvl</q>) (<q lblue>40lvl</q>)",
 		description:
 			"<q lblue>Квест</q> локация. При открытии сундука восстают <q green>2</q> драугра. Дальше <q green>20</q> драугров. Далее <q green>9</q> драугров, <q red>повелитель</q> (<q lblue>100lvl</q>) посошник с архимагами и <q green>2</q> драуграми.",
-		secondDescription: ["<q yelow>Превосходное Зелье</q> <q llgreen>СТ</q>, Слово <q yelow>Разоружение</q>."],
+		secondDescription: [
+			"<q yelow>Превосходное Зелье</q> <q llgreen>СТ</q>, Слово <q yelow>Разоружение</q>.",
+		],
 		type: "draugry bottle word",
 		nameIcon: "Tomb",
 		scale: 0.4,
@@ -2392,7 +2442,9 @@ const listMarkersSky = [
 	{
 		title: "Ведьмин оплот (<q lblue>20lvl</q>)",
 		description: "Изгои <q green>8</q> снаружи, в руинах <q green>3</q> и папаша.",
-		secondDescription: ["<q lblue>Книга Опыта</q>, мастер сундук <q yelow>Превосходное Зелье</q> <q llgreen>СТ</q>."],
+		secondDescription: [
+			"<q lblue>Книга Опыта</q>, мастер сундук <q yelow>Превосходное Зелье</q> <q llgreen>СТ</q>.",
+		],
 		type: "trash bottle",
 		nameIcon: "Tomb",
 		scale: 0.4,
@@ -2403,7 +2455,9 @@ const listMarkersSky = [
 	{
 		title: "Оплот Потерянная Долина (<q lblue>20lvl</q>)",
 		description: "Изгои <q green>13</q> потом папаша и <q green>2</q> варажеи.",
-		secondDescription: ["Прыжок с моста <q lblue>3000xp</q>, слово <q yelow>Бесплодность</q>, <q yelow>Веревское сердце</q> <q green>2</q>."],
+		secondDescription: [
+			"Прыжок с моста <q lblue>3000xp</q>, слово <q yelow>Бесплодность</q>, <q yelow>Веревское сердце</q> <q green>2</q>.",
+		],
 		type: "trash xp word",
 		nameIcon: "Tomb",
 		scale: 0.4,
@@ -2443,7 +2497,7 @@ const listMarkersSky = [
 			"Скелеты и трелл. После огненных ловушек, комната с <q red>закрывающейся</q> дверью. В комнате <q green>4</q> вампира и <q red>Босс</q>",
 		secondDescription: [
 			"<q red>Босс</q> вампир Тилен Малорен (<q lblue>75lvl</q>) <q lblue>4000xp</q> с копьем.",
-			"Cлово <q yelow>Элементарная ярость</q>, <q yelow>Шлем Инквизитора</q>, <q yelow>Элексир крови вампира</q>, Мастер сундук <q yelow>Превосходное Зелье</q> <q llred>ХП</q>.",
+			"Cлово <q yelow>Элементная Ярость</q>, <q yelow>Шлем Инквизитора</q>, <q yelow>Элексир крови вампира</q>, Мастер сундук <q yelow>Превосходное Зелье</q> <q llred>ХП</q>.",
 		],
 		type: "vampire vB loot bottle",
 		nameIcon: "Tomb",
@@ -2495,7 +2549,8 @@ const listMarkersSky = [
 	},
 	{
 		title: "Зал Гейрмунда (<q lblue>35lvl</q>)",
-		description: "<q red>Упав</q>, вернуться нельзя. Внутри <q green>4</q> драугра, после двери <q green>6</q> драугров.",
+		description:
+			"<q red>Упав</q>, вернуться нельзя. Внутри <q green>4</q> драугра, после двери <q green>6</q> драугров.",
 		secondDescription: [
 			"<q red>Босс</q> драугр Сидис Голдурсон (<q lblue>130lvl</q>) <q lblue>5000xp</q>, лежит в гробу (можно успеть дать пару ударов) <br/>&nbsp; -Создает <q green>2</q> копии на трех монументах. Кричит красным криком (ест <q llgreen>СТ</q>), стреляет из лука. Стой за камнем и ищи его по шкале здоровья.",
 			"<q yelow>Лук Голдура</q>, <q yelow>Часть амулета</q>, <q yelow>Превосходное Зелье <q llgreen>СТ</q></q>.",
@@ -2622,7 +2677,8 @@ const listMarkersSky = [
 	},
 	{
 		title: "Южная горная застава (<q lblue>30lvl</q>) (<q lblue>10lvl</q>)",
-		description: "Опасная <q red>мать дымок</q> снаружи. Внутри <q green>8</q> бандитов и огромный <q red>паук</q>.",
+		description:
+			"Опасная <q red>мать дымок</q> снаружи. Внутри <q green>8</q> бандитов и огромный <q red>паук</q>.",
 		secondDescription: [""],
 		type: "bandit",
 		nameIcon: "NordicTower",
@@ -2748,7 +2804,9 @@ const listMarkersSky = [
 	{
 		title: "Руины Оберег Ветров (<q lblue>25lvl</q>)",
 		description: "Призрак по квесту Фроки.",
-		secondDescription: ["<q red>Босс</q> Дух злокрыса (<q lblue>62lvl</q>) <q lblue>5000xp</q>, Быстрый."],
+		secondDescription: [
+			"<q red>Босс</q> Дух злокрыса (<q lblue>62lvl</q>) <q lblue>5000xp</q>, Быстрый.",
+		],
 		type: "skelet sB",
 		nameIcon: "NordicDwelling",
 		id: "id255",
@@ -2826,7 +2884,10 @@ const listMarkersSky = [
 	{
 		title: "Каприз Хелы (<q lblue>30lvl</q>)",
 		description: "Много Бандитов по квесту Восточной Имперской Компании.",
-		secondDescription: ["<q red>Босс</q> Халдин <q lblue>4000xp</q>. Маг гроз.", "Мечь шторма?????"],
+		secondDescription: [
+			"<q red>Босс</q> Халдин <q lblue>4000xp</q>. Маг гроз.",
+			"Мечь шторма?????",
+		],
 		type: "bandit mB",
 		nameIcon: "Shipwreck",
 		id: "id263",
@@ -2953,7 +3014,8 @@ const listMarkersSky = [
 	},
 	{
 		title: "Бандиты (<q lblue>0lvl</q>)",
-		description: "Бандиты <q green>3</q> засада при открытии запертого сундука. Появляются справа за деревом.",
+		description:
+			"Бандиты <q green>3</q> засада при открытии запертого сундука. Появляются справа за деревом.",
 		secondDescription: [""],
 		nameIcon: "bandit",
 		type: "bandit",
@@ -3046,7 +3108,9 @@ const listMarkersSky = [
 	{
 		title: "Дом Дреласа (<q lblue>10lvl</q>)",
 		description: "",
-		secondDescription: ["<q red>Босс</q> Дрелас <q lblue>1000xp</q>. <br/>&nbsp; -Сразу в упоре сильный маг яда, Используй 75% ядо реза."],
+		secondDescription: [
+			"<q red>Босс</q> Дрелас <q lblue>1000xp</q>. <br/>&nbsp; -Сразу в упоре сильный маг яда, Используй 75% ядо реза.",
+		],
 		type: "bandit bB",
 		nameIcon: "Shack",
 		scale: 0.3,
@@ -3068,7 +3132,9 @@ const listMarkersSky = [
 	{
 		title: "Лагерь Бронин (<q lblue>10lvl</q>)",
 		description: "Бандиты <q green>4</q> снаружи.",
-		secondDescription: ["<q red>Босс</q> Нарикус <q lblue>1000xp</q>. <br/>&nbsp; -Сильно замедляет ударами."],
+		secondDescription: [
+			"<q red>Босс</q> Нарикус <q lblue>1000xp</q>. <br/>&nbsp; -Сильно замедляет ударами.",
+		],
 		type: "bandit bB",
 		nameIcon: "Campsite",
 		scale: 0.3,
@@ -3089,7 +3155,8 @@ const listMarkersSky = [
 	},
 	{
 		title: "Пещера Ноголомный Проход (<q lblue>20lvl</q>)",
-		description: "Скелеты <q green>12</q> и некромант, могут зажать толпой. <q green>4</q> <q red>руны</q> холода возле дверей.",
+		description:
+			"Скелеты <q green>12</q> и некромант, могут зажать толпой. <q green>4</q> <q red>руны</q> холода возле дверей.",
 		secondDescription: [""],
 		type: "skelet",
 		nameIcon: "Cave",
@@ -3111,7 +3178,8 @@ const listMarkersSky = [
 	},
 	{
 		title: "Темное братство (<q lblue>30lvl</q>)",
-		description: "По квесту. В локации боссы расположены по порядку, можно быстро убить всех по одному.",
+		description:
+			"По квесту. В локации боссы расположены по порядку, можно быстро убить всех по одному.",
 		secondDescription: [
 			"<q red>Босс</q> Арнбьерн <q lblue>2000xp</q>. <br/>&nbsp; -Сильный двуручник спит.",
 			"<q red>Босс</q> Визара <q lblue>2000xp</q>. <br/>&nbsp; -Кинжальщик инвизник, умеет делать раскрутки.",
@@ -3380,7 +3448,9 @@ const listMarkersSky = [
 		title: "Щелкающая пещера (<q lblue>30lvl</q>)",
 		description:
 			"Некромантов <q green>5</q> и большой паук (<q lblue>60lvl</q>). Ворожея (<q lblue>30lvl</q>) В конце локации пуляет фаерболы и призывает медведя.",
-		secondDescription: ["<q lblue>Книга Опыта</q>, Мастер сундук с <q yelow>Превосходным Зельем</q> <q llblue>МП</q>, <q yelow>Посох Паралича</q>."],
+		secondDescription: [
+			"<q lblue>Книга Опыта</q>, Мастер сундук с <q yelow>Превосходным Зельем</q> <q llblue>МП</q>, <q yelow>Посох Паралича</q>.",
+		],
 		type: "magic bottle",
 		nameIcon: "Cave",
 		scale: 0.4,
@@ -3557,7 +3627,8 @@ const listMarkersSky = [
 
 	{
 		title: "Картвастен (<q lblue>25lvl</q>)",
-		description: "Наёмники Серебряной Крови <q green>4</q> по квесту. Станешь <q yelow>другом орков</q> если убьешь бандитов.",
+		description:
+			"Наёмники Серебряной Крови <q green>4</q> по квесту. Станешь <q yelow>другом орков</q> если убьешь бандитов.",
 		secondDescription: [""],
 		type: "bandit",
 		nameIcon: "Town",
@@ -3678,7 +3749,9 @@ const listMarkersSky = [
 	{
 		title: "<q lblue>Квест</q> Фроки (<q lblue>25lvl</q>)",
 		description: "",
-		secondDescription: ["<q red>Босс</q> Дух Волка (<q lblue>62lvl</q>) <q lblue>5000xp</q>, Быстрый, накидывает кровотечение."],
+		secondDescription: [
+			"<q red>Босс</q> Дух Волка (<q lblue>62lvl</q>) <q lblue>5000xp</q>, Быстрый, накидывает кровотечение.",
+		],
 		type: "skelet sB",
 		nameIcon: "Sneg",
 		scale: 0.2,
@@ -3704,7 +3777,9 @@ const listMarkersSky = [
 	{
 		title: "<q lblue>Квест</q> Фроки (<q lblue>25lvl</q>)",
 		description: "",
-		secondDescription: ["<q red>Босс</q> Дух Медведя (<q lblue>62lvl</q>) <q lblue>5000xp</q><br/>&nbsp; -Быстрый, сильно бьет, может сбить с ног."],
+		secondDescription: [
+			"<q red>Босс</q> Дух Медведя (<q lblue>62lvl</q>) <q lblue>5000xp</q><br/>&nbsp; -Быстрый, сильно бьет, может сбить с ног.",
+		],
 		type: "skelet sB",
 		nameIcon: "Sneg",
 		scale: 0.2,
@@ -3716,7 +3791,9 @@ const listMarkersSky = [
 	{
 		title: "<q lblue>Квест</q> Фроки (<q lblue>25lvl</q>)",
 		description: "",
-		secondDescription: ["Дух Саблезуба (<q lblue>62lvl</q>) <q lblue>5000xp</q>. Быстрый, сильно бьет, может сбить с ног. Крутись вокруг зверя."],
+		secondDescription: [
+			"Дух Саблезуба (<q lblue>62lvl</q>) <q lblue>5000xp</q>. Быстрый, сильно бьет, может сбить с ног. Крутись вокруг зверя.",
+		],
 		type: "skelet sB",
 		nameIcon: "Sneg",
 		scale: 0.2,
@@ -3756,7 +3833,8 @@ const listMarkersSky = [
 
 	{
 		title: "Одинокая скала (<q lblue>30lvl</q>)",
-		description: "По квесту восстановления древа в вайтране. <q green>4</q> некроманта и ворожея. <q red>Открытая</q> локация.",
+		description:
+			"По квесту восстановления древа в вайтране. <q green>4</q> некроманта и ворожея. <q red>Открытая</q> локация.",
 		secondDescription: ["<q yelow>Крапивник</q>."],
 		type: "magic",
 		nameIcon: "PointofInterest",
@@ -3861,7 +3939,8 @@ const listMarkersSky = [
 
 	{
 		title: "Переправа глубинного народа (<q lblue>30lvl</q>)",
-		description: "Снаружи зачар. сфера (<q lblue>60lvl</q>), <q green>5</q> сфер, <q green>2</q> паука.",
+		description:
+			"Снаружи зачар. сфера (<q lblue>60lvl</q>), <q green>5</q> сфер, <q green>2</q> паука.",
 		secondDescription: [""],
 		type: "dwemer",
 		nameIcon: "PointofInterest",
@@ -4159,7 +4238,9 @@ const listMarkersSky = [
 	{
 		title: "Труп мага (<q lblue>0lvl</q>)",
 		description: "Пару волков.",
-		secondDescription: ["<q yelow>Посох льда</q>, <q lblue>Книга Опыта</q>, <q yelow>Паучий Яд</q>."],
+		secondDescription: [
+			"<q yelow>Посох льда</q>, <q lblue>Книга Опыта</q>, <q yelow>Паучий Яд</q>.",
+		],
 		type: "soc",
 		nameIcon: "Loot",
 		scale: 0.2,
@@ -4267,7 +4348,9 @@ const listMarkersSky = [
 	{
 		title: "Лесопилка пирожок",
 		description: "",
-		secondDescription: ["В доме рабочих <q yelow>Банки</q>, <q yelow>Бутылки</q>, <q yelow>Еда</q>."],
+		secondDescription: [
+			"В доме рабочих <q yelow>Банки</q>, <q yelow>Бутылки</q>, <q yelow>Еда</q>.",
+		],
 		type: "soc",
 		nameIcon: "WoodMill",
 		scale: 0.3,
@@ -4469,7 +4552,9 @@ const listMarkersSky = [
 	{
 		title: "Руда",
 		description: "",
-		secondDescription: ["<q yelow>Оружие</q>, <q yelow>Зелья</q>, рядом <q yelow>Ртутная</q> жила, <q yelow>Ожерелье</q>"],
+		secondDescription: [
+			"<q yelow>Оружие</q>, <q yelow>Зелья</q>, рядом <q yelow>Ртутная</q> жила, <q yelow>Ожерелье</q>",
+		],
 		type: "soc",
 		nameIcon: "Loot",
 		scale: 0.2,
@@ -5230,7 +5315,8 @@ const listMarkersSky = [
 
 	{
 		title: "",
-		description: "<q red>Босс</q>  Гигантский грязевой краб <q lblue>6000xp</q> <q lred>3000hp</q> Убивает с одного удара! Достает из далека!",
+		description:
+			"<q red>Босс</q>  Гигантский грязевой краб <q lblue>6000xp</q> <q lred>3000hp</q> Убивает с одного удара! Достает из далека!",
 		secondDescription: [""],
 		type: "animal aB",
 		nameIcon: "Sneg",
