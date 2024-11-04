@@ -81,7 +81,8 @@ const fpsIntervalMap = JSON.parse(localStorage.getItem("rfabMapSettings"))?.fps 
 const $inputFps = $("[data-fps]");
 
 $inputFps.each((i) => {
-	if ($($inputFps[i]).attr("data-fps") == fpsIntervalMap) $($inputFps[i]).addClass("input-label--active");
+	if ($($inputFps[i]).attr("data-fps") == fpsIntervalMap)
+		$($inputFps[i]).addClass("input-label--active");
 });
 
 const intervalMove = setInterval(() => {
