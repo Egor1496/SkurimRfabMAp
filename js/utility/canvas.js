@@ -105,6 +105,11 @@ const setScaleHover = (oImg, isSacle) => {
 const getScaleIcon = (scaleIcon) => {
 	const coeffMapScale = map.scaleX / baseScale;
 	const baseScaleIcon = scaleIcon * COEFF_WIDTH || DEFAULT_SCALE_ICON * COEFF_WIDTH;
+	if (localStorage.getItem("isHate") === "x2")
+		return (baseScaleIcon * coeffMapScale * (1.3 - currentZoom * 0.08)) / 2;
+	if (localStorage.getItem("isHate") === "x4")
+		return (baseScaleIcon * coeffMapScale * (1.3 - currentZoom * 0.08)) / 4;
+
 	return baseScaleIcon * coeffMapScale * (1.3 - currentZoom * 0.08);
 };
 
