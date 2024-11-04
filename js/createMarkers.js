@@ -100,8 +100,8 @@ function createMarkers() {
 		mark.description = mark?.description || "";
 		mark.secondDescription = mark?.secondDescription || [""];
 
-		// const iconPath = `image/icon/${(mark?.nameIcon || "circle") + mark.filter}.svg`;
-		const iconPath = `image/icon/cave.png`;
+		const iconPath = `image/icon/${(mark?.nameIcon || "circle") + mark.filter}.svg`;
+		// const iconPath = `image/icon/cave.png`;
 
 		let iconOImg = iconPath;
 
