@@ -11,11 +11,14 @@ const startTimerMouse = (mark, oImg) => {
 };
 
 const copyIdMarker = () => navigator.clipboard.writeText(thisMark?.id || "");
-const copyCoordMarker = () => navigator.clipboard.writeText(`top: ${thisMark?.top},\nleft: ${thisMark?.left},`);
+const copyCoordMarker = () =>
+	navigator.clipboard.writeText(`top: ${thisMark?.top},\nleft: ${thisMark?.left},`);
 const copyTitleMarker = () => navigator.clipboard.writeText(thisMark?.title || "");
 const copyIconMarker = () => navigator.clipboard.writeText(thisMark?.nameIcon || "");
 const copyDescriptionMarker = () => {
-	navigator.clipboard.writeText(thisMark?.description + " \n " + thisMark?.secondDescription.join(" \n ") || "");
+	navigator.clipboard.writeText(
+		thisMark?.description + " \n " + thisMark?.secondDescription.join(" \n ") || ""
+	);
 };
 
 const copyObjMarker = () => {
@@ -97,7 +100,8 @@ function createMarkers() {
 		mark.description = mark?.description || "";
 		mark.secondDescription = mark?.secondDescription || [""];
 
-		const iconPath = `image/icon/${(mark?.nameIcon || "circle") + mark.filter}.svg`;
+		// const iconPath = `image/icon/${(mark?.nameIcon || "circle") + mark.filter}.svg`;
+		const iconPath = `image/icon/cave.png`;
 
 		let iconOImg = iconPath;
 

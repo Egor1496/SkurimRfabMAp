@@ -186,7 +186,10 @@ var bindContainerTouchEvents = function () {
 				// Масштабирование
 				if (lastTouchesLength == 2) {
 					currentScale =
-						Math.sqrt(Math.pow(touches[0].pageX - touches[1].pageX, 2) + Math.pow(touches[0].pageY - touches[1].pageY, 2)) / touchStartDistance;
+						Math.sqrt(
+							Math.pow(touches[0].pageX - touches[1].pageX, 2) +
+								Math.pow(touches[0].pageY - touches[1].pageY, 2)
+						) / touchStartDistance;
 					setScale(touchStartScale * currentScale, centerTouchX, centerTouchY);
 					e.preventDefault();
 				} else {
@@ -206,7 +209,10 @@ var bindContainerTouchEvents = function () {
 					centerTouchY -= offset.top;
 
 					touchStartScale = scale;
-					touchStartDistance = Math.sqrt(Math.pow(touches[0].pageX - touches[1].pageX, 2) + Math.pow(touches[0].pageY - touches[1].pageY, 2));
+					touchStartDistance = Math.sqrt(
+						Math.pow(touches[0].pageX - touches[1].pageX, 2) +
+							Math.pow(touches[0].pageY - touches[1].pageY, 2)
+					);
 				}
 			}
 
