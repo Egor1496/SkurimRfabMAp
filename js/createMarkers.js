@@ -100,8 +100,11 @@ function createMarkers() {
 		mark.description = mark?.description || "";
 		mark.secondDescription = mark?.secondDescription || [""];
 
-		const iconPath = `image/icon/${(mark?.nameIcon || "circle") + mark.filter}.svg`;
-		// const iconPath = `image/icon/cave.png`;
+		let iconPath = "";
+
+		if (!localStorage.getItem("isHate"))
+			iconPath = `image/icon/${(mark?.nameIcon || "circle") + mark.filter}.svg`;
+		else iconPath = `image/icon/cave.png`;
 
 		let iconOImg = iconPath;
 
