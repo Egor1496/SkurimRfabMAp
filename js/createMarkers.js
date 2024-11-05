@@ -102,12 +102,11 @@ function createMarkers() {
 
 		let iconPath = "";
 
-		if (!localStorage.getItem("isHate"))
+		if (!localStorage.getItem("icon"))
 			iconPath = `image/icon/${(mark?.nameIcon || "circle") + mark.filter}.svg`;
 		else {
-			if (localStorage.getItem("isHate") === "x1") iconPath = `image/icon/Cave.png`;
-			if (localStorage.getItem("isHate") === "x2") iconPath = `image/icon/Cave_2x.png`;
-			if (localStorage.getItem("isHate") === "x4") iconPath = `image/icon/Cave_4x.png`;
+			if (localStorage.getItem("icon") === "png")
+				iconPath = `image/icon/v1/${(mark?.nameIcon || "warning") + mark.filter}.png`;
 		}
 
 		let iconOImg = iconPath;

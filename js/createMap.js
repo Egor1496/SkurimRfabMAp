@@ -64,7 +64,6 @@ fabric.util.loadImage(nameMapURL, function (img) {
 			} else {
 				bindContainerEvents();
 			}
-			// alert("Не пугайтесть, я просто вирусы вам заливаю");
 			// canvas.update();
 			clearInterval(loadInterval);
 		}
