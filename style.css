@@ -1074,11 +1074,11 @@ body {
   transition: opacity 0.4s;
 }
 
-.modal-question.close{
+/* .modal-question.close{
   opacity: 0;
   left: -110%;
   transition: opacity 0.4s, left 0s 0.4s;
-}
+} */
 
 .modal-question-body{
   z-index: 40;
